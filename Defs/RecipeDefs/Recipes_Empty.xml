@@ -13,6 +13,7 @@
 <!-- Can be omitted -->
     <allowMixingIngredients>CHANGE_ME</allowMixingIngredients>
     <workAmount>CHANGE_ME</workAmount>
+<!-- Can be omitted -->    
     <unfinishedThingDef>CHANGE_ME</unfinishedThingDef>    
 <!-- Can be omitted -->
     <targetCountAdjustment>CHANGE_ME</targetCountAdjustment>
