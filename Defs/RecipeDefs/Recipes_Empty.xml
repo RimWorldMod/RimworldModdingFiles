@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<RecipeDefs>
+  
+  <RecipeDef>
+    <defName>CHANGE_ME</defName>
+    <label>CHANGE_ME</label>
+    <description>CHANGE_ME</description>
+    <jobString>CHANGE_ME</jobString>
+    <workSpeedStat>CHANGE_ME</workSpeedStat>
+    <effectWorking>CHANGE_ME</effectWorking>
+    <soundWorking>CHANGE_ME</soundWorking>
+<!-- Can be omitted -->
+    <allowMixingIngredients>CHANGE_ME</allowMixingIngredients>
+    <workAmount>CHANGE_ME</workAmount>
+    <unfinishedThingDef>CHANGE_ME</unfinishedThingDef>    
+<!-- Can be omitted -->
+    <targetCountAdjustment>CHANGE_ME</targetCountAdjustment>
+    <ingredients>
+      <li>
+        <filter>
+<!-- Could also be a <categories><li>xxxx</li></categories> -->          
+          <thingDefs>
+            <li>CHANGE_ME</li>
+          </thingDefs>
+        </filter>
+<!-- Can be omitted if you require only one item-->
+        <count>10</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>CHANGE_ME</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+<!-- Here it is the defName of the produced item that you have to modify in the <> -->      
+      <ITEM_DEFNAME>1</ITEM_DEFNAME>
+    </products>
+<!-- Can be completely omitted if no skill requirement-->    
+    <skillRequirements>
+      <li>
+        <skill>CHANGE_ME</skill>
+        <minLevel>1</minLevel>
+      </li>
+<!-- Or can have severals -->
+      <li>
+        <skill>CHANGE_ME</skill>
+        <minLevel>1</minLevel>
+      </li>
+    </skillRequirements>
+    <workSkill>CHANGE_ME</workSkill>
+  </RecipeDef>
+  
+</RecipeDefs>
