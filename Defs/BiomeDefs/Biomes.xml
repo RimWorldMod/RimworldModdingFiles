@@ -280,7 +280,7 @@
 	<description></description>
 	<workerClass></workerClass>
 	<canBuildBase>false</canBuildBase>
-	<hideTerrain>true</hideTerrain>
+	<hideTerrain>true or false</hideTerrain>
 	<baseColor>(, , )</baseColor>
 	</BiomeDef>
 
