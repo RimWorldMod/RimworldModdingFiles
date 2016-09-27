@@ -1,0 +1,287 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- Habitable biome with comments -->
+	
+	<BiomeDef>
+		<defName>BiomeName</defName>
+		<!--defName used to reference and use the biome -->
+		<label>biome label</label>
+		<!-- Biome label (short descriptor) -->
+		<description>Biome description</description>
+		<!-- A longer-form description of the biome. Tip: include climate, terrain, vegetation, animals and optionally some flavour text -->
+		<workerClass>BiomeWorker_Biometype</workerClass>
+		<!-- String used for biome generation. Available vanilla strings:
+		BiomeWorker_AridShrubland
+		BiomeWorker_BorealForest
+		BiomeWorker_Desert
+		BiomeWorker_ExtremeDesert
+		BiomeWorker_IceSheet
+		BiomeWorker_Ocean
+		BiomeWorker_TemperateForest
+		BiomeWorker_TropicalRainforest
+		BiomeWorker_Tundra -->
+		<implemented>true or false</implemented>
+		<!-- ???, shows up in cold biomes xml. Defaults to true if not specified -->
+		<canBuildBase>true or false</canBuildBase>
+		<!-- Defines if it's possible to choose as a colony base. Defaults to true if not specified -->
+		<animalDensity>number</animalDensity>
+		<!-- How many animals are on the map. For example: 0.006 for extreme desert, 5.5 for temperate forest. 0 to disable -->
+		<plantDensity>number</plantDensity>
+		<!-- How many plants are on the map. For example: 0.5 for arid shrubland, 0.83 for temperate forest. 0 to disable -->
+		<baseColor>(colour1, colour2, colour3)</baseColor>
+		<!-- World map colour. For example - (0.30, 0.60, 0.55) for boreal forest -->
+		<soundsAmbient>
+			<li>Sound reference</li>
+			<li>Sound reference</li>
+		</soundsAmbient>
+		<!-- Ambient sounds used in the biome. Can use one or more. For example - AmbientNightInsects_Standard or AmbientWind_Desolate -->
+		<diseaseMtbDays>number</diseaseMtbDays>
+		<!-- Sets disease generation to the biome, according to <diseases> below. Diseases occur more with lower diseaseMtbDays and vice versa -->
+		<diseases>
+			<li>
+				<diseaseInc>Disease name</diseaseInc>
+				<commonality>number</commonality>
+			</li>
+			<li>
+				<diseaseInc>Disease name</diseaseInc>
+				<commonality>name</commonality>
+			</li>
+		</diseases>
+		<!-- You can set 1 or more diseases using this structure. Available vanilla diseases:
+		Disease_FibrousMechanites
+		Disease_Flu
+		Disease_GutWorms
+		Disease_Malaria
+		Disease_MuscleParasites
+		Disease_Plague
+		Disease_SensoryMechanites
+		Disease_SleepingSickness -->
+		<terrainsByFertility>
+		<!-- Sets terrain types for the biome along with their fertility values. Can set one or more types -->
+			<li>
+				<terrain>Terrain name</terrain>
+				<!-- Available terrains:
+				Ice
+				Marsh
+				MarshyTerrain
+				MossyTerrain
+				Mud
+				Sand
+				Soil
+				SoilRich
+				WaterDeep
+				WaterShallow -->
+				<min>number, can be negative</min>
+				<!-- Minimum fertility, lowest -999 -->
+				<max>number</max>
+				<!-- Maximum fertility, highest 999 -->
+			</li>
+			<li>
+				<terrain>Terrain name</terrain>
+				<min>number</min>
+				<max>number</max>
+			</li>
+		</terrainsByFertility>
+		<terrainPatchMakers>
+		<!-- Generate (optional) terrain patches -->
+			<li>
+				<perlinFrequency>number</perlinFrequency>
+				<!-- Frequency of patches generated. Should be very low, for example 0.01 or 0.018 -->
+				<thresholds>
+					<li>
+						<terrain>Terrain name</terrain>
+						<min>number</min>
+						<max>number</max>
+					</li>
+					<li>
+						<terrain>Terrain name</terrain>
+						<min>number</min>
+						<max>number</max>
+					</li>
+					<li>
+						<terrain>Terrain name</terrain>
+						<min>number</min>
+						<max>number</max>
+					</li>
+				</thresholds>
+			</li>
+		</terrainPatchMakers>
+		<baseWeatherCommonalities>
+		<!-- Sets weather types and sets likelihood of each one to occur. The number can be set to 0 to disable a certain type of weather, or you can delete the weather entirely from the list -->
+			<Clear>number</Clear>
+			<Fog>number</Fog>
+			<Rain>number</Rain>
+			<DryThunderstorm>number</DryThunderstorm>
+			<RainyThunderstorm>number</RainyThunderstorm>
+			<FoggyRain>number</FoggyRain>
+			<SnowGentle>number</SnowGentle>
+			<SnowHard>number</SnowHard>
+		</baseWeatherCommonalities>
+		<wildPlants>
+		<!-- Sets naturally occuring plant types used in the biome. Uses plant defName. Can set one or more -->
+			<PlantDefName>number</PlantDefName>
+			<PlantDefName>number</PlantDefName>
+			<PlantDefName>number</PlantDefName>
+		</wildPlants>
+		<wildAnimals>
+		<!-- Sets animals to spawn and wander the biome. Uses animal defName. Can set one or more -->
+			<AnimalDefName>number</AnimalDefName>
+			<AnimalDefName>number</AnimalDefName>
+			<AnimalDefName>number</AnimalDefName>
+		</wildAnimals>
+		<allowedPackAnimals>
+		<!-- Sets which animals are used as pack animals (traders and such). Uses animal defName. Can set one or more -->
+			<li>AnimalDefName</li>
+			<li>AnimalDefName</li>
+		</allowedPackAnimals>
+	</BiomeDef>
+
+	<!-- Habitable biome minimal clean template -->
+	
+	<BiomeDef>
+		<defName></defName>
+		<label></label>
+		<description></description>
+		<workerClass></workerClass>
+		<animalDensity></animalDensity>
+		<plantDensity></plantDensity>
+		<baseColor>(, , )</baseColor>
+		<soundsAmbient>
+			<li></li>
+		</soundsAmbient>
+		<diseaseMtbDays></diseaseMtbDays>
+		<diseases>
+			<li>
+				<diseaseInc></diseaseInc>
+				<commonality></commonality>
+			</li>
+		</diseases>
+		<terrainsByFertility>
+			<li>
+				<terrain></terrain>
+				<min></min>
+				<max></max>
+			</li>
+		</terrainsByFertility>
+		<baseWeatherCommonalities>
+			<Clear></Clear>
+			<Fog></Fog>
+			<Rain></Rain>
+			<DryThunderstorm></DryThunderstorm>
+			<RainyThunderstorm></RainyThunderstorm>
+			<FoggyRain></FoggyRain>
+			<SnowGentle></SnowGentle>
+			<SnowHard></SnowHard>
+		</baseWeatherCommonalities>
+		<wildPlants>
+			<></>
+		</wildPlants>
+		<wildAnimals>
+			<></>
+		</wildAnimals>
+		<allowedPackAnimals>
+			<li></li>
+		</allowedPackAnimals>
+	</BiomeDef>
+	
+	<!-- Habitable biome advanced clean template -->
+	
+	<BiomeDef>
+		<defName></defName>
+		<label></label>
+		<description></description>
+		<workerClass></workerClass>
+		<implemented></implemented>
+		<canBuildBase>true</canBuildBase>
+		<animalDensity></animalDensity>
+		<plantDensity></plantDensity>
+		<baseColor>(, , )</baseColor>
+		<soundsAmbient>
+			<li></li>
+			<li></li>
+		</soundsAmbient>
+		<diseaseMtbDays></diseaseMtbDays>
+		<diseases>
+			<li>
+				<diseaseInc></diseaseInc>
+				<commonality></commonality>
+			</li>
+			<li>
+				<diseaseInc></diseaseInc>
+				<commonality></commonality>
+			</li>
+		</diseases>
+		<terrainsByFertility>
+			<li>
+				<terrain></terrain>
+				<min></min>
+				<max></max>
+			</li>
+			<li>
+				<terrain></terrain>
+				<min></min>
+				<max></max>
+			</li>
+		</terrainsByFertility>
+		<terrainPatchMakers>
+			<li>
+				<perlinFrequency></perlinFrequency>
+				<thresholds>
+					<li>
+						<terrain></terrain>
+						<min></min>
+						<max></max>
+					</li>
+					<li>
+						<terrain></terrain>
+						<min></min>
+						<max></max>
+					</li>
+					<li>
+						<terrain></terrain>
+						<min></min>
+						<max></max>
+					</li>
+				</thresholds>
+			</li>
+		</terrainPatchMakers>
+		<baseWeatherCommonalities>
+			<Clear></Clear>
+			<Fog></Fog>
+			<Rain></Rain>
+			<DryThunderstorm></DryThunderstorm>
+			<RainyThunderstorm></RainyThunderstorm>
+			<FoggyRain></FoggyRain>
+			<SnowGentle></SnowGentle>
+			<SnowHard></SnowHard>
+		</baseWeatherCommonalities>
+		<wildPlants>
+			<></>
+			<></>
+			<></>
+		</wildPlants>
+		<wildAnimals>
+			<></>
+			<></>
+			<></>
+		</wildAnimals>
+		<allowedPackAnimals>
+			<li></li>
+			<li></li>
+		</allowedPackAnimals>
+	</BiomeDef>
+
+	<!-- Non-habitable biome clean template -->
+
+	<BiomeDef>
+	<defName></defName>
+	<label></label>
+	<description></description>
+	<workerClass></workerClass>
+	<canBuildBase>false</canBuildBase>
+	<hideTerrain>true</hideTerrain>
+	<baseColor>(, , )</baseColor>
+	</BiomeDef>
+
+</Defs>
