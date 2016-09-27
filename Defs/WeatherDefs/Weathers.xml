@@ -1,0 +1,218 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<WeatherDefs>
+
+	<!-- Weather is a mix of natural phenomena (or lack thereof), colour scheme, sounds etc. -->
+
+	<WeatherDef>
+		<defName>desired defName</defName>
+		<!-- Sets the defName to reference or use this weather -->
+		<label>adjective</label>
+		<!-- The actual in-game label you see on the UI. For example - "clear", "rain", "dry thunderstorm" -->
+		<description>Long-form description of the weather.</description>
+		<!-- Tips: describe the feel of the weather, include penalties ("reduces accuracy of ranged weapons", "slows down people and animals") and hazards "lightning can cause fires") -->
+		<repeatable>true or false</repeatable>
+		<!-- If true, the game has a chance of using this weather type again after its duration is over instead of switching weathers -->
+		<temperatureRange>
+		<!-- Sets a custom range for temperature occurance. By default a weather can occur at any temperature, but you can restrict it using this section -->
+			<min>number</min>
+			<max>number</max>
+		</temperatureRange>
+		<windSpeedFactor>number</windSpeedFactor>
+		<!-- Sets a multiplier for wind during this weather type. For example - 0.5 during fog. Defaults to 1.0 -->
+		<moveSpeedMultiplier>number</moveSpeedMultiplier>
+		<!-- Sets a multiplier for wind during this weather type. For example - 0.9 during rain. Defaults to 1.0 -->
+		<accuracyMultiplier>number</accuracyMultiplier>
+		<!-- Sets a multiplier for combat accuracy during this weather type. For example - 0.8 during rain. Defaults to 1.0 -->
+		<favorability>Good</favorability>
+		<!-- Sets weather favourability (which is what? I dunno). Defaults to "Neutral". Available vanilla values:
+		VeryBad
+		Bad
+		Neutral
+		Good
+		VeryGood -->
+		<rainRate>number</rainRate>
+		<!-- Sets the rate of rain occurance. -->
+		<snowRate>number</snowRate>
+		<!-- Sets the rate of snow occurance. -->
+		<ambientSounds>
+		<!-- Sets ambient sounds to play when the weather is active. Can set one or more. -->
+			<li>Sound_reference</li>
+		</ambientSounds>
+		<durationRange>
+		<!-- Sets a range for duration ticks (how long the weather lasts). Every 2500 points is 1 in-game hour.
+		Defaults to <min>16000</min> and <max>160000</max>-->
+			<min>number</min>
+			<max>number</max>
+		</durationRange>
+		<eventMakers>
+		<!-- Sets special events to occur during the weather. Like durationRange, intervals are defined in ticks. Can set one or more events. -->
+			<li>
+				<averageInterval>number</averageInterval>
+				<eventClass>WeatherEvent_EventType</eventClass>
+				<!-- Available vanilla events:
+				WeatherEvent_LightningFlash
+				WeatherEvent_LightningStrike -->
+			</li>
+			<li>
+				<averageInterval>number</averageInterval>
+				<eventClass>WeatherEvent_EventType</eventClass>
+			</li>
+		</eventMakers>
+		<overlayClasses>
+		<!-- Injects a visual effect into the map. Available vanilla classes:
+		WeatherOverlay_Fog
+		WeatherOverlay_Rain
+		WeatherOverlay_SnowGentle
+		WeatherOverlay_SnowHard -->
+			<li>WeatherOverlay_OverlayType</li>
+		</overlayClasses>
+		<commonalityRainfallFactor>
+		<!-- Sets a curve for the amount of rainfall during the weather. Use an existing pattern from Weathers.xml if you're unsure.
+		Not necessary to define when you have no need for rain. For example - "Clear" weather. -->
+			<points>
+				<li>(X1, Y1)</li>
+				<li>(X2, Y2)</li>
+				<li>(X3, Y3)</li>
+			</points>
+			<!-- You must define at least 2 points on the curve -->
+		</commonalityRainfallFactor>
+		<!-- For colour settings (below this comment) it's best to use Core\WeatherDefs\Weathers.xml as a guide	-->
+		<skyColorsDay>
+		<!-- Sets the colour scheme during daytime -->
+			<sky>(number, number, number)</sky>
+			<shadow>(number, number, number)</shadow>
+			<overlay>(number, number, number)</overlay>
+			<saturation>number</saturation>
+		</skyColorsDay>
+		<skyColorsDusk>
+		<!-- Sets the colour scheme during dusk -->
+			<sky>(number, number, number)</sky>
+			<shadow>(number, number, number)</shadow>
+			<overlay>(number, number, number)</overlay>
+			<saturation>number</saturation>
+		</skyColorsDusk>
+		<skyColorsNightEdge>
+		<!-- Sets the colour scheme during the early night -->
+			<sky>(number, number, number)</sky>
+			<shadow>(number, number, number)</shadow>
+			<overlay>(number, number, number)</overlay>
+			<saturation>number</saturation>
+		</skyColorsNightEdge>
+		<skyColorsNightMid>
+		<!-- Sets the colour scheme during nighttime -->
+			<sky>(number, number, number)</sky>
+			<shadow>(number, number, number)</shadow>
+			<overlay>(number, number, number)</overlay>
+			<saturation>number</saturation>
+		</skyColorsNightMid>
+	</WeatherDef>
+
+	<!-- Basic weather clean template -->
+	
+	<WeatherDef>
+		<defName></defName>
+		<label></label>
+		<description></description>
+		<ambientSounds>
+			<li></li>
+		</ambientSounds>
+		<overlayClasses>
+			<li></li>
+		</overlayClasses>
+		<skyColorsDay>
+			<sky>(, , )</sky>
+			<shadow>(, , )</shadow>
+			<overlay>(, , )</overlay>
+			<saturation></saturation>
+		</skyColorsDay>
+		<skyColorsDusk>
+			<sky>(, , )</sky>
+			<shadow>(, , )</shadow>
+			<overlay>(, , )</overlay>
+			<saturation></saturation>
+		</skyColorsDusk>
+		<skyColorsNightEdge>
+			<sky>(, , )</sky>
+			<shadow>(, , )</shadow>
+			<overlay>(, , )</overlay>
+			<saturation></saturation>
+		</skyColorsNightEdge>
+		<skyColorsNightMid>
+			<sky>(, , )</sky>
+			<shadow>(, , )</shadow>
+			<overlay>(, , )</overlay>
+			<saturation></saturation>
+		</skyColorsNightMid>
+	</WeatherDef>
+	
+	<!-- Advanced weather clean template -->
+	
+	<WeatherDef>
+		<defName></defName>
+		<label></label>
+		<description></description>
+		<repeatable></repeatable>
+		<temperatureRange>
+			<min></min>
+			<max></max>
+		</temperatureRange>
+		<windSpeedFactor></windSpeedFactor>
+		<moveSpeedMultiplier></moveSpeedMultiplier>
+		<accuracyMultiplier></accuracyMultiplier>
+		<favorability></favorability>
+		<rainRate></rainRate>
+		<snowRate></snowRate>
+		<ambientSounds>
+			<li></li>
+		</ambientSounds>
+		<durationRange>
+			<min></min>
+			<max></max>
+		</durationRange>
+		<eventMakers>
+			<li>
+				<averageInterval></averageInterval>
+				<eventClass></eventClass>
+			</li>
+			<li>
+				<averageInterval></averageInterval>
+				<eventClass></eventClass>
+			</li>
+		</eventMakers>
+		<overlayClasses>
+			<li></li>
+		</overlayClasses>
+		<commonalityRainfallFactor>
+			<points>
+				<li>(, )</li>
+				<li>(, )</li>
+				<li>(, )</li>
+			</points>
+		</commonalityRainfallFactor>
+		<skyColorsDay>
+			<sky>(, , )</sky>
+			<shadow>(, , )</shadow>
+			<overlay>(, , )</overlay>
+			<saturation></saturation>
+		</skyColorsDay>
+		<skyColorsDusk>
+			<sky>(, , )</sky>
+			<shadow>(, , )</shadow>
+			<overlay>(, , )</overlay>
+			<saturation></saturation>
+		</skyColorsDusk>
+		<skyColorsNightEdge>
+			<sky>(, , )</sky>
+			<shadow>(, , )</shadow>
+			<overlay>(, , )</overlay>
+			<saturation></saturation>
+		</skyColorsNightEdge>
+		<skyColorsNightMid>
+			<sky>(, , )</sky>
+			<shadow>(, , )</shadow>
+			<overlay>(, , )</overlay>
+			<saturation></saturation>
+		</skyColorsNightMid>
+	</WeatherDef>	
+	
+</WeatherDefs>
