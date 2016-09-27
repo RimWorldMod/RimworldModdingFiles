@@ -1,0 +1,291 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<RecipeDefs>
+
+	<!-- A butchery recipe is used to destroy a corpse and spawn ingredients based on its definition -->
+
+	<RecipeDef>
+		<defName>desired defName</defName>
+		<!-- Desired defName to reference and use the recipe -->
+		<label>second-person verb</label>
+		<!-- Name of the recipe bill. For example - "butcher creature", "disassemble mechanoid" -->
+		<description>Long-form description of the procedure.</description>
+		<!-- Long-form description of the action. Tip: be concise. For example - "Butchers an animal to obtain its meat" -->
+		<jobString>Present-progressive verb.</jobString>
+		<!-- What the pawn state will be defined as. For example - "Butchering." or "Disassembling mechanoid" -->
+		<workAmount>number</workAmount>
+		<!-- The amount of work ticks to complete production. Interacts with workSpeedStat. -->
+		<workSpeedStat>stat name</workSpeedStat>
+		<!-- The stat responsible for how fast a pawn completes this action. Interacts with workAmount. Available vanilla stats:
+		BrewingSpeed
+		ButcheryFleshSpeed
+		ButcheryMechanoidSpeed
+		CookSpeed
+		DrugProductionSpeed
+		MedicalOperationSpeed
+		SculptingSpeed
+		SmeltingSpeed
+		SmithingSpeed
+		StonecuttingSpeed
+		TailoringSpeed -->
+		<workSkill>skill name</workSkill>
+		<!-- Defines which skill category governs this recipe. If a pawn does not have it enabled, they will not use the recipe.
+		The vanilla game uses Artistic, Cooking, Crafting or Medicine for recipes -->
+		<efficiencyStat>efficiency stat name</efficiencyStat>
+		<!-- The efficiency stat is a pawn stat unique to butchery in vanilla and governs the amount of product a recipe yields.
+		In A15 you can use "ButcheryFleshEfficiency" or "ButcheryMechanoidEfficiency" -->
+		<effectWorking>effect name</effectWorking>
+		<!-- The working effect for the recipe. Available vanilla values:
+		BurnDrug
+		ButcherFlesh
+		ButcherMechanoid
+		Cook
+		Cremate
+		CutStone
+		Repair
+		Sculpt
+		Smelt
+		Smith
+		Surgery
+		Tailor -->
+		<soundWorking>sound reference</soundWorking>
+		<!-- Relevant sound to be used with the recipe -->
+		<ingredients>
+		<!-- These are the actual things the recipe uses for production. You can set an item or a category by filter. You can use multiple filters to include multiple ingredients. -->
+			<li>
+				<filter>
+					<categories>
+					<!-- If you set a category filter, every item in that category is fair to use unless specified elsewhere (see below) -->
+						<li>category</li>
+						<!-- Vanilla categories:
+						AnimalProductRaw
+						Apparel
+						Corpses
+						CorpsesAnimal
+						CorpsesHumanlike
+						CorpsesMechanoid
+						Drugs
+						Fabric
+						FoodRaw
+						Foods
+						MeatRaw
+						Medicine
+						Metallic
+						PlantFoodRaw
+						Root
+						StoneChunks
+						Stony
+						Weapons
+						Woody -->
+					</categories>
+				</filter>
+				<count>number</count>
+				<!-- Defines the amount taken in this specific ingredient, is defined for every ingredient -->
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+					<!-- If you set a thingDefs filter, this specific thingDef will be used -->
+						<li>defName</li>
+					</thingDefs>
+				</filter>
+				<count>number</count>
+			</li>
+		</ingredients>
+		<products>
+		<!-- Used in most recipes to define a specific amount of products (defNames) that the recipe will yield.
+		i.e. This is what your recipe will eventually spawn upon completion. -->
+			<defName>number</defName>
+		</products>
+		<specialProducts>
+		<!-- Special products means that you don't define a specific product for the recipe, the game chooses it from a category based on a formula -->
+			<li>specialproduct category</li>
+			<!-- The base game only uses "Butchery" and "Smelted" as special product categories -->
+		</specialProducts>
+		<fixedIngredientFilter>
+		<!-- Required and is used to include or exclude products in the bill. It can be identical to your <ingredients> list or more specific.
+		If you set a category filter in your ingredient list, you can omit it from this list and set specific thingDefs instead; only they will be used out of that category.
+		For example, if your ingredients list includes <filter><categories>PlantFoodRaw</categories></filter>, you can set fixedIngredientFilter to only include a couple of items from that list:
+		<thingDefs>
+			<li>Rice</li>
+		</thingDefs>
+		<thingDefs>
+			<li>Berries</li>
+		</thingDefs>
+		In this example, the game will use either rice or berries for that ingredient filter according to the amount specified (they are interchangeable when defined by a category) -->
+			<categories>
+				<li>category</li>
+			</categories>
+			<thingDefs>
+				<li>defName</li>
+			</thingDefs>
+			<exceptedCategories>
+			<!-- Optional. Excludes entire categories of items from the recipe, they will not be used -->
+				<li>category</li>
+			</exceptedCategories>
+			<specialFiltersToDisallow>
+			<!-- Optional. Tells the game to add a special filter in the recipe bill so it can be allowed ot disallowed.
+			Best not to mess with this if you don't need it or use an existing recipe's special filter if you know it fits. -->
+				<li>special filter</li>
+			</specialFiltersToDisallow>
+		</fixedIngredientFilter>
+		<defaultIngredientFilter>
+		<!-- Optional. When spawning the ingredients for the recipe bill, these will be the ones enabled by default -->
+			<categories>
+				<li>category</li>
+			</categories>
+			<thingDefs>
+				<li>defName</li>
+			</thingDefs>
+		</defaultIngredientFilter>
+	</RecipeDef>
+
+	<!-- Basic butchery recipe template (ingredient: category) -->
+	
+	<RecipeDef>
+		<defName></defName>
+		<label></label>
+		<description></description>
+		<jobString></jobString>
+		<workAmount></workAmount>
+		<workSpeedStat></workSpeedStat>
+		<workSkill></workSkill>
+		<efficiencyStat></efficiencyStat>
+		<effectWorking></effectWorking>
+		<soundWorking></soundWorking>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li></li>
+					</categories>
+				</filter>
+				<count></count>
+			</li>
+		</ingredients>
+		<products>
+			<></>
+		</products>
+		<fixedIngredientFilter>
+			<categories>
+				<li></li>
+			</categories>
+		</fixedIngredientFilter>
+	</RecipeDef>
+	
+	<!-- Basic butchery recipe template (multiple thingDefs ingredients) -->
+	
+	<RecipeDef>
+		<defName></defName>
+		<label></label>
+		<description></description>
+		<jobString></jobString>
+		<workAmount></workAmount>
+		<workSpeedStat></workSpeedStat>
+		<workSkill></workSkill>
+		<efficiencyStat></efficiencyStat>
+		<effectWorking></effectWorking>
+		<soundWorking></soundWorking>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li></li>
+					</thingDefs>
+				</filter>
+				<count></count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li></li>
+					</thingDefs>
+				</filter>
+				<count></count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li></li>
+					</thingDefs>
+				</filter>
+				<count></count>
+			</li>
+		</ingredients>
+		<products>
+			<></>
+		</products>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li></li>
+			</thingDefs>
+			<thingDefs>
+				<li></li>
+			</thingDefs>
+			<thingDefs>
+				<li></li>
+			</thingDefs>
+		</fixedIngredientFilter>
+	</RecipeDef>
+	
+	<!-- Advanced butchery recipe template -->
+
+	<RecipeDef>
+		<defName></defName>
+		<label></label>
+		<description></description>
+		<jobString></jobString>
+		<workAmount></workAmount>
+		<workSpeedStat></workSpeedStat>
+		<workSkill></workSkill>
+		<efficiencyStat></efficiencyStat>
+		<effectWorking></effectWorking>
+		<soundWorking></soundWorking>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li></li>
+					</categories>
+				</filter>
+				<count></count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li></li>
+					</thingDefs>
+				</filter>
+				<count></count>
+			</li>
+		</ingredients>
+		<products>
+			<></>
+		</products>
+		<specialProducts>
+			<li></li>
+		</specialProducts>
+		<fixedIngredientFilter>
+			<categories>
+				<li></li>
+			</categories>
+			<thingDefs>
+				<li></li>
+			</thingDefs>
+			<exceptedCategories>
+				<li></li>
+			</exceptedCategories>
+			<specialFiltersToDisallow>
+				<li></li>
+			</specialFiltersToDisallow>
+		</fixedIngredientFilter>
+		<defaultIngredientFilter>
+			<categories>
+				<li></li>
+			</categories>
+			<thingDefs>
+				<li></li>
+			</thingDefs>
+		</defaultIngredientFilter>
+	</RecipeDef>
+	
+</RecipeDefs>
