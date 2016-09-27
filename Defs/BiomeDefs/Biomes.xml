@@ -1,7 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-	<!-- Habitable biome with comments -->
+	<!-- Every tile on the world map is associated with a biome.
+	Biomes are large ecological areas, with specific animals, plants and weather types -->
 	
 	<BiomeDef>
 		<defName>BiomeName</defName>

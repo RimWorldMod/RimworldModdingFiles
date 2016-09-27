@@ -1,0 +1,154 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<WorkTypeDefs>
+
+	<!-- A work type is a task category that can be designated using the in-game work priorities tab.
+	An assignment is fully defined when it has a work giver and a corresponding work type -->
+
+	<WorkTypeDef>
+		<defName>desired defName</defName>
+		<!-- Sets a defName to reference and use the work type -->
+		<labelShort>very short label</labelShort>
+		<!-- Sets the label that is used in the work priorities menu. Don't use labels longer than 1 or 2 words to avoid UI clutter -->
+		<pawnLabel>noun based on labelshort</pawnLabel>
+		<!-- Pawns who are assigned to this work type receive this label. Can be the same as labelShort or with the suffix "-er"
+		For example, for labelShort "Firefight" - "Firefighter"; for labelShort "Doctor" - "Doctor" -->
+		<gerundLabel>noun with suffix -ing</gerundLabel>
+		<!-- Present progressive form of the pawn label (can be funny sometimes, like "patienting") -->
+		<description>Description of the action.</description>
+		<!-- This description will be shown as a tooltip for the work type in the work priorities menu -->
+		<verb>verb</verb>
+		<!-- Action performed by the pawn (second-person verb). Available vanilla verbs:
+		Become patient
+		brew
+		build roof
+		bury
+		butcher
+		Care for
+		chat with
+		clean
+		clear snow
+		construct
+		cook
+		Craft at
+		craft
+		cremate
+		cut
+		deconstruct
+		deliver food for
+		Do art at
+		do execution on
+		drill
+		extinguish
+		feed
+		fill
+		flick switch on
+		Flick
+		get bed rest in
+		Grow
+		Handle
+		harvest
+		haul
+		hunt
+		milk
+		mine
+		modify
+		open
+		operate
+		produce components
+		produce drugs
+		rearm
+		receive treatment in
+		refine
+		refuel
+		release
+		remove floor
+		remove roof
+		repair
+		replace broken components in
+		rescue
+		Research at
+		research
+		sculpt
+		shear
+		slaughter
+		Smith at
+		smith
+		smooth
+		sow
+		stonecut
+		strip
+		Tailor at
+		tailor
+		take beer
+		take to bed
+		take to operate
+		tame
+		train
+		treat
+		uninstall
+		visit
+		work at
+		work on
+		work	-->
+		<naturalPriority>number</naturalPriority>
+		<!-- Sets the priority for the entire work type. Higher values take precedent over lower values.
+		For example, firefighting has the highest vanilla natural priority (1400) and it is prioritised by pawns over anything if it is enabled -->
+		<alwaysStartActive>true or false</alwaysStartActive>
+		<!-- If true, will default to enable the action for any pawn who is capable of it. Defaults to false -->
+		<requireCapableColonist>true or false</requireCapableColonist>
+		<!-- If true, sets restriction on pawns with traits or modifiers that disallow this work type ("incapable of [gerundLabel]") -->
+		<workTags>
+			<li>tag</li>
+			<li>tag</li>
+		</workTags>
+		<!-- Like requireCapableColonist, defines one or more tags which forbid the work type if pawns are incapable of it.
+		For example - "incapable of... scary", "incapable of... intellectual". Available vanilla tags:
+		Animals
+		Artistic
+		Caring
+		Cleaning
+		Cooking
+		Crafting
+		Firefighting
+		Hauling
+		Intellectual
+		ManualDumb
+		ManualSkilled
+		Mining
+		PlantWork
+		Scary
+		Social
+		Violent	-->
+	</WorkTypeDef>
+
+	<!-- Basic work type clean template -->
+
+	<WorkTypeDef>
+		<defName></defName>
+		<labelShort></labelShort>
+		<pawnLabel></pawnLabel>
+		<gerundLabel></gerundLabel>
+		<description></description>
+		<verb></verb>
+		<naturalPriority></naturalPriority>
+	</WorkTypeDef>
+
+	<!-- Advanced work type clean template -->
+
+	<WorkTypeDef>
+		<defName></defName>
+		<labelShort></labelShort>
+		<pawnLabel></pawnLabel>
+		<gerundLabel></gerundLabel>
+		<description></description>
+		<verb></verb>
+		<naturalPriority></naturalPriority>
+		<alwaysStartActive></alwaysStartActive>
+		<requireCapableColonist></requireCapableColonist>
+		<workTags>
+			<li></li>
+			<li></li>
+		</workTags>
+	</WorkTypeDef>
+
+</WorkTypeDefs>
