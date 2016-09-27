@@ -1,0 +1,428 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TraitDefs>
+
+	<!-- Traits are characteristics of pawns which make them unique. A pawn can have several traits or no traits at all when it is generated.
+	Traits can affect addiction, mental states, joy, preferred activities and more. They are permanent pawn stats. -->
+	
+	<TraitDef>
+		<defName>desired defName</defName>
+		<!-- Desired defName for referencing and using the trait -->
+		<commonality>number</commonality>
+		<!-- How likely a pawn is to receive this trait during random generation. Usually a number between 0 (never spawns) and 2 (more likely to spawn) -->
+		<degreeDatas>
+		<!-- Trait properties. You can define many values here, and you can split a trait into multiple sub-traits. (See templates section) -->
+			<li>
+				<label>adjective</label>
+				<!-- This is the label that will be shown in the "Character" tab for the pawn when they have this trait -->
+				<description>Long-form description of how the trait affects the pawn.</description>
+				<!-- Tip: You can use the following keywords (must be written in capital letters):
+				NAME (= pawn name)
+				HE (= he, she)
+				HECAP (= He, She)
+				HIM (= him, her)
+				HIS (= his, her)
+				HISCAP (= His, Her)	-->
+				<!-- For example: "NAME loves watching the sky. HECAP will be more likely to cloudwatch." translates to
+				"Johnny loves watching the sky. He will be more likely to cloudwatch." if the pawn is named Johnny and he is male, or
+				"Sarah loves watching the sky. She will be more likely to cloudwatch." if the pawn is named Sarah and she is female. -->
+				<degree>number</degree>
+				<!-- Can be positive or negative. This is the def used to define multiple sub-traits, of which one will be randomly selected (See templates section) -->
+				<socialFightChanceFactor>number</socialFightChanceFactor>
+				<!-- This def affects the likelihood that a pawn will engage in social fights (fist fights over insults, etc.). It is an optional def.
+				The default socialFightChanceFactor is 1 (as in 100%), it can be set to a decimal or an integer. 0.45=45%, 2=200% etc. -->
+				<statOffsets>
+				<!-- Stat increase (positive) or decrease (negative) if the trait is enabled for a pawn. Available vanilla stats:
+				AimingDelayFactor
+				BrewingSpeed
+				ButcheryFleshEfficiency
+				ButcheryFleshSpeed
+				ButcheryMechanoidEfficiency
+				ButcheryMechanoidSpeed
+				CarryingCapacity
+				ComfyTemperatureMax
+				ComfyTemperatureMin
+				ConstructFailChance
+				ConstructionSpeed
+				CookSpeed
+				DrugProductionSpeed
+				EatingSpeed
+				FixBrokenDownBuildingFailChance
+				FoodPoisonChance
+				GiftImpact
+				GlobalLearningFactor
+				HarvestFailChance
+				HealingSpeed
+				ImmunityGainSpeed
+				ImmunityGainSpeedFactor
+				MeatAmount
+				MedicalOperationSpeed
+				MeleeDPS
+				MeleeHitChance
+				MentalBreakThreshold
+				MiningSpeed
+				MoveSpeed
+				PlantWorkSpeed
+				PsychicSensitivity
+				RecruitPrisonerChance
+				ResearchSpeed
+				ResearchSpeedFactor
+				SculptingSpeed
+				ShootingAccuracy
+				SmeltingSpeed
+				SmithingSpeed
+				SmoothingSpeed
+				SocialImpact
+				StonecuttingSpeed
+				SurgerySuccessChance
+				TailoringSpeed
+				TameAnimalChance
+				ToxicSensitivity
+				TradePriceImprovement
+				TrainAnimalChance
+				WorkSpeedGlobal	-->
+					<StatDefName>number</StatDefName>
+					<StatDefName>number</StatDefName>
+				</statOffsets>
+				<statFactors>
+				<!-- Stat multipliers if the trait is enabled for a pawn. See statOffsets above for the full list of vanilla defNames -->
+					<StatDefName>number</StatDefName>
+					<StatDefName>number</StatDefName>
+					<!-- Please note that while statOffsets adds or detracts a static number, statFactors is multiplicative. -->
+				</statFactors>
+				<skillGains>
+				<!-- Skill increase (positive) or decrease (negative) in a specific skill when this trait is enabled. Available vanilla skills:
+				Animals
+				Artistic
+				Construction
+				Cooking
+				Crafting
+				Growing
+				Medicine
+				Melee
+				Mining
+				Research
+				Shooting
+				Social	-->
+					<li>
+						<key>SkillDefName</key>
+						<value>number</value>
+					</li>
+					<li>
+						<key>SkillDefName</key>
+						<value>number</value>
+					</li>
+				</skillGains>
+				<allowedMentalBreaks>
+				<!-- Allows mental breaks to occur for the pawn. Available vanilla defnames:
+				Berserk
+				BingingDrugExtreme
+				BingingDrugMajor
+				BingingFood
+				FireStartingSpree
+				GiveUpExit
+				WanderOwnRoom
+				WanderPsychotic
+				WanderSad -->
+					<li>MentalBreakDefName</li>
+					<li>MentalBreakDefName</li>
+				</allowedMentalBreaks>
+				<randomMentalState>MentalStateDefName</randomMentalState>
+				<!-- Sets the pawn to the defined mental state on occasion. Available vanilla defnames:
+				Berserk
+				BingingDrugExtreme
+				BingingDrugMajor
+				BingingFood
+				FireStartingSpree
+				GiveUpExit
+				Manhunter
+				ManhunterPermanent
+				PanicFlee
+				SocialFighting
+				WanderConfused
+				WanderOwnRoom
+				WanderPsychotic
+				WanderSad	-->
+				<randomMentalStateMtbDaysMoodCurve>
+				<!-- When the pawn enters their desired mental state, they gain mood as a curve function of how long they have been doing it (I think) -->
+					<points>
+						<li>(0, 15)</li>
+						<li>(50, 50)</li>
+						<li>(100, 100)</li>
+					</points>
+				</randomMentalStateMtbDaysMoodCurve>
+			</li>
+		</degreeDatas>
+		<conflictingTraits>
+		<!-- Traits that nullify this trait if they exist. Can set one or more. -->
+			<li>trait defName</li>
+		</conflictingTraits>
+		<requiredWorkTags>
+		<!-- Optional requirement that will only spawn a trait on a pawn with one or more existing work tags. Available vanilla tags:
+		Animals
+		Artistic
+		Caring
+		Cleaning
+		Cooking
+		Crafting
+		Firefighting
+		Hauling
+		Intellectual
+		ManualDumb
+		ManualSkilled
+		Mining
+		PlantWork
+		Scary
+		Social
+		Violent -->
+			<li>tag</li>
+			<li>tag</li>
+		</requiredWorkTags>
+		<requiredWorkTypes>
+		<!-- Optional requirement that will only spawn a trait on a pawn which is capable of one or more specific work types. Available vanilla types:
+		Art
+		Cleaning
+		Construction
+		Cooking
+		Crafting
+		Doctor
+		Firefighter
+		Flicker
+		Growing
+		Handling
+		Hauling
+		Hunting
+		Mining
+		PatientBedRest
+		PatientEmergency
+		PlantCutting
+		Repair
+		Research
+		Smithing
+		Tailoring
+		Warden	-->
+			<li>WorkTypeDefName</li>
+			<li>WorkTypeDefName</li>
+		</requiredWorkTypes>
+	</TraitDef>
+
+	<!-- Basic single trait clean template -->
+
+	<TraitDef>
+		<defName></defName>
+		<commonality></commonality>
+		<degreeDatas>
+			<li>
+				<label></label>
+				<description></description>
+			</li>
+		</degreeDatas>
+	</TraitDef>
+	
+	<!-- Basic spectrum trait (with sub traits) clean template -->
+	
+	<TraitDef>
+		<defName></defName>
+		<commonality></commonality>
+		<degreeDatas>
+			<li>
+				<label></label>
+				<description></description>
+				<degree>2</degree>
+			</li>
+			<li>
+				<label></label>
+				<description></description>
+				<degree>1</degree>
+			</li>
+			<li>
+				<label></label>
+				<description></description>
+				<degree>-1</degree>
+			</li>
+		</degreeDatas>
+	</TraitDef>
+	
+	<!-- Advanced single trait clean template -->
+	
+	<TraitDef>
+		<defName></defName>
+		<commonality></commonality>
+		<degreeDatas>
+			<li>
+				<label></label>
+				<description></description>
+				<socialFightChanceFactor></socialFightChanceFactor>
+				<statOffsets>
+					<StatDefName></StatDefName>
+					<StatDefName></StatDefName>
+				</statOffsets>
+				<statFactors>
+					<StatDefName></StatDefName>
+					<StatDefName></StatDefName>
+				</statFactors>
+				<skillGains>
+					<li>
+						<key></key>
+						<value></value>
+					</li>
+					<li>
+						<key></key>
+						<value></value>
+					</li>
+				</skillGains>
+				<allowedMentalBreaks>
+					<li></li>
+					<li></li>
+				</allowedMentalBreaks>
+				<randomMentalState></randomMentalState>
+				<randomMentalStateMtbDaysMoodCurve>
+					<points>
+						<li>(, )</li>
+						<li>(, )</li>
+						<li>(, )</li>
+					</points>
+				</randomMentalStateMtbDaysMoodCurve>
+			</li>
+		</degreeDatas>
+		<conflictingTraits>
+			<li></li>
+		</conflictingTraits>
+		<requiredWorkTags>
+			<li></li>
+			<li></li>
+		</requiredWorkTags>
+		<requiredWorkTypes>
+			<li></li>
+			<li></li>
+		</requiredWorkTypes>
+	</TraitDef>
+	
+	<!-- Advanced spectrum trait clean template -->
+	
+	<TraitDef>
+		<defName></defName>
+		<commonality></commonality>
+		<degreeDatas>
+			<li>
+				<label></label>
+				<description></description>
+				<degree>2</degree>
+				<socialFightChanceFactor></socialFightChanceFactor>
+				<statOffsets>
+					<StatDefName></StatDefName>
+					<StatDefName></StatDefName>
+				</statOffsets>
+				<statFactors>
+					<StatDefName></StatDefName>
+					<StatDefName></StatDefName>
+				</statFactors>
+				<skillGains>
+					<li>
+						<key></key>
+						<value></value>
+					</li>
+					<li>
+						<key></key>
+						<value></value>
+					</li>
+				</skillGains>
+				<allowedMentalBreaks>
+					<li></li>
+					<li></li>
+				</allowedMentalBreaks>
+				<randomMentalState></randomMentalState>
+				<randomMentalStateMtbDaysMoodCurve>
+					<points>
+						<li>(, )</li>
+						<li>(, )</li>
+						<li>(, )</li>
+					</points>
+				</randomMentalStateMtbDaysMoodCurve>
+			</li>
+			<li>
+				<label></label>
+				<description></description>
+				<degree>1</degree>
+				<socialFightChanceFactor></socialFightChanceFactor>
+				<statOffsets>
+					<StatDefName></StatDefName>
+					<StatDefName></StatDefName>
+				</statOffsets>
+				<statFactors>
+					<StatDefName></StatDefName>
+					<StatDefName></StatDefName>
+				</statFactors>
+				<skillGains>
+					<li>
+						<key></key>
+						<value></value>
+					</li>
+					<li>
+						<key></key>
+						<value></value>
+					</li>
+				</skillGains>
+				<allowedMentalBreaks>
+					<li></li>
+					<li></li>
+				</allowedMentalBreaks>
+				<randomMentalState></randomMentalState>
+				<randomMentalStateMtbDaysMoodCurve>
+					<points>
+						<li>(, )</li>
+						<li>(, )</li>
+						<li>(, )</li>
+					</points>
+				</randomMentalStateMtbDaysMoodCurve>
+			</li>
+			<li>
+				<label></label>
+				<description></description>
+				<degree>-1</degree>
+				<socialFightChanceFactor></socialFightChanceFactor>
+				<statOffsets>
+					<StatDefName></StatDefName>
+					<StatDefName></StatDefName>
+				</statOffsets>
+				<statFactors>
+					<StatDefName></StatDefName>
+					<StatDefName></StatDefName>
+				</statFactors>
+				<skillGains>
+					<li>
+						<key></key>
+						<value></value>
+					</li>
+					<li>
+						<key></key>
+						<value></value>
+					</li>
+				</skillGains>
+				<allowedMentalBreaks>
+					<li></li>
+					<li></li>
+				</allowedMentalBreaks>
+				<randomMentalState></randomMentalState>
+				<randomMentalStateMtbDaysMoodCurve>
+					<points>
+						<li>(, )</li>
+						<li>(, )</li>
+						<li>(, )</li>
+					</points>
+				</randomMentalStateMtbDaysMoodCurve>
+			</li>
+		</degreeDatas>
+		<conflictingTraits>
+			<li></li>
+		</conflictingTraits>
+		<requiredWorkTags>
+			<li></li>
+			<li></li>
+		</requiredWorkTags>
+		<requiredWorkTypes>
+			<li></li>
+			<li></li>
+		</requiredWorkTypes>
+	</TraitDef>
+	
+</TraitDefs>
