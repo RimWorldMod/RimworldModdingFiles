@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<WorkTypeDefs>
+
+	<!-- A work type is a task category that can be designated using the in-game work priorities tab -->
+
+	<WorkTypeDef>
+		<defName>WorkTypeDefName</defName>
+		<!-- Sets a defName to reference and use the work type -->
+		<labelShort>worktype_name</labelShort>
+		<!-- Sets the in-game name used in the work priorities menu. Don't use a long labelShort -->
+		<pawnLabel>noun_based_on_labelShort</pawnLabel>
+		<!-- Pawns who are assigned to this work type receive this label. Can be the same as labelShort or with a suffix -->
+		<gerundLabel>gerund</gerundLabel>
+		<!-- Present progressive form of the pawn label (can be funny sometimes, like "patienting") -->
+		<description>WorkType_description.</description>
+		<!-- Long-form description of the work type. Will be shown as a tooltip in the work priorities menu -->
+		<verb>verb</verb>
+		<!-- Action performed by the pawn. Available vanilla verbs:
+		Become patient
+		brew
+		build roof
+		bury
+		butcher
+		Care for
+		chat with
+		clean
+		clear snow
+		construct
+		cook
+		Craft at
+		craft
+		cremate
+		cut
+		deconstruct
+		deliver food for
+		Do art at
+		do execution on
+		drill
+		extinguish
+		feed
+		fill
+		flick switch on
+		Flick
+		get bed rest in
+		Grow
+		Handle
+		harvest
+		haul
+		hunt
+		milk
+		mine
+		modify
+		open
+		operate
+		produce components
+		produce drugs
+		rearm
+		receive treatment in
+		refine
+		refuel
+		release
+		remove floor
+		remove roof
+		repair
+		replace broken components in
+		rescue
+		Research at
+		research
+		sculpt
+		shear
+		slaughter
+		Smith at
+		smith
+		smooth
+		sow
+		stonecut
+		strip
+		Tailor at
+		tailor
+		take beer
+		take to bed
+		take to operate
+		tame
+		train
+		treat
+		uninstall
+		visit
+		work at
+		work on
+		work -->
+		<naturalPriority>number</naturalPriority>
+		<!-- Sets a priority for the work type in relation to other work types. Higher values take precedent over lower values -->
+		<alwaysStartActive>true_or_false</alwaysStartActive>
+		<!-- Optional. Defaults to false. If true, the work type will be enabled if the pawn is capable of it -->
+		<visible>true_or_false</visible>
+		<!-- Optional. Defaults to true. If false, the work type will not be visible as a work priority (but can still collect work givers) -->
+		<requireCapableColonist>true_or_false</requireCapableColonist>
+		<!-- Optional. Defaults to false. If true, pawns who are "incapable of..." this work type can't set it in the work priorities menu -->
+		<relevantSkills>
+		<!-- Optional. Defines which skills are relevant to the work type's tasks -->
+			<li>skillDefName</li>
+			<!-- Vanilla skills:
+			Animals
+			Artistic
+			Construction
+			Cooking
+			Crafting
+			Growing
+			Medicine
+			Melee
+			Mining
+			Research
+			Shooting
+			Social -->
+		</relevantSkills>
+		<workTags>
+		<!-- Optional. Defines tags for the work type -->
+			<li>tag</li>
+			<!-- Available vanilla tags:
+			Animals
+			Artistic
+			Caring
+			Cleaning
+			Cooking
+			Crafting
+			Firefighting
+			Hauling
+			Intellectual
+			ManualDumb
+			ManualSkilled
+			Mining
+			PlantWork
+			Scary
+			Social
+			Violent	-->
+			<li>tag</li>
+		</workTags>
+	</WorkTypeDef>
+
+</WorkTypeDefs>

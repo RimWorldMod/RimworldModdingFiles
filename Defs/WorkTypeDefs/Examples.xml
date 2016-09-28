@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<WorkTypeDefs>
+
+	<!-- Vanilla work types -->
+
+	<!-- Firefighting -->
+	
+	<WorkTypeDef>
+		<defName>Firefighter</defName>
+		<labelShort>Firefight</labelShort>
+		<pawnLabel>Firefighter</pawnLabel>
+		<gerundLabel>Firefighting</gerundLabel>
+		<description>Extinguish fires in the colony.</description>
+		<verb>Extinguish</verb>
+		<naturalPriority>1400</naturalPriority>
+		<alwaysStartActive>true</alwaysStartActive>
+		<requireCapableColonist>true</requireCapableColonist>
+		<workTags>
+			<li>Firefighting</li>
+			<li>Scary</li>
+		</workTags>
+	</WorkTypeDef>
+	
+	<!-- Doctoring -->
+	
+	<WorkTypeDef>
+		<defName>Doctor</defName>
+		<labelShort>Doctor</labelShort>
+		<pawnLabel>Doctor</pawnLabel>
+		<gerundLabel>Doctoring</gerundLabel>
+		<description>Treat the sick, bring them food, cheer them up, and perform assigned surgeries. Doctors will care for both colonists and prisoners.</description>
+		<verb>Care for</verb>
+		<naturalPriority>1300</naturalPriority>
+		<relevantSkills>
+			<li>Medicine</li>
+		</relevantSkills>
+		<workTags>
+			<li>Caring</li>
+		</workTags>
+	</WorkTypeDef>
+	
+	<!-- Construction -->
+	
+	<WorkTypeDef>
+		<defName>Construction</defName>
+		<labelShort>Construct</labelShort>
+		<pawnLabel>Constructor</pawnLabel>
+		<gerundLabel>Constructing</gerundLabel>
+		<description>Build things that you've designated.</description>
+		<verb>Construct</verb>
+		<naturalPriority>900</naturalPriority>
+		<requireCapableColonist>true</requireCapableColonist>
+		<relevantSkills>
+			<li>Construction</li>
+		</relevantSkills>
+		<workTags>
+			<li>ManualSkilled</li>
+		</workTags>
+	</WorkTypeDef>
+
+</WorkTypeDefs>

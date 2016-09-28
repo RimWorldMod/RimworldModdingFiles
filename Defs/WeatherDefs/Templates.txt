@@ -1,0 +1,108 @@
+﻿	<!-- Base template -->
+
+	<WeatherDef>
+		<defName>WeatherName</defName>
+		<label>weather_label</label>
+		<description>Weather_description.</description>
+		<repeatable>true_or_false</repeatable>
+		<temperatureRange>
+			<min>number</min>
+			<max>number</max>
+		</temperatureRange>
+		<windSpeedFactor>number</windSpeedFactor>
+		<moveSpeedMultiplier>number</moveSpeedMultiplier>
+		<accuracyMultiplier>number</accuracyMultiplier>
+		<favorability>Good</favorability>
+		<rainRate>number</rainRate>
+		<snowRate>number</snowRate>
+		<ambientSounds>
+			<li>Sound_reference</li>
+		</ambientSounds>
+		<durationRange>
+			<min>number</min>
+			<max>number</max>
+		</durationRange>
+		<eventMakers>
+			<li>
+				<averageInterval>number</averageInterval>
+				<eventClass>WeatherEvent_EventType</eventClass>
+			</li>
+			<li>
+				<averageInterval>number</averageInterval>
+				<eventClass>WeatherEvent_EventType</eventClass>
+			</li>
+		</eventMakers>
+		<overlayClasses>
+			<li>WeatherOverlay_OverlayType</li>
+			<li>WeatherOverlay_OverlayType</li>
+		</overlayClasses>
+		<commonalityRainfallFactor>
+			<points>
+				<li>(X1, Y1)</li>
+				<li>(X2, Y2)</li>
+				<li>(X3, Y3)</li>
+			</points>
+		</commonalityRainfallFactor>
+		<skyColorsDay>
+			<sky>(number, number, number)</sky>
+			<shadow>(number, number, number)</shadow>
+			<overlay>(number, number, number)</overlay>
+			<saturation>number</saturation>
+		</skyColorsDay>
+		<skyColorsDusk>
+			<sky>(number, number, number)</sky>
+			<shadow>(number, number, number)</shadow>
+			<overlay>(number, number, number)</overlay>
+			<saturation>number</saturation>
+		</skyColorsDusk>
+		<skyColorsNightEdge>
+			<sky>(number, number, number)</sky>
+			<shadow>(number, number, number)</shadow>
+			<overlay>(number, number, number)</overlay>
+			<saturation>number</saturation>
+		</skyColorsNightEdge>
+		<skyColorsNightMid>
+			<sky>(number, number, number)</sky>
+			<shadow>(number, number, number)</shadow>
+			<overlay>(number, number, number)</overlay>
+			<saturation>number</saturation>
+		</skyColorsNightMid>
+	</WeatherDef>
+	
+	<!-- Basic weather template -->
+	
+	<WeatherDef>
+		<defName>WeatherName</defName>
+		<label>weather_label</label>
+		<description>Weather_description.</description>
+		<ambientSounds>
+			<li>Sound_reference</li>
+		</ambientSounds>
+		<overlayClasses>
+			<li>WeatherOverlay_OverlayType</li>
+		</overlayClasses>
+		<skyColorsDay>
+			<sky>(number, number, number)</sky>
+			<shadow>(number, number, number)</shadow>
+			<overlay>(number, number, number)</overlay>
+			<saturation>number</saturation>
+		</skyColorsDay>
+		<skyColorsDusk>
+			<sky>(number, number, number)</sky>
+			<shadow>(number, number, number)</shadow>
+			<overlay>(number, number, number)</overlay>
+			<saturation>number</saturation>
+		</skyColorsDusk>
+		<skyColorsNightEdge>
+			<sky>(number, number, number)</sky>
+			<shadow>(number, number, number)</shadow>
+			<overlay>(number, number, number)</overlay>
+			<saturation>number</saturation>
+		</skyColorsNightEdge>
+		<skyColorsNightMid>
+			<sky>(number, number, number)</sky>
+			<shadow>(number, number, number)</shadow>
+			<overlay>(number, number, number)</overlay>
+			<saturation>number</saturation>
+		</skyColorsNightMid>
+	</WeatherDef>

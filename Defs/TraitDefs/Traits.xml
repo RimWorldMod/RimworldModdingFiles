@@ -1,0 +1,224 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TraitDefs>
+
+	<!-- Traits are permanent characteristics of pawns which make them unique. A pawn can have several traits -->
+	
+	<TraitDef>
+		<defName>TraitDefName</defName>
+		<!-- Desired defName for referencing and using the trait -->
+		<commonality>number</commonality>
+		<!-- How likely a pawn is to receive this trait during random generation. Usually a number between 0 (never spawns) and 2 (more likely to spawn) -->
+		<commonalityFemale>number</commonalityFemale>
+		<!-- Optional. Defaults to 0 (disabled). Overrides commonality for female pawns -->
+		<degreeDatas>
+		<!-- Trait properties. This includes everything the trait actively influences -->
+			<li>
+				<label>TraitName</label>
+				<!-- This is what the trait will be called in-game (during generation, in the "Character" tab etc.) -->
+				<description>Trait_description.</description>
+				<!-- Long-form description. Tip: You can use the following keywords (must be written in capital letters):
+				NAME (= pawn name)
+				HE (= he, she)
+				HECAP (= He, She)
+				HIM (= him, her)
+				HIS (= his, her)
+				HISCAP (= His, Her)	-->
+				<commonality>number</commonality>
+				<!-- Optional. Sub traits can have a sub-commonality, but usually it is not defined -->
+				<degree>number</degree>
+				<!-- Optional. Used to seperate one TraitDefName into multiple possible sub-traits (only one will be used if the TraitDefName is chosen when the pawn is generated) -->
+				<statOffsets>
+				<!-- Optional. Modifies pawn stats by value. Negative numbers decrease the stat, positive numbers increase it -->
+					<StatDefName>number</StatDefName>
+					<!-- Available vanilla defNames:
+					AimingDelayFactor
+					BrewingSpeed
+					ButcheryFleshEfficiency
+					ButcheryFleshSpeed
+					ButcheryMechanoidEfficiency
+					ButcheryMechanoidSpeed
+					CarryingCapacity
+					ComfyTemperatureMax
+					ComfyTemperatureMin
+					ConstructFailChance
+					ConstructionSpeed
+					CookSpeed
+					DrugProductionSpeed
+					EatingSpeed
+					FixBrokenDownBuildingFailChance
+					FoodPoisonChance
+					GiftImpact
+					GlobalLearningFactor
+					HarvestFailChance
+					HealingSpeed
+					ImmunityGainSpeed
+					ImmunityGainSpeedFactor
+					MeatAmount
+					MedicalOperationSpeed
+					MeleeDPS
+					MeleeHitChance
+					MentalBreakThreshold
+					MiningSpeed
+					MoveSpeed
+					PlantWorkSpeed
+					PsychicSensitivity
+					RecruitPrisonerChance
+					ResearchSpeed
+					ResearchSpeedFactor
+					SculptingSpeed
+					ShootingAccuracy
+					SmeltingSpeed
+					SmithingSpeed
+					SmoothingSpeed
+					SocialImpact
+					StonecuttingSpeed
+					SurgerySuccessChance
+					TailoringSpeed
+					TameAnimalChance
+					ToxicSensitivity
+					TradePriceImprovement
+					TrainAnimalChance
+					WorkSpeedGlobal	-->
+					<StatDefName>number</StatDefName>
+				</statOffsets>
+				<statFactors>
+				<!-- Optional. Modifies pawn stats by multiplier -->
+					<StatDefName>number</StatDefName>
+					<StatDefName>number</StatDefName>
+				</statFactors>
+				<skillGains>
+				<!-- Optional. Modifies pawn skills by value. Negative numbers decrease the skill, positive numbers increase it --> 
+					<li>
+						<key>SkillDefName</key>
+						<!-- Available vanilla defNames:
+						Animals
+						Artistic
+						Construction
+						Cooking
+						Crafting
+						Growing
+						Medicine
+						Melee
+						Mining
+						Research
+						Shooting
+						Social	-->
+						<value>number</value>
+					</li>
+					<li>
+						<key>SkillDefName</key>
+						<value>number</value>
+					</li>
+				</skillGains>
+				<socialFightChanceFactor>number</socialFightChanceFactor>
+				<!-- Optional. Defaults to 1. Multiplier for the pawn's likelihood of starting a social fight with another pawn -->
+				<randomMentalState>MentalStateDefName</randomMentalState>
+				<!-- Optional. Sets the pawn to the defined mental state on occasion. Available vanilla defNames:
+				Berserk
+				BingingDrugExtreme
+				BingingDrugMajor
+				BingingFood
+				FireStartingSpree
+				GiveUpExit
+				Manhunter
+				ManhunterPermanent
+				PanicFlee
+				SocialFighting
+				WanderConfused
+				WanderOwnRoom
+				WanderPsychotic
+				WanderSad	-->
+				<randomMentalStateMtbDaysMoodCurve>
+				<!-- Optional. No description available yet -->
+					<points>
+						<li>(X1, Y1)</li>
+						<li>(X2, Y2)</li>
+						<li>(X3, Y3)</li>
+					</points>
+				</randomMentalStateMtbDaysMoodCurve>
+				<disallowedMentalStates>
+				<!-- Optional. Forbids the pawn from ever entering these mental states -->
+					<li>MentalStateDefName</li>
+					<li>MentalStateDefName</li>
+				</disallowedMentalStates>
+				<allowedMentalBreaks>
+				<!-- Optional. Sets specific preferred mental breaks for the pawn (outside of the usual in-game breaks). Available vanilla defNames:
+				Berserk
+				BingingDrugExtreme
+				BingingDrugMajor
+				BingingFood
+				FireStartingSpree
+				GiveUpExit
+				WanderOwnRoom
+				WanderPsychotic
+				WanderSad -->
+					<li>MentalBreakDefName</li>
+					<li>MentalBreakDefName</li>
+				</allowedMentalBreaks>
+			</li>
+		</degreeDatas>
+		<conflictingTraits>
+		<!-- Optional. Flags other traits as conflicting towards the trait. Can set one or more -->
+			<li>trait_label</li>
+			<li>trait_label</li>
+		</conflictingTraits>
+		<requiredWorkTypes>
+		<!-- Optional. The trait will only work for pawns capable of a specific work type. Can set one or more. Available vanilla defNames:
+		Art
+		Cleaning
+		Construction
+		Cooking
+		Crafting
+		Doctor
+		Firefighter
+		Flicker
+		Growing
+		Handling
+		Hauling
+		Hunting
+		Mining
+		PatientBedRest
+		PatientEmergency
+		PlantCutting
+		Repair
+		Research
+		Smithing
+		Tailoring
+		Warden	-->
+			<li>WorkTypeDefName</li>
+			<li>WorkTypeDefName</li>
+		</requiredWorkTypes>
+		<requiredWorkTags>
+		<!-- Optional. The trait will only work for pawns capable of a specific work tag. Can set one or more. Available vanilla tags:
+		Animals
+		Artistic
+		Caring
+		Cleaning
+		Cooking
+		Crafting
+		Firefighting
+		Hauling
+		Intellectual
+		ManualDumb
+		ManualSkilled
+		Mining
+		PlantWork
+		Scary
+		Social
+		Violent -->
+			<li>tag</li>
+			<li>tag</li>
+		</requiredWorkTags>
+		<disabledWorkTypes>
+		<!-- Optional. The trait will disable one or more work types -->
+			<li>WorkTypeDefName</li>
+			<li>WorkTypeDefName</li>
+		</disabledWorkTypes>
+		<disabledWorkTags>
+		<!-- Optional. The trait will disable one or more work tags -->
+			<li>tag</li>
+			<li>tag</li>
+		</disabledWorkTags>
+	</TraitDef>
+
+</TraitDefs>

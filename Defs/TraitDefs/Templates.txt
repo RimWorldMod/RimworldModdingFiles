@@ -1,0 +1,106 @@
+	<!-- Base template -->
+	
+	<TraitDef>
+		<defName>TraitDefName</defName>
+		<commonality>number</commonality>
+		<commonalityFemale>number</commonalityFemale>
+		<degreeDatas>
+			<li>
+				<label>TraitName</label>
+				<description>Trait_description.</description>
+				<degree>number</degree>
+				<statOffsets>
+					<StatDefName>number</StatDefName>
+					<StatDefName>number</StatDefName>
+				</statOffsets>
+				<statFactors>
+					<StatDefName>number</StatDefName>
+					<StatDefName>number</StatDefName>
+				</statFactors>
+				<skillGains>
+					<li>
+						<key>SkillDefName</key>
+						<value>number</value>
+					</li>
+					<li>
+						<key>SkillDefName</key>
+						<value>number</value>
+					</li>
+				</skillGains>
+				<socialFightChanceFactor>number</socialFightChanceFactor>
+				<randomMentalState>MentalStateDefName</randomMentalState>
+				<randomMentalStateMtbDaysMoodCurve>
+					<points>
+						<li>(X1, Y1)</li>
+						<li>(X2, Y2)</li>
+						<li>(X3, Y3)</li>
+					</points>
+				</randomMentalStateMtbDaysMoodCurve>
+				<disallowedMentalStates>
+					<li>MentalStateDefName</li>
+					<li>MentalStateDefName</li>
+				</disallowedMentalStates>
+				<allowedMentalBreaks>
+					<li>MentalBreakDefName</li>
+					<li>MentalBreakDefName</li>
+				</allowedMentalBreaks>
+			</li>
+		</degreeDatas>
+		<conflictingTraits>
+			<li>trait_label</li>
+			<li>trait_label</li>
+		</conflictingTraits>
+		<requiredWorkTypes>
+			<li>WorkTypeDefName</li>
+			<li>WorkTypeDefName</li>
+		</requiredWorkTypes>
+		<requiredWorkTags>
+			<li>tag</li>
+			<li>tag</li>
+		</requiredWorkTags>
+		<disabledWorkTypes>
+			<li>WorkTypeDefName</li>
+			<li>WorkTypeDefName</li>
+		</disabledWorkTypes>
+		<disabledWorkTags>
+			<li>tag</li>
+			<li>tag</li>
+		</disabledWorkTags>
+	</TraitDef>
+	
+	<!-- Basic single-trait template -->
+	
+	<TraitDef>
+		<defName>TraitDefName</defName>
+		<commonality>number</commonality>
+		<degreeDatas>
+			<li>
+				<label>TraitName</label>
+				<description>Trait_description.</description>
+			</li>
+		</degreeDatas>
+	</TraitDef>
+	
+	<!-- Basic trait with sub-traits template -->
+	
+	<TraitDef>
+		<defName>TraitDefName</defName>
+		<commonality>number</commonality>
+		<degreeDatas>
+			<li>
+				<label>TraitName</label>
+				<description>Trait_description.</description>
+				<degree>2</degree>
+			</li>
+			<li>
+				<label>TraitName</label>
+				<description>Trait_description.</description>
+				<degree>1</degree>
+			</li>
+			<li>
+				<label>TraitName</label>
+				<description>Trait_description.</description>
+				<degree>-1</degree>
+			</li>
+		</degreeDatas>
+	</TraitDef>

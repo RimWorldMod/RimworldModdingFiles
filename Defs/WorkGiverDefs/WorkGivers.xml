@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<WorkGivers>
+
+	<!-- Work givers are tasks within a work type category. They are executed according to priority -->
+
+	<WorkGiverDef>
+		<defName>WorkGiverDefName</defName>
+		<!-- Desired defName to reference and use the work giver -->
+		<label>workgiver_name</label>
+		<!-- The in-game label given to the action. For example - fight fires -->
+		<giverClass>WorkGiver_WorkGiverType</giverClass>
+		<!-- Sets which work class is used for the task. Available vanilla giverClasses:
+		WorkGiver_BuildRoof
+		WorkGiver_BuryCorpses
+		WorkGiver_CleanFilth
+		WorkGiver_ClearSnow
+		WorkGiver_ConstructDeliverResourcesToBlueprints
+		WorkGiver_ConstructDeliverResourcesToFrames
+		WorkGiver_ConstructFinishFrames
+		WorkGiver_ConstructRemoveFloor
+		WorkGiver_ConstructSmoothFloor
+		WorkGiver_CookFillHopper
+		WorkGiver_Deconstruct
+		WorkGiver_DeepDrill
+		WorkGiver_DoBill
+		WorkGiver_FeedPatient
+		WorkGiver_FightFires
+		WorkGiver_FillFermentingBarrel
+		WorkGiver_FixBrokenDownBuilding
+		WorkGiver_Flick
+		WorkGiver_GrowerHarvest
+		WorkGiver_GrowerSow
+		WorkGiver_HaulCorpses
+		WorkGiver_HaulGeneral
+		WorkGiver_HunterHunt
+		WorkGiver_Milk
+		WorkGiver_Miner
+		WorkGiver_Open
+		WorkGiver_PatientGoToBedEmergency
+		WorkGiver_PatientGoToBedRecuperate
+		WorkGiver_PlantsCut
+		WorkGiver_RearmTraps
+		WorkGiver_Refuel
+		WorkGiver_RemoveRoof
+		WorkGiver_Repair
+		WorkGiver_RescueDowned
+		WorkGiver_Researcher
+		WorkGiver_Shear
+		WorkGiver_Slaughter
+		WorkGiver_Strip
+		WorkGiver_TakeBeerOutOfFermentingBarrel
+		WorkGiver_TakeToBedToOperate
+		WorkGiver_Tame
+		WorkGiver_Tend
+		WorkGiver_TendEmergency
+		WorkGiver_Train
+		WorkGiver_Uninstall
+		WorkGiver_VisitSickPawn
+		WorkGiver_Warden_Chat
+		WorkGiver_Warden_DeliverFood
+		WorkGiver_Warden_DoExecution
+		WorkGiver_Warden_Feed
+		WorkGiver_Warden_ReleasePrisoner
+		WorkGiver_Warden_TakeToBed -->
+		<workType>WorkTypeDefName</workType>
+		<!-- Sets which work type this work giver belongs to. Available vanilla work types:
+		Art
+		Cleaning
+		Construction
+		Cooking
+		Crafting
+		Doctor
+		Firefighter
+		Flicker
+		Growing
+		Handling
+		Hauling
+		Hunting
+		Mining
+		PatientBedRest
+		PatientEmergency
+		PlantCutting
+		Repair
+		Research
+		Smithing
+		Tailoring
+		Warden -->
+		<emergency>true_or_false</emergency>
+		<!-- Optional. Defaults to false. Defines if the task is an emergency task -->
+		<verb>verb</verb>
+		<!-- Defines the verb part of the in-game action. For example - "cook", "receive treatment in" -->
+		<gerund>present_progressive_verb</gerund>
+		<!-- Based on <verb> above it. For example - "cooking", "receiving treatment in" -->
+		<requiredCapacities>
+		<!-- Optional. Can set one or more. Requires the pawn to have a capacity enabled to perform the task -->
+			<li>capacity_defName</li>
+			<!-- The usual capacities used are Manipulation, Sight or Talking. All vanilla capacities:
+			BloodFiltration
+			BloodPumping
+			Breathing
+			Consciousness
+			Eating
+			Hearing
+			Manipulation
+			Metabolism
+			Moving
+			Sight
+			Talking -->
+		</requiredCapacities>
+		<priorityInType>number</priorityInType>
+		<!-- Defines which tasks take precedent over other tasks in the same workType. The higher the priority the more important it is to perform -->
+		<prioritizeSustains>true_or_false</prioritizeSustains>
+		<!-- Optional. If true, telling a pawn to prioritise a task will set them to do it forever (until the player stops them manually or they collapse -->
+		<directOrderable>true_or_false</directOrderable>
+		<!-- Optional. Defaults to true. If false, the player can't order this action manually -->
+		<fixedBillGiverDefs>
+		<!-- Optional. Only used if giverClass is WorkGiver_DoBill. Defines which buildings use this workgiver by default for their bills -->
+			<li>defName</li>
+			<li>defName</li>
+		</fixedBillGiverDefs>
+		<billGiversAllHumanlikes>true_or_false</billGiversAllHumanlikes>
+		<!-- Optional. Defaults to false. If true, all humanlike-based bills will use this work giver. Will conflict with DoBillsMedicalHumanOperation by default if true -->
+		<billGiversAllHumanlikesCorpses>true_or_false</billGiversAllHumanlikesCorpses>
+		<!-- Optional. Defaults to false. If true, all humanlikecorpse-based bills will use this work giver. Will conflict with DoBillsMedicalHumanOperation by default if true -->
+		<billGiversAllMechanoids>true_or_false</billGiversAllMechanoids>
+		<!-- Optional. Defaults to false. If true, all mechanoid-based bills will use this work giver. Will conflict with DoBillsMedicalMechanoidOperation by default if true -->
+		<billGiversAllMechanoidsCorpses>true_or_false</billGiversAllMechanoidsCorpses>
+		<!-- Optional. Defaults to false. If true, all mechanoidcorpse-based bills will use this work giver. Will conflict with DoBillsMedicalMechanoidOperation by default if true -->
+		<billGiversAllAnimals>true_or_false</billGiversAllAnimals>
+		<!-- Optional. Defaults to false. If true, all animal-based bills will use this work giver. Will conflict with DoBillsMedicalAnimalOperation by default if true -->
+		<billGiversAllAnimalsCorpses>true_or_false</billGiversAllAnimalsCorpses>
+		<!-- Optional. Defaults to false. If true, all animalcorpse-based bills will use this work giver. Will conflict with DoBillsMedicalAnimalOperation by default if true -->
+		<canBeDoneByNonColonists>true_or_false</canBeDoneByNonColonists>
+		<!-- Optional. Defaults to false. Defines tasks which can be used by non-colonists (raiders, trade caravans). Used for siege mechanics in vanilla -->
+		<scanThings>true_or_false</scanThings>
+		<!-- Optional. Defaults to true. Defines if the work giver will ignore things in the environment. Defined as false for work givers relating to roofs, floors, growing and clearing snow -->
+		<scanCells>true_or_false</scanCells>
+		<!-- Optional. Undefined by default. Defines if the work giver will ignore cells (tiles). Defined as true for work givers relating to roofs, floors, growing and clearing snow -->
+	</WorkGiverDef>
+	
+</WorkGivers>
