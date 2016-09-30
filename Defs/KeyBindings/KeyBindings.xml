@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<KeyBindingDefs>
+
+	<!-- Keybindings link keyboard keys to in-game actions/buttons -->
+
+	<KeyBindingDef>
+		<defName>KeybindingDefName</defName>
+		<!-- defName for the linked action/button. Vanilla defnames:
+		MapDollyUp
+		MapDollyDown
+		MapDollyLeft
+		MapDollyRight
+		MapZoomIn
+		MapZoomOut
+		ToggleScreenshotMode
+		TakeScreenshot
+		SelectNextInCell
+		TogglePause
+		TimeSpeedNormal
+		TimeSpeedFast
+		TimeSpeedSuperfast
+		TimeSpeedUltrafast
+		PreviousColonist
+		NextColonist
+		Misc1
+		Misc2
+		Misc3
+		Misc4
+		Misc5
+		Misc6
+		Misc7
+		Misc8
+		Misc9
+		Misc10
+		Misc11
+		Misc12
+		CommandTogglePower
+		CommandItemForbid
+		CommandColonistDraft
+		DesignatorCancel
+		DesignatorDeconstruct
+		DesignatorRotateLeft
+		DesignatorRotateRight
+		TickOnce
+		ToggleGodMode
+		ToggleDebugLog
+		ToggleDebugActionsMenu
+		ToggleDebugLogMenu
+		ToggleDebugInspector
+		ToggleDebugSettingsMenu -->
+		<category>keybinding_category</category>
+		<!-- Desired category for the keybind -->
+		<defaultKeyCodeA>first_key</defaultKeyCodeA>
+		<!-- Defines the main default key -->
+		<defaultKeyCodeB>second_key</defaultKeyCodeB>
+		<!-- Optional. Defines a secondary default key -->
+		<devModeOnly>true_or_false</devModeOnly>
+		<!-- Optional. Defines if a keybinding is only available while in dev-mode -->
+	</KeyBindingDef>
+
+</KeyBindingDefs>
