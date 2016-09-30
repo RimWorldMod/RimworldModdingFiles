@@ -97,6 +97,9 @@
 				<li>thingDef</li>
 				<li>thingDef</li>
 			</exceptedThingDefs>
+			<specialFiltersToAllow>
+				<li>special_filter</li>
+			</specialFiltersToAllow>
 			<specialFiltersToDisallow>
 				<li>special_filter</li>
 			</specialFiltersToDisallow>
@@ -121,6 +124,15 @@
 				<li>thingDef</li>
 				<li>thingDef</li>
 			</exceptedThingDefs>
+			<specialFiltersToAllow>
+				<li>special_filter</li>
+			</specialFiltersToAllow>
+			<specialFiltersToDisallow>
+				<li>special_filter</li>
+			</specialFiltersToDisallow>
+			<disallowedSpecialFilters>
+				<li>special_filter</li>
+			</disallowedSpecialFilters>
 		</defaultIngredientFilter>
 		<addsHediff>HediffDefName</addsHediff>
 		<removesHediff>HediffDefName</removesHediff>

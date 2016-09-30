@@ -235,6 +235,10 @@
 				<li>thingDef</li>
 				<li>thingDef</li>
 			</exceptedThingDefs>
+			<specialFiltersToAllow>
+			<!-- Optional. Don't use it if you don't know what you're doing -->
+				<li>special_filter</li>
+			</specialFiltersToAllow>
 			<specialFiltersToDisallow>
 			<!-- Optional. Don't use it if you don't know what you're doing -->
 				<li>special_filter</li>
@@ -264,6 +268,18 @@
 				<li>thingDef</li>
 				<li>thingDef</li>
 			</exceptedThingDefs>
+			<specialFiltersToAllow>
+			<!-- Optional. Don't use it if you don't know what you're doing -->
+				<li>special_filter</li>
+			</specialFiltersToAllow>
+			<specialFiltersToDisallow>
+			<!-- Optional. Don't use it if you don't know what you're doing -->
+				<li>special_filter</li>
+			</specialFiltersToDisallow>
+			<disallowedSpecialFilters>
+			<!-- Optional. Don't use it if you don't know what you're doing -->
+				<li>special_filter</li>
+			</disallowedSpecialFilters>
 		</defaultIngredientFilter>
 		<addsHediff>HediffDefName</addsHediff>
 		<!-- Optional. Completing the recipe adds a hediff -->
