@@ -280,7 +280,7 @@
 		</allowedPackAnimals>
 	</BiomeDef>
 
-	<!-- Ocean (non-habitable -->
+	<!-- Ocean (non-habitable) -->
 
 	<BiomeDef>
 		<defName>Ocean</defName>
