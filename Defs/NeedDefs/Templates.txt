@@ -1,0 +1,36 @@
+﻿	<!-- Base template -->
+
+	<NeedDef>
+		<DefName>DesiredDefName</DefName>
+		<needClass>NeedClass_Name</needClass>
+		<label>need_name</label>
+		<description>Need_description.</description>
+		<baseLevel>number</baseLevel>
+		<fallPerDay>number</fallPerDay>
+		<showOnNeedList>true_or_false</showOnNeedList>
+		<listPriority>number</listPriority>
+		<major>true_or_false</major>
+		<freezeWhileSleeping>true_or_false</freezeWhileSleeping>
+		<minIntelligence>Intelligence_Name</minIntelligence>
+		<seekerRisePerHour>number</seekerRisePerHour>
+		<seekerFallPerHour>number</seekerFallPerHour>
+		<colonistsOnly>true_or_false</colonistsOnly>
+		<colonistAndPrisonersOnly>true_or_false</colonistAndPrisonersOnly>
+		<onlyIfCausedByHediff>true_or_false</onlyIfCausedByHediff>
+		<tutorHighlightTag>Highlight_Tag</tutorHighlightTag>
+	</NeedDef>
+	
+	<!-- Basic need -->
+	
+	<NeedDef>
+		<DefName>DesiredDefName</DefName>
+		<needClass>NeedClass_Name</needClass>
+		<label>need_name</label>
+		<description>Need_description.</description>
+		<listPriority>number</listPriority>
+		<major>true_or_false</major>
+		<freezeWhileSleeping>true_or_false</freezeWhileSleeping>
+		<minIntelligence>Humanlike</minIntelligence>
+		<colonistsOnly>true_or_false</colonistsOnly>
+		<colonistAndPrisonersOnly>true_or_false</colonistAndPrisonersOnly>
+	</NeedDef>
