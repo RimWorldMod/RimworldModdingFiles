@@ -1,0 +1,22 @@
+﻿	<!-- Base designation template -->
+	
+	<DesignationDef>
+		<defName>DesignationDefName</defName>
+		<texturePath>Desired_texture_path</texturePath>
+		<targetType>desired_target</targetType>
+		<removeIfBuildingDespawned>true_or_false</removeIfBuildingDespawned>
+		<designateCancelable>true_or_false</designateCancelable>
+	</DesignationDef>
+
+	<!-- Base designationCategory template -->
+	
+	<DesignationCategoryDef>
+		<defName>CategoryDefName</defName>
+		<label>category_name</label>
+		<description>DesignationCategory_description.</description>
+		<order>number</order>
+		<specialDesignatorClasses>
+			<li>Designator_name</li>
+			<li>Designator_name</li>
+		</specialDesignatorClasses>
+	</DesignationCategoryDef>
