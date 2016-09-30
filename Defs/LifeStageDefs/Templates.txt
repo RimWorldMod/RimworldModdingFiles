@@ -1,0 +1,54 @@
+﻿	<!-- Base template -->
+
+	<LifeStageDef>
+		<defName>StageDefName</defName>
+		<label>lifestage_name</label>
+		<adjective>lifestage_adjective</adjective>
+		<visible>true_or_false</visible>
+		<reproductive>true_or_false</reproductive>
+		<milkable>true_or_false</milkable>
+		<shearable>true_or_false</shearable>
+		<statFactors>
+			<statDefName>number</statDefName>
+			<statDefName>number</statDefName>
+		</statFactors>
+		<bodySizeFactor>number</bodySizeFactor>
+		<healthScaleFactor>number</healthScaleFactor>
+		<hungerRateFactor>number</hungerRateFactor>
+		<marketValueFactor>number</marketValueFactor>
+		<voxPitch>number</voxPitch>
+		<voxVolume>number</voxVolume>
+		<icon>icon_path</icon>
+	</LifeStageDef>
+	
+	<!-- Basic (adult) life stage -->
+	
+	<LifeStageDef>
+		<defName>StageDefName</defName>
+		<label>lifestage_name</label>
+		<visible>true_or_false</visible>
+		<reproductive>true_or_false</reproductive>
+		<milkable>true_or_false</milkable>
+		<shearable>true_or_false</shearable>
+	</LifeStageDef>
+	
+	<!-- Toddler life stage -->
+	
+	<LifeStageDef>
+		<defName>StageDefName</defName>
+		<label>lifestage_name</label>
+		<adjective>lifestage_adjective</adjective>
+		<reproductive>true_or_false</reproductive>
+		<milkable>true_or_false</milkable>
+		<shearable>true_or_false</shearable>
+		<statFactors>
+			<statDefName>number</statDefName>
+			<statDefName>number</statDefName>
+		</statFactors>
+		<bodySizeFactor>number</bodySizeFactor>
+		<healthScaleFactor>number</healthScaleFactor>
+		<hungerRateFactor>number</hungerRateFactor>
+		<marketValueFactor>number</marketValueFactor>
+		<voxPitch>number</voxPitch>
+		<voxVolume>number</voxVolume>
+	</LifeStageDef>
