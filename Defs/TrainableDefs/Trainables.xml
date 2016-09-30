@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- "Trainables" are skills that can be trained in animals via handler pawns -->
+	
+	<TrainableDef>
+		<defName>TrainableDefName</defName>
+		<!-- Desired defName to reference and use the skill -->
+		<label>trainable_name</label>
+		<!-- Sets the in-game display name for the skill -->
+		<description>Trainable_description.</description>
+		<!-- Long-form description of the skill. What is it used for? -->
+		<icon>icon_path</icon>
+		<!-- Defines which icon is used for the skill -->
+		<listPriority>number</listPriority>
+		<!-- Defines the trainable's placement in the animal's Training tab. Higher values are further up the list -->
+		<difficulty>number</difficulty>
+		<!-- Defines the difficulty of training the skill -->
+		<requiredTrainableIntelligence>intelligence_level</requiredTrainableIntelligence>
+		<!-- Optional. Defaults to Simple. Sets the required animal intelligence to be able to train this skill. Vanilla intelligence types:
+		Advanced
+		Intermediate
+		Simple -->
+		<steps>number</steps>
+		<!-- Optional. Defaults to 1. Sets the number of training steps (successful training sessions) required to fully train the skill -->
+		<prerequisites>
+		<!-- Optional. Forbids training the skill until previous trainables have been completed -->
+			<li>TrainableDefName</li>
+			<li>TrainableDefName</li>
+		</prerequisites>
+		<minBodySize>number</minBodySize>
+		<!-- Optional. Defines a minimum body size required for an animal to use the skill -->
+		<defaultTrainable>true_or_false</defaultTrainable>
+		<!-- Defines if the skill is trainable by default. All vanilla trainableDefs set this as true -->
+		<tags>
+		<!-- Sets tags for the trainableDef -->
+			<li>tag</li>
+			<!-- Vanilla tags:
+			Basic
+			Combat
+			Help
+			Work -->
+			<li>tag</li>
+		</tags>
+	</TrainableDef>
+
+</Defs>
