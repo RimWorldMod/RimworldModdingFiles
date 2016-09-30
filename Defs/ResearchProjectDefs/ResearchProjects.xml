@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- Research projects unlock additional content in-game once they are completed -->
+
+	<ResearchProjectDef>
+		<defName>ProjectDefName</defName>
+		<!-- Desired defName to reference and use the research project -->
+		<label>project_name</label>
+		<!-- Sets the in-game name display for the research project -->
+		<description>Project_description.</description>
+		<!-- Long-form description of the project. Tips: include a general description and some key unlocks from completing the project -->
+		<descriptionDiscovered>Optional_description.</descriptionDiscovered>
+		<!-- Optional. No description available. Don't include this if you don't know what you're doing -->
+		<baseCost>number</baseCost>
+		<!-- Optional. Defaults to 100. Sets the point cost of completing the project. Colonists who actively research will acquire points according to their research skill -->
+		<techLevel>techlevel_name</techLevel>
+		<!-- Sets the tech level of the project. Colonies with a higher tech level than the project's level receive a reduction to total cost.
+		A lower tech level than the project's level results in cost penalties. Vanilla tech levels:
+		Animal
+		Neolithic
+		Medieval
+		Industrial
+		Spacer
+		Ultra -->
+		<prerequisites>
+		<!-- Optional. Defines reserach project(s) which must be completed before the project is available -->
+			<li>ProjectDefName</li>
+			<li>ProjectDefName</li>
+		</prerequisites>
+		<requiredResearchBuilding>Building_defName</requiredResearchBuilding>
+		<!-- Optional. Defines a specific research building required to research the project -->
+		<requiredResearchFacilities>
+		<!-- Optional. Defines additional research facilities required to research the project -->
+			<li>Facility_defName</li>
+		</requiredResearchFacilities>
+		<tags>
+		<!-- Optional. Unlocks the project by default for the following scenario(s) -->
+			<li>ScenarioDefName</li>
+			<li>ScenarioDefName</li>
+		</tags>
+		<researchMods>
+		<!-- Optional. No description available. Don't include this if you don't know what you're doing -->
+			<li>mod</li>
+			<li>mod</li>
+		</researchMods>
+	</ResearchProjectDef>
+
+</Defs>

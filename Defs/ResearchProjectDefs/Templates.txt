@@ -1,0 +1,56 @@
+﻿	<!-- Base template -->
+
+	<ResearchProjectDef>
+		<defName>ProjectDefName</defName>
+		<label>project_name</label>
+		<description>Project_description.</description>
+		<descriptionDiscovered>Optional_description.</descriptionDiscovered>
+		<baseCost>number</baseCost>
+		<techLevel>techlevel_name</techLevel>
+		<prerequisites>
+			<li>ProjectDefName</li>
+			<li>ProjectDefName</li>
+		</prerequisites>
+		<requiredResearchBuilding>Building_defName</requiredResearchBuilding>
+		<requiredResearchFacilities>
+			<li>Facility_defName</li>
+		</requiredResearchFacilities>
+		<tags>
+			<li>ScenarioDefName</li>
+			<li>ScenarioDefName</li>
+		</tags>
+		<researchMods>
+			<li>mod</li>
+			<li>mod</li>
+		</researchMods>
+	</ResearchProjectDef>
+	
+	<!-- Basic project -->
+
+	<ResearchProjectDef>
+		<defName>ProjectDefName</defName>
+		<label>project_name</label>
+		<description>Project_description.</description>
+		<baseCost>number</baseCost>
+		<techLevel>techlevel_name</techLevel>
+	</ResearchProjectDef>
+	
+	<!-- Advanced project -->
+	
+	<ResearchProjectDef>
+		<defName>ProjectDefName</defName>
+		<label>project_name</label>
+		<description>Project_description.</description>
+		<baseCost>number</baseCost>
+		<techLevel>techlevel_name</techLevel>
+		<prerequisites>
+			<li>ProjectDefName</li>
+		</prerequisites>
+		<requiredResearchBuilding>Building_defName</requiredResearchBuilding>
+		<requiredResearchFacilities>
+			<li>Facility_defName</li>
+		</requiredResearchFacilities>
+		<tags>
+			<li>ScenarioDefName</li>
+		</tags>
+	</ResearchProjectDef>
