@@ -1,0 +1,24 @@
+﻿	<!-- Base template -->
+	
+	<PawnCapacityDef>
+		<defName>CapacityDefName</defName>
+		<label>capacity_name</label>
+		<listOrder>number</listOrder>
+		<labelMechanoids>Capacityname_mechanoids</labelMechanoids>
+		<labelAnimals>Capacityname_animals</labelAnimals>
+		<showOnHumanlikes>true_or_false</showOnHumanlikes>
+		<showOnAnimals>true_or_false</showOnAnimals>
+		<showOnMechanoids>true_or_false</showOnMechanoids>
+		<lethalFlesh>true_or_false</lethalFlesh>
+		<lethalMechanoids>true_or_false</lethalMechanoids>
+		<minForCapable>number</minForCapable>
+		<minValue>number</minValue>
+	</PawnCapacityDef>
+	
+	<!-- Basic capacity -->
+	
+	<PawnCapacityDef>
+		<defName>CapacityDefName</defName>
+		<label>capacity_name</label>
+		<listOrder>number</listOrder>
+	</PawnCapacityDef>

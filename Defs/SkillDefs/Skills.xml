@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<SkillDefs>
+
+	<!-- Skills define pawn proficiency in different fields -->
+	
+	<SkillDef>
+		<defName>SkillDefName</defName>
+		<!-- Desired defName to reference and use the skill -->
+		<description>Skill_description.</description>
+		<!-- Long-form description of the skill -->
+		<skillLabel>skill_name</skillLabel>
+		<!-- Sets the in-game display name of the skill -->
+		<pawnLabel>pawn_name</pawnLabel>
+		<!-- Defines the secondary name of pawns who spawn with a focus on the skill -->
+		<definedInBackstories>true_or_false</definedInBackstories>
+		<!-- Optional. Defaults to true. No description available -->
+		<disablingWorkTags>WorkTag_defName</disablingWorkTags>
+		<!-- Optional. If a pawn is incapable of a workTag, the skill is disabled for that pawn. Vanilla work tags:
+		Animals
+		Artistic
+		Caring
+		Cleaning
+		Cooking
+		Crafting
+		Firefighting
+		Hauling
+		Intellectual
+		ManualDumb
+		ManualSkilled
+		Mining
+		PlantWork
+		Scary
+		Social
+		Violent -->
+	</SkillDef>
+
+</SkillDefs>

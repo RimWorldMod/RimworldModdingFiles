@@ -1,0 +1,11 @@
+﻿	<!-- Base template -->
+	
+	<RoofDef>
+		<defName>RoofDefName</defName>
+		<label>roof_name</label>
+		<isNatural>true_or_false</isNatural>
+		<isThickRoof>true_or_false</isThickRoof>
+		<collapseLeavingThingDef>thing_defName</collapseLeavingThingDef>
+		<filthLeaving>filth_name</filthLeaving>
+		<soundPunchThrough>sound_reference</soundPunchThrough>
+	</RoofDef>
