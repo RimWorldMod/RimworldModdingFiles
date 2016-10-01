@@ -1,41 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <KeyBindingDefs>
 
-	<!-- Vanilla keybinding categories -->
-
-	<KeyBindingCategoryDef>
-		<defName>Game</defName>
-		<label>in-game global</label>
-		<description>Colony mode controls that apply in most situations.</description>
-		<isGameUniversal>true</isGameUniversal>
-		<checkForConflicts>
-			<li>GameMapCamera</li>
-			<li>SelectionMisc</li>
-			<li>MainTabs</li>
-		</checkForConflicts>
-	</KeyBindingCategoryDef>
-
-	<KeyBindingCategoryDef>
-		<defName>SelectionSpecial</defName>
-		<label>special</label>
-		<description>Special controls reserved for specific functions on specific objects.</description>
-		<checkForConflicts>
-			<li>SelectionMisc</li>
-			<li>GameMapCamera</li>
-			<li>Game</li>
-		</checkForConflicts>
-	</KeyBindingCategoryDef>
-
-	<KeyBindingCategoryDef>
-		<defName>Architect</defName>
-		<label>architect</label>
-		<description>General-use controls for the architect mode menu.</description>
-		<checkForConflicts>
-			<li>GameMapCamera</li>
-			<li>Game</li>
-		</checkForConflicts>
-	</KeyBindingCategoryDef>
-
 	<!-- Vanilla keybindings. Instead of setting a category every time, the Core XML divides categories by abstract bases -->
 
 	<!-- Camera -->

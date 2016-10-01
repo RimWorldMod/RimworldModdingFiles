@@ -1,0 +1,12 @@
+﻿	<!-- Base template -->
+	
+	<DesignationCategoryDef>
+		<defName>CategoryDefName</defName>
+		<label>category_name</label>
+		<description>DesignationCategory_description.</description>
+		<order>number</order>
+		<specialDesignatorClasses>
+			<li>Designator_name</li>
+			<li>Designator_name</li>
+		</specialDesignatorClasses>
+	</DesignationCategoryDef>
