@@ -1,0 +1,14 @@
+﻿	<!-- Base template -->
+	
+	<DifficultyDef>
+		<defName>DifficultyDefName</defName>
+		<label>difficulty_name</label>
+		<description>Difficulty_description.</description>
+		<difficulty>number</difficulty>
+		<threatScale>number</threatScale>
+		<colonistMoodOffset>number</colonistMoodOffset>
+		<baseSellPriceFactor>number</baseSellPriceFactor>
+		<cropYieldFactor>number</cropYieldFactor>
+		<diseaseIntervalFactor>number</diseaseIntervalFactor>
+		<enemyReproductionRateFactor>number</enemyReproductionRateFactor>
+	</DifficultyDef>

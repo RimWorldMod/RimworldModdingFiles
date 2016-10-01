@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- Vanilla difficulties -->
+	
+	<DifficultyDef>
+		<defName>Easy</defName>
+		<label>Some challenge</label>
+		<description>For players on their first game, or casual players who still want a challenge. Threats are dangerous but not brutal.</description>
+		<difficulty>2</difficulty>
+		<threatScale>0.35</threatScale>
+		<colonistMoodOffset>-5</colonistMoodOffset>
+		<baseSellPriceFactor>0.60</baseSellPriceFactor>
+		<cropYieldFactor>1.20</cropYieldFactor>
+		<diseaseIntervalFactor>1.5</diseaseIntervalFactor>
+		<enemyReproductionRateFactor>0.4</enemyReproductionRateFactor>
+	</DifficultyDef>
+	
+	<DifficultyDef>
+		<defName>Hard</defName>
+		<label>Intense</label>
+		<description>A significant challenge. Succeeding at this level requires a solid and well-rounded understanding of survival strategies, and some luck.</description>
+		<difficulty>4</difficulty>
+		<threatScale>1.0</threatScale>
+		<colonistMoodOffset>-13</colonistMoodOffset>
+		<baseSellPriceFactor>0.55</baseSellPriceFactor>
+		<cropYieldFactor>1</cropYieldFactor>
+		<diseaseIntervalFactor>1</diseaseIntervalFactor>
+		<enemyReproductionRateFactor>1</enemyReproductionRateFactor>
+	</DifficultyDef>
+
+	<DifficultyDef>
+		<defName>VeryHard</defName>
+		<label>Extreme</label>
+		<description>As hard as a diamond-bladed dagger. Enemies are strong, prices are poor, food is scarce, and colonists are grumpy. For those who enjoy digital suffering.</description>
+		<difficulty>5</difficulty>
+		<threatScale>1.3</threatScale>
+		<colonistMoodOffset>-18</colonistMoodOffset>
+		<baseSellPriceFactor>0.47</baseSellPriceFactor>
+		<cropYieldFactor>0.9</cropYieldFactor>
+		<diseaseIntervalFactor>0.9</diseaseIntervalFactor>
+		<enemyReproductionRateFactor>1</enemyReproductionRateFactor>
+	</DifficultyDef>
+
+</Defs>
