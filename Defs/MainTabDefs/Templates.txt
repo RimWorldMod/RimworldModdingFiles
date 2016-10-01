@@ -1,0 +1,23 @@
+﻿	<!-- Base template -->
+	
+	<MainTabDef>
+		<defName>Inspect</defName>
+		<label>inspect</label>
+		<description>MainTab_description.</description>
+		<TabButtonHeight>number</TabButtonHeight>
+		<windowClass>MainTabWindow_ClassName</windowClass>
+		<showTabButton>true_or_false</showTabButton>
+		<order>number</order>
+		<defaultToggleKey>keybinding</defaultToggleKey>
+		<canBeTutorDenied>true_or_false</canBeTutorDenied>
+	</MainTabDef>
+	
+	<!-- Basic MainTab -->
+	
+	<MainTabDef>
+		<defName>Inspect</defName>
+		<label>inspect</label>
+		<description>MainTab_description.</description>
+		<windowClass>MainTabWindow_ClassName</windowClass>
+		<order>number</order>
+	</MainTabDef>

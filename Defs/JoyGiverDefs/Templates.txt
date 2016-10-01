@@ -1,0 +1,32 @@
+﻿	<!-- Base template -->
+
+	<JoyGiverDef>
+		<defName>JoyGiverDefName</defName>
+		<giverClass>JoyGiver_Class</giverClass>
+		<baseChance>number</baseChance>
+		<thingDefs>
+			<li>defName</li>
+			<li>defName</li>
+		</thingDefs>
+		<jobDef>job_name</jobDef>
+		<desireSit>true_or_false</desireSit>
+		<pctPawnsEverDo>number</pctPawnsEverDo>
+		<unroofedOnly>true_or_false</unroofedOnly>
+		<joyKind>joykind_defName</joyKind>
+		<requiredCapacities>
+			<li>capacity_defName</li>
+			<li>capacity_defName</li>
+		</requiredCapacities>
+		<canDoWhileInBed>true_or_false</canDoWhileInBed>
+	</JoyGiverDef>
+	
+	<!-- Basic joy giver -->
+	
+	<JoyGiverDef>
+		<defName>JoyGiverDefName</defName>
+		<giverClass>JoyGiver_Class</giverClass>
+		<baseChance>number</baseChance>
+		<jobDef>job_name</jobDef>
+		<pctPawnsEverDo>number</pctPawnsEverDo>
+		<joyKind>joykind_defName</joyKind>
+	</JoyGiverDef>

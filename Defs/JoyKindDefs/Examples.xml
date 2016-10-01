@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- Vanilla examples -->
+	
+	<JoyKindDef>
+		<defName>Work</defName>
+		<label>work</label>
+	</JoyKindDef>
+
+	<JoyKindDef>
+		<defName>Meditative</defName>
+		<label>meditative</label>
+	</JoyKindDef>
+	
+	<JoyKindDef>
+		<defName>GamingDexterity</defName>
+		<label>gaming (dexterity)</label>
+	</JoyKindDef>
+
+</Defs>

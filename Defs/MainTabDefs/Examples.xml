@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MainTabDefs>
+
+	<!-- Vanilla MainTabs -->
+	
+	<MainTabDef>
+		<defName>Architect</defName>
+		<label>architect</label>
+		<description>Designate where and what colonists should build, farm, store items, and so on.</description>
+		<windowClass>MainTabWindow_Architect</windowClass>
+		<order>1</order>
+		<defaultToggleKey>Tab</defaultToggleKey>
+	</MainTabDef>
+
+	<MainTabDef>
+		<defName>Restrict</defName>
+		<label>restrict</label>
+		<description>Restrict colonists to certain activities at certain times of day, or to specific allowed areas.</description>
+		<windowClass>MainTabWindow_Restrict</windowClass>
+		<order>20</order>
+		<defaultToggleKey>F2</defaultToggleKey>
+	</MainTabDef>
+
+	<MainTabDef>
+		<defName>Research</defName>
+		<label>research</label>
+		<description>Examine and decide on research projects.</description>
+		<windowClass>MainTabWindow_Research</windowClass>
+		<order>50</order>
+	</MainTabDef>
+
+	<MainTabDef>
+		<defName>Menu</defName>
+		<label>menu</label>
+		<description>Change options, save, load, or quit the game.</description>
+		<windowClass>MainTabWindow_Menu</windowClass>
+		<canBeTutorDenied>false</canBeTutorDenied>
+		<order>500</order>
+	</MainTabDef>
+
+</MainTabDefs>

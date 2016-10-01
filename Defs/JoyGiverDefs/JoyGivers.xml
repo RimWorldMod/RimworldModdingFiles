@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- Joy givers are activities that satisfy the joy need -->
+
+	<JoyGiverDef>
+		<defName>JoyGiverDefName</defName>
+		<!-- Desired defName to reference and use the joy giver -->
+		<giverClass>JoyGiver_Class</giverClass>
+		<!-- Defines the task class of the joy giver. Available vanilla giverClasses:
+		JoyGiver_BuildSnowman
+		JoyGiver_GoForWalk
+		JoyGiver_Ingest
+		JoyGiver_InPrivateRoom
+		JoyGiver_InteractBuildingInteractionCell
+		JoyGiver_InteractBuildingSitAdjacent
+		JoyGiver_PlayBilliards
+		JoyGiver_Skygaze
+		JoyGiver_SocialRelax
+		JoyGiver_TakeDrug
+		JoyGiver_ViewArt
+		JoyGiver_VisitGrave
+		JoyGiver_VisitSickPawn
+		JoyGiver_WatchBuilding -->
+		<baseChance>number</baseChance>
+		<!-- Defines the likelihood of a pawn performing the activity -->
+		<thingDefs>
+		<!-- Optional. Required for some giverClasses. Defines which thingDefs will be targeted -->
+			<li>defName</li>
+			<li>defName</li>
+		</thingDefs>
+		<jobDef>job_name</jobDef>
+		<!-- Defines the name of the activity -->
+		<desireSit>true_or_false</desireSit>
+		<!-- Optional. Defaults to true. Defines if the activity will prioritise sitting -->
+		<pctPawnsEverDo>number</pctPawnsEverDo>
+		<!-- Optional. Defaults to 1 (100%). Defines what percentage of total pawns will use the activity -->
+		<unroofedOnly>true_or_false</unroofedOnly>
+		<!-- Optional. If true, the activity can only be performed when in an unroofed area -->
+		<joyKind>joykind_defName</joyKind>
+		<!-- Sets the joy kind (category) the joy giver belongs to -->
+		<requiredCapacities>
+		<!-- Optional. Defines one or more capacities the pawn must be capable of to perform the activity -->
+			<li>capacity_defName</li>
+			<!-- Vanilla capacity defNames:
+			BloodFiltration
+			BloodPumping
+			Breathing
+			Consciousness
+			Eating
+			Hearing
+			Manipulation
+			Metabolism
+			Moving
+			Sight
+			Talking -->
+			<li>capacity_defName</li>
+		</requiredCapacities>
+		<canDoWhileInBed>true_or_false</canDoWhileInBed>
+		<!-- Optional. Defines if the activity can be performed while lying in a bed -->
+	</JoyGiverDef>
+
+</Defs>

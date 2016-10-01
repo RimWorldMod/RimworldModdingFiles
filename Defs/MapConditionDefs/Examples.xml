@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MapConditionDefs>
+
+	<!-- Vanilla map conditions -->
+		
+	<MapConditionDef>
+		<defName>SolarFlare</defName>
+		<label>solar flare</label>
+		<description>A solar flare is hitting the planet. This creates extreme electrical interference and prevents most electrical devices from working.</description>
+		<endMessage>The solar flare is ending.</endMessage>
+		<canBePermanent>true</canBePermanent>
+	</MapConditionDef>
+
+	<MapConditionDef>
+		<defName>Eclipse</defName>
+		<conditionClass>MapCondition_Eclipse</conditionClass>
+		<label>eclipse</label>
+		<description>An eclipse is shadowing the surface. It will be dark, even during the daytime.</description>
+		<endMessage>The eclipse is ending.</endMessage>
+		<canBePermanent>true</canBePermanent>
+	</MapConditionDef>
+
+	<MapConditionDef>
+		<defName>PsychicDrone</defName>
+		<conditionClass>MapCondition_PsychicEmanation</conditionClass>
+		<label>psychic drone</label>
+		<description>A distant, powerful AI is emitting waves of psychic force that are driving people towards insanity.</description>
+		<droneLevel>BadMedium</droneLevel>
+		<endMessage>The psychic drone is ending.</endMessage>
+		<exclusiveConditions>
+			<li>PsychicSoothe</li>
+		</exclusiveConditions>
+		<canBePermanent>true</canBePermanent>
+	</MapConditionDef>
+
+	<MapConditionDef>
+		<defName>HeatWave</defName>
+		<conditionClass>MapCondition_HeatWave</conditionClass>
+		<label>heat wave</label>
+		<description>An extreme wave of heat is baking the area.</description>
+		<endMessage>The heat wave is over.</endMessage>
+		<exclusiveConditions>
+			<li>ColdSnap</li>
+			<li>VolcanicWinter</li>
+		</exclusiveConditions>
+	</MapConditionDef>
+
+</MapConditionDefs>

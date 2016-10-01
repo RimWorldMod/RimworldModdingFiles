@@ -1,0 +1,27 @@
+﻿	<!-- Base template -->
+	
+	<MapConditionDef>
+		<defName>MapConditionDefName</defName>
+		<label>mapcondition_name</label>
+		<description>MapCondition_description.</description>
+		<conditionClass>MapCondition_ClassName</conditionClass>
+		<exclusiveConditions>
+			<li>condition_defName</li>
+			<li>condition_defName</li>
+		</exclusiveConditions>
+		<endMessage>message</endMessage>
+		<canBePermanent>true_or_false</canBePermanent>
+		<droneLevel>dronelevel_name</droneLevel>
+		<preventRain>true_or_false</preventRain>
+		<CanCoexistWithMAPCONDITIONDEF>true_or_false</CanCoexistWithMAPCONDITIONDEF>
+	</MapConditionDef>
+	
+	<!-- Basic map condition -->
+	
+	<MapConditionDef>
+		<defName>MapConditionDefName</defName>
+		<label>mapcondition_name</label>
+		<description>MapCondition_description.</description>
+		<conditionClass>MapCondition_ClassName</conditionClass>
+		<endMessage>message</endMessage>
+	</MapConditionDef>
