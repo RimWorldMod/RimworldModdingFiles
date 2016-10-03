@@ -1,0 +1,6 @@
+﻿	<!-- Base template -->
+
+	<StuffCategoryDef>
+		<defName>StuffCategoryDefName</defName>
+		<label>stuffcategory_name</label>
+	</StuffCategoryDef>

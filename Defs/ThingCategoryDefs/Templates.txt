@@ -1,0 +1,17 @@
+﻿	<!-- Base template -->
+
+	<ThingCategoryDef>
+		<defName>CategoryDefName</defName>
+		<label>category_name</label>
+		<parent>CategoryDefName</parent>
+		<iconPath>icon_reference_path</iconPath>
+		<resourceReadoutRoot>true_or_false</resourceReadoutRoot>
+	</ThingCategoryDef>
+
+	<!-- Basic category -->
+	
+	<ThingCategoryDef>
+		<defName>CategoryDefName</defName>
+		<label>category_name</label>
+		<parent>Root</parent>
+	</ThingCategoryDef>

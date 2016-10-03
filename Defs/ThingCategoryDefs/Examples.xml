@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ThingCategoryDefs>
+
+	<!-- Vanilla categories -->
+
+	<!-- The Root category is the default parent. It includes many categories, used for compatibility -->
+	
+	<ThingCategoryDef>
+		<defName>Root</defName>
+		<label>root</label>
+	</ThingCategoryDef>
+	
+	<!-- Many categories use a master category (as a sub category of Root) and have their own sub-categories -->
+	
+	<!-- Food -->
+	
+	<ThingCategoryDef>
+		<defName>Foods</defName>
+		<label>foods</label>
+		<parent>Root</parent>
+		<resourceReadoutRoot>true</resourceReadoutRoot>
+		<iconPath>UI/Icons/ThingCategories/Foods</iconPath>
+	</ThingCategoryDef>
+
+	<ThingCategoryDef>
+		<defName>FoodRaw</defName>
+		<label>raw food</label>
+		<parent>Foods</parent>
+		<resourceReadoutRoot>true</resourceReadoutRoot>
+		<iconPath>UI/Icons/ThingCategories/FoodRaw</iconPath>
+	</ThingCategoryDef>
+	
+	<!-- Items -->
+	
+	<ThingCategoryDef>
+		<defName>Items</defName>
+		<label>items</label>
+		<parent>Root</parent>
+	</ThingCategoryDef>
+
+	<ThingCategoryDef>
+		<defName>Art</defName>
+		<label>art</label>
+		<parent>Items</parent>
+	</ThingCategoryDef>
+	
+	<!-- Weapons -->
+	
+	<ThingCategoryDef>
+		<defName>Weapons</defName>
+		<label>weapons</label>
+		<parent>Root</parent>
+	</ThingCategoryDef>
+
+	<ThingCategoryDef>
+		<defName>WeaponsMelee</defName>
+		<label>melee weapons</label>
+		<parent>Weapons</parent>
+	</ThingCategoryDef>
+
+</ThingCategoryDefs>
