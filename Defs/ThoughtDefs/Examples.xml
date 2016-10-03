@@ -1,0 +1,325 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- Vanilla examples -->
+
+	<!-- Hediff thought -->
+
+	<ThoughtDef>
+		<defName>Joywire</defName>
+		<workerClass>ThoughtWorker_Hediff</workerClass>
+		<hediff>Joywire</hediff>
+		<stages>
+			<li>
+				<label>Joywire</label>
+				<description>It feels amazing.</description>
+				<baseMoodEffect>30</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<!-- Item-triggered thought (trigger is outside of the thoughtDef) -->
+	
+	<ThoughtDef>
+		<defName>ArtifactMoodBoost</defName>
+		<durationDays>1.0</durationDays>
+		<stackLimit>4</stackLimit>
+		<stackedEffectMultiplier>0.4</stackedEffectMultiplier>
+		<stages>
+			<li>
+				<label>Strange feeling</label>
+				<description>I feel strange, but also very relaxed.</description>
+				<baseMoodEffect>15</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<!-- Psychic Drone -->
+	
+	<ThoughtDef>
+		<defName>PsychicDrone</defName>
+		<workerClass>ThoughtWorker_PsychicDrone</workerClass>
+		<effectMultiplyingStat>PsychicSensitivity</effectMultiplyingStat>
+		<stages>
+			<li>
+				<label>psychic soothe (medium)</label>
+				<description>It's like a calming voice at the back of my mind, soothing me, settling my nerves.</description>
+				<baseMoodEffect>15</baseMoodEffect>
+			</li>
+			<li>
+				<label>psychic drone (low)</label>
+				<description>It's like a scratching at the back of my mind. A voice, whispering. I can only make out a few words, and I don't like them.</description>
+				<baseMoodEffect>-7</baseMoodEffect>
+			</li>
+			<li>
+				<label>psychic drone (medium)</label>
+				<description>I feel like someone is always just out of sight, speaking to me. The voice changes but the message doesn't. I'm supposed to hurt people. Make it go away!</description>
+				<baseMoodEffect>-15</baseMoodEffect>
+			</li>
+			<li>
+				<label>psychic drone (high)</label>
+				<description>The voice is unbearably loud. It's hard to concentrate. I find myself talking back to it, yelling at it. But it just keeps shouting!</description>
+				<baseMoodEffect>-25</baseMoodEffect>
+			</li>
+			<li>
+				<label>psychic drone (extreme)</label>
+				<description>My heart pounds and I'm sweating. All I can think of is hurting and suffering and all these enemies around me. They're my nightmare, my nightmare, my nightmare...</description>
+				<baseMoodEffect>-50</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+	
+	<!-- Event-based ("memory") thoughts -->
+	
+	<!-- Other pawn's death -->
+	
+	<ThoughtDef ParentName="DeathMemory">
+		<defName>KnowGuestExecuted</defName>
+		<durationDays>6</durationDays>
+		<nullifyingTraits>
+			<li>Psychopath</li>
+			<li>Bloodlust</li>
+		</nullifyingTraits>
+		<stages>
+			<li>
+				<label>someone was euthanized</label>
+				<!-- generic humane -->
+				<description>A prisoner or guest was euthanized. It was humane, but still sad.</description>
+				<baseMoodEffect>-3</baseMoodEffect>
+			</li>
+			<li>
+				<label>someone was executed</label>
+				<!-- generic brutal -->
+				<description>A prisoner or guest was killed in cold blood. It seemed a bit evil.</description>
+				<baseMoodEffect>-5</baseMoodEffect>
+			</li>
+			<li>
+				<label>someone killed by organ harvest</label>
+				<!-- died because of organ harvesting -->
+				<description>A prisoner or guest died because the colony took body parts from him. It's horrible.</description>
+				<baseMoodEffect>-6</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+	
+	<ThoughtDef ParentName="DeathMemory">
+		<defName>BondedAnimalDied</defName>
+		<durationDays>20</durationDays>
+		<stackLimit>5</stackLimit>
+		<nullifyingTraits>
+			<li>Psychopath</li>
+		</nullifyingTraits>
+		<stages>
+			<li>
+				<label>bonded animal {0} died</label>
+				<description>Such a tender, unique animal. This universe is evil!</description>
+				<baseMoodEffect>-8</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+	
+	<!-- "Ate human meat" event affects cannibals differently -->
+	
+	<ThoughtDef>
+		<defName>AteHumanlikeMeatDirectCannibal</defName>
+		<durationDays>1.0</durationDays>
+		<stackedEffectMultiplier>0.25</stackedEffectMultiplier>
+		<stackLimit>1</stackLimit>
+		<requiredTraits>
+			<li>Cannibal</li>
+		</requiredTraits>
+		<stages>
+			<li>
+				<label>raw cannibalism</label>
+				<description>I ate the meat of another human, raw, like an animal. It was so... succulent.</description>
+				<baseMoodEffect>20</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+	
+	<!-- Special social thoughts are triggered by non-Def code -->
+	
+	<ThoughtDef>
+		<defName>DeepTalk</defName>
+		<thoughtClass>Thought_MemorySocial</thoughtClass>
+		<durationDays>20</durationDays>
+		<stackLimit>300</stackLimit>
+		<stackLimitPerPawn>10</stackLimitPerPawn>
+		<stackedEffectMultiplier>0.88</stackedEffectMultiplier>
+		<nullifyingTraits>
+			<li>Psychopath</li>
+		</nullifyingTraits>
+		<stages>
+			<li>
+				<label>had deep talk</label>
+				<baseOpinionOffset>15</baseOpinionOffset>
+			</li>
+		</stages>
+	</ThoughtDef>
+	
+	<!-- FeelingRandom chooses a mood stage at random according to the RandomMood worker class -->
+	
+	<ThoughtDef>
+		<defName>FeelingRandom</defName>
+		<workerClass>ThoughtWorker_RandomMood</workerClass>
+		<stages>
+			<li>
+				<label>Feeling great</label>
+				<description>For no apparent reason, I just feel great right now.</description>
+				<baseMoodEffect>8</baseMoodEffect>
+			</li>
+			<li>
+				<label>Feeling good</label>
+				<description>For no apparent reason, I just feel good right now.</description>
+				<baseMoodEffect>4</baseMoodEffect>
+			</li>
+			<li>
+				<label>Feeling bad</label>
+				<description>For no apparent reason, I just feel bad right now.</description>
+				<baseMoodEffect>-4</baseMoodEffect>
+			</li>
+			<li>
+				<label>Feeling terrible</label>
+				<description>For no apparent reason, I just feel terrible right now.</description>
+				<baseMoodEffect>-8</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+	
+	<!-- EnvironmentHot triggers a different stage the hotter it is, defined by its worker class -->
+	
+	<ThoughtDef>
+		<defName>EnvironmentHot</defName>
+		<workerClass>ThoughtWorker_Hot</workerClass>
+		<stages>
+			<li>
+				<label>hot</label>
+				<description>This heat is unpleasant. I'm sweating.</description>
+				<baseMoodEffect>-5</baseMoodEffect>
+			</li>
+			<li>
+				<label>very hot</label>
+				<description>I'm really overheated.</description>
+				<baseMoodEffect>-10</baseMoodEffect>
+			</li>    
+			<li>
+				<label>extremely hot</label>
+				<description>I feel like I'm in an oven! I'm not sure how long I can handle this.</description>
+				<baseMoodEffect>-15</baseMoodEffect>
+			</li>
+			<li>
+				<label>burning up</label>
+				<description>I'm burning up. I think I could die from this heat!</description>
+				<baseMoodEffect>-20</baseMoodEffect>
+			</li>     
+		</stages>
+	</ThoughtDef>
+	
+	<!-- Mental state thoughts don't affect anything, but give extra flavour and feedback to the player -->
+	
+	<ThoughtDef>
+		<defName>CurrentlyInMentalStateSad</defName>
+		<workerClass>ThoughtWorker_CurrentlyInMentalStateSad</workerClass>
+		<validWhileInMentalState>true</validWhileInMentalState>
+		<stages>
+			<li>
+				<label>sad thoughts</label>
+				<description>It's all just too much.</description>
+			</li>
+		</stages>  
+	</ThoughtDef>
+	
+	<!-- The Bedroom thought chooses a stage according to the pawn's bedroom stats. It does nothing for certain impressiveness values -->
+	
+	<ThoughtDef>
+		<defName>Bedroom</defName>
+		<workerClass>ThoughtWorker_BedroomImpressiveness</workerClass>
+		<stages>
+			<li>
+				<label>awful bedroom</label>
+				<description>My bedroom is an awful place.</description>
+				<baseMoodEffect>-5</baseMoodEffect>
+			</li>
+			<li>
+				<label>repulsive bedroom</label>
+				<description>My bedroom is a repulsive place.</description>
+				<baseMoodEffect>-3</baseMoodEffect>
+			</li>
+			<li IsNull="True" /> <!-- dull -->
+			<li IsNull="True" /> <!-- mediocre -->
+			<li>
+				<label>interesting bedroom</label>
+				<description>My bedroom is very interesting. I like it.</description>
+				<baseMoodEffect>1</baseMoodEffect>
+			</li>
+			<li>
+				<label>little bit impressive bedroom</label>
+				<description>My bedroom is a nice place. I like it.</description>
+				<baseMoodEffect>3</baseMoodEffect>
+			</li>
+			<li>
+				<label>impressive bedroom</label>
+				<description>My bedroom is impressive. I love it!</description>
+				<baseMoodEffect>5</baseMoodEffect>
+			</li>
+			<li>
+				<label>very impressive bedroom</label>
+				<description>My bedroom is very impressive. This is the best place ever!</description>
+				<baseMoodEffect>7</baseMoodEffect>
+			</li>
+			<li>
+				<label>extremely impressive bedroom</label>
+				<description>My bedroom is extremely impressive. This is the best place ever!</description>
+				<baseMoodEffect>9</baseMoodEffect>
+			</li>
+			<li>
+				<label>unbelievably impressive bedroom</label>
+				<description>My bedroom is unbelievably impressive. This is the best place ever!</description>
+				<baseMoodEffect>11</baseMoodEffect>
+			</li>
+			<li>
+				<label>miraculously wonderful bedroom</label>
+				<description>My bedroom is the best place one can ever imagine. It's wonderful.</description>
+				<baseMoodEffect>13</baseMoodEffect>
+			</li>
+			<li>
+				<label>wonder of the World</label>
+				<description>Is this real world? I can't believe I live in a place like this.</description>
+				<baseMoodEffect>15</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+	
+	<!-- MasochistPain triggers a positive pain thought for masochists -->
+
+	<ThoughtDef>
+		<defName>MasochistPain</defName>
+		<workerClass>ThoughtWorker_Pain</workerClass>
+		<requiredTraits>
+			<li>Masochist</li>
+		</requiredTraits>
+		<stages>
+			<li>
+				<label>in a little pain</label>
+				<description>Ow... Heh heh heh... I could get used to this!</description>
+				<baseMoodEffect>5</baseMoodEffect>
+			</li>
+			<li>
+				<label>in a moderate amount of pain</label>
+				<description>Ughhh... It hurts, but I love it! Keep it coming!</description>
+				<baseMoodEffect>10</baseMoodEffect>
+			</li>
+			<li>
+				<label>experiencing acute pain</label>
+				<description>Ouch... I think something's broken... But what an exquisite feeling!</description>
+				<baseMoodEffect>15</baseMoodEffect>
+			</li>
+			<li>
+				<label>in shock from exceptional pain</label>
+				<description>Ahhh... Am I in heaven?</description>
+				<baseMoodEffect>20</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+</Defs>
