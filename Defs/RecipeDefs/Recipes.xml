@@ -114,7 +114,7 @@
 		<!-- Optional. The ValueGetter assigns a count value for ingredients based on a formula, instead of every item having a value of 1.
 		The only ValueGetter used in vanilla is IngredientValueGetter_Nutrition -->
 		<targetCountAdjustment>number</targetCountAdjustment>
-		<!-- Optional. No description available -->
+		<!-- Optional. Defines how much the recipe bill will increase/decrease when pressing on +/- in the bill order -->
 		<productHasIngredientStuff>true_or_false</productHasIngredientStuff>
 		<!-- Optional. No description available. Not used in vanilla -->
 		<unfinishedThingDef>unifinishedthing_defName</unfinishedThingDef>
