@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- Job defs customise job drivers (activities) -->
+
+	<JobDef>
+		<defName>JobDefName</defName>
+		<!-- Desired defName to reference and use the job -->
+		<driverClass>JobDriver_Class</driverClass>
+		<!-- Defines which action is governed by the def. Vanilla driverClasses:
+		JobDriver_AttackMelee
+		JobDriver_AttackStatic
+		JobDriver_BeatFire
+		JobDriver_BuildRoof
+		JobDriver_BuildSnowman
+		JobDriver_BuryCorpse
+		JobDriver_CarryToCryptosleepCasket
+		JobDriver_CastVerbOnce
+		JobDriver_ChatWithPrisoner
+		JobDriver_CleanFilth
+		JobDriver_ClearSnow
+		JobDriver_ConstructFinishFrame
+		JobDriver_Deconstruct
+		JobDriver_DoBill
+		JobDriver_EnterCryptosleepCasket
+		JobDriver_Equip
+		JobDriver_Execute
+		JobDriver_ExtinguishSelf
+		JobDriver_FillFermentingBarrel
+		JobDriver_FixBrokenDownBuilding
+		JobDriver_FleeAndCower
+		JobDriver_Flick
+		JobDriver_FoodDeliver
+		JobDriver_FoodFeedPatient
+		JobDriver_GoForWalk
+		JobDriver_Goto
+		JobDriver_HaulToCell
+		JobDriver_HaulToContainer
+		JobDriver_Hunt
+		JobDriver_Ignite
+		JobDriver_Ingest
+		JobDriver_Kidnap
+		JobDriver_LayDown
+		JobDriver_LayEgg
+		JobDriver_Lovin
+		JobDriver_Maintain
+		JobDriver_ManTurret
+		JobDriver_MarryAdjacentPawn
+		JobDriver_Mate
+		JobDriver_Milk
+		JobDriver_Mine
+		JobDriver_Nuzzle
+		JobDriver_Open
+		JobDriver_OperateDeepDrill
+		JobDriver_PlaceNoCostFrame
+		JobDriver_PlantCut
+		JobDriver_PlantHarvest
+		JobDriver_PlantSow
+		JobDriver_PlayBilliards
+		JobDriver_PlayHorseshoes
+		JobDriver_PredatorHunt
+		JobDriver_RearmTrap
+		JobDriver_Refuel
+		JobDriver_RelaxAlone
+		JobDriver_ReleasePrisoner
+		JobDriver_RemoveApparel
+		JobDriver_RemoveFloor
+		JobDriver_RemoveRoof
+		JobDriver_Repair
+		JobDriver_Research
+		JobDriver_Shear
+		JobDriver_SitFacingBuilding
+		JobDriver_Skygaze
+		JobDriver_Slaughter
+		JobDriver_SmoothFloor
+		JobDriver_SocialRelax
+		JobDriver_Spectate
+		JobDriver_StandAndBeSociallyActive
+		JobDriver_Strip
+		JobDriver_TakeAndExitMap
+		JobDriver_TakeBeerOutOfFermentingBarrel
+		JobDriver_TakeInventory
+		JobDriver_TakeToBed
+		JobDriver_Tame
+		JobDriver_TendPatient
+		JobDriver_TradeWithPawn
+		JobDriver_Train
+		JobDriver_Uninstall
+		JobDriver_UseCommsConsole
+		JobDriver_UseItem
+		JobDriver_ViewArt
+		JobDriver_VisitGrave
+		JobDriver_VisitSickPawn
+		JobDriver_Vomit
+		JobDriver_Wait
+		JobDriver_WatchBuilding
+		JobDriver_WatchTelevision
+		JobDriver_Wear -->
+		<reportString>job_description.</reportString>
+		<!-- Defines how the activity is displayed in-game when inspecting the working pawn. If the job driver has a target, you may use "TargetA" to display its name -->
+		<playerInterruptible>true_or_false</playerInterruptible>
+		<!-- Optional. Defaults to true. Defines if the player can issue a command to a pawn performing the job -->
+		<canCheckOverrideOnDamage>true_or_false</canCheckOverrideOnDamage>
+		<!-- Optional. Defaults to true. If the pawn is damaged, it will reconsider continuing the job -->
+		<alwaysShowWeapon>true_or_false</alwaysShowWeapon>
+		<!-- Optional. If true, the pawn's weapon will be drawn while doing the job -->
+		<neverShowWeapon>true_or_false</neverShowWeapon>
+		<!-- Optional. If true, the pawn's weapon will never be drawn while doing the job -->
+		<suspendable>true_or_false</suspendable>
+		<!-- Optional. Defaults to true. If set to false, the job will not be suspended in favour of eating / joy / etc. -->
+		<casualInterruptible>true_or_false</casualInterruptible>
+		<!-- Optional. Defaults to true. If false, the activity will not be interruptible by non-urgent things -->
+		<collideWithPawns>true_or_false</collideWithPawns>
+		<!-- Optional. If true, pawn collision boxes will be considered when performing the job -->
+		<makeTargetPrisoner>true_or_false</makeTargetPrisoner>
+		<!-- Optional. If true, the job will set the target as a prisoner (capturing, etc.) -->
+		<joyDuration>number</joyDuration>
+		<!-- Optional. Defaults to 4000 (counted in ticks). Defines the duration of joy activities -->
+		<joyMaxParticipants>number</joyMaxParticipants>
+		<!-- Optional. Defaults to 1. Defines the number of pawns involved in a joy activity -->
+		<joyGainRate>number</joyGainRate>
+		<!-- Optional. Defaults to 1. Defines a multiplier for the joy gaining rate of joy activities -->
+		<joySkill>SkillDefName</joySkill>
+		<!-- Optional. If defined, a joy activity will also gain xp for a particular skill -->
+		<joyXpPerTick>number</joyXpPerTick>
+		<!-- Optional. If a joySkill is defined, joyXpPerTick needs to be defined. Sets the amount of XP the joySkill will gain per 1 in-game tick -->
+		<joyKind>JoyKindDefName</joyKind>
+		<!-- Optional. Required for joy activities. Defines which type of joy the activity satisfies. Vanilla joy kinds:
+		Chemical
+		GamingCerebral
+		GamingDexterity
+		Gluttonous
+		Meditative
+		Passive
+		Social
+		Study -->
+	</JobDef>
+
+</Defs>

@@ -1,0 +1,54 @@
+﻿	<!-- Base template -->
+
+	<JobDef>
+		<defName>JobDefName</defName>
+		<driverClass>JobDriver_Class</driverClass>
+		<reportString>job_description.</reportString>
+		<playerInterruptible>true_or_false</playerInterruptible>
+		<canCheckOverrideOnDamage>true_or_false</canCheckOverrideOnDamage>
+		<alwaysShowWeapon>true_or_false</alwaysShowWeapon>
+		<neverShowWeapon>true_or_false</neverShowWeapon>
+		<suspendable>true_or_false</suspendable>
+		<casualInterruptible>true_or_false</casualInterruptible>
+		<collideWithPawns>true_or_false</collideWithPawns>
+		<makeTargetPrisoner>true_or_false</makeTargetPrisoner>
+		<joyDuration>number</joyDuration>
+		<joyMaxParticipants>number</joyMaxParticipants>
+		<joyGainRate>number</joyGainRate>
+		<joySkill>SkillDefName</joySkill>
+		<joyXpPerTick>number</joyXpPerTick>
+		<joyKind>JoyKindDefName</joyKind>
+	</JobDef>
+	
+	<!-- Basic job -->
+
+	<JobDef>
+		<defName>JobDefName</defName>
+		<driverClass>JobDriver_Class</driverClass>
+		<reportString>job_description.</reportString>
+	</JobDef>
+	
+	<!-- Basic joy job -->
+
+	<JobDef>
+		<defName>JobDefName</defName>
+		<driverClass>JobDriver_Class</driverClass>
+		<reportString>job_description.</reportString>
+		<joyDuration>number</joyDuration>
+		<joyGainRate>number</joyGainRate>
+		<joyKind>JoyKindDefName</joyKind>
+	</JobDef>
+	
+	<!-- Detailed joy job -->
+	
+	<JobDef>
+		<defName>JobDefName</defName>
+		<driverClass>JobDriver_Class</driverClass>
+		<reportString>job_description.</reportString>
+		<joyDuration>number</joyDuration>
+		<joyMaxParticipants>number</joyMaxParticipants>
+		<joyGainRate>number</joyGainRate>
+		<joySkill>SkillDefName</joySkill>
+		<joyXpPerTick>number</joyXpPerTick>
+		<joyKind>JoyKindDefName</joyKind>
+	</JobDef>

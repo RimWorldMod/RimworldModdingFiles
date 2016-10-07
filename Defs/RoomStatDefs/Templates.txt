@@ -1,0 +1,51 @@
+﻿	<!-- Base template -->
+
+	<RoomStatDef>
+		<defName>RoomStatDefName</defName>
+		<label>roomstat_name</label>
+		<workerClass>RoomStat_WorkerClass</workerClass>
+		<updatePriority>number</updatePriority>
+		<displayRounded>true_or_false</displayRounded>
+		<isHidden>true_or_false</isHidden>
+		<defaultScore>number</defaultScore>
+		<scoreStages>
+			<li>
+				<minScore>number</minScore>
+				<label>adjective</label>
+			</li>
+			<li>
+				<minScore>number</minScore>
+				<label>adjective</label>
+			</li>
+		</scoreStages>
+	</RoomStatDef>
+
+	<!-- Normal, displayed stat -->
+
+	<RoomStatDef>
+		<defName>RoomStatDefName</defName>
+		<label>roomstat_name</label>
+		<workerClass>RoomStat_WorkerClass</workerClass>
+		<updatePriority>number</updatePriority>
+		<defaultScore>0</defaultScore>
+		<scoreStages>
+			<li>
+				<label>adjective</label>
+			</li>
+			<li>
+				<minScore>number</minScore>
+				<label>adjective</label>
+			</li>
+		</scoreStages>
+	</RoomStatDef>
+	
+	<!-- Hidden stat -->
+	
+	<RoomStatDef>
+		<defName>RoomStatDefName</defName>
+		<label>roomstat_name</label>
+		<workerClass>RoomStat_WorkerClass</workerClass>
+		<updatePriority>0</updatePriority>
+		<isHidden>true</isHidden>
+		<defaultScore>number</defaultScore>
+	</RoomStatDef>

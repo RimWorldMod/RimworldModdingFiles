@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- Vanilla jobs -->
+
+	<!-- Animals -->
+	
+	<JobDef>
+		<defName>Nuzzle</defName>
+		<driverClass>JobDriver_Nuzzle</driverClass>
+		<reportString>nuzzling TargetA.</reportString>
+	</JobDef>
+	
+	<JobDef>
+		<defName>LayEgg</defName>
+		<driverClass>JobDriver_LayEgg</driverClass>
+		<reportString>laying egg.</reportString>
+		<casualInterruptible>false</casualInterruptible>
+	</JobDef>
+	
+	<JobDef>
+		<defName>PredatorHunt</defName>
+		<driverClass>JobDriver_PredatorHunt</driverClass>
+		<reportString>hunting TargetA.</reportString>
+		<casualInterruptible>false</casualInterruptible>
+		<canCheckOverrideOnDamage>false</canCheckOverrideOnDamage>
+	</JobDef>
+	
+	<!-- Social -->
+	
+	<JobDef>
+		<defName>MarryAdjacentPawn</defName>
+		<driverClass>JobDriver_MarryAdjacentPawn</driverClass>
+		<reportString>marrying TargetA.</reportString>
+		<casualInterruptible>false</casualInterruptible>
+	</JobDef>
+
+	<JobDef>
+		<defName>SpectateCeremony</defName>
+		<driverClass>JobDriver_Spectate</driverClass>
+		<reportString>spectating.</reportString>
+	</JobDef>
+
+	<JobDef>
+		<defName>StandAndBeSociallyActive</defName>
+		<driverClass>JobDriver_StandAndBeSociallyActive</driverClass>
+		<reportString>relaxing socially.</reportString>
+	</JobDef>
+	
+	<!-- Joy -->
+	
+	<JobDef>
+		<defName>GoForWalk</defName>
+		<driverClass>JobDriver_GoForWalk</driverClass>
+		<reportString>going for a walk.</reportString>
+		<joyDuration>8000</joyDuration>
+		<joyGainRate>1</joyGainRate>
+		<joyKind>Meditative</joyKind>
+	</JobDef>
+	
+	<JobDef>
+		<defName>VisitSickPawn</defName>
+		<driverClass>JobDriver_VisitSickPawn</driverClass>
+		<reportString>cheering up patient TargetA.</reportString>
+		<joyDuration>1500</joyDuration>
+		<joyGainRate>1</joyGainRate>
+		<joyKind>Social</joyKind>
+	</JobDef>
+	
+	<JobDef>
+		<defName>PlayBilliards</defName>
+		<driverClass>JobDriver_PlayBilliards</driverClass>
+		<reportString>playing billiards.</reportString>
+		<joyDuration>4000</joyDuration>
+		<joyMaxParticipants>2</joyMaxParticipants>
+		<joyGainRate>1.3</joyGainRate>
+		<joySkill>Shooting</joySkill>
+		<joyXpPerTick>0.004</joyXpPerTick>
+		<joyKind>GamingDexterity</joyKind>
+	</JobDef>
+	
+	<!-- General action -->
+	
+	<JobDef>
+		<defName>Goto</defName>
+		<driverClass>JobDriver_Goto</driverClass>
+		<reportString>moving.</reportString>
+	</JobDef>
+	
+	<JobDef>
+		<defName>GotoSafeTemperature</defName>
+		<driverClass>JobDriver_Goto</driverClass>
+		<reportString>seeking safe temperature.</reportString>
+		<casualInterruptible>false</casualInterruptible>
+	</JobDef>
+	
+	<JobDef>
+		<defName>AttackStatic</defName>
+		<driverClass>JobDriver_AttackStatic</driverClass>
+		<reportString>attacking TargetA.</reportString>
+		<alwaysShowWeapon>true</alwaysShowWeapon>
+		<casualInterruptible>false</casualInterruptible>
+	</JobDef>
+
+	<!-- Work -->
+
+	<JobDef>
+		<defName>HaulToCell</defName>
+		<driverClass>JobDriver_HaulToCell</driverClass>
+		<reportString>hauling TargetA.</reportString>
+	</JobDef>
+
+	<JobDef>
+		<defName>Kidnap</defName>
+		<driverClass>JobDriver_Kidnap</driverClass>
+		<reportString>kidnapping TargetA.</reportString>
+		<casualInterruptible>false</casualInterruptible>
+		<canCheckOverrideOnDamage>false</canCheckOverrideOnDamage>
+	</JobDef>
+
+	<JobDef>
+		<defName>Arrest</defName>
+		<driverClass>JobDriver_TakeToBed</driverClass>
+		<reportString>arresting TargetA.</reportString>
+		<alwaysShowWeapon>true</alwaysShowWeapon>
+		<makeTargetPrisoner>true</makeTargetPrisoner>
+		<casualInterruptible>false</casualInterruptible>
+	</JobDef>
+
+	<JobDef>
+		<defName>Train</defName>
+		<driverClass>JobDriver_Train</driverClass>
+		<reportString>training TargetA.</reportString>
+		<casualInterruptible>false</casualInterruptible>
+	</JobDef>
+
+</Defs>

@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<RoomRoleDefs>
+
+	<!-- Vanilla room roles -->
+
+	<!-- Dummy room -->
+
+	<RoomRoleDef>
+		<defName>None</defName>
+		<label>none</label>
+		<workerClass>RoomRoleWorker_None</workerClass>
+	</RoomRoleDef>
+
+	<!-- Basic room -->
+
+	<RoomRoleDef>
+		<defName>Room</defName>
+		<label>room</label>
+		<workerClass>RoomRoleWorker_Room</workerClass>
+	</RoomRoleDef>
+
+	<!-- Special rooms -->
+
+	<RoomRoleDef>
+		<defName>Bedroom</defName>
+		<label>bedroom</label>
+		<workerClass>RoomRoleWorker_Bedroom</workerClass>
+		<relatedStats>
+			<li>Beauty</li>
+			<li>Cleanliness</li>
+			<li>Wealth</li>
+			<li>Space</li>
+			<li>Impressiveness</li>
+		</relatedStats>
+	</RoomRoleDef>
+
+	<RoomRoleDef>
+		<defName>PrisonCell</defName>
+		<label>prison cell</label>
+		<workerClass>RoomRoleWorker_PrisonCell</workerClass>
+		<relatedStats>
+			<li>Beauty</li>
+			<li>Cleanliness</li>
+			<li>Wealth</li>
+			<li>Space</li>
+			<li>Impressiveness</li>
+		</relatedStats>
+	</RoomRoleDef>
+
+	<RoomRoleDef>
+		<defName>DiningRoom</defName>
+		<label>dining room</label>
+		<workerClass>RoomRoleWorker_DiningRoom</workerClass>
+		<relatedStats>
+			<li>Beauty</li>
+			<li>Cleanliness</li>
+			<li>Wealth</li>
+			<li>Space</li>
+			<li>Impressiveness</li>
+		</relatedStats>
+	</RoomRoleDef>
+
+</RoomRoleDefs>

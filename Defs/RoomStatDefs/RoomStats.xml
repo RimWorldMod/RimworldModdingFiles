@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<RoomStatDefs>
+
+	<!-- Room stats are used in different calculations and determine the quality of a room -->
+
+	<RoomStatDef>
+		<defName>RoomStatDefName</defName>
+		<!-- Desired defName to reference and use the room stat -->
+		<label>roomstat_name</label>
+		<!-- Defines the in-game display name of the room stat -->
+		<workerClass>RoomStat_WorkerClass</workerClass>
+		<!-- Defines which calculations are used for this room stat. Vanilla workerClasses:
+		RoomStatWorker_Beauty
+		RoomStatWorker_Cleanliness
+		RoomStatWorker_FoodPoisonChanceFactor
+		RoomStatWorker_GraveVisitingJoyGainFactor
+		RoomStatWorker_Impressiveness
+		RoomStatWorker_InfectionChanceFactor
+		RoomStatWorker_ResearchSpeedFactor
+		RoomStatWorker_Space
+		RoomStatWorker_SurgerySuccessChanceFactor
+		RoomStatWorker_Wealth -->
+		<updatePriority>number</updatePriority>
+		<!-- No description available -->
+		<displayRounded>true_or_false</displayRounded>
+		<!-- Defines if the stat is displayed in-game as an integer (true) or a decimal number (false) -->
+		<isHidden>true_or_false</isHidden>
+		<!-- Optional. If true, the stat will not be shown in the room stats display -->
+		<defaultScore>number</defaultScore>
+		<!-- Defines which score is given by default for the stat -->
+		<scoreStages>
+		<!-- Defines labels according to the room's score for the stat -->
+			<li>
+				<minScore>number</minScore>
+				<!-- Can be negative. If the room meets the minScore it will append a label. If no minScore is defined, the label will be appointed to any score below the next stage -->
+				<label>adjective</label>
+				<!-- Defines how the stat is displayed in-game if it meets the minScore -->
+			</li>
+			<li>
+				<minScore>number</minScore>
+				<label>adjective</label>
+			</li>
+		</scoreStages>
+	</RoomStatDef>
+
+</RoomStatDefs>

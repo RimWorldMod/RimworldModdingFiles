@@ -1,0 +1,11 @@
+﻿	<!-- Base template -->
+
+	<RoomRoleDef>
+		<defName>RoomRoleDefName</defName>
+		<label>roomrole_name</label>
+		<workerClass>RoomRole_WorkerClass</workerClass>
+		<relatedStats>
+			<li>RoomStatDefName</li>
+			<li>RoomStatDefName</li>
+		</relatedStats>
+	</RoomRoleDef>

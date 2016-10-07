@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<RoomRoleDefs>
+
+	<!-- Room roles define special types of rooms for different purposes -->
+
+	<RoomRoleDef>
+		<defName>RoomRoleDefName</defName>
+		<!-- Desired defName to reference and use the room role -->
+		<label>roomrole_name</label>
+		<!-- Defines the in-game display name of rooms that receive the role -->
+		<workerClass>RoomRole_WorkerClass</workerClass>
+		<!-- Defines different code-related properties of the room. Vanilla workerClasses:
+		RoomRoleWorker_Barn
+		RoomRoleWorker_Barracks
+		RoomRoleWorker_Bedroom
+		RoomRoleWorker_DiningRoom
+		RoomRoleWorker_Hospital
+		RoomRoleWorker_Kitchen
+		RoomRoleWorker_Laboratory
+		RoomRoleWorker_None
+		RoomRoleWorker_PrisonBarracks
+		RoomRoleWorker_PrisonCell
+		RoomRoleWorker_RecRoom
+		RoomRoleWorker_Room
+		RoomRoleWorker_Tomb
+		RoomRoleWorker_Workshop -->
+		<relatedStats>
+		<!-- Optional. Links room stat(s) to the room type -->
+			<li>RoomStatDefName</li>
+			<!-- Vanilla room stats:
+			Beauty
+			Cleanliness
+			Impressiveness
+			Space
+			Wealth -->
+			<li>RoomStatDefName</li>
+		</relatedStats>
+	</RoomRoleDef>
+
+</RoomRoleDefs>

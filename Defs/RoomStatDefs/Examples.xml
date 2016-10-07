@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<RoomStatDefs>
+
+	<!-- Vanilla room stats -->
+
+	<!-- Displayed stats -->
+	
+	<RoomStatDef>
+		<defName>Impressiveness</defName>
+		<label>impressiveness</label>
+		<workerClass>RoomStatWorker_Impressiveness</workerClass>
+		<updatePriority>1</updatePriority>
+		<displayRounded>true</displayRounded>
+		<defaultScore>0</defaultScore>
+		<scoreStages>
+			<li>
+				<label>awful</label>
+			</li>
+			<li>
+				<minScore>-150</minScore>
+				<label>repulsive</label>
+			</li>
+			<li>
+				<minScore>-40</minScore>
+				<label>dull</label>
+			</li>
+			<li>
+				<minScore>30</minScore>
+				<label>mediocre</label>
+			</li>
+			<li>
+				<minScore>60</minScore>
+				<label>interesting</label>
+			</li>
+			<li>
+				<minScore>80</minScore>
+				<label>little bit impressive</label>
+			</li>
+			<li>
+				<minScore>95</minScore>
+				<label>impressive</label>
+			</li>
+			<li>
+				<minScore>115</minScore>
+				<label>very impressive</label>
+			</li>
+			<li>
+				<minScore>130</minScore>
+				<label>extremely impressive</label>
+			</li>
+			<li>
+				<minScore>160</minScore>
+				<label>unbelievably impressive</label>
+			</li>
+			<li>
+				<minScore>180</minScore>
+				<label>miraculously wonderful</label>
+			</li>
+			<li>
+				<minScore>215</minScore>
+				<label>wonder of the World</label>
+			</li>
+		</scoreStages>
+	</RoomStatDef>
+	
+	<RoomStatDef>
+		<defName>Space</defName>
+		<label>space</label>
+		<workerClass>RoomStatWorker_Space</workerClass>
+		<updatePriority>2</updatePriority>
+		<displayRounded>true</displayRounded>
+		<defaultScore>350</defaultScore>
+		<scoreStages>
+			<li>
+				<label>cramped</label>
+			</li>
+			<li>
+				<minScore>12.5</minScore>
+				<label>rather tight</label>
+			</li>
+			<li>
+				<minScore>29</minScore>
+				<label>average-sized</label>
+			</li>
+			<li>
+				<minScore>55</minScore>
+				<label>rather spacious</label>
+			</li>
+			<li>
+				<minScore>70</minScore>
+				<label>spacious</label>
+			</li>
+			<li>
+				<minScore>130</minScore>
+				<label>very spacious</label>
+			</li>
+			<li>
+				<minScore>349.5</minScore>
+				<label>extremely spacious</label>
+			</li>
+		</scoreStages>
+	</RoomStatDef>
+	
+	<RoomStatDef>
+		<defName>Cleanliness</defName>
+		<label>cleanliness</label>
+		<workerClass>RoomStatWorker_Cleanliness</workerClass>
+		<updatePriority>2</updatePriority>
+		<defaultScore>0</defaultScore>
+		<scoreStages>
+			<li>
+				<label>very dirty</label>
+			</li>
+			<li>
+				<minScore>-1.1</minScore>
+				<label>dirty</label>
+			</li>
+			<li>
+				<minScore>-0.4</minScore>
+				<label>a little bit dirty</label>
+			</li>
+			<li>
+				<minScore>-0.05</minScore>
+				<label>clean</label>
+			</li>
+			<li>
+				<minScore>0.4</minScore>
+				<label>sterile</label>
+			</li>
+		</scoreStages>
+	</RoomStatDef>
+	
+	<!-- Hidden stats -->
+	
+	<RoomStatDef>
+		<defName>InfectionChanceFactor</defName>
+		<label>infection chance factor</label>
+		<workerClass>RoomStatWorker_InfectionChanceFactor</workerClass>
+		<updatePriority>0</updatePriority>
+		<isHidden>true</isHidden>
+		<defaultScore>1</defaultScore>
+	</RoomStatDef>
+
+	<RoomStatDef>
+		<defName>SurgerySuccessChanceFactor</defName>
+		<label>surgery success chance factor</label>
+		<workerClass>RoomStatWorker_SurgerySuccessChanceFactor</workerClass>
+		<updatePriority>0</updatePriority>
+		<isHidden>true</isHidden>
+		<defaultScore>1</defaultScore>
+	</RoomStatDef>
+
+	<RoomStatDef>
+		<defName>ResearchSpeedFactor</defName>
+		<label>research speed factor</label>
+		<workerClass>RoomStatWorker_ResearchSpeedFactor</workerClass>
+		<updatePriority>0</updatePriority>
+		<isHidden>true</isHidden>
+		<defaultScore>1</defaultScore>
+	</RoomStatDef>
+
+</RoomStatDefs>
