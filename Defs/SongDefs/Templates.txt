@@ -1,0 +1,35 @@
+﻿	<!-- Base template -->
+
+	<SongDef>
+		<defName>SongDefName</defName>
+		<clipPath>path_to_song_file</clipPath>
+		<volume>number</volume>
+		<playOnMap>true_or_false</playOnMap>
+		<commonality>number</commonality>
+		<tense>true_or_false</tense>
+		<allowedTimeOfDay>time_of_day</allowedTimeOfDay>
+		<allowedSeasons>
+			<li>SeasonDefName</li>
+			<li>SeasonDefName</li>
+		</allowedSeasons>
+	</SongDef>
+
+	<!-- Simple randomly-playing song -->
+	
+	<SongDef>
+		<clipPath>path_to_song_file</clipPath>
+	</SongDef>
+
+	<!-- Basic template with customisation -->
+	
+	<SongDef>
+		<defName>SongDefName</defName>
+		<clipPath>path_to_song_file</clipPath>
+		<volume>number</volume>
+		<commonality>number</commonality>
+		<tense>true_or_false</tense>
+		<allowedTimeOfDay>time_of_day</allowedTimeOfDay>
+		<allowedSeasons>
+			<li>SeasonDefName</li>
+		</allowedSeasons>
+	</SongDef>

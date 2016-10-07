@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<SongDefs>
+
+	<!-- Vanilla examples -->
+
+	<!-- Main menu -->
+
+	<SongDef>
+		<defName>EntrySong</defName>
+		<playOnMap>false</playOnMap>
+		<clipPath>Songs/Entry/Entry_Ambience_Full</clipPath>
+		<volume>0.9</volume>
+	</SongDef>
+
+	<!-- Time-of-day songs -->
+
+	<SongDef>
+		<clipPath>Songs/Relax/Noodles_Planetfall/Noodle_Planetfall_a</clipPath>
+		<volume>0.65</volume>
+		<allowedTimeOfDay>Day</allowedTimeOfDay>
+	</SongDef>
+
+	<SongDef>
+		<clipPath>Songs/Relax/Noodles_Starscape/Noodle_Starscape_d</clipPath>
+		<allowedTimeOfDay>Night</allowedTimeOfDay>
+	</SongDef>
+
+	<!-- Randomly-playing -->
+
+	<SongDef>
+		<clipPath>Songs/Relax/Noodles_Mirage/Noodle_Mirage_e</clipPath>
+	</SongDef>
+
+	<SongDef>
+		<clipPath>Songs/Relax/I_Like_It_Here</clipPath>
+		<volume>1.03</volume>
+	</SongDef>
+
+	<!-- Seasonal -->
+
+	<SongDef>
+		<clipPath>Songs/Relax/Ice_Shaman</clipPath>
+		<volume>0.97</volume>
+		<commonality>2.0</commonality>
+		<allowedSeasons>
+			<li>Winter</li>
+		</allowedSeasons>
+	</SongDef>
+
+	<!-- Tense moments -->
+
+	<SongDef>
+		<clipPath>Songs/Tension/Close_The_Gates</clipPath>
+		<volume>1.0</volume>
+		<tense>true</tense>
+	</SongDef>
+
+	<SongDef>
+		<clipPath>Songs/Tension/Dont_Freeze_Up</clipPath>
+		<volume>1.0</volume>
+		<tense>true</tense>
+	</SongDef>
+
+</SongDefs>

@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<SongDefs>
+
+	<!-- Songs get played randomly, but can be customised to an extent -->
+
+	<SongDef>
+		<defName>SongDefName</defName>
+		<!-- Desired defName to reference and use the song. Songs don't need defNames to work, but it is good practice to have them anyway -->
+		<clipPath>path_to_song_file</clipPath>
+		<!-- This is the folder path to the file -->
+		<volume>number</volume>
+		<!-- Optional. Defaults to 1. Adjusts the song's volume when it plays -->
+		<playOnMap>true_or_false</playOnMap>
+		<!-- Optional. Defaults to true. Defines if the song is played in-game (true) or in the main menu/end credits (false) -->
+		<commonality>number</commonality>
+		<!-- Optional. Defaults to 1. Defines how rarely the song plays -->
+		<tense>true_or_false</tense>
+		<!-- Optional. If true, the song will play during raids and other intense moments -->
+		<allowedTimeOfDay>time_of_day</allowedTimeOfDay>
+		<!-- Optional. Defaults to Any. Can be set to Any, Day or Night -->
+		<allowedSeasons>
+		<!-- Optional. Enables the song only in specific season(s) -->
+			<li>SeasonDefName</li>
+			<!-- Vanilla def names:
+			Undefined
+			Spring
+			Summer
+			Fall
+			Winter -->
+			<li>SeasonDefName</li>
+		</allowedSeasons>
+	</SongDef>
+
+</SongDefs>
