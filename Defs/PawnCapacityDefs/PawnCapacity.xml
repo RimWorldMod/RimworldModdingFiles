@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<PawnCapacityDefs>
+
+	<!-- Capcities are abilities relating to pawn health -->
+	
+	<PawnCapacityDef>
+		<defName>CapacityDefName</defName>
+		<!-- Desired defName to reference and use the capacity -->
+		<label>capacity_name</label>
+		<!-- Defines the in-game display name of the capacity -->
+		<listOrder>number</listOrder>
+		<!-- Defines the display order of capacities in the Health tab. Lower listOrder = higher up the list -->
+		<labelMechanoids>Capacityname_mechanoids</labelMechanoids>
+		<!-- Optional. Defines a different display name on mechanoids -->
+		<labelAnimals>Capacityname_animals</labelAnimals>
+		<!-- Optional. Defines a different display name on animals -->
+		<showOnHumanlikes>true_or_false</showOnHumanlikes>
+		<!-- Optional. Defaults to true. If false, the capacity will not be displayed for humanoids -->
+		<showOnAnimals>true_or_false</showOnAnimals>
+		<!-- Optional. Defaults to true. If false, the capacity will not be displayed for animals -->
+		<showOnMechanoids>true_or_false</showOnMechanoids>
+		<!-- Optional. Defaults to true. If false, the capacity will not be displayed for mechanoids -->
+		<lethalFlesh>true_or_false</lethalFlesh>
+		<!-- No description available -->
+		<lethalMechanoids>true_or_false</lethalMechanoids>
+		<!-- No description available -->
+		<minForCapable>number</minForCapable>
+		<!-- Optional. Defines a capability percentage (0=0%, 0.5=50%). If a pawn's capacity drops below this percentage it is considered "incapable of capacity_name" -->
+		<minValue>number</minValue>
+		<!-- Optional. Defines the minimum possible value for the capacity -->
+	</PawnCapacityDef>
+
+</PawnCapacityDefs>

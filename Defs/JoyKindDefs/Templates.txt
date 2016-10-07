@@ -1,0 +1,6 @@
+﻿	<!-- Base template -->
+	
+	<JoyKindDef>
+		<defName>JoyKindDefName</defName>
+		<label>joykind_name</label>
+	</JoyKindDef>

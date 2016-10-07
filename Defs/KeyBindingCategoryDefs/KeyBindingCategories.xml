@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<KeyBindingCategoryDefs>
+
+	<!-- Keybinding categories group keybindings into different groups in the menu. That are also used to set conflicting groups to prevent duplicate keys -->
+
+	<KeyBindingCategoryDef>
+		<defName>CategoryDefName</defName>
+		<!-- Desired defName to reference and use the category -->
+		<label>category_label</label>
+		<!-- The in-game display name of the category -->
+		<description>Category_description.</description>
+		<!-- Long-form description of the category's contents -->
+		<isGameUniversal>true_or_false</isGameUniversal>
+		<!-- Optional. No description available -->
+		<checkForConflicts>
+		<!-- Defines which categories conflict with the category. The game checks for conflicting keybindings between these categories -->
+			<li>CategoryDefName</li>
+			<li>CategoryDefName</li>
+		</checkForConflicts>
+	</KeyBindingCategoryDef>
+
+</KeyBindingCategoryDefs>

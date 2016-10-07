@@ -1,0 +1,9 @@
+	<!-- Base template -->
+
+	<KeyBindingDef>
+		<defName>KeybindingDefName</defName>
+		<category>keybinding_category</category>
+		<defaultKeyCodeA>first_key</defaultKeyCodeA>
+		<defaultKeyCodeB>second_key</defaultKeyCodeB>
+		<devModeOnly>true_or_false</devModeOnly>
+	</KeyBindingDef>

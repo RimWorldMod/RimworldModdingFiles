@@ -1,0 +1,19 @@
+﻿	<!-- Base template -->
+	
+	<SkillDef>
+		<defName>SkillDefName</defName>
+		<description>Skill_description.</description>
+		<skillLabel>skill_name</skillLabel>
+		<pawnLabel>pawn_name</pawnLabel>
+		<definedInBackstories>true_or_false</definedInBackstories>
+		<disablingWorkTags>WorkTag_defName</disablingWorkTags>
+	</SkillDef>
+	
+	<!-- Basic skill -->
+	
+	<SkillDef>
+		<defName>SkillDefName</defName>
+		<description>Skill_description.</description>
+		<skillLabel>skill_name</skillLabel>
+		<pawnLabel>pawn_name</pawnLabel>
+	</SkillDef>

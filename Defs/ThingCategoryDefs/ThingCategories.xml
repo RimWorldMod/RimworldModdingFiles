@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ThingCategoryDefs>
+
+	<!-- Thing categories group several defs in one category that can be easily referenced -->
+
+	<ThingCategoryDef>
+		<defName>CategoryDefName</defName>
+		<!-- Desired defName to reference and use the category -->
+		<label>category_name</label>
+		<!-- Defines the in-game display name for the category -->
+		<parent>CategoryDefName</parent>
+		<!-- Optional. Defines the category as a sub-category, it will be included every time its parent is referenced -->
+		<iconPath>icon_reference_path</iconPath>
+		<!-- Optional. Defines the icon asset for the category -->
+		<resourceReadoutRoot>true_or_false</resourceReadoutRoot>
+		<!-- Optional. No description available -->
+	</ThingCategoryDef>
+
+</ThingCategoryDefs>

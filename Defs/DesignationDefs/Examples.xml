@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- Vanilla designations -->
+
+	<DesignationDef>
+		<defName>Plan</defName>
+		<texturePath>Designations/Plan</texturePath>
+		<targetType>Cell</targetType>
+		<removeIfBuildingDespawned>true</removeIfBuildingDespawned>
+	</DesignationDef>
+
+	<DesignationDef>
+		<defName>Deconstruct</defName>
+		<texturePath>Designations/Deconstruct</texturePath>
+		<targetType>Thing</targetType>
+	</DesignationDef>
+
+	<DesignationDef>
+		<defName>Hunt</defName>
+		<texturePath>Designations/Hunt</texturePath>
+		<targetType>Thing</targetType>
+	</DesignationDef>
+
+</Defs>

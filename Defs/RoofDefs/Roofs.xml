@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Roofs>
+
+	<!-- Roofs prevent item deterioration, provide shelter and block sunlight -->
+	
+	<RoofDef>
+		<defName>RoofDefName</defName>
+		<!-- Desired defName to reference and use the roof type -->
+		<label>roof_name</label>
+		<!-- Sets the in-game display name of the roof type -->
+		<isNatural>true_or_false</isNatural>
+		<!-- Optional. Defines if the roof is natural or constructed -->
+		<isThickRoof>true_or_false</isThickRoof>
+		<!-- Optional. If false, the roof is considered to be thin -->
+		<collapseLeavingThingDef>thing_defName</collapseLeavingThingDef>
+		<!-- Optional. Defines a thingDef to spawn if the roof collapses due to lack of support -->
+		<filthLeaving>filth_name</filthLeaving>
+		<!-- Defines which rubble is left if the roof is deconstructed or collapses. Vanilla uses BuildingRubble or RockRubble -->
+		<soundPunchThrough>sound_reference</soundPunchThrough>
+		<!-- Optional. No description available -->
+	</RoofDef>
+
+</Roofs>

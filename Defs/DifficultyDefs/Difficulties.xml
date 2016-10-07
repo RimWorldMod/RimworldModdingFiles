@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- Difficulty is set upon generating a new colony and can be changed from the in-game pause menu.
+	Difficulty influences various parameters, as detailed below -->
+	
+	<DifficultyDef>
+		<defName>DifficultyDefName</defName>
+		<!-- Desired defName to reference and use the difficulty -->
+		<label>difficulty_name</label>
+		<!-- The in-game display name of the difficulty -->
+		<description>Difficulty_description.</description>
+		<!-- Long-form description of the difficulty -->
+		<difficulty>number</difficulty>
+		<!-- Defines the difficulty's place on the difficulties list. Lower values appear higher up on the list -->
+		<threatScale>number</threatScale>
+		<!-- Defines a scale multiplier for the severity of threats -->
+		<colonistMoodOffset>number</colonistMoodOffset>
+		<!-- Defines a base change in colonist mood. Positive numbers increase base mood, negative numbers decrease it -->
+		<baseSellPriceFactor>number</baseSellPriceFactor>
+		<!-- Defines a multiplier for trade prices -->
+		<cropYieldFactor>number</cropYieldFactor>
+		<!-- Defines a multiplier for crop yield -->
+		<diseaseIntervalFactor>number</diseaseIntervalFactor>
+		<!-- Defines a multiplier for disease frequency -->
+		<enemyReproductionRateFactor>number</enemyReproductionRateFactor>
+		<!-- Defines a multiplier for the amount of enemies -->
+	</DifficultyDef>
+
+</Defs>

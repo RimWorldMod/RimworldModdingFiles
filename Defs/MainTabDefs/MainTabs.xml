@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MainTabDefs>
+
+	<!-- MainTabs are the tabs that appear at the bottom of the screenspace and contain the various UI elements -->
+	
+	<MainTabDef>
+		<defName>Inspect</defName>
+		<!-- Desired defName to reference and use the maintab -->
+		<label>inspect</label>
+		<!-- Sets the in-game display name of the maintab -->
+		<description>MainTab_description.</description>
+		<!-- Long-form description of the tab and its contents -->
+		<TabButtonHeight>number</TabButtonHeight>
+		<!-- Optional. Defaults to 35. Defines the height of the tab button -->
+		<windowClass>MainTabWindow_ClassName</windowClass>
+		<!-- Defines the type of interface contained in the tab. Vanilla windowClasses:
+		MainTabWindow_Animals
+		MainTabWindow_Architect
+		MainTabWindow_Assign
+		MainTabWindow_Factions
+		MainTabWindow_History
+		MainTabWindow_Inspect
+		MainTabWindow_Menu
+		MainTabWindow_Research
+		MainTabWindow_Restrict
+		MainTabWindow_Work
+		MainTabWindow_World -->
+		<showTabButton>true_or_false</showTabButton>
+		<!-- Optional. Defaults to true. Defines if the tab button is visible -->
+		<order>number</order>
+		<!-- Defines the placement of the tab from left to right. The lowest value is furthest to the left, next higher to its right etc. -->
+		<defaultToggleKey>keybinding</defaultToggleKey>
+		<!-- Optional. Assigns a default keybinding to the tab -->
+		<canBeTutorDenied>true_or_false</canBeTutorDenied>
+		<!-- Optional. Defaults to true. No description available -->
+	</MainTabDef>
+
+</MainTabDefs>

@@ -1,0 +1,11 @@
+﻿	<!-- Base template -->
+	
+	<HairDef>
+		<defName>HairDefName</defName>
+		<label>hairstyle_name</label>
+		<hairGender>gender_type</hairGender>
+		<texPath>texture_path</texPath>
+		<hairTags>
+			<li>tag</li>
+		</hairTags>
+	</HairDef>

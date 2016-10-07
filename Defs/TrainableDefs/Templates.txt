@@ -1,0 +1,39 @@
+﻿	<!-- Base template -->
+	
+	<TrainableDef>
+		<defName>TrainableDefName</defName>
+		<label>trainable_name</label>
+		<description>Trainable_description.</description>
+		<icon>icon_path</icon>
+		<listPriority>number</listPriority>
+		<difficulty>number</difficulty>
+		<requiredTrainableIntelligence>intelligence_level</requiredTrainableIntelligence>
+		<steps>number</steps>
+		<prerequisites>
+			<li>TrainableDefName</li>
+			<li>TrainableDefName</li>
+		</prerequisites>
+		<minBodySize>number</minBodySize>
+		<defaultTrainable>true_or_false</defaultTrainable>
+		<tags>
+			<li>tag</li>
+			<li>tag</li>
+		</tags>
+	</TrainableDef>
+	
+	<!-- Basic trainable skill -->
+	
+	<TrainableDef>
+		<defName>TrainableDefName</defName>
+		<label>trainable_name</label>
+		<description>Trainable_description.</description>
+		<icon>icon_path</icon>
+		<listPriority>number</listPriority>
+		<difficulty>number</difficulty>
+		<requiredTrainableIntelligence>intelligence_level</requiredTrainableIntelligence>
+		<steps>number</steps>
+		<defaultTrainable>true</defaultTrainable>
+		<tags>
+			<li>tag</li>
+		</tags>
+	</TrainableDef>

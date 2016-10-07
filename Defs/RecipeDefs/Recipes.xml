@@ -1,0 +1,346 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<RecipeDefs>
+
+	<!-- Recipes are used to transform ingredients into products (or other results like surgery post-states).
+	RecipesDefs are independent, which makes them ideal for compatibility, since recipes can also be made in less compatible ways.
+	RecipesDefs will generate errors if the ingredients, products, hediffs etc. associated with them are missing (missing mods, missing defs) -->
+
+	<RecipeDef>
+		<defName>RecipeDefName</defName>
+		<!-- Desired defName to reference and use the recipe -->
+		<label>recipe_name</label>
+		<!-- This is the in-game name display for the recipe -->
+		<description>Recipe_description.</description>
+		<!-- Long-form description of the action, appears in bill details -->
+		<jobString>Present_progressive_description.</jobString>
+		<!-- Defines how the pawn will be described when it is performing the job. For example - "Making a simple meal." -->
+		<workAmount>number</workAmount>
+		<!-- Optional. Defaults to -1 (insignificant). Defines the amount of ticks to complete the recipe. The default value defers to the product's WorkToMake stat instead -->
+		<workSpeedStat>stat_defname</workSpeedStat>
+		<!-- Defines which stat governs the recipe's completion rate. Available vanilla stats:
+		BrewingSpeed
+		ButcheryFleshSpeed
+		ButcheryMechanoidSpeed
+		CookSpeed
+		DrugProductionSpeed
+		MedicalOperationSpeed
+		SculptingSpeed
+		SmeltingSpeed
+		SmithingSpeed
+		StonecuttingSpeed
+		TailoringSpeed -->
+		<efficiencyStat>efficiencystat_defname</efficiencyStat>
+		<!-- Optional. Unique to butchery recipes in vanilla. Influences the amount of products spawned on completion. Available vanilla defnames:
+		ButcheryFleshEfficiency
+		ButcheryMechanoidEfficiency -->
+		<workSkill>skill_defname</workSkill>
+		<!-- Optional. Defines if the recipe is linked to a skill. The skill's XP will increase when performing the recipe. Available vanilla skills:
+		Animals
+		Artistic
+		Construction
+		Cooking
+		Crafting
+		Growing
+		Medicine
+		Melee
+		Mining
+		Research
+		Shooting
+		Social -->
+		<workSkillLearnFactor>number</workSkillLearnFactor>
+		<!-- Optional. Defaults to 1. Defines an XP gain multiplier for the workSkill defined when using the recipe -->
+		<effectWorking>effect_name</effectWorking>
+		<!-- The visual effect for the recipe. Available vanilla effects:
+		BurnDrug
+		ButcherFlesh
+		ButcherMechanoid
+		Cook
+		Cremate
+		CutStone
+		Repair
+		Sculpt
+		Smelt
+		Smith
+		Surgery
+		Tailor -->
+		<soundWorking>sound_reference</soundWorking>
+		<!-- Relevant sound to be used with the recipe -->
+		<workerClass>WorkerClass_Name</workerClass>
+		<!-- Optional. Links the recipe to a workerClass, used for surgery recipes in vanilla. Vanilla recipe workers:
+		Recipe_InstallArtificialBodyPart
+		Recipe_InstallImplant
+		Recipe_InstallNaturalBodyPart
+		Recipe_Kill
+		Recipe_RemoveBodyPart
+		Recipe_RemoveHediff -->
+		<workerCounterClass>WorkCounterClass_Name</workerCounterClass>
+		<!-- Optional. Vanilla uses only RecipeWorkerCounter_MakeStoneBlocks -->
+		<surgeonSurgerySuccessChanceExponent>number</surgeonSurgerySuccessChanceExponent>
+		<!-- Optional. Defaults to 1. Only relevant to surgery recipes. Multiplies the surgeon's SurgerySuccessChance contribution as an exponent. Higher values effectively DECREASE the contribution (ex. 0.2^2=0.04) -->
+		<roomSurgerySuccessChanceFactorExponent>number</roomSurgerySuccessChanceFactorExponent>
+		<!-- Optional. Defaults to 1. Only relevant to surgery recipes. Modifies the room stats' influence factor on a successful surgery as an exponent. Higher values INCREASE the importance of the room's stats -->
+		<surgerySuccessChanceFactor>number</surgerySuccessChanceFactor>
+		<!-- Optional. Defaults to 1. Only relevant to surgery recipes. After a surgery's success chance has been calculated, it is multiplied by this value for the final result -->
+		<deathOnFailedSurgeryChance>number</deathOnFailedSurgeryChance>
+		<!-- Optional. Only relevant to surgery recipes. Modifies failed surgery death chance as a percentage. 0=0%, 0.5=50%, 1.0=100% etc. -->
+		<requiredGiverWorkType>WorkType_DefName</requiredGiverWorkType>
+		<!-- Optional. Defines a workType for the recipe. If the workType is disabled for a pawn, it can't use the recipe. Vanilla workTypes:
+		Art
+		Cleaning
+		Construction
+		Cooking
+		Crafting
+		Doctor
+		Firefighter
+		Flicker
+		Growing
+		Handling
+		Hauling
+		Hunting
+		Mining
+		PatientBedRest
+		PatientEmergency
+		PlantCutting
+		Repair
+		Research
+		Smithing
+		Tailoring
+		Warden -->
+		<researchPrerequisite>ResearchProjectDefName</researchPrerequisite>
+		<!-- Optional. Locks the recipe until a research project has been completed -->
+		<allowMixingIngredients>true_or_false</allowMixingIngredients>
+		<!-- Optional. Allows mixing ingredients from the same filter to achieve the desired count -->
+		<ingredientValueGetterClass>valuegetter_class</ingredientValueGetterClass>
+		<!-- Optional. The ValueGetter assigns a count value for ingredients based on a formula, instead of every item having a value of 1.
+		The only ValueGetter used in vanilla is IngredientValueGetter_Nutrition -->
+		<targetCountAdjustment>number</targetCountAdjustment>
+		<!-- Optional. Defines how much the recipe bill will increase/decrease when pressing on +/- in the bill order -->
+		<productHasIngredientStuff>true_or_false</productHasIngredientStuff>
+		<!-- Optional. No description available. Not used in vanilla -->
+		<unfinishedThingDef>unifinishedthing_defName</unfinishedThingDef>
+		<!-- Optional. After the recipe has started, transforms the ingredients into a special unfinished product. If production is stopped, the unifinishedThing can be picked up in the future to complete the recipe.
+		Vanilla unfinishedThing defNames:
+		UnfinishedApparel
+		UnfinishedComponent
+		UnfinishedGun
+		UnfinishedSculpture
+		UnfinishedTechArmor
+		UnfinishedWeapon -->
+		<skillRequirements>
+		<!-- Optional. Forbids the recipe for pawns who don't meet the required skill(s) requirement -->
+			<li>
+				<skill>skill_defName</skill>
+				<minLevel>number</minLevel>
+			</li>
+			<li>
+				<skill>skill_defName</skill>
+				<minLevel>number</minLevel>
+			</li>
+		</skillRequirements>
+		<recipeUsers>
+		<!-- Optional. Adds the recipe as a bill for the defined building(s) -->
+			<li>defName</li>
+			<li>defName</li>
+		</recipeUsers>
+		<hideBodyPartNames>true_or_false</hideBodyPartNames>
+		<!-- Optional. If true, the bill will not show a body part to target. Used in some surgery bills -->
+		<isViolation>true_or_false</isViolation>
+		<!-- Optional. Defaults to false. Used in the Euthanize and ShutDownMechanoid recipes -->
+		<appliedOnFixedBodyParts>
+		<!-- Optional. Defines specific body parts to be targeted by a surgery recipe -->
+			<li>BodyPartDefName</li>
+			<li>BodyPartDefName</li>
+		</appliedOnFixedBodyParts>
+		<ingredients>
+		<!-- Item requirements for the recipe. All ingredients are gathered and "combined" to create the product. You can set one or more thingDef(s) or one or more category(ies) by filter. You can use multiple filters to include more ingredients -->
+			<li>
+				<filter>
+				<!-- You can use one category, one thingDef, multiple categories, multiple thingdefs, and use both in the same filter -->
+					<categories>
+					<!-- If you set a category filter, every item in that category is fair to use unless specified elsewhere (see below) -->
+						<li>category</li>
+						<!-- Vanilla categories:
+						AnimalProductRaw
+						Apparel
+						Corpses
+						CorpsesAnimal
+						CorpsesHumanlike
+						CorpsesMechanoid
+						Drugs
+						Fabric
+						FoodRaw
+						Foods
+						MeatRaw
+						Medicine
+						Metallic
+						PlantFoodRaw
+						Root
+						StoneChunks
+						Stony
+						Weapons
+						Woody -->
+						<li>category</li>
+					</categories>
+					<thingDefs>
+					<!-- If you set a thingDefs filter, this specific thingDef will be used -->
+						<li>defName</li>
+						<li>defName</li>
+					</thingDefs>
+				</filter>
+				<count>number</count>
+				<!-- Defines the amount of ingredients taken from this filter. Is defined for every filter -->
+			</li>
+			<li>
+				<filter>
+					<categories>
+						<li>category</li>
+						<li>category</li>
+					</categories>
+					<thingDefs>
+						<li>defName</li>
+						<li>defName</li>
+					</thingDefs>
+				</filter>
+				<count>number</count>
+			</li>
+		</ingredients>
+		<products>
+		<!-- Optional. Defines which product(s) the recipe spawns and the amount to spawn. Having no products results in a cremation-like recipe -->
+			<defName>number</defName>
+			<defName>number</defName>
+		</products>
+		<specialProducts>
+		<!-- Optional. Defines a special product category, uses an algorithm to define products -->
+			<li>specialproduct_category</li>
+			<!-- The base game only uses Butchery and Smelted as special categories -->
+		</specialProducts>
+		<fixedIngredientFilter>
+		<!-- Defines which ingredients are used in the bill regardless of amount. Can be identical to the list in <ingredients>, broader, or more specific.
+		If you set a category filter as an ingredient, you can omit it from this list and set specific thingDefs instead; only they will be used from that category -->
+			<categories>
+				<li>category</li>
+				<li>category</li>
+			</categories>
+			<thingDefs>
+				<li>defName</li>
+				<li>defName</li>
+			</thingDefs>
+			<exceptedCategories>
+			<!-- Optional. Excludes categories from the recipe. Can be used to exclude a sub-category if a broad category is used as an ingredient filter -->
+				<li>category</li>
+				<li>category</li>
+			</exceptedCategories>
+			<exceptedThingDefs>
+			<!-- Optional. Excludes thingDefs from the recipe -->
+				<li>thingDef</li>
+				<li>thingDef</li>
+			</exceptedThingDefs>
+			<specialFiltersToAllow>
+			<!-- Optional. Don't use it if you don't know what you're doing -->
+				<li>special_filter</li>
+			</specialFiltersToAllow>
+			<specialFiltersToDisallow>
+			<!-- Optional. Don't use it if you don't know what you're doing -->
+				<li>special_filter</li>
+			</specialFiltersToDisallow>
+			<disallowedSpecialFilters>
+			<!-- Optional. Don't use it if you don't know what you're doing -->
+				<li>special_filter</li>
+			</disallowedSpecialFilters>
+		</fixedIngredientFilter>
+		<defaultIngredientFilter>
+		<!-- Optional. When spawning the recipe bill, these ingredients will be enabled by default -->
+			<categories>
+				<li>category</li>
+				<li>category</li>
+			</categories>
+			<thingDefs>
+				<li>defName</li>
+				<li>defName</li>
+			</thingDefs>
+			<exceptedCategories>
+			<!-- Optional. Excludes categories from being enabled by default. Useful if you set a broad category to be enabled by default but want a subcategory to be disabled -->
+				<li>category</li>
+				<li>category</li>
+			</exceptedCategories>
+			<exceptedThingDefs>
+			<!-- Optional. Excludes thingDefs from being enabled by default -->
+				<li>thingDef</li>
+				<li>thingDef</li>
+			</exceptedThingDefs>
+			<specialFiltersToAllow>
+			<!-- Optional. Don't use it if you don't know what you're doing -->
+				<li>special_filter</li>
+			</specialFiltersToAllow>
+			<specialFiltersToDisallow>
+			<!-- Optional. Don't use it if you don't know what you're doing -->
+				<li>special_filter</li>
+			</specialFiltersToDisallow>
+			<disallowedSpecialFilters>
+			<!-- Optional. Don't use it if you don't know what you're doing -->
+				<li>special_filter</li>
+			</disallowedSpecialFilters>
+		</defaultIngredientFilter>
+		<addsHediff>HediffDefName</addsHediff>
+		<!-- Optional. Completing the recipe adds a hediff -->
+		<removesHediff>HediffDefName</removesHediff>
+		<!-- Optional. Completing the recipe removes a hediff -->
+		<successfullyRemovedHediffMessage>RemoveHediff_Message.</successfullyRemovedHediffMessage>
+		<!-- Optional. If a recipe with removesHediff succeeds, a message is displayed. Tip: {0} will show the name of the pawn who used the recipe, {1} will show the name of the receiving pawn -->
+		<conceptLearned>ConceptDefName</conceptLearned>
+		<!-- Optional. Links a concept to the recipe to notify the in-game Learning Helper. Vanilla concept defnames:
+		Alerts
+		AllowedAreas
+		AnimalsDontAttackDoors
+		AnimalTaming
+		AnimalTraining
+		ArrestingCreatesEnemies
+		BillsTab
+		BuildOrbitalTradeBeacon
+		CameraDolly
+		CameraZoom
+		Capturing
+		ClickingMessages
+		CoverAndShooting
+		Deterioration
+		Drafting
+		DrugAddiction
+		DrugBurning
+		DrugPolicies
+		EquippingWeapons
+		FirePreparation
+		Forbidding
+		ForbiddingDoors
+		FriendlyFireSafety
+		GettingMoreTraders
+		GrowingFood
+		HistoryTab
+		HomeArea
+		HostilityResponse
+		InfoCard
+		InspectRoomStats
+		InteractingWithTraders
+		ManualWorkPriorities
+		MedicalOperations
+		Mining
+		OpeningComms
+		Outfits
+		Pause
+		PersonalShields
+		PrisonerTab
+		Rescuing
+		SetGrowingZonePlant
+		ShotAccuracyTooltip
+		SpoilageAndFreezers
+		Stockpiles
+		StorageTab
+		SwitchFlickingDesignation
+		TimeAssignments
+		TimeControls
+		TradeGoodsMustBeNearBeacon
+		TVForSickPeople
+		WorkTab
+		WorldCameraMovement -->
+	</RecipeDef>
+	
+</RecipeDefs>

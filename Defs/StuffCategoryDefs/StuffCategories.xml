@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- Stuff categories are used to group materials that are used in recipes/construction/etc. -->
+
+	<StuffCategoryDef>
+		<defName>StuffCategoryDefName</defName>
+		<!-- Desired defName to reference and use the included stuff -->
+		<label>stuffcategory_name</label>
+		<!-- Defines the in-game display name of the category, alludes to the included materials -->
+	</StuffCategoryDef>
+
+</Defs>

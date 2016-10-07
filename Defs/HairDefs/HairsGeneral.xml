@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DefPackage-HairDef>
+
+	<!-- Hair defs define hair style properties -->
+	
+	<HairDef>
+		<defName>HairDefName</defName>
+		<!-- Desired defName to reference and use the hair style -->
+		<label>hairstyle_name</label>
+		<!-- Sets the in-game display name of the hair style -->
+		<hairGender>gender_type</hairGender>
+		<!-- Optional. Defaults to Any. Defines if the hair style is for Any, Male or Female -->
+		<texPath>texture_path</texPath>
+		<!-- Path to the hair style's texture -->
+		<hairTags>
+		<!-- Defines the hair style's associated tags (used in faction defs) -->
+			<li>tag</li>
+			<!-- Vanilla hair style tags:
+			Punk
+			Rural
+			Tribal
+			Urban -->
+			<li>tag</li>
+		</hairTags>
+	</HairDef>
+
+</DefPackage-HairDef>

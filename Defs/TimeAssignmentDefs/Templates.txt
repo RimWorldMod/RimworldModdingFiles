@@ -1,0 +1,9 @@
+﻿	<!-- Base template -->
+	
+	<TimeAssignmentDef>
+		<defName>AssignmentDefName</defName>
+		<label>assignment_name</label>
+		<color>(colour1, colour2, colour3)</color>
+		<allowRest>true_or_false</allowRest>
+		<allowJoy>true_or_false</allowJoy>
+	</TimeAssignmentDef>

@@ -1,0 +1,42 @@
+﻿	<!-- Base template -->
+
+	<WorkGiverDef>
+		<defName>WorkGiverDefName</defName>
+		<label>workgiver_name</label>
+		<giverClass>WorkGiver_WorkGiverType</giverClass>
+		<workType>WorkTypeDefName</workType>
+		<emergency>true_or_false</emergency>
+		<verb>verb</verb>
+		<gerund>present_progressive_verb</gerund>
+		<requiredCapacities>
+			<li>capacity_defName</li>
+		</requiredCapacities>
+		<priorityInType>number</priorityInType>
+		<prioritizeSustains>true_or_false</prioritizeSustains>
+		<directOrderable>true_or_false</directOrderable>
+		<fixedBillGiverDefs>
+			<li>defName</li>
+			<li>defName</li>
+		</fixedBillGiverDefs>
+		<billGiversAllHumanlikes>true_or_false</billGiversAllHumanlikes>
+		<billGiversAllHumanlikesCorpses>true_or_false</billGiversAllHumanlikesCorpses>
+		<billGiversAllMechanoids>true_or_false</billGiversAllMechanoids>
+		<billGiversAllMechanoidsCorpses>true_or_false</billGiversAllMechanoidsCorpses>
+		<billGiversAllAnimals>true_or_false</billGiversAllAnimals>
+		<billGiversAllAnimalsCorpses>true_or_false</billGiversAllAnimalsCorpses>
+		<canBeDoneByNonColonists>true_or_false</canBeDoneByNonColonists>
+		<scanThings>true_or_false</scanThings>
+		<scanCells>true_or_false</scanCells>
+	</WorkGiverDef>
+	
+	<!-- Basic template -->
+	
+	<WorkGiverDef>
+		<defName>WorkGiverDefName</defName>
+		<label>workgiver_name</label>
+		<giverClass>WorkGiver_WorkGiverType</giverClass>
+		<workType>WorkTypeDefName</workType>
+		<verb>verb</verb>
+		<gerund>present_progressive_verb</gerund>
+		<priorityInType>number</priorityInType>
+	</WorkGiverDef>

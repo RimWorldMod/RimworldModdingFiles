@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MapConditionDefs>
+
+	<!-- Map conditions are non-standard phenomenas that occur randomly and affect things like weather or pawn mood -->
+	
+	<MapConditionDef>
+		<defName>MapConditionDefName</defName>
+		<!-- Desired defName to reference and use the map condition -->
+		<label>mapcondition_name</label>
+		<!-- Sets the in-game display name of the map condition -->
+		<description>MapCondition_description.</description>
+		<!-- Long-form description of the map condition (effects, climate changes etc.) -->
+		<conditionClass>MapCondition_ClassName</conditionClass>
+		<!-- Optional. Defines special modifiers used by the map condition. Vanilla conditionClasses:
+		MapCondition_ClimateCycle
+		MapCondition_ColdSnap
+		MapCondition_Eclipse
+		MapCondition_Flashstorm
+		MapCondition_HeatWave
+		MapCondition_Planetkiller
+		MapCondition_PsychicEmanation
+		MapCondition_ToxicFallout
+		MapCondition_VolcanicWinter -->
+		<exclusiveConditions>
+		<!-- Optional. Defines special modifier(s) used by the map condition -->
+			<li>condition_defName</li>
+			<!-- Vanilla exclusiveConditions:
+			ColdSnap
+			HeatWave
+			PsychicDrone
+			PsychicSoothe
+			VolcanicWinter -->
+			<li>condition_defName</li>
+		</exclusiveConditions>
+		<endMessage>message</endMessage>
+		<!-- Optional. Defines a message the player will see when the map condition duration is over -->
+		<canBePermanent>true_or_false</canBePermanent>
+		<!-- Optional. If true, the map condition can be set permanently -->
+		<droneLevel>dronelevel_name</droneLevel>
+		<!-- Optional. Used for MapCondition_PsychicEmanation. Sets the drone level used. Vanilla uses BadMedium or GoodMedium -->
+		<preventRain>true_or_false</preventRain>
+		<!-- Optional. If true, prevents rainfall even if the current weather includes rain -->
+		<CanCoexistWithMAPCONDITIONDEF>true_or_false</CanCoexistWithMAPCONDITIONDEF>
+		<!-- Optional. Unused in vanilla. Don't touch this if you don't know what you're doing -->
+	</MapConditionDef>
+
+</MapConditionDefs>

@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- Vanilla examples -->
+	
+	<JoyGiverDef>
+		<defName>Meditate</defName>
+		<giverClass>JoyGiver_InPrivateRoom</giverClass>
+		<baseChance>2</baseChance>
+		<pctPawnsEverDo>0.4</pctPawnsEverDo>
+		<jobDef>Meditate</jobDef>
+		<joyKind>Meditative</joyKind>
+	</JoyGiverDef>
+	
+	<JoyGiverDef>
+		<defName>EatChocolate</defName>
+		<giverClass>JoyGiver_Ingest</giverClass>
+		<baseChance>2.5</baseChance>
+		<thingDefs>
+			<li>Chocolate</li>
+		</thingDefs>
+		<joyKind>Gluttonous</joyKind>
+		<requiredCapacities>
+			<li>Manipulation</li>
+		</requiredCapacities>
+	</JoyGiverDef>
+	
+	<JoyGiverDef>
+		<defName>PlayHorseshoes</defName>
+		<giverClass>JoyGiver_WatchBuilding</giverClass>
+		<baseChance>2.3</baseChance>
+		<thingDefs>
+			<li>HorseshoesPin</li>
+		</thingDefs>
+		<jobDef>PlayHorseshoes</jobDef>
+		<desireSit>false</desireSit>
+		<joyKind>GamingDexterity</joyKind>
+		<requiredCapacities>
+			<li>Sight</li>
+			<li>Manipulation</li>
+		</requiredCapacities>
+	</JoyGiverDef>
+	
+	<JoyGiverDef>
+		<defName>UseTelescope</defName>
+		<giverClass>JoyGiver_InteractBuildingInteractionCell</giverClass>
+		<baseChance>1.4</baseChance>
+		<thingDefs>
+			<li>Telescope</li>
+		</thingDefs>
+		<jobDef>UseTelescope</jobDef>
+		<joyKind>Study</joyKind>
+		<unroofedOnly>true</unroofedOnly>
+		<requiredCapacities>
+			<li>Sight</li>
+		</requiredCapacities>
+	</JoyGiverDef>
+
+</Defs>

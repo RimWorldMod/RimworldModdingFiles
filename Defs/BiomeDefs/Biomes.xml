@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- Every tile on the world map is associated with a biome.
+	Biomes are large ecological areas, with specific animals, plants and weather types -->
+	
+	<BiomeDef>
+		<defName>BiomeName</defName>
+		<!-- defName used to reference and use the biome -->
+		<label>biome_label</label>
+		<!-- Biome label (this is the actual name displayed in-game) -->
+		<description>Biome_description.</description>
+		<!-- A long-form description of the biome. Tip: include climate, terrain, vegetation, animals and optionally some flavour text -->
+		<workerClass>BiomeWorker_Biometype</workerClass>
+		<!-- String used for biome generation. Available vanilla strings:
+		BiomeWorker_AridShrubland
+		BiomeWorker_BorealForest
+		BiomeWorker_Desert
+		BiomeWorker_ExtremeDesert
+		BiomeWorker_IceSheet
+		BiomeWorker_Ocean
+		BiomeWorker_TemperateForest
+		BiomeWorker_TropicalRainforest
+		BiomeWorker_Tundra -->
+		<implemented>true_or_false</implemented>
+		<!-- Optional. Defaults to true -->
+		<canBuildBase>true_or_false</canBuildBase>
+		<!-- Optional. Defaults to true. Defines if a tile with this biome is choosable on the world map as a colony base -->
+		<hideTerrain>true_or_false</hideTerrain>
+		<!-- Optional. Defaults to false. Toggles terrain display for the biome. Used in vanilla for the ocean biome -->
+		<animalDensity>number</animalDensity>
+		<!-- Controls the amount of animals spawned. 0 to disable -->
+		<plantDensity>number</plantDensity>
+		<!-- Controls the amount of plants spawned. 0 to disable -->
+		<baseColor>(colour1, colour2, colour3)</baseColor>
+		<!-- World map colour -->
+		<soundsAmbient>
+		<!-- Ambient sounds used in the biome. Can use one or more -->
+			<li>Sound_reference</li>
+			<li>Sound_reference</li>
+		</soundsAmbient>
+		<diseaseMtbDays>number</diseaseMtbDays>
+		<!-- Controls the frequency of disease. Lower values increase frequency-->
+		<diseases>
+		<!-- Defines which diseases will spawn -->
+			<li>
+				<diseaseInc>Disease_name</diseaseInc>
+				<!-- Available vanilla defNames:
+				Disease_FibrousMechanites
+				Disease_Flu
+				Disease_GutWorms
+				Disease_Malaria
+				Disease_MuscleParasites
+				Disease_Plague
+				Disease_SensoryMechanites
+				Disease_SleepingSickness -->
+				<commonality>number</commonality>
+			</li>
+			<li>
+				<diseaseInc>Disease_name</diseaseInc>
+				<commonality>name</commonality>
+			</li>
+		</diseases>
+		<terrainsByFertility>
+		<!-- Sets terrain types for the biome along with their spawn threshold. Can set one or more types -->
+			<li>
+				<terrain>Terrain_name</terrain>
+				<!-- Available vanilla terrains:
+				Ice
+				Marsh
+				MarshyTerrain
+				MossyTerrain
+				Mud
+				Sand
+				Soil
+				SoilRich
+				WaterDeep
+				WaterShallow -->
+				<min>number</min>
+				<!-- Minimum threshold, lowest -999 -->
+				<max>number</max>
+				<!-- Maximum threshold, highest 999 -->
+			</li>
+			<li>
+				<terrain>Terrain_name</terrain>
+				<min>number</min>
+				<max>number</max>
+			</li>
+		</terrainsByFertility>
+		<terrainPatchMakers>
+		<!-- Optional. Generates small terrain patches -->
+			<li>
+				<perlinFrequency>number</perlinFrequency>
+				<!-- Perlin-noise is used in the generation formula. Default perlinFrequency is 0.01 -->
+				<thresholds>
+					<li>
+						<terrain>Terrain_name</terrain>
+						<min>number</min>
+						<max>number</max>
+					</li>
+					<li>
+						<terrain>Terrain_name</terrain>
+						<min>number</min>
+						<max>number</max>
+					</li>
+					<li>
+						<terrain>Terrain_name</terrain>
+						<min>number</min>
+						<max>number</max>
+					</li>
+				</thresholds>
+			</li>
+		</terrainPatchMakers>
+		<baseWeatherCommonalities>
+		<!-- Sets weather types and sets likelihood of each one to occur. The number can be set to 0 to disable a certain type of weather -->
+			<Clear>number</Clear>
+			<Fog>number</Fog>
+			<Rain>number</Rain>
+			<DryThunderstorm>number</DryThunderstorm>
+			<RainyThunderstorm>number</RainyThunderstorm>
+			<FoggyRain>number</FoggyRain>
+			<SnowGentle>number</SnowGentle>
+			<SnowHard>number</SnowHard>
+		</baseWeatherCommonalities>
+		<wildPlants>
+		<!-- Sets naturally occuring plant types used in the biome. Uses plant defName. Can set one or more -->
+			<PlantDefName>number</PlantDefName>
+			<PlantDefName>number</PlantDefName>
+			<PlantDefName>number</PlantDefName>
+		</wildPlants>
+		<wildAnimals>
+		<!-- Sets animals to spawn and wander the biome. Uses animal defName. Can set one or more -->
+			<AnimalDefName>number</AnimalDefName>
+			<AnimalDefName>number</AnimalDefName>
+			<AnimalDefName>number</AnimalDefName>
+		</wildAnimals>
+		<allowedPackAnimals>
+		<!-- Sets which animals are used as pack animals (traders and such). Uses animal defName. Can set one or more -->
+			<li>AnimalDefName</li>
+			<li>AnimalDefName</li>
+		</allowedPackAnimals>
+	</BiomeDef>
+
+</Defs>

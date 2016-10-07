@@ -1,0 +1,12 @@
+	<!-- Base keybinding category template -->
+
+	<KeyBindingCategoryDef>
+		<defName>CategoryDefName</defName>
+		<label>category_label</label>
+		<description>Category_description.</description>
+		<isGameUniversal>true_or_false</isGameUniversal>
+		<checkForConflicts>
+			<li>CategoryDefName</li>
+			<li>CategoryDefName</li>
+		</checkForConflicts>
+	</KeyBindingCategoryDef>

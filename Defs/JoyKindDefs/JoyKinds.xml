@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- Joy kinds are basic categories used to gather joy givers -->
+	
+	<JoyKindDef>
+		<defName>JoyKindDefName</defName>
+		<!-- Desired defName to reference and use the joy kind -->
+		<label>joykind_name</label>
+		<!-- Sets the in-game display name of the joy kind -->
+	</JoyKindDef>
+
+</Defs>

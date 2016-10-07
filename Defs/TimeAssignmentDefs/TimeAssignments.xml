@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- Time assignments dictate what colonists can do at specific times and are shown in the Restrict tab -->
+	
+	<TimeAssignmentDef>
+		<defName>AssignmentDefName</defName>
+		<!-- Desired defName to reference and use the TimeAssignment -->
+		<label>assignment_name</label>
+		<!-- Sets the in-game display name of the assignment, shown in the Restrict tab -->
+		<color>(colour1, colour2, colour3)</color>
+		<!-- Defines the assignment's colours in the Restrict tab -->
+		<allowRest>true_or_false</allowRest>
+		<!-- Optional. Defaults to true. Defines if the colonist can rest during the assigned timeslot -->
+		<allowJoy>true_or_false</allowJoy>
+		<!-- Optional. Defaults to true. Defines if the colonist can perform joy activities during the assigned timeslot -->
+	</TimeAssignmentDef>
+
+</Defs>

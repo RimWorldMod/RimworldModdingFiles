@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- Needs are parameters that must be fulfilled by pawns to avoid negative modifiers.
+	Some needs provide positive modifiers depending on their state -->
+
+	<NeedDef>
+		<DefName>DesiredDefName</DefName>
+		<!-- The desired defName to reference and use the need -->
+		<needClass>NeedClass_Name</needClass>
+		<!-- Defines which needClass is used. Vanilla needClasses:
+		Need_Beauty
+		Need_Chemical
+		Need_Comfort
+		Need_Food
+		Need_Joy
+		Need_Mood
+		Need_Rest
+		Need_Space -->
+		<label>need_name</label>
+		<!-- Defines the in-game display name for the need -->
+		<description>Need_description.</description>
+		<!-- Long-form description of the need -->
+		<baseLevel>number</baseLevel>
+		<!-- Optional. Defaults to 0.5. Defines the default percentage for the need (before any rise/fall over time) -->
+		<fallPerDay>number</fallPerDay>
+		<!-- Optional. Defaults to 0.5. Defines the percentage decrease per day. Divide this value by 0.24 for the hourly decrease percentage -->
+		<showOnNeedList>true_or_false</showOnNeedList>
+		<!-- Optional. Defaults to true. Defines if the need is part of the list in the Needs tab -->
+		<listPriority>number</listPriority>
+		<!-- Defines the need's placement in the Needs tab. Higher priorities are further up the list -->
+		<major>true_or_false</major>
+		<!-- Defines if the need is major (major needs have large display boxes) -->
+		<freezeWhileSleeping>true_or_false</freezeWhileSleeping>
+		<!-- Defines if the need level stops decreasing when the pawn is sleeping -->
+		<minIntelligence>Intelligence_Name</minIntelligence>
+		<!-- Optional. Defines if a need is unnecessary below this intelligence level (ex. animals don't need joy/comfort). Vanilla only uses Humanlike as minIntelligence -->
+		<seekerRisePerHour>number</seekerRisePerHour>
+		<!-- No available description -->
+		<seekerFallPerHour>number</seekerFallPerHour>
+		<!-- No available description -->
+		<colonistsOnly>true_or_false</colonistsOnly>
+		<!-- Optional. Defines if the need is only calculated for colonists -->
+		<colonistAndPrisonersOnly>true_or_false</colonistAndPrisonersOnly>
+		<!-- Optional. Defines if the need is only calculated for colonists and prisoners -->
+		<onlyIfCausedByHediff>true_or_false</onlyIfCausedByHediff>
+		<!-- Optional. If true, the need will only be used in association with a Hediff. Only true in vanilla for drug addiction -->
+		<tutorHighlightTag>Highlight_Tag</tutorHighlightTag>
+		<!-- Optional. If defined, spawning the need will highlight a Learning Helper popup. Only used in vanilla for NeedAddiction -->
+	</NeedDef>
+
+</Defs>

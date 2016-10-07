@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- Vanilla examples -->
+
+	<!-- Basic research projects -->
+
+	<ResearchProjectDef>
+		<defName>PassiveCooler</defName>
+		<label>passive cooler</label>
+		<description>Make passive coolers, a way to cool indoor spaces without using electricity.</description>
+		<baseCost>400</baseCost>
+		<techLevel>Neolithic</techLevel>
+		<tags>
+			<li>TribalStart</li>
+		</tags>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef>
+		<defName>Smithing</defName>
+		<label>smithing</label>
+		<description>Build smithies for crafting metal weapons and tools.</description>
+		<baseCost>700</baseCost>
+		<techLevel>Medieval</techLevel>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef>
+		<defName>AirConditioning</defName>
+		<label>air conditioning</label>
+		<description>Build air conditions to cool rooms in the heat, or to keep freezers.</description>
+		<baseCost>600</baseCost>
+		<techLevel>Industrial</techLevel>
+		<prerequisites>
+			<li>Electricity</li>
+		</prerequisites>
+		<tags>
+			<li>ClassicStart</li>
+		</tags>
+	</ResearchProjectDef>
+
+	<!-- Advanced research projects -->
+
+	<ResearchProjectDef>
+		<defName>DeepDrilling</defName>
+		<label>deep drilling</label>
+		<description>Allows you to build deep drills for extracting resources from deep underground. You'll need a ground-penetrating scanner to find the resources.</description>
+		<baseCost>1500</baseCost>
+		<techLevel>Industrial</techLevel>
+		<prerequisites>
+			<li>MicroelectronicsBasics</li>
+		</prerequisites>
+		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+		<requiredResearchFacilities>
+			<li>MultiAnalyzer</li>
+		</requiredResearchFacilities>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef>
+		<defName>VitalsMonitor</defName>
+		<label>vitals monitor</label>
+		<description>Allows colonists to build vitals monitors which increase patients treatment quality if placed next to medical beds.</description>
+		<baseCost>1600</baseCost>
+		<techLevel>Industrial</techLevel>
+		<prerequisites>
+			<li>MicroelectronicsBasics</li>
+			<li>HospitalBed</li>
+		</prerequisites>
+		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+		<requiredResearchFacilities>
+			<li>MultiAnalyzer</li>
+		</requiredResearchFacilities>
+	</ResearchProjectDef>
+
+</Defs>

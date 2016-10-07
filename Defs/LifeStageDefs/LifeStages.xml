@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- Life stages modify some pawn properties. They apply to humanlikes, animals and mechanoids -->
+
+	<LifeStageDef>
+		<defName>StageDefName</defName>
+		<!-- Desired defName to reference and use the life stage -->
+		<label>lifestage_name</label>
+		<!-- The in-game name of the life stage -->
+		<adjective>lifestage_adjective</adjective>
+		<!-- Optional. Defaults to using <label>. The prefix given to the pawn at this life stage -->
+		<visible>true_or_false</visible>
+		<!-- Optional. Defaults to true. Defines if the life stage is visible to the player -->
+		<reproductive>true_or_false</reproductive>
+		<!-- Optional. Defines if the pawn can reproduce at this stage -->
+		<milkable>true_or_false</milkable>
+		<!-- Optional. Defines if the pawn can be milked at this stage -->
+		<shearable>true_or_false</shearable>
+		<!-- Optional. Defines if the pawn can be sheared at this stage -->
+		<statFactors>
+		<!-- Optional. Sets a multiplier for the pawn's stats at this stage -->
+			<statDefName>number</statDefName>
+			<!-- Available vanilla defNames:
+			AimingDelayFactor
+			BrewingSpeed
+			ButcheryFleshEfficiency
+			ButcheryFleshSpeed
+			ButcheryMechanoidEfficiency
+			ButcheryMechanoidSpeed
+			CarryingCapacity
+			ComfyTemperatureMax
+			ComfyTemperatureMin
+			ConstructFailChance
+			ConstructionSpeed
+			CookSpeed
+			DrugProductionSpeed
+			EatingSpeed
+			FixBrokenDownBuildingFailChance
+			FoodPoisonChance
+			GiftImpact
+			GlobalLearningFactor
+			HarvestFailChance
+			HealingSpeed
+			ImmunityGainSpeed
+			ImmunityGainSpeedFactor
+			MeatAmount
+			MedicalOperationSpeed
+			MeleeDPS
+			MeleeHitChance
+			MentalBreakThreshold
+			MiningSpeed
+			MoveSpeed
+			PlantWorkSpeed
+			PsychicSensitivity
+			RecruitPrisonerChance
+			ResearchSpeed
+			ResearchSpeedFactor
+			SculptingSpeed
+			ShootingAccuracy
+			SmeltingSpeed
+			SmithingSpeed
+			SmoothingSpeed
+			SocialImpact
+			StonecuttingSpeed
+			SurgerySuccessChance
+			TailoringSpeed
+			TameAnimalChance
+			ToxicSensitivity
+			TradePriceImprovement
+			TrainAnimalChance
+			WorkSpeedGlobal -->
+			<statDefName>number</statDefName>
+		</statFactors>
+		<bodySizeFactor>number</bodySizeFactor>
+		<!-- Optional. Defaults to 1. Multiplier for the pawn's body size at this stage -->
+		<healthScaleFactor>number</healthScaleFactor>
+		<!-- Optional. Defaults to 1. Multiplier for the pawn's health at this stage -->
+		<hungerRateFactor>number</hungerRateFactor>
+		<!-- Optional. Defaults to 1. Multiplier for the pawn's hunger rate at this stage -->
+		<marketValueFactor>number</marketValueFactor>
+		<!-- Optional. Defaults to 1. Multiplier for the pawn's market value at this stage -->
+		<voxPitch>number</voxPitch>
+		<!-- Optional. Defaults to 1. Modifies the pawn's vocal pitch at this stage -->
+		<voxVolume>number</voxVolume>
+		<!-- Optional. Defaults to 1. Modifies the pawn's vocal volume at this stage -->
+		<icon>icon_path</icon>
+		<!-- Optional. No description available -->
+	</LifeStageDef>
+
+</Defs>

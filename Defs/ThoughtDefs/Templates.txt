@@ -1,0 +1,74 @@
+﻿	<!-- Base template -->
+
+	<ThoughtDef>
+		<defName>ThoughtDefName</defName>
+		<thoughtClass>Thought_Class</thoughtClass>
+		<workerClass>ThoughtWorker_Type</workerClass>
+		<hediff>HediffDefName</hediff>
+		<taleDef>TaleDefName</taleDef>
+		<stackLimit>number</stackLimit>
+		<stackLimitPerPawn>number</stackLimitPerPawn>
+		<stackedEffectMultiplier>number</stackedEffectMultiplier>
+		<effectMultiplyingStat>StatDefName</effectMultiplyingStat>
+		<durationDays>number</durationDays>
+		<invert>true_or_false</invert>
+		<validWhileInMentalState>true_or_false</validWhileInMentalState>
+		<requiredTraits>
+			<li>TraitDefName</li>
+			<li>TraitDefName</li>
+		</requiredTraits>
+		<requiredTraitsDegree>number</requiredTraitsDegree>
+		<nullifyingTraits>
+			<li>TraitDefName</li>
+			<li>TraitDefName</li>
+		</nullifyingTraits>
+		<nullifyingOwnTales>
+			<li>defName</li>
+			<li>defName</li>
+		</nullifyingOwnTales>
+		<nullifiedIfNotColonist>true_or_false</nullifiedIfNotColonist>
+		<stages>
+			<li>
+				<label>Thought_label</label>
+				<labelSocial>Thought_name_social</labelSocial>
+				<description>Thought_description.</description>
+				<baseMoodEffect>number</baseMoodEffect>
+				<baseOpinionOffset>number</baseOpinionOffset>
+				<visible>true_or_false</visible>
+			</li>
+		</stages>
+		<maxCumulatedOpinionOffset>number</maxCumulatedOpinionOffset>
+		<nextThought>ThoughtDefName</nextThought>
+		<thoughtToMake>ThoughtDefName</thoughtToMake>
+		<socialThoughtAffectingMood>true_or_false</socialThoughtAffectingMood>
+		<lerpOpinionToZeroAfterDurationPct>number</lerpOpinionToZeroAfterDurationPct>
+	</ThoughtDef>
+	
+	<!-- Basic hediff-based thought (will appear/disappear when the hediff appears/disappears) -->
+
+	<ThoughtDef>
+		<defName>ThoughtDefName</defName>
+		<workerClass>ThoughtWorker_Hediff</workerClass>
+		<hediff>HediffDefName</hediff>
+		<stages>
+			<li>
+				<label>Thought_label</label>
+				<description>Thought_description.</description>
+				<baseMoodEffect>number</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+	
+	<!-- Basic duration-based thought -->
+
+	<ThoughtDef>
+		<defName>ThoughtDefName</defName>
+		<durationDays>number</durationDays>
+		<stages>
+			<li>
+				<label>Thought_label</label>
+				<description>Thought_description.</description>
+				<baseMoodEffect>number</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>

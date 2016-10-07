@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<WorkGivers>
+
+	<!-- Vanilla work givers -->
+	
+	<!-- Firefight (lacks priority because it is the only work giver in its workType) -->
+	
+	<WorkGiverDef>
+		<defName>FightFires</defName>
+		<label>fight fires</label>
+		<giverClass>WorkGiver_FightFires</giverClass>
+		<workType>Firefighter</workType>
+		<emergency>true</emergency>
+		<verb>extinguish</verb>
+		<gerund>extinguishing</gerund>
+	</WorkGiverDef>
+	
+	<!-- Doctor -->
+	
+	<WorkGiverDef>
+		<defName>DoctorTreatEmergency</defName>
+		<label>give emergency treatment</label>
+		<giverClass>WorkGiver_TendEmergency</giverClass>
+		<workType>Doctor</workType>
+		<emergency>true</emergency>
+		<verb>treat</verb>
+		<gerund>treating</gerund>
+		<requiredCapacities>
+			<li>Manipulation</li>
+		</requiredCapacities>
+		<priorityInType>100</priorityInType>
+		<prioritizeSustains>true</prioritizeSustains>
+	</WorkGiverDef>
+	
+	<WorkGiverDef>
+		<defName>DoBillsMedicalHumanOperation</defName>
+		<label>operate on humanlikes</label>
+		<giverClass>WorkGiver_DoBill</giverClass>
+		<workType>Doctor</workType>
+		<priorityInType>70</priorityInType>
+		<billGiversAllHumanlikes>true</billGiversAllHumanlikes>
+		<billGiversAllHumanlikesCorpses>true</billGiversAllHumanlikesCorpses>
+		<verb>operate</verb>
+		<gerund>operating on</gerund>
+		<requiredCapacities>
+			<li>Manipulation</li>
+		</requiredCapacities>
+		<prioritizeSustains>true</prioritizeSustains>
+	</WorkGiverDef>
+
+	<WorkGiverDef>
+		<defName>DoBillsMedicalAnimalOperation</defName>
+		<label>operate on animals</label>
+		<giverClass>WorkGiver_DoBill</giverClass>
+		<workType>Doctor</workType>
+		<priorityInType>60</priorityInType>
+		<billGiversAllAnimals>true</billGiversAllAnimals>
+		<billGiversAllAnimalsCorpses>true</billGiversAllAnimalsCorpses>
+		<verb>operate</verb>
+		<gerund>operating on</gerund>
+		<requiredCapacities>
+			<li>Manipulation</li>
+		</requiredCapacities>
+		<prioritizeSustains>true</prioritizeSustains>
+	</WorkGiverDef>
+	
+	<!-- Warden -->
+	
+	<WorkGiverDef>
+		<defName>DoExecution</defName>
+		<label>execute prisoners</label>
+		<giverClass>WorkGiver_Warden_DoExecution</giverClass>
+		<workType>Warden</workType>
+		<verb>do execution on</verb>
+		<gerund>doing execution on</gerund>
+		<priorityInType>110</priorityInType>
+		<requiredCapacities>
+			<li>Manipulation</li>
+		</requiredCapacities>
+	</WorkGiverDef>
+
+	<WorkGiverDef>
+		<defName>ReleasePrisoner</defName>
+		<label>release prisoners</label>
+		<giverClass>WorkGiver_Warden_ReleasePrisoner</giverClass>
+		<workType>Warden</workType>
+		<verb>release</verb>
+		<gerund>releasing</gerund>
+		<priorityInType>100</priorityInType>
+		<requiredCapacities>
+			<li>Manipulation</li>
+		</requiredCapacities>
+	</WorkGiverDef>
+	
+	<WorkGiverDef>
+		<defName>ChatWithPrisoner</defName>
+		<label>chat with prisoners</label>
+		<giverClass>WorkGiver_Warden_Chat</giverClass>
+		<workType>Warden</workType>
+		<verb>chat with</verb>
+		<gerund>chatting with</gerund>
+		<priorityInType>60</priorityInType>
+		<requiredCapacities>
+			<li>Talking</li>
+		</requiredCapacities>
+	</WorkGiverDef>
+	
+	<!-- Tailoring -->
+	
+	<WorkGiverDef>
+		<defName>DoBillsMakeApparel</defName>
+		<label>tailor apparel</label>
+		<giverClass>WorkGiver_DoBill</giverClass>
+		<workType>Tailoring</workType>
+		<priorityInType>110</priorityInType>
+		<fixedBillGiverDefs>
+			<li>ElectricTailoringBench</li>
+			<li>HandTailoringBench</li>
+		</fixedBillGiverDefs>
+		<verb>tailor</verb>
+		<gerund>tailoring at</gerund>
+		<requiredCapacities>
+			<li>Manipulation</li>
+		</requiredCapacities>
+		<prioritizeSustains>true</prioritizeSustains>
+	</WorkGiverDef>
+	
+</WorkGivers>

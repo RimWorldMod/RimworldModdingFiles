@@ -1,0 +1,33 @@
+﻿	<!-- Base template -->
+	
+	<WorkTypeDef>
+		<defName>WorkTypeDefName</defName>
+		<labelShort>worktype_name</labelShort>
+		<pawnLabel>noun_based_on_labelShort</pawnLabel>
+		<gerundLabel>gerund</gerundLabel>
+		<description>WorkType_description.</description>
+		<verb>verb</verb>
+		<naturalPriority>number</naturalPriority>
+		<alwaysStartActive>true_or_false</alwaysStartActive>
+		<visible>true_or_false</visible>
+		<requireCapableColonist>true_or_false</requireCapableColonist>
+		<relevantSkills>
+			<li>skillDefName</li>
+		</relevantSkills>
+		<workTags>
+			<li>tag</li>
+			<li>tag</li>
+		</workTags>
+	</WorkTypeDef>
+	
+	<!-- Basic template -->
+	
+	<WorkTypeDef>
+		<defName>WorkTypeDefName</defName>
+		<labelShort>worktype_name</labelShort>
+		<pawnLabel>noun_based_on_labelShort</pawnLabel>
+		<gerundLabel>gerund</gerundLabel>
+		<description>WorkType_description.</description>
+		<verb>verb</verb>
+		<naturalPriority>number</naturalPriority>
+	</WorkTypeDef>

@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- Thoughts are pawn modifiers that display under the Needs tab. They mostly affect mood or opinion of other pawns -->
+
+	<ThoughtDef>
+		<defName>ThoughtDefName</defName>
+		<!-- Desired defName to reference and use the tought -->
+		<thoughtClass>Thought_Class</thoughtClass>
+		<!-- Optional. Assigns a special thought class that changes the thought's origin/effects. Vanilla thoughtClasses:
+		Thought_ChemicalInterestVsTeetotaler
+		Thought_HardWorkerVsLazy
+		Thought_Incestuous
+		Thought_MemoryObservation
+		Thought_MemorySocial
+		Thought_MemorySocialCumulative
+		Thought_OpinionOfMyLover
+		Thought_SharedBed
+		Thought_SituationalSocial
+		Thought_Tale
+		Thought_TeetotalerVsChemicalInterest
+		Thought_WantToSleepWithSpouseOrLover -->
+		<workerClass>ThoughtWorker_Type</workerClass>
+		<!-- Optional. Assigns a special worker class that changes the thought's origin/effects. Vanilla workerClasses:
+		ThoughtWorker_Affair
+		ThoughtWorker_AlwaysActive
+		ThoughtWorker_AnnoyingVoice
+		ThoughtWorker_ApparelDamaged
+		ThoughtWorker_Ascetic
+		ThoughtWorker_BarracksImpressiveness
+		ThoughtWorker_BeautyPretty
+		ThoughtWorker_BeautyUgly
+		ThoughtWorker_BedroomImpressiveness
+		ThoughtWorker_BedroomJealous
+		ThoughtWorker_BondedAnimalMaster
+		ThoughtWorker_CabinFever
+		ThoughtWorker_ChemicalInterestVsTeetotaler
+		ThoughtWorker_Cold
+		ThoughtWorker_ColonistLeftUnburied
+		ThoughtWorker_Comfort
+		ThoughtWorker_Cramped
+		ThoughtWorker_CreepyBreathing
+		ThoughtWorker_CurrentlyInMentalStateAggro
+		ThoughtWorker_CurrentlyInMentalStatePanic
+		ThoughtWorker_CurrentlyInMentalStateSad
+		ThoughtWorker_Dark
+		ThoughtWorker_Disfigured
+		ThoughtWorker_Drunk
+		ThoughtWorker_Expectations
+		ThoughtWorker_Food
+		ThoughtWorker_Greedy
+		ThoughtWorker_HardWorkerVsLazy
+		ThoughtWorker_HasBionicBodyPart
+		ThoughtWorker_Hediff
+		ThoughtWorker_HospitalPatientRoomStats
+		ThoughtWorker_Hot
+		ThoughtWorker_Imprisoned
+		ThoughtWorker_Incestuous
+		ThoughtWorker_IsCarryingRangedWeapon
+		ThoughtWorker_IsDayForNightOwl
+		ThoughtWorker_IsNightForNightOwl
+		ThoughtWorker_Joy
+		ThoughtWorker_Man
+		ThoughtWorker_NotBondedAnimalMaster
+		ThoughtWorker_NudistNude
+		ThoughtWorker_OpinionOfMyLover
+		ThoughtWorker_Pain
+		ThoughtWorker_Pretty
+		ThoughtWorker_PrisonBarracksImpressiveness
+		ThoughtWorker_PrisonCellImpressiveness
+		ThoughtWorker_PsychicDrone
+		ThoughtWorker_PsychologicallyNude
+		ThoughtWorker_RandomMood
+		ThoughtWorker_Rest
+		ThoughtWorker_SharedBed
+		ThoughtWorker_SharedBedroom
+		ThoughtWorker_Sick
+		ThoughtWorker_SpaciousInterior
+		ThoughtWorker_Tale
+		ThoughtWorker_TeetotalerVsChemicalInterest
+		ThoughtWorker_Ugly
+		ThoughtWorker_WantToSleepWithSpouseOrLover
+		ThoughtWorker_Woman -->
+		<hediff>HediffDefName</hediff>
+		<!-- Optional. If workerClass is ThoughtWorker_Hediff, defines which Hediff is used to activate/deactivate the thought -->
+		<taleDef>TaleDefName</taleDef>
+		<!-- Optional. Links the thought to a taleDef -->
+		<stackLimit>number</stackLimit>
+		<!-- Optional. Defaults to 1. Changes the number of additive stacks the pawn can accumulate for the same thought -->
+		<stackLimitPerPawn>number</stackLimitPerPawn>
+		<!-- Optional. Defaults to 1. Changes the number of times one pawn can stack the thought for another -->
+		<stackedEffectMultiplier>number</stackedEffectMultiplier>
+		<!-- Optional. Defaults to 0.75. Changes the influence of any stack over 1 -->
+		<effectMultiplyingStat>StatDefName</effectMultiplyingStat>
+		<!-- Optional. Defines a stat that changes the thought's effects (under <stages>) as a factor -->
+		<durationDays>number</durationDays>
+		<!-- If the thought is governed by a timer, sets the number of days it takes for the thought to disappear -->
+		<invert>true_or_false</invert>
+		<!-- Optional. No description available -->
+		<validWhileInMentalState>true_or_false</validWhileInMentalState>
+		<!-- Optional. Defines if the thought still affects a pawn's mood if it it is experiencing an ongoing mental state -->
+		<requiredTraits>
+		<!-- Optional. The thought will only trigger for pawns with certain trait(s) -->
+			<li>TraitDefName</li>
+			<li>TraitDefName</li>
+		</requiredTraits>
+		<requiredTraitsDegree>number</requiredTraitsDegree>
+		<!-- Optional. Requires a specific sub-trait (defined by <degree> in the TraitDef) -->
+		<nullifyingTraits>
+		<!-- Optional. Defines trait(s) that prevent the thought from activating -->
+			<li>TraitDefName</li>
+			<li>TraitDefName</li>
+		</nullifyingTraits>
+		<nullifyingOwnTales>
+		<!-- Optional. The thought will not trigger if the pawn triggered defName(s) before.
+		For example - pawns that ate human meat will not trigger an opinion penalty for pawns who also ate human meat in the past) -->
+			<li>defName</li>
+			<li>defName</li>
+		</nullifyingOwnTales>
+		<nullifiedIfNotColonist>true_or_false</nullifiedIfNotColonist>
+		<!-- Optional. If true, the thought is disabled for pawns who are outside of the colony (prisoners, visitors, traders) -->
+		<stages>
+		<!-- Defines which values are changed when the thought is active. Can set more than one stage (only if you know what you're doing) -->
+			<li>
+				<label>Thought_label</label>
+				<!-- Defines the in-game display name of the thought -->
+				<labelSocial>Thought_name_social</labelSocial>
+				<!-- Optional. If the thoughtClass is Thought_MemorySocial, it will show a special note in the Social tab -->
+				<description>Thought_description.</description>
+				<!-- Long-form description of the thought, shown in-game -->
+				<baseMoodEffect>number</baseMoodEffect>
+				<!-- Optional. Defines the thought's effect on pawn mood -->
+				<baseOpinionOffset>number</baseOpinionOffset>
+				<!-- Optional. Offsets the triggered pawn's opinion of the triggering pawn by this value -->
+				<visible>true_or_false</visible>
+				<!-- Optional. Defaults to true. Defines if the thought is visible in the Needs tab -->
+			</li>
+		</stages>
+		<maxCumulatedOpinionOffset>number</maxCumulatedOpinionOffset>
+		<!-- Optional. Defaults to maximum. Sets a ceiling for the opinion offset if the thought affects opinion (useful if you have a stacking effect and want to issue a cap) -->
+		<nextThought>ThoughtDefName</nextThought>
+		<!-- Optional. Defines another thought to trigger when this thought is over -->
+		<thoughtToMake>ThoughtDefName</thoughtToMake>
+		<!-- Optional. No description available -->
+		<socialThoughtAffectingMood>true_or_false</socialThoughtAffectingMood>
+		<!-- Optional. No description available -->
+		<lerpOpinionToZeroAfterDurationPct>number</lerpOpinionToZeroAfterDurationPct>
+		<!-- Optional. Defaults to 0.7. No description available -->
+	</ThoughtDef>
+
+</Defs>

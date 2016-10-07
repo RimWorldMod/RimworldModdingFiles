@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<KeyBindingDefs>
+
+	<!-- Vanilla keybindings. Instead of setting a category every time, the Core XML divides categories by abstract bases -->
+
+	<!-- Camera -->
+
+	<KeyBindingDef Name="GameMapKeyBinding" Abstract="true">
+		<category>GameMapCamera</category>
+	</KeyBindingDef>
+
+	<KeyBindingDef ParentName="GameMapKeyBinding">
+		<defName>MapDollyUp</defName>
+		<label>dolly up</label>
+		<defaultKeyCodeA>W</defaultKeyCodeA>
+		<defaultKeyCodeB>UpArrow</defaultKeyCodeB>
+	</KeyBindingDef>
+
+	<KeyBindingDef ParentName="GameMapKeyBinding">
+		<defName>MapDollyDown</defName>
+		<label>dolly down</label>
+		<defaultKeyCodeA>S</defaultKeyCodeA>
+		<defaultKeyCodeB>DownArrow</defaultKeyCodeB>
+	</KeyBindingDef>
+
+	<!-- Map -->
+
+	<KeyBindingDef Name="GameKeyBinding" Abstract="true">
+		<category>Game</category>
+	</KeyBindingDef>
+
+	<KeyBindingDef ParentName="GameKeyBinding">
+		<defName>TakeScreenshot</defName>
+		<label>take screenshot</label>
+		<defaultKeyCodeA>F10</defaultKeyCodeA>
+	</KeyBindingDef>
+
+	<KeyBindingDef ParentName="GameKeyBinding">
+		<defName>TogglePause</defName>
+		<label>pause/resume game</label>
+		<defaultKeyCodeA>Space</defaultKeyCodeA>
+	</KeyBindingDef>
+
+	<KeyBindingDef ParentName="GameKeyBinding">
+		<defName>TimeSpeedUltrafast</defName>
+		<label>game speed: ultra fast (debug)</label>
+		<defaultKeyCodeA>Alpha4</defaultKeyCodeA>
+		<devModeOnly>true</devModeOnly>
+	</KeyBindingDef>
+
+	<!-- Misc -->
+
+	<KeyBindingDef Name="MiscKeyBinding" Abstract="true">
+		<category>SelectionMisc</category>
+	</KeyBindingDef>
+
+	<KeyBindingDef ParentName="MiscKeyBinding">
+		<defName>Misc1</defName>
+		<label>Misc 1</label>
+		<defaultKeyCodeA>B</defaultKeyCodeA>
+	</KeyBindingDef>
+
+	<KeyBindingDef ParentName="MiscKeyBinding">
+		<defName>Misc2</defName>
+		<label>Misc 2</label>
+		<defaultKeyCodeA>H</defaultKeyCodeA>
+	</KeyBindingDef>
+
+</KeyBindingDefs>

@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<PawnCapacityDefs>
+
+	<!-- Vanilla capacities -->
+
+	<PawnCapacityDef>
+		<defName>Sight</defName>
+		<label>sight</label>
+		<listOrder>20</listOrder>
+	</PawnCapacityDef>
+
+	<PawnCapacityDef>
+		<defName>Eating</defName>
+		<label>eating</label>
+		<listOrder>70</listOrder>
+		<minValue>0.1</minValue>
+		<showOnMechanoids>false</showOnMechanoids>
+	</PawnCapacityDef>
+
+	<PawnCapacityDef>
+		<defName>BloodFiltration</defName>
+		<label>blood filtration</label>
+		<listOrder>90</listOrder>
+		<lethalFlesh>true</lethalFlesh>
+		<showOnMechanoids>false</showOnMechanoids>
+	</PawnCapacityDef>
+
+</PawnCapacityDefs>
