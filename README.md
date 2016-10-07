@@ -1,14 +1,21 @@
 # RimWorld XML Database
-My personal attempt at creating an XML database. Forked from RimworldModdingFiles (kaptain_kavern's version) and will eventually make its way there.
+This repository's goal is to make RimWorld modding easier. We strive to provide easy-to-read files to help everyone understand XML modding.
+
+Feel free to use anything in the repository to help you make, update, modify or do anything relating to mods.
 
 # Folder Structure
-* Each folder contains at least 1 big commented XML with a set structure.
-* Commented XML files are commented as standalone (containing all possible comments, referring as little as possible to other XML files).
-* Each folder contains 1 templates txt file. I chose txt because XML throws annoying errors when you try to open or save it if you have certain document editors. The purpose of this file is to provide easy-to-copy templates, not edit.
-* Each folder contains at least 1 examples XML, striving to provide diverse examples (can be from mods).
-* The goal is to have as few files as possible per folder to minimise confusion.
+* One master file per folder (ex. Recipes.xml) containing a very long XML def. Every line is commented to explain what it does
+* One templates file per folder (Templates.txt) containing a few easy-to-copy defs without comments
+* One examples file per folder (Examples.xml) containing several complete defs (taken from vanilla and/or mods)
 
-# Roadmap
-* Finish all defs I possibly can.
-* Set a good structure for each file and folder: readable, well commented, at least mostly correct. This requires feedback from other modders.
-* When all of the folders are done: publish, have users correct mistakes, strive to be the only XML database for maximum participation and accuracy.
+# Contributions
+Any contributions are welcome. These are some things we would love to see:
+* New master XML files
+* Corrections to mistakes in the master XML files
+* New templates
+* New, useful examples
+* Suggestions & questions
+
+# Credits
+* **milon** for his extremely useful XML auto-documentation
+* **Zhentar** for his fork of ILSpy which is also extremely invaluable to understanding RimWorld code
