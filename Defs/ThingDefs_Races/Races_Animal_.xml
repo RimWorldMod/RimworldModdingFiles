@@ -1,0 +1,186 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <ThingDef>
+    <defName>AnimalDefName</defName>
+    <label>animal_name</label>
+    <description></description>
+    <statBases>
+      <ArmorRating_Blunt>number</ArmorRating_Blunt>
+      <ArmorRating_Sharp>number</ArmorRating_Sharp>
+      <ComfyTemperatureMin>number</ComfyTemperatureMin>
+      <ComfyTemperatureMax>number</ComfyTemperatureMax>
+      <Flammability>number</Flammability>
+      <LeatherAmount>number</LeatherAmount>
+      <MarketValue>number</MarketValue>
+      <MeatAmount>number</MeatAmount>
+      <MoveSpeed>number</MoveSpeed>
+      <PsychicSensitivity>number</PsychicSensitivity>
+      <ToxicSensitivity>number</ToxicSensitivity>
+    </statBases>
+    <verbs>
+      <li>
+        <verbClass>Verb_MeleeAttack</verbClass>
+        <!-- As far as I know Verb_MeleeAttack is the only one use with Vanilla animals -->
+        <defaultCooldownTicks>number</defaultCooldownTicks>
+        <meleeDamageBaseAmount>number</meleeDamageBaseAmount>
+        <meleeDamageDef>Damage_type</meleeDamageDef>
+        <!-- Available vanilla meleeDamageDef
+        Bite
+        Blunt
+        Cut
+        Scratch
+        Stab
+        ToxicBite -->
+        <linkedBodyPartsGroup>BodyPartsGroup</linkedBodyPartsGroup>
+        <!-- Available vanilla BodyPartsGroup
+        Beak
+        Feet
+        FrontLeftClaws
+        FrontLeftLeg
+        FrontLeftPaw
+        FrontRightClaws
+        FrontRightLeg
+        FrontRightPaw
+        HeadAttackTool
+        HeadClaw
+        HornAttackTool
+        LeftBlade
+        LeftHand
+        Mouth
+        RightBlade
+        RightHand
+        Teeth
+        TurtleBeakAttackTool
+        TuskAttackTool -->
+      </li>
+      <li>
+        <!-- Could be as many as you wish/with several different BodyPartsGroup's -->
+        <verbClass>Verb_MeleeAttack</verbClass>
+        <defaultCooldownTicks>number</defaultCooldownTicks>
+        <meleeDamageBaseAmount>number</meleeDamageBaseAmount>
+        <meleeDamageDef>Damage_type</meleeDamageDef>
+        <linkedBodyPartsGroup>BodyPartsGroup</linkedBodyPartsGroup>
+      </li>
+    </verbs>
+    <race>
+      <body>BodyDef_defName</body>
+      <!-- Available vanilla BodyDef defName's
+      BeetleLike
+      BeetleLikeWithClaw
+      Bird
+      Human
+      MechanicalCentipede
+      Monkey
+      QuadrupedAnimalWithClawsTailAndJowl
+      QuadrupedAnimalWithHooves
+      QuadrupedAnimalWithHoovesAndHorn
+      QuadrupedAnimalWithHoovesAndHump
+      QuadrupedAnimalWithHoovesAndTusks
+      QuadrupedAnimalWithHoovesTusksAndTrunk
+      QuadrupedAnimalWithPaws
+      QuadrupedAnimalWithPawsAndTail
+      Scyther
+      Snake
+      TurtleLike -->
+      <petness>number</petness>
+      <herdAnimal>boolean</herdAnimal>
+      <baseBodySize>1.0</baseBodySize>
+      <baseHungerRate>0.5</baseHungerRate>
+      <baseHealthScale>1.0</baseHealthScale>
+      <foodType>OmnivoreAnimal, OvivoreAnimal</foodType>
+      <leatherColor>(220,198,160)</leatherColor>
+      <leatherLabel>labrador fur</leatherLabel>
+      <leatherInsulation>0.9</leatherInsulation>
+      <gestationPeriodDays>22.5</gestationPeriodDays>
+      <nameOnTameChance>1</nameOnTameChance>
+      <trainableIntelligence>Advanced</trainableIntelligence>
+      <wildness>0</wildness>
+      <nuzzleMtbHours>24</nuzzleMtbHours>
+      <litterSizeCurve>
+        <points>
+          <li>(0.5, 0)</li>
+          <li>(1, 1)</li>
+          <li>(2, 1.7)</li>
+          <li>(3, 0.7)</li>
+          <li>(3.5, 0)</li>
+        </points>
+      </litterSizeCurve>
+      <lifeExpectancy>12</lifeExpectancy>
+      <lifeStageAges>
+        <li>
+          <def>AnimalBaby</def>
+          <minAge>0</minAge>
+        </li>
+        <li>
+          <def>AnimalJuvenile</def>
+          <minAge>0.25</minAge>
+        </li>
+        <li>
+          <def>AnimalAdult</def>
+          <minAge>0.8</minAge>
+          <soundWounded>Pawn_Dog_Injured</soundWounded>
+          <soundDeath>Pawn_Dog_Death</soundDeath>
+          <soundCall>Pawn_Dog_Call</soundCall>
+          <soundAngry>Pawn_Dog_Angry</soundAngry>
+        </li>
+      </lifeStageAges>
+      <soundMeleeHitPawn>Pawn_Melee_SmallScratch_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Melee_SmallScratch_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_SmallScratch_Miss</soundMeleeMiss>
+    </race>
+    <tradeTags>
+      <li>StandardAnimal</li>
+    </tradeTags>
+  </ThingDef>
+  <PawnKindDef ParentName="AnimalKindBase">
+    <defName>LabradorRetriever</defName>
+    <label>labrador retriever</label>
+    <race>LabradorRetriever</race>
+    <combatPower>55</combatPower>
+    <lifeStages>
+      <li>
+        <label>labrador puppy</label>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/Labrador/Labrador</texPath>
+          <drawSize>0.95</drawSize>
+          <color>(220,198,160)</color>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Dessicated/CritterDessicatedMedium</texPath>
+          <drawSize>0.95</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/Labrador/Labrador</texPath>
+          <drawSize>1.35</drawSize>
+          <color>(220,198,160)</color>
+          <shadowData>
+            <volume>(0.25, 0.3, 0.25)</volume>
+            <offset>(0,0,-0.15)</offset>
+          </shadowData>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Dessicated/CritterDessicatedMedium</texPath>
+          <drawSize>1.35</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/Labrador/Labrador</texPath>
+          <drawSize>1.6</drawSize>
+          <color>(220,198,160)</color>
+          <shadowData>
+            <volume>(0.3, 0.4, 0.3)</volume>
+            <offset>(0,0,-0.15)</offset>
+          </shadowData>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Dessicated/CritterDessicatedMedium</texPath>
+          <drawSize>1.6</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+    </lifeStages>
+    <wildSpawn_spawnWild>false</wildSpawn_spawnWild>
+  </PawnKindDef>
+</Defs>
