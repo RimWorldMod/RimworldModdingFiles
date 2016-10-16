@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TerrainDefs>
+
+	<!-- Terrain is any floor type, natural or artificial. Some is automatically generated and some must be constructed -->
+
+	<TerrainDef>
+		<defName>TerrainDefName</defName>
+		<!-- Desired defName to reference and use the terrain -->
+		<label>terrain_name</label>
+		<!-- The in-game display name of the terrain -->
+		<description>Terrain_description.</description>
+		<!-- Long-form description of the terrain, in plain text -->
+		<texturePath>texture_reference</texturePath>
+		<!-- Path to the texture file used for the terrain -->
+		<edgeType>terrain_edge_type</edgeType>
+		<!-- Defines the rendering method for terrain edges. Vanilla types:
+		Hard
+		Fade
+		FadeRough -->
+		<renderPrecedence>number</renderPrecedence>
+		<!-- Defines the rendering order for the assembly. Should not be over 400 -->
+		<affordances>
+		<!-- Defines affordance types for the terrain -->
+			<li>ground_type</li>
+			<!-- Vanilla affordances:
+			Diggable
+			GrowSoil
+			Heavy
+			Light
+			SmoothHard -->
+			<li>ground_type</li>
+		</affordances>
+		<fertility>number</fertility>
+		<!-- Defines the terrain's vertility multiplier. Can set to 0 to disable growing crops on the terrain -->
+		<constructEffect>effect_type</constructEffect>
+		<!-- Defines which visual effect is used when constructing the floor or terrain. Vanilla effects:
+		ConstructDirt
+		ConstructMetal
+		ConstructWood -->
+		<designationCategory>DesignationCategoryDef</designationCategory>
+		<!-- Defines which category in the Architect tab contains the terrain or floor building order -->
+		<layerable>true_or_false</layerable>
+		<!-- Optional. If true, the player can build the terrain (floor) on top of an existing floor -->
+		<scatterType>scatter_type</scatterType>
+		<!-- Optional. Used in natural floor types. Vanilla types:
+		Rocky
+		SoftDry
+		SoftGray -->
+		<takeFootprints>true_or_false</takeFootprints>
+		<!-- Optional. If true, the terrain will display footprints when pawns traverse it -->
+		<avoidWander>true_or_false</avoidWander>
+		<!-- No description available -->
+		<changeable>true_or_false</changeable>
+		<!-- Optional. Defaults to true. If false, the terrain will be static and will disallow floors on top of itself -->
+		<smoothedTerrain>SmoothTerrainDefName</smoothedTerrain>
+		<!-- Optional. Unused in vanilla. Defines a different terrain that is the product of smoothing the terrain in-game -->
+		<driesTo>DryTerrainDefName</driesTo>
+		<!-- Optional. Defines a different terrain that is the product of drying the terrain in-game -->
+		<holdSnow>true_or_false</holdSnow>
+		<!-- Optional. Defaults to true. If false, the terrain will disallow snow residue -->
+		<color>(colour1, colour2, colour3)</color>
+		<!-- Optional. Defines a custom colour that is applied to the terrain texture. Usually uses RGB with this structure -->
+		<terrainFilthDef>ThingDef</terrainFilthDef>
+		<!-- Optional. Adds filth to the terrain. Vanilla FilthDefs:
+		FilthDirt
+		FilthSand -->
+		<acceptTerrainSourceFilth>true_or_false</acceptTerrainSourceFilth>
+		<!-- Optional. True for vanilla floors. No description available -->
+		<acceptFilth>true_or_false</acceptFilth>
+		<!-- Optional. Defaults to true. If false, the terrain will not become dirty -->
+		<statBases>
+		<!-- Optional. Defines stats for the terrain -->
+			<statDefName>number</statDefName>
+			<!-- Vanilla floors sometimes define these attributes:
+			Beauty
+			Cleanliness
+			WorkToMake -->
+		</statBases>
+		<passability>passability</passability>
+		<!-- Optional. Undefined for regular terrain. Using Impassable will not allow pawns to traverse through the terrain. Vanilla passabilties:
+		Impassable
+		PassThroughOnly
+		Standable -->
+		<pathCost>number</pathCost>
+		<!-- Optional. If higher than 0, pawns will slow down to traverse the terrain -->
+		<pathCostIgnoreRepeat>true_or_false</pathCostIgnoreRepeat>
+		<!-- Optional. Defaults to true. No description available -->
+		<costList>
+		<!-- Optional. Defines the amount of material(s) needed to build 1 tile of the terrain or floor -->
+			<ThingDefName>number</ThingDefName>
+			<ThingDefName>number</ThingDefName>
+		</costList>
+		<stuffCategories>
+		<!-- Optional. Adds material cost to the terrain using one or more categories instead of specific ThingDefs. Can be used with costList or individually -->
+			<li>category</li>
+			<!-- Vanilla stuffCategories:
+			Fabric
+			Leathery
+			Metallic
+			Stony
+			Woody -->
+			<li>category</li>
+		</stuffCategories>
+		<costStuffCount>number</costStuffCount>
+		<!-- Optional. Defines the amount of material(s) needed to build 1 tile of the terrain when using stuffCategories -->
+		<terrainAffordanceNeeded>terrain_affordance</terrainAffordanceNeeded>
+		<!-- Optional. Defaults to Light. Defines which terrain affordance level is needed when placing a floor tile -->
+		<researchPrerequisites>
+		<!-- Optional. The player will not be able to build the floor or terrain until completing one or more research projects -->
+			<li>ResearchProjectDefName</li>
+			<li>ResearchProjectDefName</li>
+		</researchPrerequisites>
+		<designationHotKey>HotKey</designationHotKey>
+		<!-- Optional. Defines a HotKey to use in the designation category menu when selecting the terrain -->
+	</TerrainDef>
+
+</TerrainDefs>
