@@ -90,19 +90,6 @@
 			<ThingDefName>number</ThingDefName>
 			<ThingDefName>number</ThingDefName>
 		</costList>
-		<stuffCategories>
-		<!-- Optional. Adds material cost to the terrain using one or more categories instead of specific ThingDefs. Can be used with costList or individually -->
-			<li>category</li>
-			<!-- Vanilla stuffCategories:
-			Fabric
-			Leathery
-			Metallic
-			Stony
-			Woody -->
-			<li>category</li>
-		</stuffCategories>
-		<costStuffCount>number</costStuffCount>
-		<!-- Optional. Defines the amount of material(s) needed to build 1 tile of the terrain when using stuffCategories -->
 		<terrainAffordanceNeeded>terrain_affordance</terrainAffordanceNeeded>
 		<!-- Optional. Defaults to Light. Defines which terrain affordance level is needed when placing a floor tile -->
 		<researchPrerequisites>
