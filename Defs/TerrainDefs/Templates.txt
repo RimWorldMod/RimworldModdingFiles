@@ -36,11 +36,6 @@
 			<ThingDefName>number</ThingDefName>
 			<ThingDefName>number</ThingDefName>
 		</costList>
-		<stuffCategories>
-			<li>category</li>
-			<li>category</li>
-		</stuffCategories>
-		<costStuffCount>number</costStuffCount>
 		<terrainAffordanceNeeded>terrain_affordance</terrainAffordanceNeeded>
 		<researchPrerequisites>
 			<li>ResearchProjectDefName</li>
