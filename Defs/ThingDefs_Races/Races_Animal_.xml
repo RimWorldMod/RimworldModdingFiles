@@ -32,7 +32,7 @@
         Stab
         ToxicBite -->
         <linkedBodyPartsGroup>BodyPartsGroup</linkedBodyPartsGroup>
-        <!-- Available vanilla BodyPartsGroup
+        <!-- Which BodyPartsGroup is used to do the attack - Available vanilla BodyPartsGroup :
         Beak
         Feet
         FrontLeftClaws
@@ -64,7 +64,7 @@
     </verbs>
     <race>
       <body>BodyDef_defName</body>
-      <!-- Available vanilla BodyDef defName's
+      <!-- Which bodydef the animal will use - Available vanilla BodyDef defName's :
       BeetleLike
       BeetleLikeWithClaw
       Bird
@@ -83,16 +83,17 @@
       Snake
       TurtleLike -->
       <petness>number</petness>
+      <!-- between 0 and 1 -This need more explanations- -->
       <herdAnimal>boolean</herdAnimal>
-      <baseBodySize>1.0</baseBodySize>
-      <baseHungerRate>0.5</baseHungerRate>
-      <baseHealthScale>1.0</baseHealthScale>
+      <baseBodySize>number</baseBodySize>
+      <baseHungerRate>number</baseHungerRate>
+      <baseHealthScale>number</baseHealthScale>
       <foodType>OmnivoreAnimal, OvivoreAnimal</foodType>
-      <leatherColor>(220,198,160)</leatherColor>
-      <leatherLabel>labrador fur</leatherLabel>
-      <leatherInsulation>0.9</leatherInsulation>
-      <gestationPeriodDays>22.5</gestationPeriodDays>
-      <nameOnTameChance>1</nameOnTameChance>
+      <leatherColor>(R,G,B)</leatherColor>
+      <leatherLabel>label</leatherLabel>
+      <leatherInsulation>number</leatherInsulation>
+      <gestationPeriodDays>number</gestationPeriodDays>
+      <nameOnTameChance>number</nameOnTameChance>
       <trainableIntelligence>Advanced</trainableIntelligence>
       <wildness>0</wildness>
       <nuzzleMtbHours>24</nuzzleMtbHours>
