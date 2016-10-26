@@ -1,0 +1,401 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- Hediffs are RimWorld's status effects. They can influence different pawn stats, represent diseases, and more -->
+
+	<HediffDef>
+		<defName>HediffDefName</defName>
+		<!-- Desired defName to reference and use the hediff -->
+		<label>hediff_name</label>
+		<!-- Sets the in-game display name for the hediff -->
+		<hediffClass>Hediff_Class</hediffClass>
+		<!-- Defines the hediff class to use. Use HediffWithComps for general purposes. Vanilla classes:
+		Hediff_AddedPart
+		Hediff_Addiction
+		Hediff_Alcohol
+		Hediff_Hangover
+		Hediff_HeartAttack
+		Hediff_Implant
+		Hediff_Injury
+		Hediff_MissingPart
+		Hediff_Pregnant
+		HediffWithComps -->
+		<comps>
+		<!-- Optional. Comps are hediff properties, each class has its own defs -->
+			<li>
+			<!-- Every comp requires a separate <li> filter. Use one class for every filter along with relevant defs -->
+				<compClass>HediffComp_Class</compClass>
+				<!-- Defines the comp's class. Vanilla HediffComp classes:
+				HediffComp_Disappears
+				HediffComp_Discoverable
+				HediffComp_DrugEffectFactor
+				HediffComp_Effecter
+				HediffComp_GetsOld
+				HediffComp_GrowthMode
+				HediffComp_Immunizable
+				HediffComp_Infecter
+				HediffComp_SeverityPerDay
+				HediffComp_Tendable
+				HediffComp_VerbGiver -->
+				<severityPerDay>number</severityPerDay>
+				<!-- Optional. Used by HediffComp_SeverityPerDay. The hediff will modify its severity automatically so that it changes by this amount every 24 hours -->
+				<healIntervalTicksStanding>number</healIntervalTicksStanding>
+				<!-- Optional. Defaults to 50 -->
+				<healIntervalTicksInBed>number</healIntervalTicksInBed>
+				<!-- Optional. Defaults to 50 -->
+				<disappearsAfterTicks>
+				<!-- Optional. Used by HediffComp_Disappears. The hediff will be removed after a random amount of time within this range -->
+					<min>number</min>
+					<max>number</max>
+				</disappearsAfterTicks>
+				<tendDuration>number</tendDuration>
+				<!-- Optional. Defaults to -1 (insignificant). Used by HediffComp_Tendable. If the number is positive, the game will use it to schedule the next treatment -->
+				<labelTended>label</labelTended>
+				<!-- Optional. Used by HediffComp_Tendable. Gives the hediff this sub-label if it was treated -->
+				<labelTendedWell>label</labelTendedWell>
+				<!-- Optional. Used by HediffComp_Tendable. Gives the hediff this sub-label if it was treated well -->
+				<labelTendedInner>label</labelTendedInner>
+				<!-- Optional. Used by HediffComp_Tendable. Gives the hediff this sub-label if it is applied on an inner body-part and was treated -->
+				<labelTendedWellInner>label</labelTendedWellInner>
+				<!-- Optional. Used by HediffComp_Tendable. Gives the hediff this sub-label if it is applied on an inner body-part and was treated well -->
+				<labelSolidTended>label</labelSolidTended>
+				<!-- Optional. Used by HediffComp_Tendable. Gives the hediff this sub-label if the injury type is solid and it was treated -->
+				<labelSolidTendedWell>label</labelSolidTendedWell>
+				<!-- Optional. Used by HediffComp_Tendable. Gives the hediff this sub-label if the injury type is solid and it was treated well -->
+				<tendAllAtOnce>true_or_false</tendAllAtOnce>
+				<!-- Optional. Used by HediffComp_Tendable. No description available -->
+				<disappearsAtTendedCount>number</disappearsAtTendedCount>
+				<!-- Optional. Defaults to -1 (insignificant). Used by HediffComp_Tendable. If the number if positive, the hediff will be removed after this number of treatments -->
+				<severityPerDayTendedOffset>number</severityPerDayTendedOffset>
+				<!-- Optional. Used by HediffComp_Tendable. If the injury is tended, it will change in severity every day by this number (affected by the treatment quality) -->
+				<infectionChance>number</infectionChance>
+				<!-- Optional. Defaults to 0.1. Used by HediffComp_Infecter. Determines the chance of infection (0=0%, 0.5=50%, 1=100%) -->
+				<verbs>
+				<!-- Optional. Used by HediffComp_VerbGiver to give the pawn abilities when the hediff is active -->
+					<li>
+						<verbClass>Verb_Class</verbClass>
+						<!-- Defines the type of verb (ability) applied by the comp. Vanilla verbs:
+						Verb_LaunchProjectile
+						Verb_MeleeAttack
+						Verb_Shoot
+						Verb_ShootOneUse -->
+						<label>verb_name</label>
+						<!-- Optional. Applies a label to the verb, unused in vanilla -->
+						<isPrimary>true_or_false</isPrimary>
+						<!-- Optional. Defaults to true. Always true for vanilla verbs -->
+						<minRange>number</minRange>
+						<!-- Optional. If applied, pawns will only attack if their target meets or exceeds a minimum range -->
+						<range>number</range>
+						<!-- Optional. Defaults to 1. Defines a range for the ability -->
+						<burstShotCount>number</burstShotCount>
+						<!-- Optional. Defaults to 1. Defines the number of shots fired by a weapon -->
+						<ticksBetweenBurstShots>number</ticksBetweenBurstShots>
+						<!-- Optional. Defaults to 15. Defines a cooldown for ranged burst-shot weapons -->
+						<noiseRadius>number</noiseRadius>
+						<!-- Optional. Defaults to 3. Defines the "loudness" of the attack -->
+						<hasStandardCommand>true_or_false</hasStandardCommand>
+						<!-- Optional. Defined as true for Verb_Shoot in vanilla defs -->
+						<targetable>true_or_false</targetable>
+						<!-- Optional. Defaults to true -->
+						<targetParams>
+						<!-- Optional. Defines specific targeting parameters -->
+							<canTargetLocations>true_or_false</canTargetLocations>
+							<!-- Optional. Defines if the weapon can target a location on the map -->
+							<canTargetSelf>true_or_false</canTargetSelf>
+							<!-- Optional. Defines if the verb can target itself -->
+							<canTargetPawns>true_or_false</canTargetPawns>
+							<!-- Optional. Defaults to true. Defines if the verb can target pawns -->
+							<canTargetFires>true_or_false</canTargetFires>
+							<!-- Optional. Defines if the verb can target fires -->
+							<canTargetBuildings>true_or_false</canTargetBuildings>
+							<!-- Optional. Defaults to true. Defines if the verb can target structures -->
+							<canTargetItems>true_or_false</canTargetItems>
+							<!-- Optional. Defines if the verb can target items -->
+							<onlyTargetFactions>
+							<!-- Optional. Unused in vanilla. The verb will only target specific factions -->
+								<li>FactionDefName</li>
+								<li>FactionDefName</li>
+							</onlyTargetFactions>
+							<onlyTargetFlammables>true_or_false</onlyTargetFlammables>
+							<!-- Optional. Unused in vanilla. The verb will only target things with flammability above 0 -->
+							<targetSpecificThing>ThingDefName</targetSpecificThing>
+							<!-- Optional. Unused in vanilla. The verb will only target a specific thingDef -->
+							<mustBeSelectable>true_or_false</mustBeSelectable>
+							<!-- Optional. No description available -->
+							<neverTargetDoors>true_or_false</neverTargetDoors>
+							<!-- Optional. The verb will not target doors -->
+							<neverTargetIncapacitated>true_or_false</neverTargetIncapacitated>
+							<!-- Optional. The verb will not target incapacitated pawns -->
+							<onlyTargetIncapacitatedPawns>true_or_false</onlyTargetIncapacitatedPawns>
+							<!-- Optional. The verb will only target incapacitated pawns -->
+							<onlyTargetBarriers>true_or_false</onlyTargetBarriers>
+							<!-- Optional. Unused in vanilla. The verb will only target barriers -->
+							<onlyTargetDamagedThings>true_or_false</onlyTargetDamagedThings>
+							<!-- Optional. The verb will only target things below 100% HP -->
+							<worldObjectTargetsMustBeAutoAttackable>true_or_false</worldObjectTargetsMustBeAutoAttackable>
+							<!-- Optional. Defaults to true. The verb will only attack objects that have the AutoAttackable property -->
+						</targetParams>
+						<requireLineOfSight>true_or_false</requireLineOfSight>
+						<!-- Optional. Defaults to true -->
+						<mustCastOnOpenGround>true_or_false</mustCastOnOpenGround>
+						<!-- Optional. Undefined in vanilla defs -->
+						<forceNormalTimeSpeed>true_or_false</forceNormalTimeSpeed>
+						<!-- Optional. Defaults to true. Causes the slowdown when pawns are attacked -->
+						<onlyManualCast>true_or_false</onlyManualCast>
+						<!-- Optional. If true, the ability must be triggered manually -->
+						<stopBurstWithoutLos>true_or_false</stopBurstWithoutLos>
+						<!-- Optional. Defaults to true. If false, burst-shots will not be interrupted if line-of-sight is broken -->
+						<surpriseAttack>
+						<!-- Optional. Adds another layer of damage -->
+							<extraMeleeDamages>
+								<li>
+									<def>DamageDefName</def>
+									<!-- This damage def will be applied -->
+									<amount>number</amount>
+									<!-- Defines the amount of damage to apply for the DamageDef -->
+								</li>
+							</extraMeleeDamages>
+						</surpriseAttack>
+						<warmupTicks>number</warmupTicks>
+						<!-- Optional. Used by ranged verbs. Defines the initial timer before a weapon is used -->
+						<defaultCooldownTicks>number</defaultCooldownTicks>
+						<!-- Optional. Used by melee verbs. Defines the base cooldown between attacks -->
+						<soundCast>SoundDefName</soundCast>
+						<!-- Optional. Used by ranged verbs. Defines which sound file to use for the attack -->
+						<soundCastTail>SoundDefName</soundCastTail>
+						<!-- Optional. Used by ranged verbs. Defines an additional sound file used by ranged verbs -->
+						<muzzleFlashScale>number</muzzleFlashScale>
+						<!-- Optional. Used by ranged verbs. Defines the size of the muzzle flash (visual effect) -->
+						<linkedBodyPartsGroup>BodyPartGroupDefName</linkedBodyPartsGroup>
+						<!-- Optional. Unused in vanilla defs. Links the verb to a body part group -->
+						<meleeDamageDef>DamageDefName</meleeDamageDef>
+						<!-- Optional. Used by melee verbs. Determines the verb's damage type. Vanilla melee damage defs:
+						Bite
+						Blunt
+						Cut
+						Scratch
+						Stab
+						ToxicBite -->
+						<meleeDamageBaseAmount>number</meleeDamageBaseAmount>
+						<!-- Optional. Defaults to 1. Defines a custom damage amount for melee verbs -->
+						<ai_IsWeapon>true_or_false</ai_IsWeapon>
+						<!-- Optional. Defaults to true -->
+						<ai_IsIncendiary>true_or_false</ai_IsIncendiary>
+						<!-- Optional. Defined as true for some vanilla guns/grenades. Defines if the weapon can start fires -->
+						<ai_IsBuildingDestroyer>true_or_false</ai_IsBuildingDestroyer>
+						<!-- Optional. Defined as true for some grenades. Defines if the weapon can destroy buildings -->
+						<projectileDef>ThingDefName</projectileDef>
+						<!-- Optional. Used by ranged verbs. Defines which projectile to use -->
+						<forcedMissRadius>number</forcedMissRadius>
+						<!-- Optional. Used by ranged verbs. Forced an accuracy malice within a certain radius -->
+						<accuracyTouch>number</accuracyTouch>
+						<!-- Optional. Defaults to 1. Used by ranged verbs. Defines accuracy at melee range -->
+						<accuracyShort>number</accuracyShort>
+						<!-- Optional. Defaults to 1. Used by ranged verbs. Defines accuracy at close range -->
+						<accuracyMedium>number</accuracyMedium>
+						<!-- Optional. Defaults to 1. Used by ranged verbs. Defines accuracy at medium range -->
+						<accuracyLong>number</accuracyLong>
+						<!-- Optional. Defaults to 1. Used by ranged verbs. Defines accuracy at long range -->
+					</li>
+				</verbs>
+				<sendLetterWhenDiscovered>true_or_false</sendLetterWhenDiscovered>
+				<!-- Optional. Used by HediffComp_Discoverable. If true, the comp will show a message when appropriate -->
+				<discoverLetterLabel>label</discoverLetterLabel>
+				<!-- Optional. Used by HediffComp_Discoverable. Defines a label for the message shown -->
+				<discoverLetterText>message</discoverLetterText>
+				<!-- Optional. Used by HediffComp_Discoverable. Defines the message the player will see in-game -->
+				<immunityPerDayNotSick>number</immunityPerDayNotSick>
+				<!-- Optional. Determines how immunity changes when the pawn isn't sick. Used in vanilla with negative values to reset immunity when the pawn is healthy -->
+				<immunityPerDaySick>number</immunityPerDaySick>
+				<!-- Optional. If positive, the pawn will become immune to the hediff at a certain rate. Higher values increase the rate -->
+				<severityPerDayNotImmune>number</severityPerDayNotImmune>
+				<!-- Optional. Determines severity change when the pawn is not immune to the hediff (usually positive) -->
+				<severityPerDayImmune>number</severityPerDayImmune>
+				<!-- Optional. Determines severity change when the pawn is immune to the hediff (usually negative) -->
+				<severityPerDayGrowing>number</severityPerDayGrowing>
+				<!-- Optional. Used by HediffComp_GrowthMode to determine severity change as the hediff develops (e.g. carcinoma) -->
+				<severityPerDayRemission>number</severityPerDayRemission>
+				<!-- Optional. Used by HediffComp_GrowthMode to determine severity change in remission -->
+				<becomeOldChance>number</becomeOldChance>
+				<!-- Optional. Defaults to 1. Determines a random chance for the injury to become old -->
+				<oldLabel>label</oldLabel>
+				<!-- Optional. Gives the hediff a label if it becomes old -->
+				<instantlyOldLabel>label</instantlyOldLabel>
+				<!-- Optional. Gives the hediff this label if it became old immediately -->
+				<stateEffecter>EffecterDefName</stateEffecter>
+				<!-- Optional. Used by HediffComp_Effecter. Applies a visual effect when the hediff is active -->
+				<severityIndices>
+				<!-- Optional. Used by HediffComp_Effecter. Influences when the effect is applied based on severity index -->
+					<min>number</min>
+					<max>number</max>
+				</severityIndices>
+				<chemical>ChemicalDefName</chemical>
+				<!-- Optional. Used by HediffComp_DrugEffectFactor. Used in tolerance hediffs to lower a drug's potency as tolerance increases -->
+			</li>
+		</comps>
+		<isBad>true_or_false</isBad>
+		<!-- Optional. Defaults to true. Some hediffs like bionic body parts or implants set this to false -->
+		<initialSeverity>number</initialSeverity>
+		<!-- Optional. Defaults to 0.001. Defines initial hediff severity -->
+		<naturallyHealed>true_or_false</naturallyHealed>
+		<!-- Optional. If set to true, the injury will heal even without treatment -->
+		<lethalSeverity>number</lethalSeverity>
+		<!-- Optional. Defaults to -1 (insignificant). If the hediff's severity reaches this level, the pawn will die -->
+		<stages>
+		<!-- Stages are the hediff's active effects. Can set one or more -->
+			<li>
+				<label>stage_name</label>
+				<!-- Optional. Defines an in-game sub-label applied to the hediff at this stage -->
+				<minSeverity>number</minSeverity>
+				<!-- Optional. The stage effects will only be applied above a certain severity level -->
+				<everVisible>true_or_false</everVisible>
+				<!-- Optional. Defaults to true. If false, the hediff will not be visible at this stage -->
+				<lifeThreatening>true_or_false</lifeThreatening>
+				<!-- Optional. Defines the stage as potentially fatal for other in-game interactions -->
+				<vomitMtbDays>number</vomitMtbDays>
+				<!-- Optional. Defaults to -1 (insignificant). If above 0, the pawn will vomit occasionally. Higher values decrease vomit frequency -->
+				<deathMtbDays>number</deathMtbDays>
+				<!-- Optional. Defaults to -1 (insignificant). If above 0, the pawn might die randomly. Higher values decrease death likelihood -->
+				<painFactor>number</painFactor>
+				<!-- Optional. Defaults to 1. Sets a multiplier for pain as a result of this stage -->
+				<painOffset>number</painOffset>
+				<!-- Optional. Changes pain by a flat number (negative values decrease pain, positive values increase pain) -->
+				<partEfficiencyFactor>number</partEfficiencyFactor>
+				<!-- Optional. Defaults to 1. If the hediff acts as a body part, defines the efficiency of the body part -->
+				<forgetMemoryThoughtMtbDays>number</forgetMemoryThoughtMtbDays>
+				<!-- Optional. Defaults to -1 (insignificant). If above 0, the pawn might lose a memory thought. Higher values decrease the statistical chance of losing a thought -->
+				<pctConditionalThoughtsNullified>number</pctConditionalThoughtsNullified>
+				<!-- Optional. If above 0, will define the percentage of thoughts to nullify when affecting memory -->
+				<opinionOfOthersFactor>number</opinionOfOthersFactor>
+				<!-- Optional. Defaults to 1. Defines the pawn's opinion multiplier for other pawns -->
+				<hungerRateFactor>number</hungerRateFactor>
+				<!-- Optional. Defaults to 1. Defines the hunger need's depletion rate. Higher values cause the need to deplete faster -->
+				<restFallFactor>number</restFallFactor>
+				<!-- Optional. Defaults to 1. Defines the rest need's depletion rate. Higher values cause the need to deplete faster -->
+				<socialFightChanceFactor>number</socialFightChanceFactor>
+				<!-- Optional. Defaults to 1. Defines the likelihood multiplier for the pawn when determining when to start social fights -->
+				<setMinPartEfficiency>number</setMinPartEfficiency>
+				<!-- Optional. Defaults to -1 (insignificant). Defines a custom value for minimum body-part efficiency when the stage is active -->
+				<destroyPart>true_or_false</destroyPart>
+				<!-- Optional. If true, the hediff's host body-part will become destroyed when this stage is activated -->
+				<makeImmuneTo>HediffDefName</makeImmuneTo>
+				<!-- Optional. The pawn will be immune to a specific hediff when this stage is active -->
+				<tale>TaleDefName</tale>
+				<!-- Optional. Will cause a specific tale (used in art, etc.) to be generated if the stage was activated -->
+				<capMods>
+				<!-- Optional. Causes the stage to offset certain capacities for the pawn -->
+					<li>
+					<!-- Each capacity must be separated by a list filter -->
+						<capacity>CapacityDefName</capacity>
+						<!-- Defines which capacity is affected. Vanilla capacities:
+						BloodFiltration
+						BloodPumping
+						Breathing
+						Consciousness
+						Eating
+						Hearing
+						Manipulation
+						Metabolism
+						Moving
+						Sight
+						Talking -->
+						<offset>number</offset>
+						<!-- Optional. Defines a flat value for capacity change. Can be positive or negative -->
+						<setMax>number</setMax>
+						<!-- Optional. Defines a maximum for this capacity when the stage is active (0 will disable the capacity) -->
+					</li>
+				</capMods>
+				<hediffGivers>
+				<!-- Optional. Will call specific function(s) to determine if/when to give the pawn additional hediff(s) when the stage is active -->
+					<li Class="HediffGiver_Class">
+					<!-- Determines which function to use. Vanilla hediffGiverClasses:
+					Class="HediffGiver_Birthday"
+					Class="HediffGiver_Bleeding"
+					Class="HediffGiver_BrainInjury"
+					Class="HediffGiver_Heatstroke"
+					Class="HediffGiver_Hypothermia"
+					Class="HediffGiver_Random"
+					Class="HediffGiver_RandomAgeCurved" -->
+						<hediff>HediffDefName</hediff>
+						<!-- Determines which hediff is given -->
+						<partsToAffect>
+						<!-- Optional. Determines if the hediff will affect specific body part(s) -->
+							<li>BodyPartDefName</li>
+							<li>BodyPartDefName</li>
+						</partsToAffect>
+						<canAffectAnyLivePart>true_or_false</canAffectAnyLivePart>
+						<!-- Optional. If true, the hediff (e.g. carcinoma) will be able to spawn on any existing biological body-part -->
+						<countToAffect>number</countToAffect>
+						<!-- Optional. Defaults to 1. Overrides the HediffGiver_Class's number of body-parts to affect from the partsToAffect list -->
+					</li>
+				</hediffGivers>
+				<mentalStateGivers>
+				<!-- Optional. The stage will have a chance to put the pawn in mental state(s) -->
+					<li>
+					<!-- Separate different mental state by a list filter -->
+						<mentalState>MentalStateDefname</mentalState>
+						<!-- Defines the mental state to grant -->
+						<mtbDays>number</mtbDays>
+						<!-- Defines the likelihood of the mental state being activated. Higher values decrease the odds of activating the state -->
+					</li>
+				</mentalStateGivers>
+				<statOffsets>
+				<!-- Optional. Can offset pawn stat(s) by value -->
+					<StatDefName>number</StatDefName>
+					<StatDefname>number</StatDefname>
+				</statOffsets>
+			</li>
+		</stages>
+		<spawnThingOnRemoved>ThingDefName</spawnThingOnRemoved>
+		<!-- Optional. Will spawn a thing via ThingDef when the hediff is removed -->
+		<tendable>true_or_false</tendable>
+		<!-- Optional. If true, the injury can be tended by a doctor -->
+		<chanceToCauseNoPain>number</chanceToCauseNoPain>
+		<!-- Optional. If set, the hediff might not trigger a pain tick when pain is calculated -->
+		<makesSickThought>true_or_false</makesSickThought>
+		<!-- Optional. If true, the pawn will receive a mood debuff due to being sick when the hediff is active -->
+		<makesAlert>true_or_false</makesAlert>
+		<!-- Optional. Defaults to true. No description available -->
+		<causesNeed>NeedDefName</causesNeed>
+		<!-- Optional. Links the hediff to a need, which will spawn when the hediff is active -->
+		<minSeverity>number</minSeverity>
+		<!-- Optional. Sets a minimum severity for the hediff -->
+		<maxSeverity>number</maxSeverity>
+		<!-- Optional. Sets a severity ceiling for the hediff -->
+		<scenarioCanAdd>true_or_false</scenarioCanAdd>
+		<!-- Optional. If false, scenarios can't manually add the hediff to pawns -->
+		<displayWound>true_or_false</displayWound>
+		<!-- Optional. If true, the pawn will be visually injured -->
+		<defaultLabelColor>(R, G, B)</defaultLabelColor>
+		<!-- Optional. White by default. Sets a custom text colour for the hediff's label -->
+		<injuryProps>
+			<painPerSeverity>number</painPerSeverity>
+			<!-- Optional. Defaults to 1. Determines pain to apply according to severity -->
+			<averagePainPerSeverityOld>number</averagePainPerSeverityOld>
+			<!-- Optional. Defaults to 0.5. Determines pain to apply according to severity if the injury is "old" -->
+			<bleeding>number</bleeding>
+			<!-- Optional. Defaults to 2. Determines the bleeding rate of the injury -->
+			<canMerge>true_or_false</canMerge>
+			<!-- Determines whether or not the injury can be merged with other injuries -->
+			<fullyHealableOnlyByTend>true_or_false</fullyHealableOnlyByTend>
+			<!-- Optional. If true, the injury will not disappear unless it was tended -->
+			<destroyedLabel>label</destroyedLabel>
+			<!-- Determines which label is applied to the body-part if it was destroyed as a result of the injury -->
+			<destroyedOutLabel>label</destroyedOutLabel>
+			<!-- Optional. Determines which label is applied to the body-part if it was removed from the body as a result of the injury -->
+			<useRemovedLabel>true_or_false</useRemovedLabel>
+			<!-- Optional. Only true in vanilla for SurgicalCut. Will use the "Removed" label -->
+		</injuryProps>
+		<addedPartProps>
+			<isBionic>true_or_false</isBionic>
+			<!-- Optional. Define as true for bionic body parts -->
+			<isSolid>true_or_false</isSolid>
+			<!-- Optional. Defaults to true. Used for some in-game functions -->
+			<partEfficiency>number</partEfficiency>
+			<!-- Optional. Defaults to 1. Defines the efficiency of the body-part (1=100%) -->
+			<isGoodWeapon>true_or_false</isGoodWeapon>
+			<!-- Optional. Defined as true for powerful body-parts like PowerClaw and ScytherBlade -->
+		</addedPartProps>
+	</HediffDef>
+
+</Defs>
