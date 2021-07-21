@@ -15,21 +15,30 @@
 		<!-- String used for biome generation. Available vanilla strings:
 		BiomeWorker_AridShrubland
 		BiomeWorker_BorealForest
+    BiomeWorker_ColdBog
 		BiomeWorker_Desert
 		BiomeWorker_ExtremeDesert
 		BiomeWorker_IceSheet
 		BiomeWorker_Ocean
+    BiomeWorker_SeaIce
 		BiomeWorker_TemperateForest
+    BiomeWorker_TemperateSwamp
 		BiomeWorker_TropicalRainforest
+    BiomeWorker_TropicalSwamp
 		BiomeWorker_Tundra -->
-		<implemented>true_or_false</implemented>
-		<!-- Optional. Defaults to true -->
+    
+    <!-- Updated up to here -->
+    
 		<canBuildBase>true_or_false</canBuildBase>
 		<!-- Optional. Defaults to true. Defines if a tile with this biome is choosable on the world map as a colony base -->
-		<hideTerrain>true_or_false</hideTerrain>
-		<!-- Optional. Defaults to false. Toggles terrain display for the biome. Used in vanilla for the ocean biome -->
+    <allowRoads>true_or_false</allowRoads>
+    <!-- Optional. Defaults to true. Decides if roads are allowed in this biome-->
+    <allowRivers>true_or_false</allowRivers>
+    <!-- Optional. Defaults to true. Decides if rivers are allowed in this biome-->
 		<animalDensity>number</animalDensity>
 		<!-- Controls the amount of animals spawned. 0 to disable -->
+    <hasVirtualPlants>true_or_false</hasVirtualPlants>
+    <!-- Optional. Defaults to true. -->
 		<plantDensity>number</plantDensity>
 		<!-- Controls the amount of plants spawned. 0 to disable -->
 		<baseColor>(colour1, colour2, colour3)</baseColor>
