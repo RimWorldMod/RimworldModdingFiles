@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThoughtDef>
+    <defName>GotMarried</defName>
+    <durationDays>30.0</durationDays>
+    <stackLimit>1</stackLimit>
+    <stages>
+      <li>
+        <label>got married to {0}</label>
+        <description>I got married! It's so wonderful to be starting a new life together!</description>
+        <baseMoodEffect>40</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <ThoughtDef>
+    <defName>AttendedWedding</defName>
+    <durationDays>10.0</durationDays>
+    <stackLimit>10</stackLimit>
+    <stages>
+      <li>
+        <label>attended wedding</label>
+        <description>It was great to see two people come together to build a future like that.</description>
+        <baseMoodEffect>20</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <ThoughtDef>
+    <defName>AttendedParty</defName>
+    <durationDays>10</durationDays>
+    <stackLimit>10</stackLimit>
+    <stages>
+      <li>
+        <label>attended party</label>
+        <description>I had a good time at that party.</description>
+        <baseMoodEffect>8</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <ThoughtDef>
+    <defName>AttendedConcert</defName>
+    <durationDays>10</durationDays>
+    <stackLimit>10</stackLimit>
+    <stages>
+      <li>
+        <label>attended concert</label>
+        <description>I enjoyed listening to that performance.</description>
+        <baseMoodEffect>8</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <ThoughtDef>
+    <defName>HeldConcert</defName>
+    <durationDays>10</durationDays>
+    <stackLimit>10</stackLimit>
+    <stages>
+      <li>
+        <label>held concert</label>
+        <description>They loved me. They really loved me.</description>
+        <baseMoodEffect>8</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <ThoughtDef>
+    <defName>TerribleSpeech</defName>
+    <thoughtClass>Thought_MemorySocial</thoughtClass>
+    <durationDays>8</durationDays>
+    <stackLimit>10</stackLimit>
+    <stages>
+      <li>
+        <label>terrible speech</label>
+        <description>That speech was atrocious. It made me realize how little hope we really have.</description>
+        <baseMoodEffect>-8</baseMoodEffect>
+        <baseOpinionOffset>-30</baseOpinionOffset>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <ThoughtDef>
+    <defName>UninspiringSpeech</defName>
+    <thoughtClass>Thought_MemorySocial</thoughtClass>
+    <durationDays>8</durationDays>
+    <stackLimit>10</stackLimit>
+    <stages>
+      <li>
+        <label>uninspiring speech</label>
+        <description>That speech was more awkward than inspiring. If that's who we're listening to, I'm worried.</description>
+        <baseMoodEffect>-4</baseMoodEffect>
+        <baseOpinionOffset>-15</baseOpinionOffset>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <ThoughtDef>
+    <defName>EncouragingSpeech</defName>
+    <thoughtClass>Thought_MemorySocial</thoughtClass>
+    <durationDays>8</durationDays>
+    <stackLimit>10</stackLimit>
+    <stages>
+      <li>
+        <label>encouraging speech</label>
+        <description>That speech made me feel like we have a solid path forward.</description>
+        <baseMoodEffect>5</baseMoodEffect>
+        <baseOpinionOffset>20</baseOpinionOffset>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <ThoughtDef>
+    <defName>InspirationalSpeech</defName>
+    <thoughtClass>Thought_MemorySocial</thoughtClass>
+    <durationDays>8</durationDays>
+    <stackLimit>10</stackLimit>
+    <stages>
+      <li>
+        <label>inspirational speech</label>
+        <description>That speech was moving emotionally and intellectually. I am filled with purpose.</description>
+        <baseMoodEffect>10</baseMoodEffect>
+        <baseOpinionOffset>40</baseOpinionOffset>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+</Defs>

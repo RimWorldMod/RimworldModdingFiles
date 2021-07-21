@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <StatDef>
+    <defName>StuffPower_Armor_Sharp</defName>
+    <label>Armor - Sharp</label>
+    <labelForFullStatList>Armor - Sharp (material factor)</labelForFullStatList>
+    <description>Armor against sharp damage like bullets, knife stabs, and animal bites.</description>
+    <category>StuffStatFactors</category>
+    <defaultBaseValue>0</defaultBaseValue>
+    <minValue>0</minValue>
+    <toStringStyle>PercentZero</toStringStyle>
+    <showIfUndefined>false</showIfUndefined>
+    <displayPriorityInCategory>4510</displayPriorityInCategory>
+  </StatDef>
+
+  <StatDef>
+    <defName>StuffPower_Armor_Blunt</defName>
+    <label>Armor - Blunt</label>
+    <labelForFullStatList>Armor - Blunt (material factor)</labelForFullStatList>
+    <description>Armor against blunt damage like club impacts, rock falls, and explosions.</description>
+    <category>StuffStatFactors</category>
+    <defaultBaseValue>0</defaultBaseValue>
+    <minValue>0</minValue>
+    <toStringStyle>PercentZero</toStringStyle>
+    <showIfUndefined>false</showIfUndefined>
+    <displayPriorityInCategory>4509</displayPriorityInCategory>
+  </StatDef>
+
+  <StatDef>
+    <defName>StuffPower_Armor_Heat</defName>
+    <label>Armor - Heat</label>
+    <labelForFullStatList>Armor - Heat (material factor)</labelForFullStatList>
+    <description>Armor against temperature-related damage like burns.</description>
+    <category>StuffStatFactors</category>
+    <defaultBaseValue>0</defaultBaseValue>
+    <minValue>0</minValue>
+    <toStringStyle>PercentZero</toStringStyle>
+    <showIfUndefined>false</showIfUndefined>
+    <displayPriorityInCategory>4508</displayPriorityInCategory>
+  </StatDef>
+
+  <StatDef>
+    <defName>StuffPower_Insulation_Cold</defName>
+    <label>Insulation - Cold</label>
+    <labelForFullStatList>Insulation - Cold (material factor)</labelForFullStatList>
+    <description>How much an apparel made of this material improves a wearer's minimum comfortable temperature when worn.</description>
+    <category>StuffStatFactors</category>
+    <defaultBaseValue>0</defaultBaseValue>
+    <hideAtValue>0</hideAtValue>
+    <toStringStyle>TemperatureOffset</toStringStyle>
+    <displayPriorityInCategory>4507</displayPriorityInCategory>
+  </StatDef>
+
+  <StatDef>
+    <defName>StuffPower_Insulation_Heat</defName>
+    <label>Insulation - Heat</label>
+    <labelForFullStatList>Insulation - Heat (material factor)</labelForFullStatList>
+    <description>How much an apparel made of this material improves a wearer's maximum comfortable temperature when worn.</description>
+    <category>StuffStatFactors</category>
+    <defaultBaseValue>0</defaultBaseValue>
+    <hideAtValue>0</hideAtValue>
+    <toStringStyle>TemperatureOffset</toStringStyle>
+    <displayPriorityInCategory>4506</displayPriorityInCategory>
+  </StatDef>
+
+</Defs>

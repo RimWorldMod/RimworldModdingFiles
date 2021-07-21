@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <RulePackDef>
+    <defName>NamerQuestDefault</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>defaultQuestName->[adjectiveCurious] [quest]</li>
+      </rulesStrings>
+      <rulesFiles>
+        <li>quest->Words/Nouns/Quests</li>
+        <li>adjectiveCurious->Words/Adjectives/Curious</li>
+      </rulesFiles>
+    </rulePack>
+  </RulePackDef>
+
+</Defs>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- History events -->
+
+  <HistoryEventDef>
+    <defName>AteNutrientPaste</defName>
+    <label>ate nutrient paste</label>
+  </HistoryEventDef>
+
+  <!-- Issue -->
+
+  <IssueDef>
+    <defName>NutrientPasteEating</defName>
+    <label>eating nutrient paste</label>
+    <iconPath>UI/Issues/EatingNutrientPaste</iconPath>
+  </IssueDef>
+
+  <!-- Precepts -->
+
+  <PreceptDef>
+    <defName>NutrientPasteEating_Disgusting</defName>
+    <issue>NutrientPasteEating</issue>
+    <label>disgusting</label>
+    <description>Nutrient paste is disgusting.</description>
+    <impact>Low</impact>
+    <displayOrderInIssue>10</displayOrderInIssue>
+    <defaultSelectionWeight>1</defaultSelectionWeight>
+    <classic>true</classic>
+    <comps>
+      <li Class="PreceptComp_SelfTookMemoryThought">
+        <eventDef>AteNutrientPaste</eventDef>
+        <thought>AteNutrientPasteMeal</thought>
+      </li>
+    </comps>
+  </PreceptDef>
+
+  <!-- Thoughts -->
+
+  <ThoughtDef>
+    <defName>AteNutrientPasteMeal</defName>
+    <durationDays>1</durationDays>
+    <stages>
+      <li>
+        <label>ate nutrient paste meal</label>
+        <description>I had to eat a disgusting, tasteless meal. I know it keeps you alive, but nobody wants to swallow that glop.</description>
+        <baseMoodEffect>-4</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+</Defs>

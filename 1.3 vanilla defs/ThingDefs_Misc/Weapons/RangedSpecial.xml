@@ -1,0 +1,245 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="BaseWeapon" Name="OrbitalWeaponBase" Abstract="True">
+    <thingCategories>
+      <li>WeaponsRanged</li>
+    </thingCategories>
+    <weaponClasses>
+      <li>Ranged</li>
+    </weaponClasses>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponSpecial/OrbitalTargeter</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>1200</MarketValue>
+      <Mass>0.2</Mass>
+      <Beauty>-3</Beauty>
+      <Flammability>0.5</Flammability>
+    </statBases>
+    <techLevel>Spacer</techLevel>
+    <tradeability>Sellable</tradeability>
+    <soundInteract>Standard_Pickup</soundInteract>
+    <tradeTags>
+      <li>ExoticMisc</li>
+    </tradeTags>
+    <thingSetMakerTags>
+      <li>SingleUseWeapon</li>
+    </thingSetMakerTags>
+  </ThingDef>
+
+  <ThingDef ParentName="ApparelNoQualityBase" Name="OrbitalUtilityBase" Abstract="True">
+    <thingCategories>
+      <li>ApparelUtility</li>
+    </thingCategories>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponSpecial/OrbitalTargeter</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>1200</MarketValue>
+      <Mass>0.2</Mass>
+      <Beauty>-3</Beauty>
+      <Flammability>0.5</Flammability>
+    </statBases>
+    <techLevel>Spacer</techLevel>
+    <tradeability>Sellable</tradeability>
+    <soundInteract>Standard_Pickup</soundInteract>
+    <tickerType>Normal</tickerType>
+    <tradeTags>
+      <li>ExoticMisc</li>
+    </tradeTags>
+    <thingSetMakerTags>
+      <li>SingleUseWeapon</li>
+    </thingSetMakerTags>
+    <apparel>
+      <countsAsClothingForNudity>false</countsAsClothingForNudity>
+      <scoreOffset>4</scoreOffset>
+      <careIfWornByCorpse>false</careIfWornByCorpse>
+      <careIfDamaged>false</careIfDamaged>
+      <ignoredByNonViolent>true</ignoredByNonViolent>
+      <wearPerDay>0</wearPerDay>
+      <bodyPartGroups>
+        <li>Waist</li>
+      </bodyPartGroups>
+      <layers>
+        <li>Belt</li>
+      </layers>
+    </apparel>
+  </ThingDef>
+
+  <ThingDef ParentName="OrbitalUtilityBase">
+    <defName>OrbitalTargeterBombardment</defName>
+    <label>orbital bombardment targeter</label>
+    <description>An ancient targeting apparatus for an orbital bombardment system. This unit designates a target and transmits the coordinates to a network of satellites, which then bombard the target area with kinetic impactors. This unit has been reprogrammed to accept unauthorized users, but once it is used, the network will detect the incursion and cut off the link permanently.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponSpecial/OrbitalTargeterBombardment/OrbitalTargeterBombardment</texPath>
+      <drawSize>(0.7,0.7)</drawSize>
+    </graphicData>
+    <apparel>
+      <ai_pickUpOpportunistically>true</ai_pickUpOpportunistically>
+      <wornGraphicPath>Things/Item/Equipment/WeaponSpecial/OrbitalTargeterBombardment/OrbitalTargeterBombardment</wornGraphicPath>
+      <wornGraphicData>
+        <renderUtilityAsPack>true</renderUtilityAsPack>
+        <north>
+          <male>  <offset>(0.25, -0.25)</offset> </male>
+          <female><offset>(0.25,-0.25)</offset> </female>
+          <thin>  <offset>(0.15,-0.25)</offset> </thin>
+          <hulk>  <offset>(0.25,-0.3)</offset> </hulk>
+          <fat>   <offset>(0.45,-0.25)</offset> </fat>
+        </north>
+        <south>
+          <male>  <offset>(-0.3, -0.25)</offset> </male>
+          <female><offset>(-0.3,-0.25)</offset> </female>
+          <thin>  <offset>(-0.2,-0.25)</offset> </thin>
+          <hulk>  <offset>(-0.3,-0.3)</offset> </hulk>
+          <fat>   <offset>(-0.5,-0.25)</offset> </fat>
+        </south>
+        <east>
+          <offset>(-0.05,-0.3)</offset>
+        </east>
+
+        <male>  <scale>(0.4,0.4)</scale> </male>
+        <female><scale>(0.4,0.4)</scale> </female>
+        <thin>  <scale>(0.4,0.4)</scale> </thin>
+        <hulk>  <scale>(0.4,0.4)</scale> </hulk>
+        <fat>   <scale>(0.4,0.4)</scale> </fat>
+      </wornGraphicData>
+    </apparel>
+    <thingSetMakerTags><li>RewardStandardHighFreq</li></thingSetMakerTags>
+    <verbs>
+      <li>
+        <verbClass>Verb_Bombardment</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <warmupTime>3</warmupTime>
+        <ai_AvoidFriendlyFireRadius>23</ai_AvoidFriendlyFireRadius>
+        <ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
+        <range>44.9</range>
+        <burstShotCount>1</burstShotCount>
+        <soundAiming>OrbitalTargeter_Aiming</soundAiming>
+        <soundCast>OrbitalTargeter_Fire</soundCast>
+        <onlyManualCast>true</onlyManualCast>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+      </li>
+    </verbs>
+    <comps>
+      <li Class="CompProperties_Reloadable">
+        <maxCharges>1</maxCharges>
+        <destroyOnEmpty>true</destroyOnEmpty>
+        <hotKey>Misc4</hotKey>
+        <chargeNoun>charge</chargeNoun>
+        <displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="OrbitalUtilityBase">
+    <defName>OrbitalTargeterPowerBeam</defName>
+    <label>orbital power beam targeter</label>
+    <description>An ancient targeting unit for a network of power-collection satellites. Once aimed at a target, it directs ancient satellites to begin beaming power down in a massive column of electromagnetic energy. This power can safely be collected in a giant absorption dish. Since you have no absorption dish, you'll be aiming it at enemies, at which point the power column will turn the area into a thousand-degree inferno. This will last until the satellites detect the unsafe targeting, shut themselves down, and permanently deactivate the targeter.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponSpecial/OrbitalTargeterPowerBeam/OrbitalTargeterPowerBeam</texPath>
+      <drawSize>(0.7,0.7)</drawSize>
+    </graphicData>
+    <apparel>
+      <ai_pickUpOpportunistically>true</ai_pickUpOpportunistically>
+      <wornGraphicPath>Things/Item/Equipment/WeaponSpecial/OrbitalTargeterPowerBeam/OrbitalTargeterPowerBeam</wornGraphicPath>
+      <wornGraphicData>
+        <renderUtilityAsPack>true</renderUtilityAsPack>
+        <north>
+          <male>  <offset>(0.25, -0.25)</offset> </male>
+          <female><offset>(0.25,-0.25)</offset> </female>
+          <thin>  <offset>(0.15,-0.25)</offset> </thin>
+          <hulk>  <offset>(0.25,-0.3)</offset> </hulk>
+          <fat>   <offset>(0.45,-0.25)</offset> </fat>
+        </north>
+        <south>
+          <male>  <offset>(-0.3, -0.25)</offset> </male>
+          <female><offset>(-0.3,-0.25)</offset> </female>
+          <thin>  <offset>(-0.2,-0.25)</offset> </thin>
+          <hulk>  <offset>(-0.3,-0.3)</offset> </hulk>
+          <fat>   <offset>(-0.5,-0.25)</offset> </fat>
+        </south>
+        <east>
+          <offset>(-0.05,-0.3)</offset>
+        </east>
+
+        <male>  <scale>(0.4,0.4)</scale> </male>
+        <female><scale>(0.4,0.4)</scale> </female>
+        <thin>  <scale>(0.4,0.4)</scale> </thin>
+        <hulk>  <scale>(0.4,0.4)</scale> </hulk>
+        <fat>   <scale>(0.4,0.4)</scale> </fat>
+      </wornGraphicData>
+    </apparel>
+    <thingSetMakerTags><li>RewardStandardHighFreq</li></thingSetMakerTags>
+    <verbs>
+      <li>
+        <verbClass>Verb_PowerBeam</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <warmupTime>3</warmupTime>
+        <ai_AvoidFriendlyFireRadius>15</ai_AvoidFriendlyFireRadius>
+        <range>44.9</range>
+        <burstShotCount>1</burstShotCount>
+        <soundAiming>OrbitalTargeter_Aiming</soundAiming>
+        <soundCast>OrbitalTargeter_Fire</soundCast>
+        <onlyManualCast>true</onlyManualCast>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+      </li>
+    </verbs>
+    <comps>
+      <li Class="CompProperties_Reloadable">
+        <maxCharges>1</maxCharges>
+        <destroyOnEmpty>true</destroyOnEmpty>
+        <hotKey>Misc4</hotKey>
+        <chargeNoun>charge</chargeNoun>
+        <displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="OrbitalUtilityBase">
+    <defName>TornadoGenerator</defName>
+    <label>tornado generator</label>
+    <description>An ancient control unit for a network of weather-control satellites. This device has had certain failsafes bypassed; it is capable of causing a massive air current disturbance, which will generate a tornado at a chosen location. The weather network will detect this unauthorized intrusion and lock out the device after use, but the tornado will be left to spend its energy normally.</description>
+    <thingSetMakerTags><li>RewardStandardHighFreq</li></thingSetMakerTags>
+    <statBases>
+      <MarketValue>800</MarketValue>
+    </statBases>
+    <apparel>
+      <ai_pickUpOpportunistically>true</ai_pickUpOpportunistically>
+    </apparel>
+    <verbs>
+      <li>
+        <verbClass>Verb_Spawn</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <warmupTime>3</warmupTime>
+        <ai_AvoidFriendlyFireRadius>10</ai_AvoidFriendlyFireRadius>
+        <spawnDef>Tornado</spawnDef>
+        <colonyWideTaleDef>TornadoFromItem</colonyWideTaleDef>
+        <range>44.9</range>
+        <burstShotCount>1</burstShotCount>
+        <soundAiming>OrbitalTargeter_Aiming</soundAiming>
+        <soundCast>OrbitalTargeter_Fire</soundCast>
+        <onlyManualCast>true</onlyManualCast>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+      </li>
+    </verbs>
+    <comps>
+      <li Class="CompProperties_Reloadable">
+        <maxCharges>1</maxCharges>
+        <destroyOnEmpty>true</destroyOnEmpty>
+        <hotKey>Misc4</hotKey>
+        <chargeNoun>charge</chargeNoun>
+        <displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
+      </li>
+    </comps>
+  </ThingDef>
+
+</Defs>

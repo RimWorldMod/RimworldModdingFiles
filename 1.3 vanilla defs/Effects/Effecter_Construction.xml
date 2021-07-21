@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <EffecterDef>
+    <defName>ConstructMetal</defName>
+    <children>
+      <li>
+        <subEffecterClass>SubEffecter_Sustainer</subEffecterClass>
+        <soundDef>Interact_ConstructMetal</soundDef>
+      </li>
+      <li>
+        <subEffecterClass>SubEffecter_SprayerChance</subEffecterClass>
+        <fleckDef>DustPuff</fleckDef>
+        <chancePerTick>0.035</chancePerTick>
+        <scale>0.9~1.3</scale>
+        <rotationRate>-60~60</rotationRate>
+        <speed>0.6~1.8</speed>
+      </li>
+      <li>
+        <subEffecterClass>SubEffecter_SprayerChance</subEffecterClass>
+        <fleckDef>SparkFlash</fleckDef>
+        <spawnLocType>BetweenTouchingCells</spawnLocType>
+        <positionLerpFactor>0.49</positionLerpFactor>
+        <chancePerTick>0.2</chancePerTick>
+        <scale>2.5~3.5</scale>
+      </li>
+      <li>
+        <subEffecterClass>SubEffecter_SprayerChance</subEffecterClass>
+        <moteDef>Mote_SparkThrown</moteDef>
+        <spawnLocType>BetweenTouchingCells</spawnLocType>
+        <positionLerpFactor>0.49</positionLerpFactor>
+        <chancePerTick>0.2</chancePerTick>
+        <scale>0.24~0.34</scale>
+        <airTime>0.08~0.16</airTime>
+        <rotationRate>-240~240</rotationRate>
+        <speed>7.2~24</speed>
+        <angle>135~225</angle>
+        <positionRadius>0.02</positionRadius>
+      </li>
+    </children>
+  </EffecterDef>
+
+  <ThingDef ParentName="MoteBase">
+    <defName>Mote_SparkThrown</defName>
+    <graphicData>
+      <texPath>Things/Mote/SparkThrown</texPath>
+    </graphicData>
+    <altitudeLayer>Projectile</altitudeLayer>
+    <mote>
+      <fadeInTime>0.08</fadeInTime>
+      <solidTime>0.33</solidTime>
+      <fadeOutTime>0.85</fadeOutTime>
+      <collide>true</collide>
+    </mote>
+  </ThingDef>
+
+  <EffecterDef>
+    <defName>ConstructWood</defName>
+    <children>
+      <li>
+        <subEffecterClass>SubEffecter_Sustainer</subEffecterClass>
+        <soundDef>Interact_ConstructWood</soundDef>
+      </li>
+      <li>
+        <subEffecterClass>SubEffecter_SprayerChance</subEffecterClass>
+        <fleckDef>DustPuff</fleckDef>
+        <chancePerTick>0.035</chancePerTick>
+        <scale>0.9~1.2</scale>
+        <rotationRate>-60~60</rotationRate>
+        <speed>0.6~1.8</speed>
+      </li>
+    </children>
+  </EffecterDef>
+
+  <EffecterDef>
+    <defName>ConstructDirt</defName>
+    <children>
+      <li>
+        <subEffecterClass>SubEffecter_Sustainer</subEffecterClass>
+        <soundDef>Interact_ConstructDirt</soundDef>
+      </li>
+      <li>
+        <subEffecterClass>SubEffecter_SprayerChance</subEffecterClass>
+        <fleckDef>DustPuff</fleckDef>
+        <chancePerTick>0.035</chancePerTick>
+        <scale>0.9~1.2</scale>
+        <rotationRate>-60~60</rotationRate>
+        <speed>0.6~1.8</speed>
+      </li>
+      <li>
+        <subEffecterClass>SubEffecter_SprayerChance</subEffecterClass>
+        <fleckDef>DirtBits</fleckDef>
+        <spawnLocType>BetweenPositions</spawnLocType>
+        <chancePerTick>0.05</chancePerTick>
+        <scale>0.5~0.6</scale>
+        <fleckUsesAngleForVelocity>true</fleckUsesAngleForVelocity>
+        <angle>0~360</angle>
+        <speed>5</speed>
+      </li>
+    </children>
+  </EffecterDef>
+
+  <EffecterDef>
+    <defName>RoofWork</defName>
+    <children>
+      <li>
+        <subEffecterClass>SubEffecter_SprayerChance</subEffecterClass>
+        <fleckDef>DustPuff</fleckDef>
+        <chancePerTick>0.07</chancePerTick>
+        <scale>0.9~1.3</scale>
+        <rotationRate>-60~60</rotationRate>
+        <speed>0.6~1.8</speed>
+      </li>
+    </children>
+  </EffecterDef>
+
+</Defs>

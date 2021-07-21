@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- Base interactions -->
+
+  <HistoryEventDef>
+    <defName>AttackedBuilding</defName>
+    <label>attacked building</label>
+  </HistoryEventDef>
+  
+  <!-- Permit-related -->
+
+  <HistoryEventDef>
+    <defName>ShuttleDestroyed</defName>
+    <label>shuttle destroyed</label>
+  </HistoryEventDef>
+
+  <HistoryEventDef>
+    <defName>LaborersMissedShuttle</defName>
+    <label>laborers missed shuttle</label>
+  </HistoryEventDef>
+
+  <!-- Misc -->
+
+  <HistoryEventDef>
+    <defName>UsedHarmfulAbility</defName>
+    <label>used harmful ability</label>
+  </HistoryEventDef>
+
+  <HistoryEventDef>
+    <defName>UsedForbiddenThing</defName>
+    <label>used forbidden thing</label>
+  </HistoryEventDef>
+
+  <HistoryEventDef>
+    <defName>ReachNaturalGoodwill</defName>
+    <label>tendency to move toward natural goodwill</label>
+  </HistoryEventDef>
+
+  <HistoryEventDef>
+    <defName>RitualDone</defName>
+    <label>ritual done</label>
+  </HistoryEventDef>
+
+  <!-- Debug -->
+
+  <HistoryEventDef>
+    <defName>DebugGoodwill</defName>
+    <label>debug event</label>
+  </HistoryEventDef>
+
+</Defs>

@@ -1,0 +1,374 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Defs>
+
+  <SoundDef>
+    <defName>CrashedShipPart_Ambience</defName>  
+    <sustain>True</sustain>  
+    <context>MapOnly</context>
+    <priorityMode>PrioritizeNearest</priorityMode>  
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Exotic/Crashed_Ship_Part/Drone/EvilShip_Loop_1b</clipPath>
+          </li>
+        </grains>      
+        <volumeRange>16</volumeRange>
+        <distRange>10~38</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>GeothermalPlant_Ambience_Start</defName>  
+    <context>MapOnly</context>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Electricity/GeothermalPlant/Start/GeothermalPlantStart_1a</clipPath>
+          </li>
+        </grains>      
+        <volumeRange>16~16</volumeRange>      
+        <distRange>0~50.27907</distRange>      
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>GeothermalPlant_Ambience_Stop</defName>  
+    <context>MapOnly</context>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Electricity/GeothermalPlant/Stop/GeothermalPlantStop_1a</clipPath>
+          </li>
+        </grains>      
+        <volumeRange>16~16</volumeRange>      
+        <distRange>0~50.27907</distRange>      
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>GeothermalPlant_Ambience</defName>  
+    <sustain>True</sustain>  
+    <context>MapOnly</context>
+    <priorityMode>PrioritizeNearest</priorityMode>  
+    <sustainStartSound>GeothermalPlant_Ambience_Start</sustainStartSound>  
+    <sustainStopSound>GeothermalPlant_Ambience_Stop</sustainStopSound>  
+    <subSounds>
+      <li>
+        <muteWhenPaused>True</muteWhenPaused>      
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Electricity/GeothermalPlant/Run/GeothermalPlantRun_Loop1a</clipPath>
+          </li>
+        </grains>      
+        <volumeRange>15~15</volumeRange>      
+        <pitchRange>1~1.015</pitchRange>      
+        <distRange>0~30</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>WaterMill_Ambience</defName>
+    <sustain>True</sustain>
+    <context>MapOnly</context>
+    <priorityMode>PrioritizeNearest</priorityMode>
+    <subSounds>
+      <li>
+        <muteWhenPaused>True</muteWhenPaused>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Electricity/Watermill_Loop_01a</clipPath>
+          </li>
+        </grains>
+        <volumeRange>18</volumeRange>
+        <distRange>10~30</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>MoisturePump_Ambience</defName>
+    <sustain>True</sustain>
+    <context>MapOnly</context>
+    <priorityMode>PrioritizeNearest</priorityMode>
+    <maxSimultaneous>1</maxSimultaneous>
+    <maxVoices>1</maxVoices>
+    <subSounds>
+      <li>
+        <muteWhenPaused>True</muteWhenPaused>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Misc/MoisturePump</clipFolderPath>
+          </li>
+        </grains>
+        <volumeRange>12~16</volumeRange>
+        <pitchRange>1~1.15</pitchRange>
+        <distRange>10~30</distRange>
+        <sustainIntervalRange>1~3</sustainIntervalRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Television_Ambience</defName>
+    <sustain>True</sustain>
+    <context>MapOnly</context>
+    <priorityMode>PrioritizeNearest</priorityMode>
+    <maxSimultaneous>1</maxSimultaneous>
+    <maxVoices>1</maxVoices>
+    <subSounds>
+      <li>
+        <muteWhenPaused>True</muteWhenPaused>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Interact/Joy/WatchTelevision/Television_Ambience_Loop1</clipPath>
+          </li>
+        </grains>
+        <volumeRange>20</volumeRange>
+        <distRange>5~25</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>ShipReactor_Ambience</defName>
+    <context>MapOnly</context>
+    <sustain>True</sustain>
+    <maxSimultaneous>1</maxSimultaneous>
+    <maxVoices>1</maxVoices>
+    <priorityMode>PrioritizeNearest</priorityMode>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Exotic/Ship_Reactor/ShipReactor_Ambience_Loop_01a</clipPath>
+          </li>
+        </grains>
+        <volumeRange>60</volumeRange>
+        <distRange>10~25</distRange>
+        <startDelayRange>17</startDelayRange>
+        <sustainAttack>5</sustainAttack>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>ScannerGroundPenetrating_Start</defName>
+    <context>MapOnly</context>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Interact/Work/Scanner/GroundPenetrating/ScannerGroundPenetrating_Ambience_Start</clipPath>
+          </li>
+        </grains>
+        <volumeRange>20</volumeRange>
+        <distRange>10~30</distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>ScannerGroundPenetrating_Stop</defName>
+    <context>MapOnly</context>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Interact/Work/Scanner/GroundPenetrating/ScannerGroundPenetrating_Ambience_Stop</clipPath>
+          </li>
+        </grains>
+        <volumeRange>20</volumeRange>
+        <distRange>10~30</distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>ScannerGroundPenetrating_Ambience</defName>
+    <sustain>True</sustain>
+    <context>MapOnly</context>
+    <priorityMode>PrioritizeNearest</priorityMode>
+    <sustainStartSound>ScannerGroundPenetrating_Start</sustainStartSound>
+    <sustainStopSound>ScannerGroundPenetrating_Stop</sustainStopSound>
+    <subSounds>
+      <li>
+        <muteWhenPaused>True</muteWhenPaused>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Interact/Work/Scanner/GroundPenetrating/ScannerGroundPenetrating_Ambience_Loop</clipPath>
+          </li>
+        </grains>
+        <volumeRange>19</volumeRange>
+        <distRange>10~25</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>ScannerLongRangeMineral_Start</defName>
+    <context>MapOnly</context>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Interact/Work/Scanner/LongRangeMineral/ScannerLongRangeMineral_Ambience_Start</clipPath>
+          </li>
+        </grains>
+        <volumeRange>20</volumeRange>
+        <distRange>10~30</distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>ScannerLongRangeMineral_Stop</defName>
+    <context>MapOnly</context>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Interact/Work/Scanner/LongRangeMineral/ScannerLongRangeMineral_Ambience_Stop</clipPath>
+          </li>
+        </grains>
+        <volumeRange>20</volumeRange>
+        <distRange>10~30</distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>ScannerLongRangeMineral_Ambience</defName>
+    <sustain>True</sustain>
+    <context>MapOnly</context>
+    <priorityMode>PrioritizeNearest</priorityMode>
+    <sustainStartSound>ScannerLongRangeMineral_Start</sustainStartSound>
+    <sustainStopSound>ScannerLongRangeMineral_Stop</sustainStopSound>
+    <subSounds>
+      <li>
+        <muteWhenPaused>True</muteWhenPaused>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Interact/Work/Scanner/LongRangeMineral/ScannerLongRangeMineral_Ambience_Loop</clipPath>
+          </li>
+        </grains>
+        <volumeRange>16</volumeRange>
+        <distRange>10~25</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>WoodFiredGenerator_Ambience</defName>
+    <sustain>True</sustain>
+    <context>MapOnly</context>
+    <priorityMode>PrioritizeNearest</priorityMode>
+    <maxSimultaneous>1</maxSimultaneous>
+    <maxVoices>1</maxVoices>
+    <subSounds>
+      <li>
+        <muteWhenPaused>True</muteWhenPaused>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Electricity/WoodFiredGenerator_Ambience</clipPath>
+          </li>
+        </grains>
+        <volumeRange>13</volumeRange>
+        <distRange>5~20</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>ChemfuelFiredGenerator_Ambience</defName>
+    <sustain>True</sustain>
+    <context>MapOnly</context>
+    <priorityMode>PrioritizeNearest</priorityMode>
+    <maxSimultaneous>1</maxSimultaneous>
+    <maxVoices>1</maxVoices>
+    <subSounds>
+      <li>
+        <muteWhenPaused>True</muteWhenPaused>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Electricity/ChemfuelFiredGenerator_Ambience</clipPath>
+          </li>
+        </grains>
+        <volumeRange>13</volumeRange>
+        <distRange>10~20</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>WindTurbine_Ambience</defName>
+    <sustain>True</sustain>
+    <context>MapOnly</context>
+    <priorityMode>PrioritizeNearest</priorityMode>
+    <maxVoices>1</maxVoices>
+    <subSounds>
+      <li>
+        <muteWhenPaused>True</muteWhenPaused>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Electricity/WindTurbine_Ambience_Loop_01</clipPath>
+          </li>
+        </grains>
+        <volumeRange>13</volumeRange>
+        <distRange>10~20</distRange>
+        <filters>
+          <li Class="SoundFilterLowPass">
+            <cutoffFrequency>50</cutoffFrequency>
+            <lowpassResonaceQ>1</lowpassResonaceQ>
+          </li>
+        </filters>
+        <paramMappings>
+          <li>
+            <inParam Class="SoundParamSource_External">
+              <inParamName>PowerOutput</inParamName>
+              <defaultValue>2000</defaultValue>
+            </inParam>
+            <outParam Class="SoundParamTarget_PropertyLowPass">
+              <filterProperty>Cutoff</filterProperty>
+            </outParam>
+            <paramUpdateMode>Constant</paramUpdateMode>
+            <curve>
+              <points>
+                <li>(0,500)</li>
+                <li>(1,5000)</li>
+              </points>
+            </curve>
+          </li>
+          <li>
+            <inParam Class="SoundParamSource_External">
+              <inParamName>PowerOutput</inParamName>
+              <defaultValue>1</defaultValue>
+            </inParam>
+            <outParam Class="SoundParamTarget_Pitch" />
+            <paramUpdateMode>Constant</paramUpdateMode>
+            <curve>
+              <points>
+                <li>(0,0.93)</li>
+                <li>(1,1.07)</li>
+              </points>
+            </curve>
+          </li>
+        </paramMappings>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+</Defs>

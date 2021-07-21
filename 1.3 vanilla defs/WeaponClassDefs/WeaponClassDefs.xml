@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <WeaponClassDef>
+    <defName>Melee</defName>
+    <label>melee</label>
+  </WeaponClassDef>
+
+  <WeaponClassDef>
+    <defName>Ranged</defName>
+    <label>ranged</label>
+  </WeaponClassDef>
+
+  <WeaponClassDef>
+    <defName>MeleePiercer</defName>
+    <label>melee piercer</label>
+  </WeaponClassDef>
+
+  <WeaponClassDef>
+    <defName>MeleeBlunt</defName>
+    <label>melee blunt</label>
+  </WeaponClassDef>
+
+  <WeaponClassDef>
+    <defName>LongShots</defName>
+    <label>long shots</label>
+  </WeaponClassDef>
+
+  <WeaponClassDef>
+    <defName>ShortShots</defName>
+    <label>short shots</label>
+  </WeaponClassDef>
+
+  <WeaponClassDef>
+    <defName>RangedHeavy</defName>
+    <label>ranged heavy</label>
+  </WeaponClassDef>
+
+  <WeaponClassDef>
+    <defName>RangedLight</defName>
+    <label>ranged light</label>
+  </WeaponClassDef>
+
+  <WeaponClassDef>
+    <defName>Neolithic</defName>
+    <label>neolithic</label>
+  </WeaponClassDef>
+
+  <WeaponClassDef>
+    <defName>Ultratech</defName>
+    <label>ultratech</label>
+  </WeaponClassDef>
+
+</Defs>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <RitualVisualEffectDef>
+    <defName>Speech</defName>
+    <comps>
+      <li Class="CompProperties_RitualEffectSpawnOnPawn">
+        <fleckDef>SpeechLines</fleckDef>
+        <compClass>CompRitualEffect_SpawnOnOrganizer</compClass>
+        <requiredTag>Arrived</requiredTag>
+        <eastRotationOffset>(0.5, 0, 0.2)</eastRotationOffset>
+        <westRotationOffset>(-0.5, 0, 0.2)</westRotationOffset>
+        <northRotationOffset>(0, 0, 0.5)</northRotationOffset>
+        <spawnIntervalTicks>45</spawnIntervalTicks>
+      </li>
+    </comps>
+  </RitualVisualEffectDef>
+</Defs>

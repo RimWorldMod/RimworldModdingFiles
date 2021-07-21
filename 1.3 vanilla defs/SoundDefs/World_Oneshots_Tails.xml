@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Defs>
+
+  <SoundDef>
+    <defName>GunTail_Light</defName>  
+    <context>MapOnly</context> 
+    <maxVoices>2</maxVoices>  
+    <maxSimultaneous>1</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <onCamera>True</onCamera>      
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Weapon/Tails/Light</clipFolderPath>
+          </li>
+        </grains>      
+        <volumeRange>18.23529~20.58824</volumeRange>      
+        <pitchRange>0.9082352~1.091765</pitchRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>GunTail_Medium</defName>  
+    <context>MapOnly</context> 
+    <maxVoices>2</maxVoices>  
+    <maxSimultaneous>1</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <onCamera>True</onCamera>      
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Weapon/Tails/Medium</clipFolderPath>
+          </li>
+        </grains>      
+        <volumeRange>24.11765~30</volumeRange>      
+        <pitchRange>0.8852941~1.114706</pitchRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>GunTail_Heavy</defName>  
+    <context>MapOnly</context> 
+    <maxVoices>2</maxVoices>  
+    <maxSimultaneous>1</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <onCamera>True</onCamera>      
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Weapon/Tails/Heavy</clipFolderPath>
+          </li>
+        </grains>      
+        <volumeRange>38.23529~37.05882</volumeRange>      
+        <pitchRange>0.9082352~1.091765</pitchRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+</Defs>

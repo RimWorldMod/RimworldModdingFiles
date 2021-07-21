@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- Diplomatic interactions -->
+
+  <HistoryEventDef>
+    <defName>GaveGift</defName>
+    <label>gave gift</label>
+  </HistoryEventDef>
+
+  <HistoryEventDef>
+    <defName>Traded</defName>
+    <label>traded</label>
+  </HistoryEventDef>
+
+  <HistoryEventDef>
+    <defName>RequestedTrader</defName>
+    <label>requested trader</label>
+  </HistoryEventDef>
+
+  <HistoryEventDef>
+    <defName>RequestedMilitaryAid</defName>
+    <label>requested military aid</label>
+  </HistoryEventDef>
+
+  <!-- Peace talks outcomes -->
+
+  <HistoryEventDef>
+    <defName>PeaceTalksDisaster</defName>
+    <label>peace talks disaster</label>
+  </HistoryEventDef>
+
+  <HistoryEventDef>
+    <defName>PeaceTalksBackfire</defName>
+    <label>peace talks backfired</label>
+  </HistoryEventDef>
+
+  <HistoryEventDef>
+    <defName>PeaceTalksSuccess</defName>
+    <label>peace talks success</label>
+  </HistoryEventDef>
+
+  <HistoryEventDef>
+    <defName>PeaceTalksTriumph</defName>
+    <label>peace talks triumph</label>
+  </HistoryEventDef>
+
+</Defs>

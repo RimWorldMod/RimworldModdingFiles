@@ -1,0 +1,173 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Defs>
+
+  <SoundDef>
+    <defName>Standard_Pickup</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>1</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Interact/Haul/Pickup/Standard</clipFolderPath>
+          </li>
+        </grains>
+        <volumeRange>17~25</volumeRange>
+        <pitchRange>0.936413~1.275543</pitchRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Standard_Drop</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>1</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Interact/Haul/Drop/Standard</clipFolderPath>
+          </li>
+        </grains>
+        <volumeRange>15~15</volumeRange>
+        <pitchRange>0.9311765~1.091765</pitchRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Grain_Drop</defName>  
+    <context>MapOnly</context>
+    <maxSimultaneous>1</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Interact/Haul/Drop/GrainDrop</clipPath>
+          </li>
+        </grains>      
+        <volumeRange>25~25</volumeRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Metal_Drop</defName>  
+    <context>MapOnly</context>
+    <maxSimultaneous>1</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Interact/Haul/Drop/MetalDrop</clipPath>
+          </li>
+        </grains>      
+        <volumeRange>25~25</volumeRange>
+        <pitchRange>0.88~1.12</pitchRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+  
+  <SoundDef>
+    <defName>Corpse_Drop</defName>  
+    <context>MapOnly</context>
+    <maxSimultaneous>1</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Interact/Haul/Drop/CorpseDrop</clipPath>
+          </li>
+        </grains>      
+        <volumeRange>25~25</volumeRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Wood_Drop</defName>  
+    <context>MapOnly</context>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Interact/Haul/Drop/Wood</clipFolderPath>
+          </li>
+        </grains>      
+        <volumeRange>14~14</volumeRange>      
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Silver_Drop</defName>  
+    <context>MapOnly</context>
+    <maxVoices>2</maxVoices>  
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Interact/Haul/Drop/Silver</clipFolderPath>
+          </li>
+        </grains>      
+        <volumeRange>13~13</volumeRange>      
+        <pitchRange>0.9770588~1.114706</pitchRange>      
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Stone_Drop</defName> 
+    <context>MapOnly</context> 
+    <maxVoices>2</maxVoices>  
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Interact/Haul/Drop/Stone</clipFolderPath>
+          </li>
+        </grains>      
+        <volumeRange>12~12</volumeRange>      
+        <pitchRange>0.9905882~1.068824</pitchRange>      
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>ChunkRock_Drop</defName>  
+    <context>MapOnly</context>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Interact/Haul/Drop/ChunkRock</clipFolderPath>
+          </li>
+        </grains>      
+        <volumeRange>9~9</volumeRange>      
+        <pitchRange>0.9770588~1.068824</pitchRange>      
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>ChunkSlag_Drop</defName>  
+    <context>MapOnly</context>
+    <maxVoices>2</maxVoices>  
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Interact/Haul/Drop/ChunkSlag</clipFolderPath>
+          </li>
+        </grains>      
+        <volumeRange>9~9</volumeRange>      
+        <pitchRange>0.9541177~1.045882</pitchRange>      
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+</Defs>

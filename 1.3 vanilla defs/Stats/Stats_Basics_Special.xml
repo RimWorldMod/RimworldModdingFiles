@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <StatDef>
+    <defName>MedicalPotency</defName>
+    <label>medical potency</label>
+    <description>How effective this is when used to tend wounds and diseases, or do surgery.\n\nHigher medical potency improves the quality of tending, and acts as a multiplier on the chance of success during surgery.\nMedical potency is just one factor in medical outcomes, among many others, including doctor ability, equipment, cleanliness, and luck.</description>
+    <category>BasicsNonPawnImportant</category>
+    <defaultBaseValue>0.0</defaultBaseValue>
+    <minValue>0.2</minValue>
+    <toStringStyle>PercentZero</toStringStyle>
+    <showIfUndefined>false</showIfUndefined>
+    <displayPriorityInCategory>4000</displayPriorityInCategory>
+  </StatDef>
+
+  <StatDef>
+    <defName>MedicalQualityMax</defName>
+    <label>medical tend quality maximum</label>
+    <description>The maximum quality of medical tending that can be achieved while using this.\n\nBetter tend quality allows skilled doctors to treat wounds better, as well as more reliably.</description>
+    <category>BasicsNonPawnImportant</category>
+    <defaultBaseValue>1.0</defaultBaseValue>
+    <minValue>0.0</minValue>
+    <toStringStyle>PercentZero</toStringStyle>
+    <showIfUndefined>false</showIfUndefined>
+    <displayPriorityInCategory>4010</displayPriorityInCategory>
+  </StatDef>
+
+  <StatDef>
+    <defName>ConstructionSpeedFactor</defName>
+    <label>construction speed</label>
+    <labelForFullStatList>construction speed (material factor)</labelForFullStatList>
+    <description>The speed at which buildings made of this are constructed is multiplied by this value.\n\nSome materials, like stone, are slow to build from, while others, like wood, are fast.</description>
+    <category>BasicsNonPawn</category>
+    <defaultBaseValue>1</defaultBaseValue>
+    <minValue>0.1</minValue>
+    <toStringStyle>PercentZero</toStringStyle>
+    <hideAtValue>1</hideAtValue>
+    <displayPriorityInCategory>2500</displayPriorityInCategory>
+  </StatDef>
+
+  <StatDef Abstract="True" Name="MeditationFocusBase">
+    <formatString>{0} / day</formatString>
+    <formatStringUnfinalized>{0} / day</formatStringUnfinalized>
+    <toStringStyle>PercentZero</toStringStyle>
+    <showIfModsLoaded><li>ludeon.rimworld.royalty</li></showIfModsLoaded>
+  </StatDef>
+
+  <StatDef ParentName="MeditationFocusBase">
+    <defName>MeditationFocusStrength</defName>
+    <label>meditation psyfocus bonus</label>
+    <description>The amount of extra psyfocus someone gains by focusing on this object during meditation, in addition to their own base rate of meditation psyfocus gain.\n\nFor some objects, this number can change depending on the surroundings and the person doing the meditating.</description>
+    <workerClass>StatWorker_PossibleCompOffsets</workerClass>
+    <category>Meditation</category>
+    <defaultBaseValue>0</defaultBaseValue>
+    <minValue>0.0</minValue>
+    <showIfUndefined>false</showIfUndefined>
+    <showZeroBaseValue>true</showZeroBaseValue>
+    <displayPriorityInCategory>4010</displayPriorityInCategory>
+  </StatDef>
+
+  <StatDef>
+    <defName>PsychicSensitivityOffset</defName>
+    <label>psychic sensitivity offset</label>
+    <description>An offset applied to the user's psychic sensitivity.</description>
+    <category>Basics</category>
+    <defaultBaseValue>0</defaultBaseValue>
+    <toStringStyle>PercentZero</toStringStyle>
+    <showOnAnimals>false</showOnAnimals>
+    <displayPriorityInCategory>3500</displayPriorityInCategory>
+    <showIfUndefined>false</showIfUndefined>
+    <showOnPawns>false</showOnPawns>
+    <parts>
+      <li Class="StatPart_Quality">
+        <factorAwful>0.5</factorAwful>
+        <factorPoor>0.66</factorPoor>
+        <factorNormal>0.83</factorNormal>
+        <factorGood>1.0</factorGood>
+        <factorExcellent>1.16</factorExcellent>
+        <factorMasterwork>1.32</factorMasterwork>
+        <factorLegendary>1.5</factorLegendary>
+        <applyToNegativeValues>true</applyToNegativeValues>
+      </li>
+    </parts>
+  </StatDef>
+
+  <StatDef>
+    <defName>FilthMultiplier</defName>
+    <label>filth multiplier</label>
+    <description>How susceptible this surface is to filth. If this is less than 100%, some of the filth deposited here will disappear on contact.</description>
+    <category>Terrain</category>
+    <defaultBaseValue>1</defaultBaseValue>
+    <minValue>0</minValue>
+    <showOnPawns>false</showOnPawns>
+    <toStringStyle>PercentZero</toStringStyle>
+  </StatDef>
+
+</Defs>

@@ -1,0 +1,237 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="BuildingBase" Name="SculptureBase" Abstract="True">
+    <thingClass>Building_Art</thingClass>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <pathCost>50</pathCost>
+    <useHitPoints>true</useHitPoints>
+    <minifiedDef>MinifiedThing</minifiedDef>
+    <thingCategories>
+      <li>BuildingsArt</li>
+    </thingCategories>
+    <thingSetMakerTags><li>RewardStandardLowFreq</li></thingSetMakerTags>
+    <statBases>
+      <Flammability>1.0</Flammability>
+      <SellPriceFactor>1.10</SellPriceFactor>
+      <MeditationFocusStrength>0.0</MeditationFocusStrength>
+    </statBases>
+    <comps>
+      <li>
+        <compClass>CompQuality</compClass>
+      </li>
+      <li Class="CompProperties_Art">
+        <nameMaker>NamerArtSculpture</nameMaker>
+        <descriptionMaker>ArtDescription_Sculpture</descriptionMaker>
+        <canBeEnjoyedAsArt>true</canBeEnjoyedAsArt>
+      </li>
+      <li Class="CompProperties_MeditationFocus">
+        <statDef>MeditationFocusStrength</statDef>
+        <focusTypes>
+          <li>Artistic</li>
+        </focusTypes>
+        <offsets>
+          <li Class="FocusStrengthOffset_Quality">
+            <curve>
+              <points>
+                <li>(0,0.12)</li> <!-- awful -->
+                <li>(1,0.16)</li> <!-- poor -->
+                <li>(2,0.20)</li> <!-- normal -->
+                <li>(3,0.22)</li> <!-- good -->
+                <li>(4,0.24)</li> <!-- excellent -->
+                <li>(5,0.26)</li> <!-- masterwork -->
+                <li>(6,0.28)</li> <!-- legendary -->
+              </points>
+            </curve>
+          </li>
+          <li Class="FocusStrengthOffset_BuildingDefsWithQuality">
+            <defs>
+              <li>SculptureSmall</li>
+              <li>SculptureLarge</li>
+              <li>SculptureGrand</li>
+            </defs>
+            <radius>9.9</radius>
+            <maxBuildings>8</maxBuildings>
+            <focusPerQuality>
+              <points>
+                <li>(0,0.0)</li> <!-- awful -->
+                <li>(1,0.0)</li> <!-- poor -->
+                <li>(2,0.01)</li> <!-- normal -->
+                <li>(3,0.01)</li> <!-- good -->
+                <li>(4,0.01)</li> <!-- excellent -->
+                <li>(5,0.02)</li> <!-- masterwork -->
+                <li>(6,0.02)</li> <!-- legendary -->
+              </points>
+            </focusPerQuality>
+            <explanationKey>MeditationFocusPerSculpture</explanationKey>
+            <explanationKeyAbstract>MeditationFocusPerSculptureAbstract</explanationKeyAbstract>
+          </li>
+        </offsets>
+      </li>
+      <li Class="CompProperties_Styleable"></li>
+    </comps>
+    <placeWorkers>
+      <li>PlaceWorker_MeditationOffsetBuildingsNear</li>
+    </placeWorkers>
+    <inspectorTabs>
+      <li>ITab_Art</li>
+    </inspectorTabs>
+    <tradeTags>
+      <li>Art</li>
+    </tradeTags>
+    <recipeMaker>
+      <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+      <workSkill>Artistic</workSkill>
+      <unfinishedThingDef>UnfinishedSculpture</unfinishedThingDef>
+      <effectWorking>Sculpt</effectWorking>
+      <soundWorking>Recipe_Sculpt</soundWorking>
+      <recipeUsers>
+        <li>TableSculpting</li>
+      </recipeUsers>
+      <defaultIngredientFilter>
+        <categories>
+          <li>Root</li>
+        </categories>
+        <disallowedThingDefs>
+          <li>Gold</li>
+          <li>Silver</li>
+          <li>Plasteel</li>
+          <li>Jade</li>
+          <li>Uranium</li>
+        </disallowedThingDefs>
+      </defaultIngredientFilter>
+    </recipeMaker>
+    <ideoBuildingNamerBase MayRequire="Ludeon.RimWorld.Ideology">NamerIdeoSculpture</ideoBuildingNamerBase>
+    <ritualFocus>
+      <spectateDistance>2</spectateDistance>
+      <allowedSpectateSides>Down</allowedSpectateSides>
+    </ritualFocus>
+  </ThingDef>
+
+  
+  
+  <!--================================ Sculptures ======================================-->
+
+  <ThingDef ParentName="SculptureBase">
+    <defName>SculptureSmall</defName>
+    <label>small sculpture</label>
+    <description>A torso-sized piece of material sculpted into an artistic form.</description>
+    <graphicData>
+      <graphicClass>Graphic_Random</graphicClass>
+      <texPath>Things/Building/Art/SculptureSmall</texPath>
+    </graphicData>
+    <fillPercent>0.35</fillPercent>
+    <rotatable>false</rotatable>
+    <statBases>
+      <MaxHitPoints>90</MaxHitPoints>
+      <Mass>3</Mass>
+      <Beauty>50</Beauty>
+      <WorkToMake>18000</WorkToMake>
+      <StyleDominance MayRequire="Ludeon.RimWorld.Ideology">10</StyleDominance>
+    </statBases>
+    <stuffCategories>
+      <li>Metallic</li>
+      <li>Woody</li>
+      <li>Stony</li>
+    </stuffCategories>
+    <costStuffCount>50</costStuffCount>
+  </ThingDef>
+
+  <ThingDef ParentName="SculptureBase">
+    <defName>SculptureLarge</defName>
+    <label>large sculpture</label>
+    <description>A person-sized piece of material sculpted into an artistic form.</description>
+    <castEdgeShadows>true</castEdgeShadows>
+    <graphicData>
+      <graphicClass>Graphic_Random</graphicClass>
+      <texPath>Things/Building/Art/SculptureLarge</texPath>
+      <drawSize>(3,3)</drawSize>
+    </graphicData>
+    <fillPercent>0.5</fillPercent>
+    <rotatable>false</rotatable>
+    <statBases>
+      <MaxHitPoints>150</MaxHitPoints>
+      <Mass>7</Mass>
+      <Beauty>100</Beauty>
+      <WorkToMake>30000</WorkToMake>
+      <StyleDominance MayRequire="Ludeon.RimWorld.Ideology">20</StyleDominance>
+    </statBases>
+    <stuffCategories>
+      <li>Metallic</li>
+      <li>Woody</li>
+      <li>Stony</li>
+    </stuffCategories>
+    <costStuffCount>100</costStuffCount>
+  </ThingDef>
+
+  <ThingDef ParentName="SculptureBase">
+    <defName>SculptureGrand</defName>
+    <label>grand sculpture</label>
+    <description>A huge sculpture sized to dominate a room.</description>
+    <castEdgeShadows>true</castEdgeShadows>
+    <graphicData>
+      <graphicClass>Graphic_Random</graphicClass>
+      <texPath>Things/Building/Art/SculptureGrand</texPath>
+      <drawSize>(4,4)</drawSize>
+    </graphicData>
+    <fillPercent>0.5</fillPercent>
+    <rotatable>false</rotatable>
+    <size>(2,2)</size>
+    <canOverlapZones>false</canOverlapZones>
+    <statBases>
+      <MaxHitPoints>300</MaxHitPoints>
+      <Beauty>400</Beauty>
+      <Mass>28</Mass>
+      <WorkToMake>105000</WorkToMake>
+      <StyleDominance MayRequire="Ludeon.RimWorld.Ideology">40</StyleDominance>
+    </statBases>
+    <stuffCategories>
+      <li>Metallic</li>
+      <li>Woody</li>
+      <li>Stony</li>
+    </stuffCategories>
+    <costStuffCount>400</costStuffCount>
+  </ThingDef>
+
+  <!--================================ Snowman ======================================-->
+
+  <ThingDef ParentName="BuildingBase">
+    <defName>Snowman</defName>
+    <label>snowman</label>
+    <description>A set of large snowballs piled and shaped to resemble a person. People make these for the fun of it.</description>
+    <thingClass>Building</thingClass>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <pathCost>30</pathCost>
+    <pathCostIgnoreRepeat>false</pathCostIgnoreRepeat>
+    <useHitPoints>true</useHitPoints>
+    <graphicData>
+      <graphicClass>Graphic_Random</graphicClass>
+      <texPath>Things/Building/Art/Snowman</texPath>
+    </graphicData>
+    <fillPercent>0.35</fillPercent>
+    <rotatable>false</rotatable>
+    <tickerType>Rare</tickerType>
+    <drawDamagedOverlay>false</drawDamagedOverlay>
+    <statBases>
+      <MaxHitPoints>50</MaxHitPoints>
+      <Beauty>4</Beauty>
+      <WorkToBuild>1000</WorkToBuild>
+      <MarketValue>0</MarketValue>
+    </statBases>
+    <comps>
+      <li>
+        <compClass>CompMelter</compClass>
+      </li>
+    </comps>
+    <forceDebugSpawnable>true</forceDebugSpawnable>
+    <building>
+      <expandHomeArea>false</expandHomeArea>
+      <repairable>false</repairable>
+      <isInert>true</isInert>
+      <artificialForMeditationPurposes>false</artificialForMeditationPurposes>
+    </building>
+  </ThingDef>
+
+</Defs>

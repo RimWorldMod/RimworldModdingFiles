@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <DesignatorDropdownGroupDef>
+    <defName>Floor_Carpet</defName>
+    <label>carpet</label>
+  </DesignatorDropdownGroupDef>
+
+  <DesignatorDropdownGroupDef>
+    <defName>Floor_Carpet_Fine</defName>
+    <label>fine carpet</label>
+  </DesignatorDropdownGroupDef>
+
+  <DesignatorDropdownGroupDef>
+    <defName>Floor_Tile</defName>
+    <label>tile</label>
+  </DesignatorDropdownGroupDef>
+
+  <DesignatorDropdownGroupDef>
+    <defName>Floor_Tile_Fine</defName>
+    <label>fine tile</label>
+  </DesignatorDropdownGroupDef>
+
+  <DesignatorDropdownGroupDef>
+    <defName>Floor_Tile_Metal</defName>
+    <label>metal tile</label>
+  </DesignatorDropdownGroupDef>
+
+  <DesignatorDropdownGroupDef>
+    <defName>Floor_Flagstone</defName>
+    <label>flagstone</label>
+  </DesignatorDropdownGroupDef>
+
+  <DesignatorDropdownGroupDef>
+    <defName>StandingLampColored</defName>
+    <label>standing lamp</label>
+  </DesignatorDropdownGroupDef>
+
+</Defs>

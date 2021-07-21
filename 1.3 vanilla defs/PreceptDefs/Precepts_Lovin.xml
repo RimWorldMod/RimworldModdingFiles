@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- Issue -->
+
+  <IssueDef>
+    <defName>Lovin</defName>
+    <label>physical love</label>
+    <iconPath>UI/Issues/PhysicalLove</iconPath>
+  </IssueDef>
+
+
+  <!-- History Events -->
+
+  <HistoryEventDef>
+    <defName>InitiatedLovin</defName>
+    <label>initiated lovin'</label>
+  </HistoryEventDef>
+
+  <HistoryEventDef>
+    <defName>GotLovin</defName>
+    <label>got some lovin'</label>
+  </HistoryEventDef>
+
+  <HistoryEventDef>
+    <defName>GotLovin_Spouse</defName>
+    <label>lovin' with spouse</label>
+  </HistoryEventDef>
+
+  <HistoryEventDef>
+    <defName>GotLovin_NonSpouse</defName>
+    <label>lovin' outside marriage</label>
+  </HistoryEventDef>
+
+  <HistoryEventDef>
+    <defName>SharedBed</defName>
+    <label>shared bed</label>
+  </HistoryEventDef>
+
+  <HistoryEventDef>
+    <defName>SharedBed_Spouse</defName>
+    <label>shared bed with spouse</label>
+  </HistoryEventDef>
+
+  <HistoryEventDef>
+    <defName>SharedBed_NonSpouse</defName>
+    <label>shared bed outside marriage</label>
+  </HistoryEventDef>
+
+
+  <!-- Precept -->
+
+  <PreceptDef>
+    <defName>Lovin_Free</defName>
+    <issue>Lovin</issue>
+    <label>free</label>
+    <description>Physical intimacy is a natural part of life, with any partner, married or not.</description>
+    <impact>Low</impact>
+    <displayOrderInIssue>0</displayOrderInIssue>
+    <displayOrderInImpact>-100</displayOrderInImpact>
+    <classic>true</classic>
+    <defaultSelectionWeight>1</defaultSelectionWeight>
+    <associatedMemes>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Individualist</li>
+    </associatedMemes>
+  </PreceptDef>
+
+</Defs>

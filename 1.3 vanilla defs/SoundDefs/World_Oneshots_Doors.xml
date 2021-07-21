@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Defs>
+
+  <SoundDef>
+    <defName>Door_OpenPowered</defName>  
+    <context>MapOnly</context> 
+    <maxSimultaneous>1</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <gameSpeedRange>1~2</gameSpeedRange>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Misc/Door/AutoDoors/Open/Normal</clipFolderPath>
+          </li>
+        </grains>
+        <volumeRange>3</volumeRange>
+        <pitchRange>0.85~1.15</pitchRange>
+      </li>
+      <li>
+        <gameSpeedRange>3~99</gameSpeedRange>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Misc/Door/AutoDoors/Open/Fast</clipFolderPath>
+          </li>
+        </grains>
+        <volumeRange>1</volumeRange>
+        <pitchRange>0.85~1.15</pitchRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Door_ClosePowered</defName>  
+    <context>MapOnly</context> 
+    <maxSimultaneous>1</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <gameSpeedRange>1~2</gameSpeedRange>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Misc/Door/AutoDoors/Close/Normal</clipFolderPath>
+          </li>
+        </grains>
+        <volumeRange>3</volumeRange>
+        <pitchRange>0.85~1.15</pitchRange>
+      </li>
+      <li>
+        <gameSpeedRange>3~99</gameSpeedRange>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Misc/Door/AutoDoors/Close/Fast</clipFolderPath>
+          </li>
+        </grains>
+        <volumeRange>1</volumeRange>
+        <pitchRange>0.85~1.15</pitchRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Door_OpenManual</defName>  
+    <context>MapOnly</context> 
+    <maxSimultaneous>1</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <gameSpeedRange>1~2</gameSpeedRange>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Misc/Door/ManualDoors/Open/Normal</clipFolderPath>
+          </li>
+        </grains>
+        <volumeRange>3</volumeRange>
+        <pitchRange>0.85~1.15</pitchRange>
+      </li>
+      <li>
+        <gameSpeedRange>3~99</gameSpeedRange>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Misc/Door/ManualDoors/Open/Fast</clipFolderPath>
+          </li>
+        </grains>
+        <volumeRange>1</volumeRange>
+        <pitchRange>0.85~1.15</pitchRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Door_CloseManual</defName>  
+    <context>MapOnly</context> 
+    <maxSimultaneous>1</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <gameSpeedRange>1~2</gameSpeedRange>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Misc/Door/ManualDoors/Close/Normal</clipFolderPath>
+          </li>
+        </grains>
+        <volumeRange>3</volumeRange>
+        <pitchRange>0.85~1.15</pitchRange>
+      </li>
+      <li>
+        <gameSpeedRange>3~99</gameSpeedRange>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Misc/Door/ManualDoors/Close/Fast</clipFolderPath>
+          </li>
+        </grains>
+        <volumeRange>1</volumeRange>
+        <pitchRange>0.85~1.15</pitchRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Door_FenceGateManual</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>1</maxSimultaneous>
+    <subSounds>
+      <li>
+        <gameSpeedRange>1~2</gameSpeedRange>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Misc/Door/FenceGates</clipFolderPath>
+          </li>
+        </grains>
+        <volumeRange>3</volumeRange>
+        <pitchRange>0.85~1.15</pitchRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+</Defs>

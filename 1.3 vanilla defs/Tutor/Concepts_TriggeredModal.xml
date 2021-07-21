@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!--=============== Concepts taught in modal dialogs ===========-->
+
+  <ConceptDef>
+    <defName>TradeGoodsMustBeNearBeacon</defName>
+    <label>Trade goods and trade beacons</label>
+    <priority>-1000</priority>
+    <helpText>To send items or silver to orbital traders, you must build an ORBITAL TRADE BEACON and place a stockpile of items near it.</helpText>
+  </ConceptDef>
+
+  <ConceptDef>
+    <defName>ArrestingCreatesEnemies</defName>
+    <label>Arresting worsens faction relations</label>
+    <priority>-1000</priority>
+    <helpText>Warning: The person you are trying to arrest may not go quietly.\n\nIf you arrest a non-colonist or a colonist from another faction, their entire faction may become your enemy. \n\nThis arrest has a {0} chance of succeeding, based on the social skill of the arrester.</helpText>
+  </ConceptDef>
+
+  <ConceptDef>
+    <defName>SwitchFlickingDesignation</defName>
+    <label>Flick designations only designate</label>
+    <priority>-1000</priority>
+    <helpText>Note: This only designates that a colonist should flick the switch.\n\nNothing will actually happen until a colonist comes and flicks the switch by hand.</helpText>
+  </ConceptDef>
+
+  <ConceptDef>
+    <defName>MaxNumberOfPlayerSettlements</defName>
+    <label>Maximum number of player colonies</label>
+    <priority>-1000</priority>
+    <helpText>Warning: RimWorld is designed to be played with one player colony at a time. Multiple player colonies are allowed as an experimental testing feature only.\n\nPlaying with multiple colonies will cause gameplay imbalances and split your focus, as well as likely causing performance slowdowns.\n\nWe recommend that you play with the one-colony maximum the game was designed for, at least for your first few games.</helpText>
+  </ConceptDef>
+
+  <ConceptDef>
+    <defName>TradingRequiresPermit</defName>
+    <label>Trading permit requirements</label>
+    <priority>-1000</priority>
+    <helpText>Trading here requires the title of {0}.\n\nEnsure any trade caravan you send has someone with the title of {0} or higher.</helpText>
+  </ConceptDef>
+
+</Defs>

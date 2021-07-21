@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <QuestScriptDef>
+    <defName>RefugeePodCrash</defName>
+    <autoAccept>true</autoAccept>
+    <defaultCharity>true</defaultCharity>
+    <successHistoryEvent MayRequire="Ludeon.RimWorld.Ideology">CharityFulfilled_RefugeePodCrash</successHistoryEvent>
+    <failedOrExpiredHistoryEvent MayRequire="Ludeon.RimWorld.Ideology">CharityRefused_RefugeePodCrash</failedOrExpiredHistoryEvent>
+    <defaultHidden>true</defaultHidden>
+    <isRootSpecial>true</isRootSpecial>
+    <questNameRules>
+      <rulesStrings>
+        <li>questName->Transport pod crash</li>
+      </rulesStrings>
+    </questNameRules>
+    <questDescriptionRules>
+      <rulesStrings>
+        <li>questDescription->A transport pod crashes with a refugee</li>
+      </rulesStrings>
+    </questDescriptionRules>
+    <root Class="QuestNode_Root_RefugeePodCrash" />
+  </QuestScriptDef>
+
+</Defs>

@@ -1,0 +1,422 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <HediffDef Name="ChronicDiseaseBase" ParentName="DiseaseBase" Abstract="True">
+    <chronic>true</chronic>
+  </HediffDef>
+
+  <HediffDef ParentName="ChronicDiseaseBase">
+    <defName>BadBack</defName>
+    <label>bad back</label>
+    <labelNoun>a bad back</labelNoun>
+    <description>Degradation in the spinal column and surrounding musculature. This makes it hard to move and bend smoothly.</description>
+    <stages>
+      <li>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.30</offset>
+          </li>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>-0.10</offset>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef ParentName="ChronicDiseaseBase">
+    <defName>Frail</defName>
+    <label>frail</label>
+    <labelNoun>frailty</labelNoun>
+    <description>Generalized loss of muscle and bone density.</description>
+    <stages>
+      <li>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.30</offset>
+          </li>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>-0.30</offset>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef ParentName="ChronicDiseaseBase">
+    <defName>Cataract</defName>
+    <label>cataract</label>
+    <labelNoun>a cataract</labelNoun>
+    <description>Milky-looking opacity in the eye. Cataracts impair vision.</description>
+    <cureAllAtOnceIfCuredByItem>true</cureAllAtOnceIfCuredByItem>
+    <stages>
+      <li>
+        <partEfficiencyOffset>-0.5</partEfficiencyOffset>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef ParentName="ChronicDiseaseBase">
+    <defName>Blindness</defName>
+    <label>blindness</label>
+    <description>Total inability to see.</description>
+    <cureAllAtOnceIfCuredByItem>true</cureAllAtOnceIfCuredByItem>
+    <stages>
+      <li>
+        <partEfficiencyOffset>-1</partEfficiencyOffset>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef ParentName="ChronicDiseaseBase">
+    <defName>HearingLoss</defName>
+    <label>hearing loss</label>
+    <description>Inability to hear quiet sounds due to degradation of hair cells in the cochlea.</description>
+    <cureAllAtOnceIfCuredByItem>true</cureAllAtOnceIfCuredByItem>
+    <stages>
+      <li>
+        <partEfficiencyOffset>-0.5</partEfficiencyOffset>
+      </li>
+    </stages>
+  </HediffDef>
+  
+  <HediffDef ParentName="ChronicDiseaseBase">
+    <defName>Dementia</defName>
+    <label>dementia</label>
+    <description>Neural degradation which causes deficits in the ability to think and remember. Dementia has various causes including aging, specific illnesses, and toxins.</description>
+    <comps>
+      <li Class="HediffCompProperties_SkillDecay">
+        <decayPerDayPercentageLevelCurve>
+          <points>
+            <li>(4, 0.05)</li>
+            <li>(12, 0.15)</li>
+            <li>(20, 0.25)</li>
+          </points>
+        </decayPerDayPercentageLevelCurve>
+    </li>
+    </comps>
+    <stages>
+      <li>
+        <partEfficiencyOffset>-0.15</partEfficiencyOffset>
+        <capMods>
+          <li>
+            <capacity>Talking</capacity>
+            <offset>-0.25</offset>
+          </li>
+          <li>
+            <capacity>Hearing</capacity>
+            <offset>-0.25</offset>
+          </li>
+        </capMods>
+        <mentalStateGivers>
+          <li>
+            <mentalState>WanderConfused</mentalState>
+            <mtbDays>5</mtbDays>
+          </li>
+        </mentalStateGivers>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef ParentName="ChronicDiseaseBase">
+    <defName>Alzheimers</defName>
+    <label>alzheimer's</label>
+    <description>A brain disease usually associated with aging. Alzheimer's disease causes progressive degradation in the ability to think and remember. Patients are known to forget close relatives and sometimes wander around in confusion.</description>
+    <comps>
+      <li Class="HediffCompProperties_Immunizable">
+        <severityPerDayNotImmune>0.003</severityPerDayNotImmune>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <label>minor</label>
+        <partEfficiencyOffset>-0.05</partEfficiencyOffset>
+        <mentalStateGivers>
+          <li>
+            <mentalState>WanderConfused</mentalState>
+            <mtbDays>12</mtbDays>
+          </li>
+        </mentalStateGivers>
+        <forgetMemoryThoughtMtbDays>7</forgetMemoryThoughtMtbDays>
+      </li>
+      <li>
+        <label>minor</label>
+        <minSeverity>0.2</minSeverity>
+        <partEfficiencyOffset>-0.1</partEfficiencyOffset>
+        <mentalStateGivers>
+          <li>
+            <mentalState>WanderConfused</mentalState>
+            <mtbDays>9</mtbDays>
+          </li>
+        </mentalStateGivers>
+        <forgetMemoryThoughtMtbDays>4</forgetMemoryThoughtMtbDays>
+        <pctConditionalThoughtsNullified>0.15</pctConditionalThoughtsNullified>
+      </li>
+      <li>
+        <label>major</label>
+        <minSeverity>0.5</minSeverity>
+        <partEfficiencyOffset>-0.15</partEfficiencyOffset>
+        <mentalStateGivers>
+          <li>
+            <mentalState>WanderConfused</mentalState>
+            <mtbDays>7</mtbDays>
+          </li>
+        </mentalStateGivers>
+        <forgetMemoryThoughtMtbDays>2</forgetMemoryThoughtMtbDays>
+        <pctConditionalThoughtsNullified>0.33</pctConditionalThoughtsNullified>
+      </li>
+      <li>
+        <label>major</label>
+        <minSeverity>0.8</minSeverity>
+        <partEfficiencyOffset>-0.2</partEfficiencyOffset>
+        <mentalStateGivers>
+          <li>
+            <mentalState>WanderConfused</mentalState>
+            <mtbDays>4</mtbDays>
+          </li>
+        </mentalStateGivers>
+        <forgetMemoryThoughtMtbDays>1.0</forgetMemoryThoughtMtbDays>
+        <pctConditionalThoughtsNullified>0.5</pctConditionalThoughtsNullified>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef ParentName="ChronicDiseaseBase">
+    <defName>Asthma</defName>
+    <label>asthma</label>
+    <description>A long-term inflammatory disease of the airways in the lungs. It requires regular tending to prevent symptoms.</description>
+    <initialSeverity>0.001</initialSeverity>
+    <minSeverity>0.001</minSeverity>
+    <maxSeverity>0.5</maxSeverity>
+    <tendable>true</tendable>
+    <cureAllAtOnceIfCuredByItem>true</cureAllAtOnceIfCuredByItem>
+    <comps>
+      <li Class="HediffCompProperties_Immunizable">
+        <severityPerDayNotImmune>0.25</severityPerDayNotImmune>
+      </li>
+      <li Class="HediffCompProperties_TendDuration">
+        <baseTendDurationHours>168</baseTendDurationHours>
+        <tendAllAtOnce>true</tendAllAtOnce>
+        <severityPerDayTended>-0.8</severityPerDayTended>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <label>minor</label>
+        <partEfficiencyOffset>-0.1</partEfficiencyOffset>
+      </li>
+      <li>
+        <label>major</label>
+        <minSeverity>0.3</minSeverity>
+        <partEfficiencyOffset>-0.3</partEfficiencyOffset>
+      </li>
+      <li>
+        <label>major</label>
+        <minSeverity>0.45</minSeverity>
+        <partEfficiencyOffset>-0.5</partEfficiencyOffset>
+      </li>
+    </stages>
+  </HediffDef>
+  
+  <HediffDef ParentName="ChronicDiseaseBase">
+    <defName>HeartArteryBlockage</defName>
+    <label>artery blockage</label>
+    <labelNoun>an artery blockage</labelNoun>
+    <description>A blockage in one of the critical arteries in the heart. Heart artery blockages randomly induce heart attacks.</description>
+    <lethalSeverity>1</lethalSeverity>
+    <comps>
+      <li Class="HediffCompProperties_Immunizable">
+        <severityPerDayNotImmune>0.0007</severityPerDayNotImmune>
+        <severityPerDayNotImmuneRandomFactor>0.5~3</severityPerDayNotImmuneRandomFactor>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <label>minor</label>
+        <partEfficiencyOffset>-0.05</partEfficiencyOffset>
+        <hediffGivers>
+          <li Class="HediffGiver_Random">
+            <hediff>HeartAttack</hediff>
+            <allowOnLodgers>false</allowOnLodgers>
+            <allowOnQuestRewardPawns>false</allowOnQuestRewardPawns>
+            <allowOnBeggars>false</allowOnBeggars>
+            <mtbDays>300</mtbDays>
+            <partsToAffect>
+              <li>Heart</li>
+            </partsToAffect>
+          </li>
+        </hediffGivers>
+      </li>
+      <li>
+        <minSeverity>0.2</minSeverity>
+        <label>minor</label>
+        <partEfficiencyOffset>-0.1</partEfficiencyOffset>
+        <hediffGivers>
+          <li Class="HediffGiver_Random">
+            <hediff>HeartAttack</hediff>
+            <allowOnLodgers>false</allowOnLodgers>
+            <allowOnQuestRewardPawns>false</allowOnQuestRewardPawns>
+            <allowOnBeggars>false</allowOnBeggars>
+            <mtbDays>200</mtbDays>
+            <partsToAffect>
+              <li>Heart</li>
+            </partsToAffect>
+          </li>
+        </hediffGivers>
+      </li>
+      <li>
+        <minSeverity>0.4</minSeverity>
+        <label>major</label>
+        <partEfficiencyOffset>-0.15</partEfficiencyOffset>
+        <hediffGivers>
+          <li Class="HediffGiver_Random">
+            <hediff>HeartAttack</hediff>
+            <allowOnLodgers>false</allowOnLodgers>
+            <allowOnQuestRewardPawns>false</allowOnQuestRewardPawns>
+            <allowOnBeggars>false</allowOnBeggars>
+            <mtbDays>100</mtbDays>
+            <partsToAffect>
+              <li>Heart</li>
+            </partsToAffect>
+          </li>
+        </hediffGivers>
+      </li>
+      <li>
+        <minSeverity>0.6</minSeverity>
+        <label>major</label>
+        <partEfficiencyOffset>-0.35</partEfficiencyOffset>
+        <hediffGivers>
+          <li Class="HediffGiver_Random">
+            <hediff>HeartAttack</hediff>
+            <allowOnLodgers>false</allowOnLodgers>
+            <allowOnQuestRewardPawns>false</allowOnQuestRewardPawns>
+            <allowOnBeggars>false</allowOnBeggars>
+            <mtbDays>60</mtbDays>
+            <partsToAffect>
+              <li>Heart</li>
+            </partsToAffect>
+          </li>
+        </hediffGivers>
+      </li>
+      <li>
+        <minSeverity>0.9</minSeverity>
+        <label>extreme</label>
+        <lifeThreatening>true</lifeThreatening>
+        <partEfficiencyOffset>-0.6</partEfficiencyOffset>
+        <hediffGivers>
+          <li Class="HediffGiver_Random">
+            <hediff>HeartAttack</hediff>
+            <allowOnLodgers>false</allowOnLodgers>
+            <allowOnQuestRewardPawns>false</allowOnQuestRewardPawns>
+            <allowOnBeggars>false</allowOnBeggars>
+            <mtbDays>30</mtbDays>
+            <partsToAffect>
+              <li>Heart</li>
+            </partsToAffect>
+          </li>
+        </hediffGivers>
+      </li>
+    </stages>
+  </HediffDef>
+  
+  <HediffDef ParentName="ChronicDiseaseBase">
+    <defName>Carcinoma</defName>
+    <label>carcinoma</label>
+    <labelNoun>a carcinoma</labelNoun>
+    <description>A lump of cancerous tissue. Without treatment, the carcinoma will grow over time, causing worsening symptoms and eventually killing the patient.
+\nA skilled doctor can excise the carcinoma. An unskilled doctor may be able to simply amputate the body part which contains the carcinoma.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <initialSeverity>0.3</initialSeverity>
+    <chanceToCauseNoPain>0.3</chanceToCauseNoPain>
+    <tendable>true</tendable>
+    <removeOnQuestLodgers>true</removeOnQuestLodgers>
+    <stages>
+      <li>
+        <label>minor</label>
+        <partEfficiencyOffset>-0.1</partEfficiencyOffset>
+        <painOffset>0.1</painOffset>
+      </li>
+      <li>
+        <minSeverity>0.15</minSeverity>
+        <label>minor</label>
+        <partEfficiencyOffset>-0.25</partEfficiencyOffset>
+        <painOffset>0.2</painOffset>
+      </li>
+      <li>
+        <minSeverity>0.4</minSeverity>
+        <label>major</label>
+        <partEfficiencyOffset>-0.5</partEfficiencyOffset>
+        <painOffset>0.35</painOffset>
+      </li>
+      <li>
+        <minSeverity>0.6</minSeverity>
+        <label>major</label>
+        <partEfficiencyOffset>-0.8</partEfficiencyOffset>
+        <painOffset>0.5</painOffset>
+      </li>
+      <li>
+        <minSeverity>0.8</minSeverity>
+        <label>extreme</label>
+        <partEfficiencyOffset>-0.9</partEfficiencyOffset>
+        <painOffset>0.6</painOffset>
+      </li>
+      <li>
+        <minSeverity>1</minSeverity>
+        <label>extreme</label>
+        <partEfficiencyOffset>-1.0</partEfficiencyOffset>
+        <painOffset>0.7</painOffset>
+        <destroyPart>true</destroyPart>
+      </li>
+    </stages>
+    <comps>
+      <li Class="HediffCompProperties_TendDuration">
+        <baseTendDurationHours>96</baseTendDurationHours>
+        <severityPerDayTended>-0.0027</severityPerDayTended>
+      </li>
+      <li Class="HediffCompProperties_GrowthMode">
+        <severityPerDayGrowing>0.003</severityPerDayGrowing>
+        <severityPerDayRemission>-0.002</severityPerDayRemission>
+        <severityPerDayGrowingRandomFactor>0.45~1.65</severityPerDayGrowingRandomFactor>
+        <severityPerDayRemissionRandomFactor>0.7~1.5</severityPerDayRemissionRandomFactor>
+      </li>
+    </comps>
+  </HediffDef>
+
+  <RecipeDef ParentName="SurgeryFlesh">
+    <defName>ExciseCarcinoma</defName>
+    <label>excise carcinoma</label>
+    <description>Excise a carcinoma.</description>
+    <workerClass>Recipe_RemoveHediff</workerClass>
+    <jobString>Excising carcinoma.</jobString>
+    <workAmount>4500</workAmount>
+    <removesHediff>Carcinoma</removesHediff>
+    <successfullyRemovedHediffMessage>{0} has successfully excised {1}'s carcinoma.</successfullyRemovedHediffMessage>
+    <deathOnFailedSurgeryChance>0.25</deathOnFailedSurgeryChance>
+    <skillRequirements>
+      <Medicine>10</Medicine>
+    </skillRequirements>
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>Medicine</li>
+          </categories>
+        </filter>
+        <count>4</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <categories>
+        <li>Medicine</li>
+      </categories>
+      <disallowedThingDefs>
+        <li>MedicineHerbal</li>
+      </disallowedThingDefs>
+    </fixedIngredientFilter>
+  </RecipeDef>
+
+</Defs>

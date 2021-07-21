@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <OrderedTakeGroupDef>
+    <defName>Medicine</defName>
+    <label>medicine</label>
+  </OrderedTakeGroupDef>
+
+  <OrderedTakeGroupDef>
+    <defName>Drug</defName>
+    <label>drug</label>
+  </OrderedTakeGroupDef>
+
+</Defs>

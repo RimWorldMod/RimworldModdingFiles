@@ -1,0 +1,541 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- Bases: Prosthetic body part (industrial tech) -->
+
+  <ThingDef Name="BodyPartProstheticBase" ParentName="BodyPartBase" Abstract="True">
+    <techLevel>Industrial</techLevel>
+    <thingCategories>
+      <li>BodyPartsProsthetic</li>
+    </thingCategories>
+    <graphicData>
+      <texPath>Things/Item/Health/HealthItem</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.80</drawSize>
+      <color>(154,124,104)</color>
+    </graphicData>
+    <statBases>
+      <WorkToMake>15000</WorkToMake>
+    </statBases>
+  </ThingDef>
+
+  <ThingDef Name="BodyPartProstheticMakeableBase" ParentName="BodyPartProstheticBase" Abstract="True">
+    <recipeMaker>
+      <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+      <workSkill>Crafting</workSkill>
+      <effectWorking>Smith</effectWorking>
+      <soundWorking>Recipe_Smith</soundWorking>
+      <recipeUsers>
+        <li>TableMachining</li>
+      </recipeUsers>
+      <skillRequirements>
+        <Crafting>5</Crafting>
+      </skillRequirements>
+      <unfinishedThingDef>UnfinishedHealthItemProsthetic</unfinishedThingDef>
+      <researchPrerequisite>Prosthetics</researchPrerequisite>
+    </recipeMaker>
+  </ThingDef>
+
+  <RecipeDef Name="SurgeryInstallBodyPartProstheticBase" ParentName="SurgeryInstallBodyPartArtificialBase" Abstract="True">
+    <skillRequirements>
+      <Medicine>4</Medicine>
+    </skillRequirements>
+  </RecipeDef>
+
+  <!-- Prosthetic leg -->
+
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>SimpleProstheticLeg</defName>
+    <label>prosthetic leg</label>
+    <labelNoun>a prosthetic leg</labelNoun>
+    <description>An installed prosthetic leg.</description>
+    <descriptionHyperlinks><ThingDef>SimpleProstheticLeg</ThingDef></descriptionHyperlinks>
+    <spawnThingOnRemoved>SimpleProstheticLeg</spawnThingOnRemoved>
+    <addedPartProps>
+      <solid>true</solid>
+      <partEfficiency>0.85</partEfficiency>
+    </addedPartProps>
+  </HediffDef>
+
+  <ThingDef ParentName="BodyPartProstheticMakeableBase">
+    <defName>SimpleProstheticLeg</defName>
+    <label>prosthetic leg</label>
+    <description>A leg prosthesis. While it lacks a neural interface, its complex arrangement of internal joints allows it to mimic natural movement quite convincingly. Still, it is inferior to a real leg.</description>
+    <descriptionHyperlinks><RecipeDef>InstallSimpleProstheticLeg</RecipeDef></descriptionHyperlinks>
+    <costList>
+      <Steel>40</Steel>
+      <ComponentIndustrial>4</ComponentIndustrial>
+    </costList>
+    <statBases>
+      <Mass>8</Mass>
+    </statBases>
+    <techHediffsTags>
+      <li>Simple</li>
+    </techHediffsTags>
+  </ThingDef>
+
+  <RecipeDef ParentName="SurgeryInstallBodyPartProstheticBase">
+    <defName>InstallSimpleProstheticLeg</defName>
+    <label>install prosthetic leg</label>
+    <description>Install a prosthetic leg.</description>
+    <descriptionHyperlinks>
+      <ThingDef>SimpleProstheticLeg</ThingDef>
+      <HediffDef>SimpleProstheticLeg</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Installing prosthetic leg.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SimpleProstheticLeg</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>SimpleProstheticLeg</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Leg</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>SimpleProstheticLeg</addsHediff>
+  </RecipeDef>
+
+  <!-- Prosthetic arm -->
+
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>SimpleProstheticArm</defName>
+    <label>prosthetic arm</label>
+    <labelNoun>a prosthetic arm</labelNoun>
+    <description>An installed prosthetic arm.</description>
+    <descriptionHyperlinks><ThingDef>SimpleProstheticArm</ThingDef></descriptionHyperlinks>
+    <comps>
+      <li Class="HediffCompProperties_VerbGiver">
+        <tools>
+          <li>
+            <label>fist</label>
+            <capacities>
+              <li>Blunt</li>
+            </capacities>
+            <power>8.2</power> <!-- Same as natural fist -->
+            <cooldownTime>2</cooldownTime>
+          </li>
+        </tools>
+      </li>
+    </comps>
+    <spawnThingOnRemoved>SimpleProstheticArm</spawnThingOnRemoved>
+    <addedPartProps>
+      <solid>true</solid>
+      <partEfficiency>0.50</partEfficiency>
+    </addedPartProps>
+  </HediffDef>
+
+  <ThingDef ParentName="BodyPartProstheticMakeableBase">
+    <defName>SimpleProstheticArm</defName>
+    <label>prosthetic arm</label>
+    <description>An arm prosthesis. While it lacks a neural interface, its complex arrangement of internal joints allows it to mimic natural movement quite convincingly. Still, it is inferior to a real arm.</description>
+    <descriptionHyperlinks><RecipeDef>InstallSimpleProstheticArm</RecipeDef></descriptionHyperlinks>
+    <costList>
+      <Steel>40</Steel>
+      <ComponentIndustrial>4</ComponentIndustrial>
+    </costList>
+    <statBases>
+      <Mass>5</Mass>
+    </statBases>
+    <techHediffsTags>
+      <li>Simple</li>
+    </techHediffsTags>
+  </ThingDef>
+
+  <RecipeDef ParentName="SurgeryInstallBodyPartProstheticBase">
+    <defName>InstallSimpleProstheticArm</defName>
+    <label>install prosthetic arm</label>
+    <description>Install a prosthetic arm.</description>
+    <descriptionHyperlinks>
+      <ThingDef>SimpleProstheticArm</ThingDef>
+      <HediffDef>SimpleProstheticArm</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Installing prosthetic arm.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SimpleProstheticArm</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>SimpleProstheticArm</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Shoulder</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>SimpleProstheticArm</addsHediff>
+  </RecipeDef>
+
+  <!-- Prosthetic heart -->
+
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>SimpleProstheticHeart</defName>
+    <label>prosthetic heart</label>
+    <labelNoun>a prosthetic heart</labelNoun>
+    <description>An installed prosthetic heart.</description>
+    <descriptionHyperlinks><ThingDef>SimpleProstheticHeart</ThingDef></descriptionHyperlinks>
+    <spawnThingOnRemoved>SimpleProstheticHeart</spawnThingOnRemoved>
+    <addedPartProps>
+      <solid>true</solid>
+      <partEfficiency>0.80</partEfficiency>
+    </addedPartProps>
+  </HediffDef>
+
+  <ThingDef ParentName="BodyPartProstheticMakeableBase">
+    <defName>SimpleProstheticHeart</defName>
+    <label>prosthetic heart</label>
+    <description>A heart prosthesis. It contains an electric motor that pumps blood smoothly around the body. Users often report feeling tired, but it's better than the alternative.</description>
+    <descriptionHyperlinks><RecipeDef>InstallSimpleProstheticHeart</RecipeDef></descriptionHyperlinks>
+    <costList>
+      <Steel>25</Steel>
+      <ComponentIndustrial>4</ComponentIndustrial>
+    </costList>
+    <statBases>
+      <Mass>2</Mass>
+    </statBases>
+    <techHediffsTags>
+      <li>Simple</li>
+    </techHediffsTags>
+  </ThingDef>
+
+  <RecipeDef ParentName="SurgeryInstallBodyPartProstheticBase">
+    <defName>InstallSimpleProstheticHeart</defName>
+    <label>install prosthetic heart</label>
+    <description>Install a prosthetic heart.</description>
+    <descriptionHyperlinks>
+      <ThingDef>SimpleProstheticHeart</ThingDef>
+      <HediffDef>SimpleProstheticHeart</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Installing prosthetic heart.</jobString>
+    <deathOnFailedSurgeryChance>0.25</deathOnFailedSurgeryChance>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SimpleProstheticHeart</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>SimpleProstheticHeart</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Heart</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>SimpleProstheticHeart</addsHediff>
+  </RecipeDef>
+
+  <!-- Cochlear implant -->
+
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>CochlearImplant</defName>
+    <label>cochlear implant</label>
+    <labelNoun>a cochlear implant</labelNoun>
+    <description>An installed cochlear implant.</description>
+    <descriptionHyperlinks><ThingDef>CochlearImplant</ThingDef></descriptionHyperlinks>
+    <spawnThingOnRemoved>CochlearImplant</spawnThingOnRemoved>
+    <addedPartProps>
+      <partEfficiency>0.65</partEfficiency>
+    </addedPartProps>
+  </HediffDef>
+
+  <ThingDef ParentName="BodyPartProstheticMakeableBase">
+    <defName>CochlearImplant</defName>
+    <label>cochlear implant</label>
+    <description>An implant which replaces normal hearing. An external microphone transmits a sound signal to electrodes wrapped around the inner ear's auditory sensing nerves. The electrodes stimulate the nerves according to the sound, creating a sensation of hearing. It's not as good as a natural ear, but it's a lot better than being deaf.</description>
+    <descriptionHyperlinks><RecipeDef>InstallCochlearImplant</RecipeDef></descriptionHyperlinks>
+    <costList>
+      <Steel>20</Steel>
+      <ComponentIndustrial>4</ComponentIndustrial>
+    </costList>
+    <techHediffsTags>
+      <li>Simple</li>
+    </techHediffsTags>
+  </ThingDef>
+
+  <RecipeDef ParentName="SurgeryInstallBodyPartProstheticBase">
+    <defName>InstallCochlearImplant</defName>
+    <label>install cochlear implant</label>
+    <description>Install a cochlear implant.</description>
+    <descriptionHyperlinks>
+      <ThingDef>CochlearImplant</ThingDef>
+      <HediffDef>CochlearImplant</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Installing cochlear implant.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>CochlearImplant</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>CochlearImplant</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Ear</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>CochlearImplant</addsHediff>
+  </RecipeDef>
+
+
+  <!-- Power claw -->
+  <!-- Was not craftable in vanilla, made craftable by research in Royalty -->
+
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>PowerClaw</defName>
+    <label>power claw</label>
+    <labelNoun>a power claw</labelNoun>
+    <description>An installed power claw.</description>
+    <descriptionHyperlinks><ThingDef>PowerClaw</ThingDef></descriptionHyperlinks>
+    <stages>
+      <li>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.08</offset>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+    <comps>
+      <li Class="HediffCompProperties_VerbGiver">
+        <tools>
+          <li>
+            <label>claw</label>
+            <capacities>
+              <li>Scratch</li>
+            </capacities>
+            <power>22</power>
+            <cooldownTime>2</cooldownTime>
+            <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+            <soundMeleeHit>Pawn_Melee_PowerClaw_Hit</soundMeleeHit>
+            <soundMeleeMiss>Pawn_Melee_PowerClaw_Miss</soundMeleeMiss>
+          </li>
+        </tools>
+      </li>
+    </comps>
+    <spawnThingOnRemoved>PowerClaw</spawnThingOnRemoved>
+    <addedPartProps>
+      <isGoodWeapon>true</isGoodWeapon>
+      <solid>true</solid>
+      <partEfficiency>1.00</partEfficiency>
+      <betterThanNatural>true</betterThanNatural>
+    </addedPartProps>
+  </HediffDef>
+
+  <ThingDef ParentName="BodyPartProstheticBase">
+    <defName>PowerClaw</defName>
+    <label>power claw</label>
+    <description>A combat-oriented hand replacement consisting of a mechanical hand with a hooked claw on each finger. It cuts deep, and it is strong enough to crush a skull like a hand crushes an egg. The claws can be retracted, making it as useful as a natural hand for non-combat tasks, however its overall ungainliness slows down movement slightly.</description>
+    <descriptionHyperlinks><RecipeDef>InstallPowerClaw</RecipeDef></descriptionHyperlinks>
+    <thingSetMakerTags>
+      <li>RewardStandardMidFreq</li>
+    </thingSetMakerTags>
+    <costList>
+      <Steel>40</Steel>
+      <ComponentIndustrial>8</ComponentIndustrial>
+    </costList>
+    <statBases>
+      <Mass>4</Mass>
+    </statBases>
+    <techHediffsTags>
+      <li>Advanced</li>
+      <li>AdvancedWeapon</li>
+    </techHediffsTags>
+  </ThingDef>
+
+  <RecipeDef ParentName="SurgeryInstallBodyPartProstheticBase">
+    <defName>InstallPowerClaw</defName>
+    <label>install power claw</label>
+    <description>Install a power claw.</description>
+    <descriptionHyperlinks>
+      <ThingDef>PowerClaw</ThingDef>
+      <HediffDef>PowerClaw</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Installing power claw.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>PowerClaw</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>PowerClaw</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Hand</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>PowerClaw</addsHediff>
+  </RecipeDef>
+
+  <!-- Joywire -->
+  <!-- Was not craftable in vanilla, made craftable by research in Royalty -->
+
+  <HediffDef ParentName="ImplantHediffBase">
+    <defName>Joywire</defName>
+    <label>joywire</label>
+    <labelNoun>a joywire</labelNoun>
+    <description>An installed joywire implant.</description>
+    <descriptionHyperlinks><ThingDef>Joywire</ThingDef></descriptionHyperlinks>
+    <stages>
+      <li>
+        <partEfficiencyOffset>-0.20</partEfficiencyOffset>
+      </li>
+    </stages>
+    <spawnThingOnRemoved>Joywire</spawnThingOnRemoved>
+  </HediffDef>
+
+  <ThingDef ParentName="BodyPartProstheticBase">
+    <defName>Joywire</defName>
+    <label>joywire</label>
+    <description>A brain implant that stimulates the brain's pleasure centers. While it dramatically improves a user's mood, the blanket of happiness makes it hard to concentrate on anything real. Joywires are illegal on many worlds, and are known for destroying whole cultures.</description>
+    <descriptionHyperlinks><RecipeDef>InstallJoywire</RecipeDef></descriptionHyperlinks>
+    <thingSetMakerTags>
+      <li>RewardStandardLowFreq</li>
+    </thingSetMakerTags>
+    <costList>
+      <Steel>20</Steel>
+      <ComponentIndustrial>4</ComponentIndustrial>
+    </costList>
+    <techHediffsTags>
+      <li>Advanced</li>
+    </techHediffsTags>
+  </ThingDef>
+
+  <RecipeDef ParentName="SurgeryInstallImplantBase">
+    <defName>InstallJoywire</defName>
+    <label>install joywire</label>
+    <description>Install a joywire.</description>
+    <descriptionHyperlinks>
+      <ThingDef>Joywire</ThingDef>
+      <HediffDef>Joywire</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Installing joywire.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Joywire</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Joywire</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Brain</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>Joywire</addsHediff>
+  </RecipeDef>
+
+  <!-- Painstopper -->
+  <!-- Was not craftable in vanilla, made craftable by research in Royalty -->
+
+  <HediffDef ParentName="ImplantHediffBase">
+    <defName>Painstopper</defName>
+    <label>painstopper</label>
+    <labelNoun>a painstopper</labelNoun>
+    <description>An installed painstopper implant.</description>
+    <descriptionHyperlinks><ThingDef>Painstopper</ThingDef></descriptionHyperlinks>
+    <stages>
+      <li>
+        <painFactor>0</painFactor>
+      </li>
+    </stages>
+    <spawnThingOnRemoved>Painstopper</spawnThingOnRemoved>
+  </HediffDef>
+
+  <ThingDef ParentName="BodyPartProstheticBase">
+    <defName>Painstopper</defName>
+    <label>painstopper</label>
+    <description>A brain implant which inhibits nociception, or pain sensation. While it does allow the user to accomplish more, it turns out pain has a purpose. When you don't feel it, you can get hurt really bad really easily.</description>
+    <descriptionHyperlinks><RecipeDef>InstallPainstopper</RecipeDef></descriptionHyperlinks>
+    <thingSetMakerTags>
+      <li>RewardStandardLowFreq</li>
+    </thingSetMakerTags>
+    <costList>
+      <Steel>20</Steel>
+      <ComponentIndustrial>4</ComponentIndustrial>
+    </costList>
+    <techHediffsTags>
+      <li>Advanced</li>
+    </techHediffsTags>
+  </ThingDef>
+
+  <RecipeDef ParentName="SurgeryInstallImplantBase">
+    <defName>InstallPainstopper</defName>
+    <label>install painstopper</label>
+    <description>Install a painstopper.</description>
+    <descriptionHyperlinks>
+      <ThingDef>Painstopper</ThingDef>
+      <HediffDef>Painstopper</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Installing painstopper.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Painstopper</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Painstopper</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Brain</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>Painstopper</addsHediff>
+  </RecipeDef>
+
+  <RecipeDef ParentName="SurgeryRemoveImplantBase">
+    <defName>RemovePainstopper</defName>
+    <label>remove painstopper</label>
+    <description>Remove the painstopper.</description>
+    <descriptionHyperlinks>
+      <ThingDef>Painstopper</ThingDef>
+      <HediffDef>Painstopper</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Removing painstopper.</jobString>
+    <removesHediff>Painstopper</removesHediff>
+  </RecipeDef>
+
+</Defs>

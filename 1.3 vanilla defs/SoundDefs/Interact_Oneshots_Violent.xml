@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Defs>
+
+  <SoundDef>
+    <defName>Interact_BeatFire</defName>  
+    <context>MapOnly</context>
+    <maxSimultaneous>1</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Impact/BeatFire</clipFolderPath>
+          </li>
+        </grains>      
+        <volumeRange>16~16</volumeRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Interact_Ignite</defName>  
+    <context>MapOnly</context>
+    <maxSimultaneous>1</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Impact/Ignite</clipFolderPath>
+          </li>
+        </grains>      
+        <volumeRange>40~47.05882</volumeRange>      
+        <pitchRange>0.9311765~1.183529</pitchRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+</Defs>

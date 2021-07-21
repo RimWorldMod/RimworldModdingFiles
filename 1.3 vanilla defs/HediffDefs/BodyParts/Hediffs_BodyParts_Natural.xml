@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- Base: Natural body part -->
+  <ThingDef Name="BodyPartNaturalBase" ParentName="BodyPartBase" Abstract="True">
+    <graphicData>
+      <texPath>Things/Item/Health/HealthItem</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.80</drawSize>
+      <color>(190,190,190)</color>
+    </graphicData>
+    <thingCategories>
+      <li>BodyPartsNatural</li>
+    </thingCategories>
+    <statBases>
+      <DeteriorationRate>4.0</DeteriorationRate>
+    </statBases>
+  </ThingDef>
+
+  <!-- Heart -->
+  <ThingDef ParentName="BodyPartNaturalBase">
+    <defName>Heart</defName>
+    <label>heart</label>
+    <description>A biological human heart. Pumps blood around the body.</description>
+    <descriptionHyperlinks><RecipeDef>InstallNaturalHeart</RecipeDef></descriptionHyperlinks>
+    <statBases>
+      <MarketValue>500</MarketValue>
+      <Mass>1</Mass>
+    </statBases>
+  </ThingDef>
+
+  <RecipeDef ParentName="SurgeryInstallBodyPartNaturalBase">
+    <defName>InstallNaturalHeart</defName>
+    <label>install heart</label>
+    <description>Install a biological heart.</description>
+    <descriptionHyperlinks><ThingDef>Heart</ThingDef></descriptionHyperlinks>
+    <jobString>Installing heart.</jobString>
+    <deathOnFailedSurgeryChance>0.25</deathOnFailedSurgeryChance>
+    <skillRequirements>
+      <Medicine>8</Medicine>
+    </skillRequirements>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Heart</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Heart</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Heart</li>
+    </appliedOnFixedBodyParts>
+  </RecipeDef>
+
+  <!-- Lung -->
+  <ThingDef ParentName="BodyPartNaturalBase">
+    <defName>Lung</defName>
+    <label>lung</label>
+    <description>A biological human lung. A pair of these form the core of the human respiratory system.</description>
+    <descriptionHyperlinks><RecipeDef>InstallNaturalLung</RecipeDef></descriptionHyperlinks>
+    <statBases>
+      <MarketValue>400</MarketValue>
+      <Mass>1</Mass>
+    </statBases>
+  </ThingDef>
+
+  <RecipeDef ParentName="SurgeryInstallBodyPartNaturalBase">
+    <defName>InstallNaturalLung</defName>
+    <label>install lung</label>
+    <description>Install a lung.</description>
+    <descriptionHyperlinks><ThingDef>Lung</ThingDef></descriptionHyperlinks>
+    <jobString>Installing lung.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Lung</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Lung</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Lung</li>
+    </appliedOnFixedBodyParts>
+  </RecipeDef>
+
+  <!-- Kidney -->
+  <ThingDef ParentName="BodyPartNaturalBase">
+    <defName>Kidney</defName>
+    <label>kidney</label>
+    <description>A biological human kidney. Filters and removes waste products from the blood.</description>
+    <descriptionHyperlinks><RecipeDef>InstallNaturalKidney</RecipeDef></descriptionHyperlinks>
+    <statBases>
+      <MarketValue>250</MarketValue>
+      <Mass>1</Mass>
+    </statBases>
+  </ThingDef>
+
+  <RecipeDef ParentName="SurgeryInstallBodyPartNaturalBase">
+    <defName>InstallNaturalKidney</defName>
+    <label>install kidney</label>
+    <description>Install a biological kidney.</description>
+    <descriptionHyperlinks><ThingDef>Kidney</ThingDef></descriptionHyperlinks>
+    <jobString>Installing kidney.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Kidney</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Kidney</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Kidney</li>
+    </appliedOnFixedBodyParts>
+  </RecipeDef>
+
+  <!-- Liver -->
+  <ThingDef ParentName="BodyPartNaturalBase">
+    <defName>Liver</defName>
+    <label>liver</label>
+    <description>A biological human liver. Plays an important role in metabolism.</description>
+    <descriptionHyperlinks><RecipeDef>InstallNaturalLiver</RecipeDef></descriptionHyperlinks>
+    <statBases>
+      <MarketValue>500</MarketValue>
+      <Mass>2</Mass>
+    </statBases>
+  </ThingDef>
+
+  <RecipeDef ParentName="SurgeryInstallBodyPartNaturalBase">
+    <defName>InstallNaturalLiver</defName>
+    <label>install liver</label>
+    <description>Install a biological liver.</description>
+    <descriptionHyperlinks><ThingDef>Liver</ThingDef></descriptionHyperlinks>
+    <jobString>Installing liver.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Liver</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Liver</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Liver</li>
+    </appliedOnFixedBodyParts>
+  </RecipeDef>
+
+</Defs>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- Pawn interactions -->
+
+  <HistoryEventDef>
+    <defName>UsedHarmfulItem</defName>
+    <label>harmed member</label>
+  </HistoryEventDef>
+
+  <HistoryEventDef>
+    <defName>AttackedMember</defName>
+    <label>attacked member</label>
+  </HistoryEventDef>
+
+  <HistoryEventDef>
+    <defName>MemberCrushed</defName>
+    <label>member crushed</label>
+  </HistoryEventDef>
+
+  <HistoryEventDef>
+    <defName>MemberNeutrallyDied</defName>
+    <label>member died</label>
+  </HistoryEventDef>
+
+  <HistoryEventDef>
+    <defName>MemberCaptured</defName>
+    <label>member captured</label>
+  </HistoryEventDef>
+
+  <HistoryEventDef>
+    <defName>MemberKilled</defName>
+    <label>member killed</label>
+  </HistoryEventDef>
+
+  <HistoryEventDef>
+    <defName>MemberSold</defName>
+    <label>member sold</label>
+  </HistoryEventDef>
+
+  <HistoryEventDef>
+    <defName>MemberExitedMapHealthy</defName>
+    <label>member exited map healthy</label>
+  </HistoryEventDef>
+
+  <HistoryEventDef>
+    <defName>PerformedHarmfulSurgery</defName>
+    <label>harmful surgery on member</label>
+  </HistoryEventDef>
+
+  <HistoryEventDef>
+    <defName>MemberStripped</defName>
+    <label>member stripped</label>
+  </HistoryEventDef>
+
+  <HistoryEventDef>
+    <defName>InnocentPrisonerDied</defName>
+    <label>innocent prisoner died</label>
+  </HistoryEventDef>
+
+  <HistoryEventDef>
+    <defName>GuiltyPrisonerDied</defName>
+    <label>guilty prisoner died</label>
+  </HistoryEventDef>
+
+  <HistoryEventDef>
+    <defName>PrisonerDied</defName>
+    <label>prisoner died</label>
+  </HistoryEventDef>
+
+</Defs>

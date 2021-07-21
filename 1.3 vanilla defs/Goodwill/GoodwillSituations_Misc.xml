@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <GoodwillSituationDef>
+    <defName>PermanentEnemy</defName>
+    <label>permanently hostile</label>
+    <workerClass>GoodwillSituationWorker_PermanentEnemy</workerClass>
+  </GoodwillSituationDef>
+
+  <GoodwillSituationDef>
+    <defName>NaturalEnemy</defName>
+    <label>natural enemy</label>
+    <workerClass>GoodwillSituationWorker_NaturalEnemy</workerClass>
+  </GoodwillSituationDef>
+
+  <GoodwillSituationDef>
+    <defName>AttackingSettlement</defName>
+    <label>attacking settlement</label>
+    <workerClass>GoodwillSituationWorker_AttackingSettlement</workerClass>
+  </GoodwillSituationDef>
+
+</Defs>

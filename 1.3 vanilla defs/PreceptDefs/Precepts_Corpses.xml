@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- HistoryEvents -->
+
+  <HistoryEventDef>
+    <defName>ObservedLayingCorpse</defName>
+    <label>observed corpse</label>
+  </HistoryEventDef>
+
+  <HistoryEventDef>
+    <defName>ObservedLayingRottingCorpse</defName>
+    <label>observed rotten corpse</label>
+  </HistoryEventDef>
+
+  <!-- Issue -->
+
+  <IssueDef>
+    <defName>Corpses</defName>
+    <label>corpses</label>
+    <iconPath MayRequire="Ludeon.RimWorld.Ideology">UI/Issues/Corpses</iconPath>
+  </IssueDef>
+
+  <!-- Precepts -->
+
+  <PreceptDef>
+    <defName>Corpses_Ugly</defName>
+    <issue>Corpses</issue>
+    <label>ugly</label>
+    <description>The sight of a dead person is horrible.</description>
+    <impact>Low</impact>
+    <classic>true</classic>
+    <displayOrderInIssue>10</displayOrderInIssue>
+    <defaultSelectionWeight>1</defaultSelectionWeight>
+    <comps>
+      <li Class="PreceptComp_SelfTookMemoryThought">
+        <eventDef>ObservedLayingCorpse</eventDef>
+        <thought>ObservedLayingCorpse</thought>
+      </li>
+      <li Class="PreceptComp_SelfTookMemoryThought">
+        <eventDef>ObservedLayingRottingCorpse</eventDef>
+        <thought>ObservedLayingRottingCorpse</thought>
+      </li>
+    </comps>
+  </PreceptDef>
+
+</Defs>

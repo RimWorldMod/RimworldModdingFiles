@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <DamageDef Name="StunBase" Abstract="True">
+    <harmsHealth>false</harmsHealth>
+    <makesBlood>false</makesBlood>
+  </DamageDef>
+
+  <DamageDef ParentName="StunBase">
+    <defName>Stun</defName>
+    <label>stun</label>
+    <workerClass>DamageWorker_Stun</workerClass>
+    <externalViolence>true</externalViolence>
+    <deathMessage>{0} has been stunned to death.</deathMessage>
+    <defaultDamage>20</defaultDamage>
+    <explosionCellFleck>BlastDry</explosionCellFleck>
+    <soundExplosion>Explosion_Stun</soundExplosion>
+    <combatLogRules>Damage_Stun</combatLogRules>
+  </DamageDef>
+
+  <DamageDef ParentName="StunBase">
+    <defName>EMP</defName>
+    <label>EMP</label>
+    <externalViolenceForMechanoids>true</externalViolenceForMechanoids>
+    <deathMessage>{0} has been EMPed to death.</deathMessage>
+    <harmsHealth>false</harmsHealth>
+    <impactSoundType>Electric</impactSoundType>
+    <defaultDamage>50</defaultDamage>
+    <explosionSnowMeltAmount>0</explosionSnowMeltAmount>
+    <explosionCellFleck>BlastEMP</explosionCellFleck>
+    <explosionColorEdge>(0.8, 0.8, 0.8, 0.8)</explosionColorEdge>
+    <explosionInteriorFleck>ElectricalSpark</explosionInteriorFleck>
+    <soundExplosion>Explosion_EMP</soundExplosion>
+    <combatLogRules>Damage_EMP</combatLogRules>
+  </DamageDef>
+  
+</Defs>

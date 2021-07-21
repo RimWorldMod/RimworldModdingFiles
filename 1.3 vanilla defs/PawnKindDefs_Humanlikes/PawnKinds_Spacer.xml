@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <PawnKindDef Name="SpaceRefugeeBase" Abstract="True">
+    <race>Human</race>
+    <combatPower>30</combatPower>
+    <baseRecruitDifficulty>0.30</baseRecruitDifficulty>
+    <backstoryCryptosleepCommonality>1</backstoryCryptosleepCommonality>
+    <forceNormalGearQuality>true</forceNormalGearQuality>
+    <isFighter>false</isFighter>
+    <chemicalAddictionChance>0.08</chemicalAddictionChance>
+    <gearHealthRange>0.4~1.4</gearHealthRange>
+    <apparelTags>
+      <li>IndustrialBasic</li>
+    </apparelTags>
+    <apparelIgnoreSeasons>true</apparelIgnoreSeasons>
+    <apparelAllowHeadgearChance>0</apparelAllowHeadgearChance>
+    <techHediffsMoney>50~800</techHediffsMoney>
+    <techHediffsTags>
+      <li>Poor</li>
+      <li>Simple</li>
+    </techHediffsTags>
+    <techHediffsChance>0.08</techHediffsChance>
+  </PawnKindDef>
+  
+  <PawnKindDef ParentName="SpaceRefugeeBase">
+    <defName>SpaceRefugee</defName>
+    <label>space refugee</label>
+    <apparelMoney>0~1000</apparelMoney>
+    <initialWillRange>1~3</initialWillRange>
+    <initialResistanceRange>12~19</initialResistanceRange>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="SpaceRefugeeBase">
+    <defName>SpaceRefugee_Clothed</defName>
+    <label>space refugee</label>
+    <apparelMoney>200~1000</apparelMoney>
+    <gearHealthRange>1~1</gearHealthRange>
+    <disallowedTraits>
+      <li>Nudist</li>
+    </disallowedTraits>
+    <initialWillRange>0</initialWillRange>
+    <initialResistanceRange>0~0</initialResistanceRange>
+  </PawnKindDef>
+
+  <PawnKindDef>
+    <defName>AncientSoldier</defName>
+    <label>ancient soldier</label>
+    <race>Human</race>
+    <combatPower>85</combatPower>
+    <baseRecruitDifficulty>0.30</baseRecruitDifficulty>
+    <defaultFactionType>AncientsHostile</defaultFactionType>
+    <backstoryCryptosleepCommonality>1</backstoryCryptosleepCommonality>
+    <chemicalAddictionChance>0.08</chemicalAddictionChance>
+    <apparelMoney>0~3800</apparelMoney>
+    <apparelTags>
+      <li>IndustrialBasic</li>
+      <li>IndustrialAdvanced</li>
+      <li>IndustrialMilitaryBasic</li>
+      <li>IndustrialMilitaryAdvanced</li>
+      <li>SpacerMilitary</li>
+      <li>BeltDefensePop</li>
+    </apparelTags>
+    <apparelIgnoreSeasons>true</apparelIgnoreSeasons>
+    <apparelAllowHeadgearChance>0</apparelAllowHeadgearChance>
+    <weaponMoney>300~900</weaponMoney>
+    <weaponTags>
+      <li>Gun</li>
+    </weaponTags>
+    <techHediffsMoney>2000~3000</techHediffsMoney>
+    <techHediffsTags>
+      <li>Advanced</li>
+      <li>AdvancedWeapon</li>
+    </techHediffsTags>
+    <techHediffsChance>0.40</techHediffsChance>
+    <combatEnhancingDrugsChance>0.5</combatEnhancingDrugsChance>
+    <combatEnhancingDrugsCount>1~2</combatEnhancingDrugsCount>
+    <biocodeWeaponChance>0.2</biocodeWeaponChance>
+    <requiredWorkTags>
+      <li>Violent</li>
+    </requiredWorkTags>
+    <initialWillRange>0</initialWillRange>
+    <initialResistanceRange>0~1</initialResistanceRange>
+  </PawnKindDef>
+
+</Defs>

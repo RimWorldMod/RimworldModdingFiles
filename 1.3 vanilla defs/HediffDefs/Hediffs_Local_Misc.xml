@@ -1,0 +1,233 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  
+  <HediffDef ParentName="DiseaseBase">
+    <defName>TraumaSavant</defName>
+    <label>trauma savant</label>
+    <labelNoun>trauma</labelNoun>
+    <description>An exceptional condition caused by trauma to the brain. The brain, in the face of injury, has developed extreme abilities in some areas, while losing the ability to speak.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <stages>
+      <li>
+        <opinionOfOthersFactor>0</opinionOfOthersFactor>
+        <partIgnoreMissingHP>true</partIgnoreMissingHP> <!-- to avoid penalties from brain injuries, so manipulation is 100%+ -->
+        <capMods>
+          <li>
+            <capacity>Talking</capacity>
+            <setMax>0</setMax>
+          </li>
+          <li>
+            <capacity>Hearing</capacity>
+            <setMax>0</setMax>
+          </li>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>0.5</offset>
+          </li>
+        </capMods>
+    </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef ParentName="DiseaseBase">
+    <defName>ChemicalDamageModerate</defName>
+    <label>chemical damage</label>
+    <description>Chemical damage at the cellular level.</description>
+    <stages>
+      <li>
+        <partEfficiencyOffset>-0.5</partEfficiencyOffset>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef ParentName="DiseaseBase">
+    <defName>ChemicalDamageSevere</defName>
+    <label>chemical damage</label>
+    <description>Chemical damage at the cellular level.</description>
+    <stages>
+      <li>
+        <partEfficiencyOffset>-0.8</partEfficiencyOffset>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef ParentName="DiseaseBase">
+    <defName>Cirrhosis</defName>
+    <label>cirrhosis</label>
+    <description>A degenerative liver disease caused by excessive alcohol consumption.</description>
+    <stages>
+      <li>
+        <partEfficiencyOffset>-0.60</partEfficiencyOffset>
+        <painOffset>0.15</painOffset>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.10</offset>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+  </HediffDef>
+  
+  <HediffDef ParentName="DiseaseBase">
+    <defName>ResurrectionPsychosis</defName>
+    <label>resurrection psychosis</label>
+    <description>Chaotic thought patterns caused by the decoherence of resurrection mechanites. Resurrection psychosis progresses and eventually causes total psychosis and death.
+\nResurrected people require mechanites to rebuild their bodily functions at the cellular level. Mechanites always have a chance to lose coherence, and if they do, they wreak havoc in the central nervous system. The older the corpse, the more mechanite action is required to resurrect it, and the greater the chance of eventual decoherence.</description>
+    <lethalSeverity>1.00</lethalSeverity>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>0.01</severityPerDay>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <label>early</label>
+        <becomeVisible>false</becomeVisible>
+      </li>
+      <li>
+        <minSeverity>0.10</minSeverity>
+        <label>early</label>
+        <mentalBreakMtbDays>9</mentalBreakMtbDays>
+      </li>
+      <li>
+        <minSeverity>0.25</minSeverity>
+        <label>moderate</label>
+        <mentalBreakMtbDays>6</mentalBreakMtbDays>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.10</offset>
+          </li>
+        </capMods>
+      </li>
+      <li>
+        <minSeverity>0.40</minSeverity>
+        <label>advanced</label>
+        <mentalBreakMtbDays>3</mentalBreakMtbDays>
+        <capMods>
+          <li>
+          <capacity>Consciousness</capacity>
+          <offset>-0.20</offset>
+        </li>
+        </capMods>
+      </li>
+      <li>
+        <minSeverity>0.55</minSeverity>
+        <label>severe</label>
+        <mentalBreakMtbDays>0.5</mentalBreakMtbDays>
+        <capMods>
+          <li>
+          <capacity>Consciousness</capacity>
+          <offset>-0.30</offset>
+        </li>
+        </capMods>
+      </li>
+      <li>
+        <minSeverity>0.7</minSeverity>
+        <label>total</label>
+        <mentalBreakMtbDays>0.25</mentalBreakMtbDays>
+        <capMods>
+          <li>
+          <capacity>Consciousness</capacity>
+          <offset>-0.40</offset>
+        </li>
+        </capMods>
+      </li>
+      <li>
+        <minSeverity>0.85</minSeverity>
+        <label>catatonic</label>
+        <capMods>
+          <li>
+          <capacity>Consciousness</capacity>
+          <setMax>0.10</setMax>
+        </li>
+        </capMods>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>Scaria</defName>
+    <label>scaria</label>
+    <description>A disease which causes affected creatures to enter berserk rages. A creature with scaria can be cured through a special medical operation, but it must be downed first. If not treated, scaria kills its host about five days after infection. The disease poisons the flesh and rots the skin, so creatures killed with scaria have a chance of rotting upon death so they cannot be butchered for meat or leather.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.9, 1.0, 0.35)</defaultLabelColor>
+    <initialSeverity>1</initialSeverity>
+    <comps>
+      <li Class="HediffCompProperties_KillAfterDays">
+        <days>5</days>
+      </li>
+      <li Class="HediffCompProperties_CauseMentalState">
+        <animalMentalState>ManhunterPermanent</animalMentalState>
+        <animalMentalStateAlias>Manhunter</animalMentalStateAlias>
+        <humanMentalState>Berserk</humanMentalState>
+        <letterDef>ThreatSmall</letterDef>
+        <mtbDaysToCauseMentalState>1</mtbDaysToCauseMentalState>
+      </li>
+    </comps>
+  </HediffDef>
+
+  <RecipeDef ParentName="SurgeryFlesh">
+    <defName>CureScaria</defName>
+    <label>cure scaria</label>
+    <description>This special medical operation cures scaria.</description>
+    <workerClass>Recipe_RemoveHediff</workerClass>
+    <jobString>Curing scaria.</jobString>
+    <workAmount>4500</workAmount>
+    <hideBodyPartNames>true</hideBodyPartNames>
+    <isViolation>false</isViolation>
+    <targetsBodyPart>false</targetsBodyPart>
+    <removesHediff>Scaria</removesHediff>
+    <successfullyRemovedHediffMessage>{0} has successfully cured {1}'s scaria.</successfullyRemovedHediffMessage>
+    <skillRequirements>
+      <Medicine>8</Medicine>
+    </skillRequirements>
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>Medicine</li>
+          </categories>
+        </filter>
+        <count>3</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <categories>
+        <li>Medicine</li>
+      </categories>
+      <disallowedThingDefs>
+        <li>MedicineHerbal</li>
+      </disallowedThingDefs>
+    </fixedIngredientFilter>
+  </RecipeDef>
+
+  <HediffDef>
+    <defName>Sterilized</defName>
+    <label>sterilized</label>
+    <description>This creature's reproductive system has been permanently shut down.</description>
+    <hediffClass>Hediff</hediffClass>
+    <defaultLabelColor>(0.9, 1.0, 0.35)</defaultLabelColor>
+    <initialSeverity>1</initialSeverity>
+  </HediffDef>
+
+  <RecipeDef ParentName="SurgeryFlesh">
+    <defName>Sterilize</defName>
+    <label>sterilize</label>
+    <description>Sterilize a creature so it can no longer reproduce.</description>
+    <workerClass>Recipe_AddHediff</workerClass>
+    <jobString>sterilizing TargetA.</jobString>
+    <workAmount>500</workAmount>
+    <hideBodyPartNames>true</hideBodyPartNames>
+    <isViolation>true</isViolation>
+    <targetsBodyPart>false</targetsBodyPart>
+    <addsHediff>Sterilized</addsHediff>
+    <successfullyRemovedHediffMessage>{0} has successfully sterilized {1}.</successfullyRemovedHediffMessage>
+    <surgeryIgnoreEnvironment>true</surgeryIgnoreEnvironment>
+    <skillRequirements>
+      <Medicine>3</Medicine>
+    </skillRequirements>
+  </RecipeDef>
+
+</Defs>

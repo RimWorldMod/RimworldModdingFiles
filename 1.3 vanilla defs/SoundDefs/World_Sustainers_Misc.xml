@@ -1,0 +1,339 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Defs>
+
+  <SoundDef>
+    <defName>FireBurning</defName>  
+    <sustain>True</sustain>  
+    <context>MapOnly</context>  
+    <maxSimultaneous>1</maxSimultaneous>  
+    <priorityMode>PrioritizeNearest</priorityMode>  
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Misc/Fire/BurningLoop</clipPath>
+          </li>
+        </grains>      
+        <volumeRange>61~61</volumeRange>      
+        <pitchRange>1.190761~0.8304348</pitchRange>      
+        <paramMappings>
+          <li>
+            <inParam Class="SoundParamSource_AggregateSize" />          
+            <outParam Class="SoundParamTarget_PropertyHighPass">
+              <filterProperty>Cutoff</filterProperty>
+            </outParam>          
+            <paramUpdateMode>Constant</paramUpdateMode>          
+            <curve>
+              <points>
+                <li>
+                  <loc>
+                    <x>0.6926602</x>                  
+                    <y>265.3306</y>
+                  </loc>
+                </li>              
+                <li>
+                  <loc>
+                    <x>2.202203</x>                  
+                    <y>50.08133</y>
+                  </loc>
+                </li>              
+                <li>
+                  <loc>
+                    <x>4.875373</x>                  
+                    <y>-2.766907</y>
+                  </loc>
+                </li>
+              </points>
+            </curve>
+          </li>        
+          <li>
+            <inParam Class="SoundParamSource_AggregateSize" />          
+            <outParam Class="SoundParamTarget_Volume" />          
+            <paramUpdateMode>Constant</paramUpdateMode>          
+            <curve>
+              <points>
+                <li>
+                  <loc>
+                    <x>0.3816619</x>                  
+                    <y>0.1522805</y>
+                  </loc>
+                </li>              
+                <li>
+                  <loc>
+                    <x>4.838721</x>                  
+                    <y>0.9683864</y>
+                  </loc>
+                </li>              
+                <li>
+                  <loc>
+                    <x>13.89854</x>                  
+                    <y>1.049647</y>
+                  </loc>
+                </li>
+              </points>
+            </curve>
+          </li>
+        </paramMappings>      
+        <filters>
+          <li Class="SoundFilterHighPass">
+            <cutoffFrequency>10000</cutoffFrequency>          
+          </li>
+        </filters>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Tornado</defName>  
+    <sustain>True</sustain>  
+    <context>MapOnly</context>  
+    <maxSimultaneous>1</maxSimultaneous>  
+    <priorityMode>PrioritizeNearest</priorityMode>  
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Misc/Tornado/TornadoLoop</clipPath>
+          </li>
+        </grains>      
+        <volumeRange>70~70</volumeRange>
+        <sustainAttack>2.5</sustainAttack>      
+        <sustainRelease>2.5</sustainRelease>
+        <distRange><min>100</min><max>200</max></distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Tunnel</defName>
+    <sustain>True</sustain>
+    <context>MapOnly</context>
+    <maxSimultaneous>1</maxSimultaneous>
+    <priorityMode>PrioritizeNearest</priorityMode>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Misc/Tunnel/TunnelLoop</clipPath>
+          </li>
+        </grains>
+        <volumeRange>18~18</volumeRange>
+        <sustainAttack>2.5</sustainAttack>
+        <sustainRelease>2.5</sustainRelease>
+        <distRange>20~100</distRange>
+      </li>
+    </subSounds>
+    <sustainStopSound>Tunnel_End</sustainStopSound>
+  </SoundDef>
+  
+  <SoundDef>
+    <defName>Tunnel_End</defName>
+    <context>MapOnly</context>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Misc/Tunnel/TunnelEnd</clipPath>
+          </li>
+        </grains>
+        <volumeRange>30~30</volumeRange>
+        <pitchRange>0.9311764~1.137647</pitchRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>HissSmall</defName>  
+    <sustain>True</sustain>  
+    <context>MapOnly</context>  
+    <maxSimultaneous>1</maxSimultaneous>  
+    <priorityMode>PrioritizeNearest</priorityMode>  
+    <subSounds>
+      <li>
+        <name>Main hiss</name>      
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Misc/Hiss/HissSmall</clipPath>
+          </li>
+        </grains>      
+        <volumeRange>15~15</volumeRange>      
+        <pitchRange>1.042391~1.021195</pitchRange>      
+        <paramMappings>
+          <li>
+            <inParam Class="SoundParamSource_SourceAge">
+              <timeType>Ticks</timeType>
+            </inParam>          
+            <outParam Class="SoundParamTarget_Pitch">
+              <pitchType>Multiply</pitchType>
+            </outParam>          
+            <paramUpdateMode>Constant</paramUpdateMode>          
+            <curve>
+              <points>
+                <li>
+                  <loc>
+                    <x>0</x>                  
+                    <y>0.8</y>
+                  </loc>
+                </li>              
+                <li>
+                  <loc>
+                    <x>360</x>                  
+                    <y>1</y>
+                  </loc>
+                </li>              
+                <li>
+                  <loc>
+                    <x>900</x>                  
+                    <y>1.25</y>
+                  </loc>
+                </li>              
+                <li>
+                  <loc>
+                    <x>2400</x>                  
+                    <y>1.5</y>
+                  </loc>
+                </li>
+              </points>
+            </curve>
+          </li>
+        </paramMappings>      
+        <sustainLoopDurationRange>5~5</sustainLoopDurationRange>      
+        <sustainIntervalRange>-2.5~-2.5</sustainIntervalRange>      
+        <sustainAttack>2.5</sustainAttack>      
+        <sustainRelease>2.5</sustainRelease>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>HissJet</defName>  
+    <sustain>True</sustain>  
+    <context>MapOnly</context>  
+    <maxSimultaneous>1</maxSimultaneous>  
+    <priorityMode>PrioritizeNearest</priorityMode>  
+    <subSounds>
+      <li>
+        <name>Main hiss jet</name>      
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Misc/Hiss/HissJet</clipPath>
+          </li>
+        </grains>      
+        <volumeRange>40~40</volumeRange>      
+        <pitchRange>0.936413~1</pitchRange>      
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Vomit</defName>  
+    <sustain>True</sustain> 
+    <context>MapOnly</context>   
+    <maxSimultaneous>4</maxSimultaneous>  
+    <priorityMode>PrioritizeNearest</priorityMode>  
+    <sustainFadeoutTime>0.25</sustainFadeoutTime>  
+    <subSounds>
+      <li>
+        <muteWhenPaused>True</muteWhenPaused>      
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Pawn/Human/Vomit</clipFolderPath>
+          </li>
+        </grains>      
+        <volumeRange>11.86047~11.86047</volumeRange>      
+        <pitchRange>0.9152174~1.158843</pitchRange>      
+        <distRange>0~51.39535</distRange>      
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Roping</defName>
+    <sustain>True</sustain>
+    <context>MapOnly</context>
+    <maxSimultaneous>4</maxSimultaneous>
+    <priorityMode>PrioritizeNearest</priorityMode>
+    <subSounds>
+      <li>
+        <muteWhenPaused>True</muteWhenPaused>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Pawn/Human/Roping</clipFolderPath>
+          </li>
+        </grains>
+        <volumeRange>19</volumeRange>
+        <pitchRange>0.91~1.15</pitchRange>
+        <distRange>0~51</distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>OrbitalBeam</defName>
+    <sustain>true</sustain>
+    <context>MapOnly</context>
+    <maxSimultaneous>1</maxSimultaneous>  
+    <priorityMode>PrioritizeNearest</priorityMode>  
+    <subSounds>
+      <li>
+        <muteWhenPaused>True</muteWhenPaused>      
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Misc/OrbitalBeam/OrbitalBeam</clipPath>
+          </li>
+        </grains>      
+        <pitchRange>0.99~1.01</pitchRange>
+        <volumeRange>25~25</volumeRange>
+        <sustainAttack>2.5</sustainAttack>      
+        <sustainRelease>2.5</sustainRelease>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>OrbitalBeamSubtle</defName>
+    <sustain>true</sustain>
+    <context>MapOnly</context>
+    <maxSimultaneous>1</maxSimultaneous>  
+    <priorityMode>PrioritizeNearest</priorityMode>  
+    <subSounds>
+      <li>
+        <muteWhenPaused>True</muteWhenPaused>      
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Misc/OrbitalBeam/OrbitalBeamSubtle</clipPath>
+          </li>
+        </grains>      
+        <pitchRange>0.99~1.01</pitchRange>
+        <volumeRange>25~25</volumeRange>
+        <sustainAttack>2.5</sustainAttack>      
+        <sustainRelease>2.5</sustainRelease>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>FlashstormAmbience</defName>
+    <sustain>true</sustain>
+    <context>MapOnly</context>
+    <maxSimultaneous>1</maxSimultaneous>
+    <priorityMode>PrioritizeNearest</priorityMode>
+    <subSounds>
+      <li>
+        <muteWhenPaused>True</muteWhenPaused>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Ambience/Wind/Amb_Wind_Stormy_Loop</clipPath>
+          </li>
+        </grains>
+        <pitchRange>0.99~1.01</pitchRange>
+        <volumeRange>13~13</volumeRange>
+        <sustainAttack>2.5</sustainAttack>
+        <sustainRelease>2.5</sustainRelease>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+</Defs>

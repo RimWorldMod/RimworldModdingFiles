@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <LetterDef ParentName="NegativeEvent">
+    <defName>Death</defName>
+    <letterClass>DeathLetter</letterClass>
+  </LetterDef>
+
+  <LetterDef ParentName="PositiveEvent">
+    <defName>NewQuest</defName>
+    <letterClass>NewQuestLetter</letterClass>
+  </LetterDef>
+
+  <LetterDef ParentName="ThreatBig">
+    <defName>NewQuest_ThreatBig</defName>
+    <letterClass>NewQuestLetter</letterClass>
+  </LetterDef>
+
+  <LetterDef>
+    <defName>RitualOutcomePositive</defName>
+    <color>(120, 176, 216)</color>
+    <flashColor>(106, 179, 231)</flashColor>
+    <flashInterval>90</flashInterval>
+    <arriveSound>RitualConclusion_Positive</arriveSound>
+  </LetterDef>
+
+  <LetterDef>
+    <defName>RitualOutcomeNegative</defName>
+    <color>(204, 196, 135)</color>
+    <flashColor>(210, 198, 106)</flashColor>
+    <flashInterval>40</flashInterval>
+    <arriveSound>RitualConclusion_Negative</arriveSound>
+  </LetterDef>
+  
+</Defs>

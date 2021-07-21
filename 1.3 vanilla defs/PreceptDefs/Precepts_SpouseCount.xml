@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- Issues -->
+
+  <IssueDef>
+    <defName>SpouseCount_Male</defName>
+    <label>Men's spouses</label>
+    <iconPath>UI/Issues/SpouseCountMale</iconPath>
+  </IssueDef>
+
+  <IssueDef>
+    <defName>SpouseCount_Female</defName>
+    <label>Women's spouses</label>
+    <iconPath>UI/Issues/SpouseCountFemale</iconPath>
+  </IssueDef>
+
+
+  <!-- History events -->
+
+  <HistoryEventDef>
+    <defName>GotMarried_SpouseCount_OneOrFewer</defName>
+    <label>married to one or fewer spouses</label>
+  </HistoryEventDef>
+
+  <HistoryEventDef>
+    <defName>GotMarried_SpouseCount_Two</defName>
+    <label>married to two or more spouses</label>
+  </HistoryEventDef>
+
+
+  <!-- Precepts -->
+  
+  <PreceptDef>
+    <defName>SpouseCount_Male_MaxOne</defName>
+    <issue>SpouseCount_Male</issue>
+    <label>one only</label>
+    <description>Men may have one spouse only.</description>
+    <impact>Low</impact>
+    <displayOrderInIssue>0</displayOrderInIssue>
+    <displayOrderInImpact>-100</displayOrderInImpact>
+    <defaultSelectionWeight>1</defaultSelectionWeight>
+    <classic>true</classic>
+    <comps>
+      <li Class="PreceptComp_UnwillingToDo_Gendered">
+        <eventDef>GotMarried_SpouseCount_Two</eventDef>
+        <gender>Male</gender>
+      </li>
+      <li MayRequire="Ludeon.RimWorld.Ideology" Class="PreceptComp_UnwillingToDo_Gendered">
+        <eventDef>GotMarried_SpouseCount_Three</eventDef>
+        <displayDescription>false</displayDescription>
+        <gender>Male</gender>
+      </li>
+      <li MayRequire="Ludeon.RimWorld.Ideology" Class="PreceptComp_UnwillingToDo_Gendered">
+        <eventDef>GotMarried_SpouseCount_Four</eventDef>
+        <displayDescription>false</displayDescription>
+        <gender>Male</gender>
+      </li>
+      <li MayRequire="Ludeon.RimWorld.Ideology" Class="PreceptComp_UnwillingToDo_Gendered">
+        <eventDef>GotMarried_SpouseCount_FiveOrMore</eventDef>
+        <displayDescription>false</displayDescription>
+        <gender>Male</gender>
+      </li>
+    </comps>
+  </PreceptDef>
+
+  <PreceptDef>
+    <defName>SpouseCount_Female_MaxOne</defName>
+    <issue>SpouseCount_Female</issue>
+    <label>one only</label>
+    <description>Women may have one spouse only.</description>
+    <impact>Low</impact>
+    <displayOrderInIssue>0</displayOrderInIssue>
+    <displayOrderInImpact>-100</displayOrderInImpact>
+    <defaultSelectionWeight>1</defaultSelectionWeight>
+    <classic>true</classic>
+    <comps>
+      <li Class="PreceptComp_UnwillingToDo_Gendered">
+        <eventDef>GotMarried_SpouseCount_Two</eventDef>
+        <gender>Female</gender>
+      </li>
+      <li MayRequire="Ludeon.RimWorld.Ideology" Class="PreceptComp_UnwillingToDo_Gendered">
+        <eventDef>GotMarried_SpouseCount_Three</eventDef>
+        <displayDescription>false</displayDescription>
+        <gender>Female</gender>
+      </li>
+      <li MayRequire="Ludeon.RimWorld.Ideology" Class="PreceptComp_UnwillingToDo_Gendered">
+        <eventDef>GotMarried_SpouseCount_Four</eventDef>
+        <displayDescription>false</displayDescription>
+        <gender>Female</gender>
+      </li>
+      <li MayRequire="Ludeon.RimWorld.Ideology" Class="PreceptComp_UnwillingToDo_Gendered">
+        <eventDef>GotMarried_SpouseCount_FiveOrMore</eventDef>
+        <displayDescription>false</displayDescription>
+        <gender>Female</gender>
+      </li>
+    </comps>
+  </PreceptDef>
+
+</Defs>

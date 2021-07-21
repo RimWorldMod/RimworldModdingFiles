@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  
+  <FleckDef ParentName="FleckBase">
+    <defName>Footprint</defName>
+    <graphicData>
+      <texPath>Things/Mote/Footprint</texPath>
+      <renderInstanced>true</renderInstanced>
+    </graphicData>
+    <altitudeLayer>MoteLow</altitudeLayer>
+    <fadeInTime>0.08</fadeInTime>
+    <solidTime>2.2</solidTime>
+    <fadeOutTime>2.6</fadeOutTime>
+  </FleckDef>
+
+  <FleckDef ParentName="FleckBase_Thrown">
+    <defName>Horseshoe</defName>
+    <graphicData>
+      <texPath>Things/Mote/Horseshoe</texPath>
+    </graphicData>
+    <altitudeLayer>MoteLow</altitudeLayer>
+    <solidTime>10</solidTime>
+    <fadeOutTime>4</fadeOutTime>
+    <landSound>HorseshoeImpact</landSound>
+  </FleckDef>
+
+  <FleckDef ParentName="FleckBase_Thrown">
+    <defName>Stone</defName>
+    <graphicData>
+      <texPath>Things/Mote/Stone</texPath>
+    </graphicData>
+    <altitudeLayer>MoteLow</altitudeLayer>
+    <solidTime>10</solidTime>
+    <fadeOutTime>4</fadeOutTime>
+    <landSound>StoneImpact</landSound>
+  </FleckDef>
+
+  <FleckDef ParentName="FleckBase">
+    <defName>SpeechLines</defName>
+    <fleckSystemClass>FleckSystemThrown</fleckSystemClass>
+    <graphicData>
+      <graphicClass>Graphic_Fleck</graphicClass>
+      <shaderType>Mote</shaderType>
+      <texPath>Things/Mote/RitualEffects/SpeechLines</texPath>
+      <drawSize>(0.7, 0.7)</drawSize>
+    </graphicData>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <solidTime>0.2</solidTime>
+    <fadeInTime>0.03</fadeInTime>
+    <fadeOutTime>0.02</fadeOutTime>
+  </FleckDef>
+  
+</Defs>

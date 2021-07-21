@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- Issue -->
+
+  <IssueDef>
+    <defName>InsectMeat</defName>
+    <label>insect meat</label>
+    <iconPath>UI/Issues/InsectMeat</iconPath>
+  </IssueDef>
+
+  <HistoryEventDef>
+    <defName>AteInsectMeatDirect</defName>
+    <label>ate insect meat</label>
+  </HistoryEventDef>
+
+  <HistoryEventDef>
+    <defName>AteInsectMeatAsIngredient</defName>
+    <label>ate meal with insect meat</label>
+  </HistoryEventDef>
+
+  <!-- Precepts -->
+
+  <PreceptDef>
+    <defName>InsectMeatEating_Despised_Classic</defName>
+    <issue>InsectMeat</issue>
+    <label>despised</label>
+    <description>Insect meat is disgusting to even look at, much less eat. Slimy!</description>
+    <impact>Low</impact>
+    <classic>true</classic>
+    <displayOrderInIssue>10</displayOrderInIssue>
+    <defaultSelectionWeight>1</defaultSelectionWeight>
+    <comps>
+      <li Class="PreceptComp_SelfTookMemoryThought">
+        <eventDef>AteInsectMeatDirect</eventDef>
+        <thought>AteInsectMeatDirect</thought>
+      </li>
+      <li Class="PreceptComp_SelfTookMemoryThought">
+        <eventDef>AteInsectMeatAsIngredient</eventDef>
+        <thought>AteInsectMeatAsIngredient</thought>
+      </li>
+    </comps>
+  </PreceptDef>
+
+</Defs>

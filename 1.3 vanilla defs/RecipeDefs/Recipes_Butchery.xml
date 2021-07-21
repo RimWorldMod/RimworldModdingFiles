@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <RecipeDef>
+    <defName>ButcherCorpseFlesh</defName>
+    <label>butcher creature</label>
+    <description>Butcher a creature to obtain its meat, leather, and other body products.</description>
+    <workerCounterClass>RecipeWorkerCounter_ButcherAnimals</workerCounterClass>
+    <jobString>Butchering.</jobString>
+    <workAmount>450</workAmount>
+    <workSpeedStat>ButcheryFleshSpeed</workSpeedStat>
+    <workSkill>Cooking</workSkill>
+    <efficiencyStat>ButcheryFleshEfficiency</efficiencyStat>
+    <effectWorking>ButcherFlesh</effectWorking>
+    <soundWorking>Recipe_ButcherCorpseFlesh</soundWorking>
+    <interruptIfIngredientIsRotting>true</interruptIfIngredientIsRotting>
+    <uiIconThing>Meat_Muffalo</uiIconThing>
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>Corpses</li>
+          </categories>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <specialProducts>
+      <li>Butchery</li>
+    </specialProducts>
+    <fixedIngredientFilter>
+      <categories>
+        <li>Corpses</li>
+      </categories>
+      <disallowedCategories>
+        <li>CorpsesMechanoid</li>
+      </disallowedCategories>
+      <specialFiltersToDisallow>
+        <li>AllowRotten</li>
+      </specialFiltersToDisallow>
+    </fixedIngredientFilter>
+    <defaultIngredientFilter>
+      <categories>
+        <li>CorpsesAnimal</li>
+      </categories>
+    </defaultIngredientFilter>
+  </RecipeDef>
+  
+  <RecipeDef Abstract="True" Name="ButcherCorpseMechanoidBase">
+    <workSpeedStat>ButcheryMechanoidSpeed</workSpeedStat>
+    <workSkill>Crafting</workSkill>
+    <efficiencyStat>ButcheryMechanoidEfficiency</efficiencyStat>
+    <effectWorking>ButcherMechanoid</effectWorking>
+    <uiIconThing>Steel</uiIconThing>
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>Corpses</li>
+          </categories>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <specialProducts>
+      <li>Butchery</li>
+    </specialProducts>
+    <fixedIngredientFilter>
+      <categories>
+        <li>CorpsesMechanoid</li>
+      </categories>
+    </fixedIngredientFilter>
+  </RecipeDef>
+  
+  <RecipeDef ParentName="ButcherCorpseMechanoidBase">
+    <defName>ButcherCorpseMechanoid</defName>
+    <label>shred mechanoid</label>
+    <description>Shred a dead mechanoid to try to salvage usable material.</description>
+    <jobString>Shredding mechanoid.</jobString>
+    <workAmount>300</workAmount>
+    <soundWorking>Recipe_ButcherCorpseMechanoid</soundWorking>
+  </RecipeDef>
+  
+  <RecipeDef ParentName="ButcherCorpseMechanoidBase">
+    <defName>SmashCorpseMechanoid</defName>
+    <label>smash mechanoid</label>
+    <description>Smash a dead mechanoid with simple hand tools to salvage usable material.</description>
+    <jobString>Smashing mechanoid.</jobString>
+    <workAmount>450</workAmount>
+    <soundWorking>Recipe_SmashCorpseMechanoid</soundWorking>
+  </RecipeDef>
+</Defs>

@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+
+  <ToolCapacityDef>
+    <defName>Stab</defName>
+    <label>stab</label>
+  </ToolCapacityDef>
+  
+  <ToolCapacityDef>
+    <defName>Cut</defName>
+    <label>cut</label>
+  </ToolCapacityDef>
+
+  <ToolCapacityDef>
+    <defName>Blunt</defName>
+    <label>blunt</label>
+  </ToolCapacityDef>
+
+  <ToolCapacityDef>
+    <defName>Scratch</defName>
+    <label>scratch</label>
+  </ToolCapacityDef>
+
+  <ToolCapacityDef>
+    <defName>Poke</defName>
+    <label>poke</label>
+  </ToolCapacityDef>
+
+  <ToolCapacityDef>
+    <defName>Bite</defName>
+    <label>bite</label>
+  </ToolCapacityDef>
+
+  <ToolCapacityDef>
+    <defName>ToxicBite</defName>
+    <label>toxic bite</label>
+  </ToolCapacityDef>
+
+  <ToolCapacityDef>
+    <defName>ScratchToxic</defName>
+    <label>toxic scratch</label>
+  </ToolCapacityDef>
+
+  <ToolCapacityDef>
+    <defName>KickMaterialInEyes</defName>
+    <label>kick material in eyes</label>
+  </ToolCapacityDef>
+
+  <ToolCapacityDef>
+    <defName>Demolish</defName>
+    <label>demolish</label>
+  </ToolCapacityDef>
+
+</Defs>

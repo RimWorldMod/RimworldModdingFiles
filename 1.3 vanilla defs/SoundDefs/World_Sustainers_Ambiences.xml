@@ -1,0 +1,970 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Defs>
+
+  <SoundDef>
+    <defName>Ambient_NightInsects_Standard</defName>  
+    <sustain>True</sustain>  
+    <context>MapOnly</context>  
+    <priorityMode>PrioritizeNearest</priorityMode>  
+    <subSounds>
+      <li>
+        <name>Main</name>      
+        <onCamera>True</onCamera>      
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Ambience/Amb_Night_Insects1a_Loop</clipPath>
+          </li>
+        </grains>      
+        <volumeRange>1.408217~1.408217</volumeRange>      
+        <pitchRange>0.9165775~1.114706</pitchRange>      
+        <paramMappings>
+          <li>
+            <inParam Class="SoundParamSource_MusicPlayingFadeOut" />
+            <outParam Class="SoundParamTarget_Volume" />
+            <paramUpdateMode>Constant</paramUpdateMode>
+            <curve>
+              <points>
+                <li>
+                  <loc>
+                    <x>0</x>                  
+                    <y>0</y>
+                  </loc>
+                </li>              
+                <li>
+                  <loc>
+                    <x>1</x>                  
+                    <y>1</y>
+                  </loc>
+                </li>
+              </points>
+            </curve>
+          </li>
+          <li>
+            <inParam Class="SoundParamSource_CameraAltitude" />          
+            <outParam Class="SoundParamTarget_Volume" />          
+            <paramUpdateMode>Constant</paramUpdateMode>          
+            <curve>
+              <points>
+                <li>
+                  <loc>
+                    <x>11.0473</x>                  
+                    <y>0.9918624</y>
+                  </loc>
+                </li>              
+                <li>
+                  <loc>
+                    <x>27.45536</x>                  
+                    <y>0.2410323</y>
+                  </loc>
+                </li>              
+                <li>
+                  <loc>
+                    <x>42.48009</x>                  
+                    <y>-0.004399121</y>
+                  </loc>
+                </li>
+              </points>
+            </curve>
+          </li>        
+          <li>
+            <inParam Class="SoundParamSource_TimeOfDay" />          
+            <outParam Class="SoundParamTarget_Volume" />          
+            <paramUpdateMode>Constant</paramUpdateMode>          
+            <curve>
+              <points>
+                <li>
+                  <loc>
+                    <x>1.743164</x>                  
+                    <y>1.004483</y>
+                  </loc>
+                </li>              
+                <li>
+                  <loc>
+                    <x>3.74354</x>                  
+                    <y>-0.002942368</y>
+                  </loc>
+                </li>              
+                <li>
+                  <loc>
+                    <x>19.08203</x>                  
+                    <y>-0.008623362</y>
+                  </loc>
+                </li>              
+                <li>
+                  <loc>
+                    <x>22.03683</x>                  
+                    <y>0.9950145</y>
+                  </loc>
+                </li>
+              </points>
+            </curve>
+          </li>        
+          <li>
+            <inParam Class="SoundParamSource_OutdoorTemperature" />          
+            <outParam Class="SoundParamTarget_Volume" />          
+            <paramUpdateMode>Constant</paramUpdateMode>          
+            <curve>
+              <points>
+                <li>
+                  <loc>
+                    <x>0</x>                  
+                    <y>0</y>
+                  </loc>
+                </li>              
+                <li>
+                  <loc>
+                    <x>5</x>                  
+                    <y>1</y>
+                  </loc>
+                </li>
+              </points>
+            </curve>
+          </li>
+          <li>
+            <inParam Class="SoundParamSource_AmbientVolume" />
+            <outParam Class="SoundParamTarget_Volume" />
+          </li>
+        </paramMappings>      
+        <sustainLoopDurationRange>40~80</sustainLoopDurationRange>      
+        <sustainIntervalRange>-20~-20</sustainIntervalRange>      
+        <sustainAttack>20</sustainAttack>      
+        <sustainRelease>20</sustainRelease>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Ambient_NightInsects_Jungle</defName>  
+    <sustain>True</sustain>  
+    <context>MapOnly</context>  
+    <priorityMode>PrioritizeNearest</priorityMode>  
+    <subSounds>
+      <li>
+        <name>Main</name>      
+        <onCamera>True</onCamera>      
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Ambience/JungleInsects_Night_1a</clipPath>
+          </li>
+        </grains>      
+        <volumeRange>15~15</volumeRange>      
+        <pitchRange>0.9165775~1.114706</pitchRange>      
+        <paramMappings>
+          <li>
+            <inParam Class="SoundParamSource_MusicPlayingFadeOut" />
+            <outParam Class="SoundParamTarget_Volume" />
+            <paramUpdateMode>Constant</paramUpdateMode>
+            <curve>
+              <points>
+                <li>
+                  <loc>
+                    <x>0</x>                  
+                    <y>0</y>
+                  </loc>
+                </li>              
+                <li>
+                  <loc>
+                    <x>1</x>                  
+                    <y>1</y>
+                  </loc>
+                </li>
+              </points>
+            </curve>
+          </li>
+          <li>
+            <inParam Class="SoundParamSource_CameraAltitude" />          
+            <outParam Class="SoundParamTarget_Volume" />          
+            <paramUpdateMode>Constant</paramUpdateMode>          
+            <curve>
+              <points>
+                <li>
+                  <loc>
+                    <x>11.0473</x>                  
+                    <y>0.9918624</y>
+                  </loc>
+                </li>              
+                <li>
+                  <loc>
+                    <x>27.45536</x>                  
+                    <y>0.2410323</y>
+                  </loc>
+                </li>              
+                <li>
+                  <loc>
+                    <x>42.48009</x>                  
+                    <y>-0.004399121</y>
+                  </loc>
+                </li>
+              </points>
+            </curve>
+          </li>        
+          <li>
+            <inParam Class="SoundParamSource_TimeOfDay" />          
+            <outParam Class="SoundParamTarget_Volume" />          
+            <paramUpdateMode>Constant</paramUpdateMode>          
+            <curve>
+              <points>
+                <li>
+                  <loc>
+                    <x>1.743164</x>                  
+                    <y>1</y>
+                  </loc>
+                </li>              
+                <li>
+                  <loc>
+                    <x>3.74354</x>                  
+                    <y>0</y>
+                  </loc>
+                </li>              
+                <li>
+                  <loc>
+                    <x>19.08203</x>                  
+                    <y>0</y>
+                  </loc>
+                </li>              
+                <li>
+                  <loc>
+                    <x>22.03683</x>                  
+                    <y>1</y>
+                  </loc>
+                </li>
+              </points>
+            </curve>
+          </li>
+          <li>
+            <inParam Class="SoundParamSource_OutdoorTemperature" />
+            <outParam Class="SoundParamTarget_Volume" />
+            <paramUpdateMode>Constant</paramUpdateMode>
+            <curve>
+              <points>
+                <li>
+                  <loc>
+                    <x>0</x>
+                    <y>0</y>
+                  </loc>
+                </li>
+                <li>
+                  <loc>
+                    <x>5</x>
+                    <y>1</y>
+                  </loc>
+                </li>
+              </points>
+            </curve>
+          </li>
+          <li>
+            <inParam Class="SoundParamSource_AmbientVolume" />
+            <outParam Class="SoundParamTarget_Volume" />
+          </li>
+        </paramMappings>      
+        <sustainLoopDurationRange>40~80</sustainLoopDurationRange>      
+        <sustainIntervalRange>-20~-20</sustainIntervalRange>      
+        <sustainAttack>20</sustainAttack>      
+        <sustainRelease>20</sustainRelease>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Ambient_DayInsects_Jungle</defName>  
+    <sustain>True</sustain>  
+    <context>MapOnly</context>  
+    <priorityMode>PrioritizeNearest</priorityMode>  
+    <subSounds>
+      <li>
+        <name>Main</name>      
+        <onCamera>True</onCamera>      
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Ambience/JungleInsects_Day_1a</clipPath>
+          </li>
+        </grains>      
+        <volumeRange>8~8</volumeRange>      
+        <pitchRange>0.9165775~1.114706</pitchRange>      
+        <paramMappings>
+          <li>
+            <inParam Class="SoundParamSource_MusicPlayingFadeOut" />
+            <outParam Class="SoundParamTarget_Volume" />
+            <paramUpdateMode>Constant</paramUpdateMode>
+            <curve>
+              <points>
+                <li>
+                  <loc>
+                    <x>0</x>                  
+                    <y>0</y>
+                  </loc>
+                </li>              
+                <li>
+                  <loc>
+                    <x>1</x>                  
+                    <y>1</y>
+                  </loc>
+                </li>
+              </points>
+            </curve>
+          </li>
+          <li>
+            <inParam Class="SoundParamSource_CameraAltitude" />          
+            <outParam Class="SoundParamTarget_Volume" />          
+            <paramUpdateMode>Constant</paramUpdateMode>          
+            <curve>
+              <points>
+                <li>
+                  <loc>
+                    <x>11.0473</x>                  
+                    <y>0.9918624</y>
+                  </loc>
+                </li>              
+                <li>
+                  <loc>
+                    <x>27.45536</x>                  
+                    <y>0.2410323</y>
+                  </loc>
+                </li>              
+                <li>
+                  <loc>
+                    <x>42.48009</x>                  
+                    <y>-0.004399121</y>
+                  </loc>
+                </li>
+              </points>
+            </curve>
+          </li>        
+          <li>
+            <inParam Class="SoundParamSource_TimeOfDay" />          
+            <outParam Class="SoundParamTarget_Volume" />          
+            <paramUpdateMode>Constant</paramUpdateMode>          
+            <curve>
+              <points>
+                <li>
+                  <loc>
+                    <x>1.743164</x>                  
+                    <y>0</y>
+                  </loc>
+                </li>              
+                <li>
+                  <loc>
+                    <x>3.74354</x>                  
+                    <y>1</y>
+                  </loc>
+                </li>              
+                <li>
+                  <loc>
+                    <x>19.08203</x>                  
+                    <y>1</y>
+                  </loc>
+                </li>              
+                <li>
+                  <loc>
+                    <x>22.03683</x>                  
+                    <y>0</y>
+                  </loc>
+                </li>
+              </points>
+            </curve>
+          </li>
+          <li>
+            <inParam Class="SoundParamSource_OutdoorTemperature" />
+            <outParam Class="SoundParamTarget_Volume" />
+            <paramUpdateMode>Constant</paramUpdateMode>
+            <curve>
+              <points>
+                <li>
+                  <loc>
+                    <x>0</x>
+                    <y>0</y>
+                  </loc>
+                </li>
+                <li>
+                  <loc>
+                    <x>5</x>
+                    <y>1</y>
+                  </loc>
+                </li>
+              </points>
+            </curve>
+          </li>
+          <li>
+            <inParam Class="SoundParamSource_AmbientVolume" />
+            <outParam Class="SoundParamTarget_Volume" />
+          </li>
+        </paramMappings>      
+        <sustainLoopDurationRange>40~80</sustainLoopDurationRange>      
+        <sustainIntervalRange>-20~-20</sustainIntervalRange>      
+        <sustainAttack>20</sustainAttack>      
+        <sustainRelease>20</sustainRelease>
+      </li>
+    </subSounds>
+  </SoundDef>
+  
+  <SoundDef>
+    <defName>Ambient_Wind_Desolate</defName>
+    <sustain>True</sustain>
+    <context>MapOnly</context>
+    <priorityMode>PrioritizeNearest</priorityMode>
+    <subSounds>
+      <li>
+        <name>main</name>
+        <onCamera>True</onCamera>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Ambience/Wind/Amb_Wind_Altitude1_Loop</clipPath>
+          </li>
+        </grains>
+        <volumeRange>2.6~2.6</volumeRange>
+        <pitchRange>0.8~0.8</pitchRange>
+        <paramMappings>
+          <li>
+            <inParam Class="SoundParamSource_MusicPlayingFadeOut" />
+            <outParam Class="SoundParamTarget_Volume" />
+            <paramUpdateMode>Constant</paramUpdateMode>
+            <curve>
+              <points>
+                <li>
+                  <loc>
+                    <x>0</x>                  
+                    <y>0</y>
+                  </loc>
+                </li>              
+                <li>
+                  <loc>
+                    <x>1</x>                  
+                    <y>1</y>
+                  </loc>
+                </li>
+              </points>
+            </curve>
+          </li>
+          <li>
+            <inParam Class="SoundParamSource_CameraAltitude" />
+            <outParam Class="SoundParamTarget_Volume" />
+            <paramUpdateMode>Constant</paramUpdateMode>
+            <curve>
+              <points>
+                <li>
+                  <loc>
+                    <x>1</x>
+                    <y>1</y>
+                  </loc>
+                </li>
+                <li>
+                  <loc>
+                    <x>40.93931</x>
+                    <y>0.9981107</y>
+                  </loc>
+                </li>
+                <li>
+                  <loc>
+                    <x>60.05113</x>
+                    <y>-0.001349449</y>
+                  </loc>
+                </li>
+              </points>
+            </curve>
+          </li>
+          <li>
+            <inParam Class="SoundParamSource_AmbientVolume" />
+            <outParam Class="SoundParamTarget_Volume" />
+          </li>
+        </paramMappings>
+      </li>
+    </subSounds>
+  </SoundDef>
+  
+  <SoundDef>
+    <defName>Ambient_AltitudeWind</defName>  
+    <sustain>True</sustain>  
+    <context>MapOnly</context>  
+    <priorityMode>PrioritizeNearest</priorityMode>  
+    <subSounds>
+      <li>
+        <name>main</name>      
+        <onCamera>True</onCamera>      
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Ambience/Wind/Amb_Wind_Altitude1_Loop</clipPath>
+          </li>
+        </grains>      
+        <volumeRange>8~8</volumeRange>      
+        <paramMappings>
+          <li>
+            <inParam Class="SoundParamSource_CameraAltitude" />          
+            <outParam Class="SoundParamTarget_Volume" />          
+            <paramUpdateMode>Constant</paramUpdateMode>          
+            <curve>
+              <points>
+                <li>
+                  <loc>
+                    <x>37.59342</x>                  
+                    <y>-0.008144975</y>
+                  </loc>
+                </li>              
+                <li>
+                  <loc>
+                    <x>50.79147</x>                  
+                    <y>0.3525248</y>
+                  </loc>
+                </li>              
+                <li>
+                  <loc>
+                    <x>64.42703</x>                  
+                    <y>0.9864293</y>
+                  </loc>
+                </li>
+              </points>
+            </curve>
+          </li>
+          <li>
+            <inParam Class="SoundParamSource_AmbientVolume" />
+            <outParam Class="SoundParamTarget_Volume" />
+          </li>
+        </paramMappings>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Thunder_OffMap</defName>    
+    <subSounds>
+      <li>
+        <name></name>      
+        <onCamera>True</onCamera>      
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Ambience/Thunder/OffMap</clipFolderPath>
+          </li>
+        </grains>      
+        <volumeRange>3~19</volumeRange>      
+        <pitchRange>0.8164706~1.160588</pitchRange>
+        <paramMappings>
+          <li>
+            <inParam Class="SoundParamSource_AmbientVolume" />
+            <outParam Class="SoundParamTarget_Volume" />
+          </li>
+        </paramMappings>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Thunder_OnMap</defName>    
+    <subSounds>
+      <li>
+        <name>main</name>      
+        <onCamera>True</onCamera>      
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Ambience/Thunder/OnMap</clipFolderPath>
+          </li>
+        </grains>      
+        <volumeRange>20.25788~30.18052</volumeRange>      
+        <pitchRange>0.7541547~1.268195</pitchRange>
+        <paramMappings>
+          <li>
+            <inParam Class="SoundParamSource_AmbientVolume" />
+            <outParam Class="SoundParamTarget_Volume" />
+          </li>
+        </paramMappings>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Ambient_Wind_Clear</defName>  
+    <sustain>True</sustain>  
+    <context>MapOnly</context>  
+    <priorityMode>PrioritizeNearest</priorityMode>  
+    <subSounds>
+      <li>
+        <name>MainWind</name>      
+        <onCamera>True</onCamera>      
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Ambience/Wind/Amb_Wind_Clear1_Loop</clipPath>
+          </li>
+        </grains>      
+        <volumeRange>2.5~2.5</volumeRange>      
+        <pitchRange>0.8973684~1.148246</pitchRange>      
+        <paramMappings>
+          <li>
+            <inParam Class="SoundParamSource_MusicPlayingFadeOut" />
+            <outParam Class="SoundParamTarget_Volume" />
+            <paramUpdateMode>Constant</paramUpdateMode>
+            <curve>
+              <points>
+                <li>
+                  <loc>
+                    <x>0</x>                  
+                    <y>0</y>
+                  </loc>
+                </li>              
+                <li>
+                  <loc>
+                    <x>1</x>                  
+                    <y>1</y>
+                  </loc>
+                </li>
+              </points>
+            </curve>
+          </li>
+          <li>
+            <inParam Class="SoundParamSource_CameraAltitude" />          
+            <outParam Class="SoundParamTarget_Volume" />          
+            <paramUpdateMode>Constant</paramUpdateMode>          
+            <curve>
+              <points>
+                <li>
+                  <loc>
+                    <x>1</x>                  
+                    <y>1</y>
+                  </loc>
+                </li>              
+                <li>
+                  <loc>
+                    <x>40.93931</x>                  
+                    <y>0.9981107</y>
+                  </loc>
+                </li>              
+                <li>
+                  <loc>
+                    <x>60.05113</x>                  
+                    <y>-0.001349449</y>
+                  </loc>
+                </li>
+              </points>
+            </curve>
+          </li>        
+          <li>
+            <inParam Class="SoundParamSource_External">
+              <inParamName>LerpFactor</inParamName>            
+              <defaultValue>0</defaultValue>
+            </inParam>          
+            <outParam Class="SoundParamTarget_Volume" />          
+            <paramUpdateMode>Constant</paramUpdateMode>          
+            <curve>
+              <points>
+                <li>
+                  <loc>
+                    <x>0</x>                  
+                    <y>0</y>
+                  </loc>
+                </li>              
+                <li>
+                  <loc>
+                    <x>1</x>                  
+                    <y>1</y>
+                  </loc>
+                </li>
+              </points>
+            </curve>
+          </li>
+          <li>
+            <inParam Class="SoundParamSource_AmbientVolume" />
+            <outParam Class="SoundParamTarget_Volume" />
+          </li>
+        </paramMappings>      
+        <sustainLoopDurationRange>30~50</sustainLoopDurationRange>      
+        <sustainIntervalRange>-10~-10</sustainIntervalRange>      
+        <sustainAttack>10</sustainAttack>      
+        <sustainRelease>10</sustainRelease>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Ambient_Wind_Fog</defName>  
+    <sustain>True</sustain>  
+    <context>MapOnly</context>  
+    <priorityMode>PrioritizeNearest</priorityMode>  
+    <subSounds>
+      <li>
+        <name>main</name>      
+        <onCamera>True</onCamera>      
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Ambience/Wind/Amb_Wind_Fog2_Loop</clipPath>
+          </li>
+        </grains>      
+        <volumeRange>4~4</volumeRange>      
+        <paramMappings>
+          <li>
+            <inParam Class="SoundParamSource_MusicPlayingFadeOut" />
+            <outParam Class="SoundParamTarget_Volume" />
+            <paramUpdateMode>Constant</paramUpdateMode>
+            <curve>
+              <points>
+                <li>
+                  <loc>
+                    <x>0</x>                  
+                    <y>0</y>
+                  </loc>
+                </li>              
+                <li>
+                  <loc>
+                    <x>1</x>                  
+                    <y>1</y>
+                  </loc>
+                </li>
+              </points>
+            </curve>
+          </li>
+          <li>
+            <inParam Class="SoundParamSource_CameraAltitude" />          
+            <outParam Class="SoundParamTarget_Volume" />          
+            <paramUpdateMode>Constant</paramUpdateMode>          
+            <curve>
+              <points>
+                <li>
+                  <loc>
+                    <x>1</x>                  
+                    <y>1</y>
+                  </loc>
+                </li>              
+                <li>
+                  <loc>
+                    <x>40.93931</x>                  
+                    <y>0.9981107</y>
+                  </loc>
+                </li>              
+                <li>
+                  <loc>
+                    <x>60.05113</x>                  
+                    <y>-0.001349449</y>
+                  </loc>
+                </li>
+              </points>
+            </curve>
+          </li>        
+          <li>
+            <inParam Class="SoundParamSource_External">
+              <inParamName>LerpFactor</inParamName>            
+              <defaultValue>0</defaultValue>
+            </inParam>          
+            <outParam Class="SoundParamTarget_Volume" />          
+            <paramUpdateMode>Constant</paramUpdateMode>          
+            <curve>
+              <points>
+                <li>
+                  <loc>
+                    <x>0</x>                  
+                    <y>0</y>
+                  </loc>
+                </li>              
+                <li>
+                  <loc>
+                    <x>1</x>                  
+                    <y>1</y>
+                  </loc>
+                </li>
+              </points>
+            </curve>
+          </li>
+          <li>
+            <inParam Class="SoundParamSource_AmbientVolume" />
+            <outParam Class="SoundParamTarget_Volume" />
+          </li>
+        </paramMappings>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Ambient_Rain</defName>  
+    <sustain>True</sustain>  
+    <context>MapOnly</context>  
+    <priorityMode>PrioritizeNearest</priorityMode>  
+    <subSounds>
+      <li>
+        <onCamera>True</onCamera>      
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Ambience/Amb_Raining2_Loop</clipPath>
+          </li>
+        </grains>      
+        <volumeRange>7~7</volumeRange>      
+        <paramMappings>
+          <li>
+            <inParam Class="SoundParamSource_CameraAltitude" />          
+            <outParam Class="SoundParamTarget_Volume" />          
+            <paramUpdateMode>Constant</paramUpdateMode>          
+            <curve>
+              <points>
+                <li>
+                  <loc>
+                    <x>1</x>                  
+                    <y>1</y>
+                  </loc>
+                </li>              
+                <li>
+                  <loc>
+                    <x>33.34967</x>                  
+                    <y>0.9631265</y>
+                  </loc>
+                </li>              
+                <li>
+                  <loc>
+                    <x>69.43261</x>                  
+                    <y>0.5882397</y>
+                  </loc>
+                </li>
+              </points>
+            </curve>
+          </li>        
+          <li>
+            <inParam Class="SoundParamSource_External">
+              <inParamName>LerpFactor</inParamName>            
+              <defaultValue>0</defaultValue>
+            </inParam>          
+            <outParam Class="SoundParamTarget_Volume" />          
+            <paramUpdateMode>Constant</paramUpdateMode>          
+            <curve>
+              <points>
+                <li>
+                  <loc>
+                    <x>0</x>                  
+                    <y>0</y>
+                  </loc>
+                </li>              
+                <li>
+                  <loc>
+                    <x>1</x>                  
+                    <y>1</y>
+                  </loc>
+                </li>
+              </points>
+            </curve>
+          </li>
+          <li>
+            <inParam Class="SoundParamSource_AmbientVolume" />
+            <outParam Class="SoundParamTarget_Volume" />
+          </li>
+        </paramMappings>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Ambient_Wind_Storm</defName>  
+    <sustain>True</sustain>  
+    <context>MapOnly</context>  
+    <priorityMode>PrioritizeNearest</priorityMode>  
+    <subSounds>
+      <li>
+        <onCamera>True</onCamera>      
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Ambience/Wind/Amb_Wind_Stormy_Loop</clipPath>
+          </li>
+        </grains>      
+        <volumeRange>16~16</volumeRange>      
+        <paramMappings>
+          <li>
+            <inParam Class="SoundParamSource_CameraAltitude" />          
+            <outParam Class="SoundParamTarget_Volume" />          
+            <paramUpdateMode>Constant</paramUpdateMode>          
+            <curve>
+              <points>
+                <li>
+                  <loc>
+                    <x>1</x>                  
+                    <y>1</y>
+                  </loc>
+                </li>              
+                <li>
+                  <loc>
+                    <x>40.93931</x>                  
+                    <y>0.9981107</y>
+                  </loc>
+                </li>              
+                <li>
+                  <loc>
+                    <x>60.05113</x>                  
+                    <y>-0.001349449</y>
+                  </loc>
+                </li>
+              </points>
+            </curve>
+          </li>        
+          <li>
+            <inParam Class="SoundParamSource_External">
+              <inParamName>LerpFactor</inParamName>            
+              <defaultValue>0</defaultValue>
+            </inParam>          
+            <outParam Class="SoundParamTarget_Volume" />          
+            <paramUpdateMode>Constant</paramUpdateMode>          
+            <curve>
+              <points>
+                <li>
+                  <loc>
+                    <x>0</x>                  
+                    <y>0</y>
+                  </loc>
+                </li>              
+                <li>
+                  <loc>
+                    <x>1</x>                  
+                    <y>1</y>
+                  </loc>
+                </li>
+              </points>
+            </curve>
+          </li>
+          <li>
+            <inParam Class="SoundParamSource_AmbientVolume" />
+            <outParam Class="SoundParamTarget_Volume" />
+          </li>
+        </paramMappings>
+      </li>
+    </subSounds>
+  </SoundDef>
+  
+  <SoundDef>
+    <defName>Ambient_Space</defName>  
+    <sustain>True</sustain>  
+    <context>WorldOnly</context>  
+    <priorityMode>PrioritizeNearest</priorityMode>  
+    <subSounds>
+      <li>
+        <name>Main</name>      
+        <onCamera>True</onCamera>      
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Ambience/Amb_Space</clipPath>
+          </li>
+        </grains>      
+        <volumeRange>3.5~3.5</volumeRange>      
+        <paramMappings>
+          <li>
+            <inParam Class="SoundParamSource_MusicPlayingFadeOut" />
+            <outParam Class="SoundParamTarget_Volume" />
+            <paramUpdateMode>Constant</paramUpdateMode>
+            <curve>
+              <points>
+                <li>
+                  <loc>
+                    <x>0</x>                  
+                    <y>0</y>
+                  </loc>
+                </li>              
+                <li>
+                  <loc>
+                    <x>1</x>                  
+                    <y>1</y>
+                  </loc>
+                </li>
+              </points>
+            </curve>
+          </li>
+          <li>
+            <inParam Class="SoundParamSource_AmbientVolume" />
+            <outParam Class="SoundParamTarget_Volume" />
+          </li>
+        </paramMappings>
+        <sustainLoopDurationRange>36~36</sustainLoopDurationRange>      
+        <sustainIntervalRange>-0.5~-0.5</sustainIntervalRange>      
+        <sustainAttack>0.5</sustainAttack>      
+        <sustainRelease>0.5</sustainRelease>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+</Defs>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <SitePartDef>
+    <defName>AmbushHidden</defName>
+    <label>ambush</label>
+    <description>An ambush.</description>
+    <workerClass>SitePartWorker_Ambush</workerClass>
+    <siteTexture>World/WorldObjects/Sites/GenericSite</siteTexture>
+    <expandingIconTexture>World/WorldObjects/Expanding/Sites/Ambush</expandingIconTexture>
+    <defaultHidden>true</defaultHidden>
+    <wantsThreatPoints>true</wantsThreatPoints>
+    <tags>
+      <li>MineralScannerPreciousLumpThreat</li>
+      <li>ItemStashQuestThreat</li>
+      <li>DownedRefugeeQuestThreat</li>
+      <li>QuestActiveThreatDefense</li>
+    </tags>
+    <excludesTags>
+      <li>MechCluster</li>
+      <li>MechClusterForceNoConditionCauser</li>
+      <li>SleepingMechanoids</li>
+      <li>Manhunters</li>
+    </excludesTags>
+  </SitePartDef>
+
+  <GenStepDef>
+    <defName>AmbushHidden</defName>
+    <linkWithSite>AmbushHidden</linkWithSite>
+    <order>1600</order>
+    <genStep Class="GenStep_Ambush_Hidden" />
+  </GenStepDef>
+
+</Defs>

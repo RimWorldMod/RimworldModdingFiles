@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Defs>
+
+  <SoundDef>
+    <defName>Explosion_Bomb</defName>  
+    <context>MapOnly</context> 
+    <maxSimultaneous>1</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Weapon/Artillery/Mortar_Explode_Dry</clipFolderPath>
+          </li>
+        </grains>      
+        <volumeRange>80~80</volumeRange>      
+        <pitchRange>0.8516304~1.254348</pitchRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+
+  <SoundDef>
+    <defName>Explosion_Stun</defName>
+    <context>MapOnly</context> 
+    <maxSimultaneous>1</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Weapon/Artillery/Mortar_Explode_Dry</clipFolderPath>
+          </li>
+        </grains>
+        <volumeRange>70~70</volumeRange>
+        <pitchRange>1.6516304~1.954348</pitchRange>
+      </li>
+    </subSounds>
+  </SoundDef>  
+  
+  
+  <SoundDef>
+    <defName>Explosion_Flame</defName>  
+    <context>MapOnly</context> 
+    <maxSimultaneous>1</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Weapon/Artillery/Mortar_Explode_Incendiary</clipFolderPath>
+          </li>
+        </grains>      
+        <volumeRange>88.23529~90.58823</volumeRange>      
+        <pitchRange>0.7456522~1.084783</pitchRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+
+  <SoundDef>
+    <defName>Explosion_EMP</defName>
+    <context>MapOnly</context> 
+    <maxSimultaneous>1</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Weapon/Artillery/EMPExplosion_01d</clipFolderPath>
+          </li>
+        </grains>
+        <volumeRange>90~90</volumeRange>
+        <pitchRange>0.8~1.15</pitchRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Explosion_Smoke</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>1</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Weapon/Artillery/Mortar_Explode_Dry</clipFolderPath>
+          </li>
+        </grains>
+        <volumeRange>70~70</volumeRange>
+        <pitchRange>1.6516304~1.954348</pitchRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Explosion_GiantBomb</defName>  
+    <context>MapOnly</context> 
+    <maxSimultaneous>1</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Explosion/GiantExplosion</clipFolderPath>
+          </li>
+        </grains>      
+        <volumeRange>100~100</volumeRange>      
+        <pitchRange>0.98~1.02</pitchRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Explosion_Thump</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>1</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Weapon/Artillery/Mortar_Explode_Dry</clipFolderPath>
+          </li>
+        </grains>
+        <volumeRange>80~80</volumeRange>
+        <pitchRange>0.4~0.5</pitchRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+</Defs>

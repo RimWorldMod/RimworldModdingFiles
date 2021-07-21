@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef Name="BodyPartArchotechBase" ParentName="BodyPartBase" Abstract="True">
+    <techLevel>Archotech</techLevel>
+    <thingCategories>
+      <li>BodyPartsArchotech</li>
+    </thingCategories>
+    <graphicData>
+      <texPath>Things/Item/Health/HealthItem</texPath>
+      <color>(155,165,148)</color>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.80</drawSize>
+    </graphicData>
+    <statBases>
+      <DeteriorationRate>0</DeteriorationRate>
+    </statBases>
+  </ThingDef>
+
+
+  <!-- Archotech eye -->
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>ArchotechEye</defName>
+    <label>archotech eye</label>
+    <labelNoun>an archotech eye</labelNoun>
+    <description>An installed archotech eye.</description>
+    <descriptionHyperlinks><ThingDef>ArchotechEye</ThingDef></descriptionHyperlinks>
+    <spawnThingOnRemoved>ArchotechEye</spawnThingOnRemoved>
+    <woundAnchorRange>0</woundAnchorRange>
+    <displayWound>true</displayWound>
+    <addedPartProps>
+      <solid>true</solid>
+      <partEfficiency>1.50</partEfficiency>
+    </addedPartProps>
+  </HediffDef>
+
+  <ThingDef ParentName="BodyPartArchotechBase">
+    <defName>ArchotechEye</defName>
+    <label>archotech eye</label>
+    <description>An artificial eye built by an archotech. It perceives every type of electromagnetic radiation, including radio waves, infrared, light, x-rays, and gamma rays. Its visual acuity is precise enough to read handwriting from twenty meters away. It can emit various wavelengths of radiation like a flashlight, and has an internal subpersona AI which helps highlight useful visual information. Its internal workings are a mystery to human minds.</description>
+    <descriptionHyperlinks><RecipeDef>InstallArchotechEye</RecipeDef></descriptionHyperlinks>
+    <statBases>
+      <MarketValue>2800</MarketValue>
+      <Mass>0.3</Mass>
+    </statBases>
+    <thingSetMakerTags>
+      <li>RewardStandardHighFreq</li>
+    </thingSetMakerTags>
+  </ThingDef>
+
+  <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+    <defName>InstallArchotechEye</defName>
+    <label>install archotech eye</label>
+    <description>Install an archotech eye.</description>
+    <descriptionHyperlinks>
+      <ThingDef>ArchotechEye</ThingDef>
+      <HediffDef>ArchotechEye</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Installing archotech eye.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>ArchotechEye</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>ArchotechEye</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Eye</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>ArchotechEye</addsHediff>
+  </RecipeDef>
+
+  <!-- Archotech arm -->
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>ArchotechArm</defName>
+    <label>archotech arm</label>
+    <labelNoun>an archotech arm</labelNoun>
+    <description>An installed archotech arm.</description>
+    <descriptionHyperlinks><ThingDef>ArchotechArm</ThingDef></descriptionHyperlinks>
+    <comps>
+      <li Class="HediffCompProperties_VerbGiver">
+        <tools>
+          <li>
+            <label>fist</label>
+            <capacities>
+              <li>Blunt</li>
+            </capacities>
+            <power>14</power>
+            <cooldownTime>2</cooldownTime>
+            <soundMeleeHit>MeleeHit_BionicPunch</soundMeleeHit>
+            <soundMeleeMiss>MeleeMiss_BionicPunch</soundMeleeMiss>
+          </li>
+        </tools>
+      </li>
+    </comps>
+    <spawnThingOnRemoved>ArchotechArm</spawnThingOnRemoved>
+    <addedPartProps>
+      <solid>true</solid>
+      <partEfficiency>1.50</partEfficiency>
+      <betterThanNatural>true</betterThanNatural>
+    </addedPartProps>
+  </HediffDef>
+
+  <ThingDef ParentName="BodyPartArchotechBase">
+    <defName>ArchotechArm</defName>
+    <label>archotech arm</label>
+    <description>An artificial arm built by an archotech. It's strong enough to crush a thick hardwood branch in its hand, and precise enough to write a sonnet on a grain of rice. It looks and feels like natural flesh, but it's harder to damage than plasteel. Even if it is harmed, it repairs itself over time. Its internal workings are a mystery to all human minds.</description>
+    <descriptionHyperlinks><RecipeDef>InstallArchotechArm</RecipeDef></descriptionHyperlinks>
+    <statBases>
+      <MarketValue>2800</MarketValue>
+      <Mass>4</Mass>
+    </statBases>
+    <thingSetMakerTags>
+      <li>RewardStandardHighFreq</li>
+    </thingSetMakerTags>
+  </ThingDef>
+
+  <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+    <defName>InstallArchotechArm</defName>
+    <label>install archotech arm</label>
+    <description>Install an archotech arm.</description>
+    <descriptionHyperlinks>
+      <ThingDef>ArchotechArm</ThingDef>
+      <HediffDef>ArchotechArm</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Installing archotech arm.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>ArchotechArm</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>ArchotechArm</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Shoulder</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>ArchotechArm</addsHediff>
+  </RecipeDef>
+
+  <!-- Archotech leg -->
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>ArchotechLeg</defName>
+    <label>archotech leg</label>
+    <labelNoun>an archotech leg</labelNoun>
+    <description>An installed archotech leg.</description>
+    <descriptionHyperlinks><ThingDef>ArchotechLeg</ThingDef></descriptionHyperlinks>
+    <spawnThingOnRemoved>ArchotechLeg</spawnThingOnRemoved>
+    <addedPartProps>
+      <solid>true</solid>
+      <partEfficiency>1.50</partEfficiency>
+      <betterThanNatural>true</betterThanNatural>
+    </addedPartProps>
+  </HediffDef>
+
+  <ThingDef ParentName="BodyPartArchotechBase">
+    <defName>ArchotechLeg</defName>
+    <label>archotech leg</label>
+    <description>An artificial leg built by an archotech. It looks and feels like natural flesh, but a pair of these can move the user as fast as a decent car, and it's harder to damage than plasteel. Even if it is harmed, it repairs itself over time. Its internal workings are a mystery to all human minds.</description>
+    <descriptionHyperlinks><RecipeDef>InstallArchotechLeg</RecipeDef></descriptionHyperlinks>
+    <statBases>
+      <MarketValue>2800</MarketValue>
+      <Mass>7</Mass>
+    </statBases>
+    <thingSetMakerTags>
+      <li>RewardStandardHighFreq</li>
+    </thingSetMakerTags>
+  </ThingDef>
+
+  <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+    <defName>InstallArchotechLeg</defName>
+    <label>install archotech leg</label>
+    <description>Install an archotech leg.</description>
+    <descriptionHyperlinks>
+      <ThingDef>ArchotechLeg</ThingDef>
+      <HediffDef>ArchotechLeg</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Installing archotech leg.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>ArchotechLeg</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>ArchotechLeg</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Leg</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>ArchotechLeg</addsHediff>
+  </RecipeDef>
+
+</Defs>

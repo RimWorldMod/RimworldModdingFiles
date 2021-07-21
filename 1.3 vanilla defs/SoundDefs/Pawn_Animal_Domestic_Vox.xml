@@ -1,0 +1,312 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <SoundDef>
+    <defName>Pawn_Chick_Call</defName>
+    <context>MapOnly</context>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Pawn/Animal/Chicken/Chick_Call</clipFolderPath>
+          </li>
+        </grains>
+        <volumeRange>20~28</volumeRange>
+        <pitchRange>0.9770588~1.137647</pitchRange>
+        <distRange>0~50.40025</distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Pawn_Chicken_Call</defName>
+    <context>MapOnly</context>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Pawn/Animal/Chicken/Chicken_Call</clipFolderPath>
+          </li>
+        </grains>
+        <volumeRange>20~28</volumeRange>
+        <pitchRange>0.9770588~1.137647</pitchRange>
+        <distRange>0~50.40025</distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Pawn_Chicken_Angry</defName>
+    <context>MapOnly</context>    
+    <maxVoices>2</maxVoices>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Pawn/Animal/Chicken/Chicken_Angry</clipFolderPath>
+          </li>
+        </grains>
+        <volumeRange>25~35</volumeRange>
+        <pitchRange>0.9541176~1.137647</pitchRange>
+        <distRange>0~70</distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Pawn_Chicken_Wounded</defName>
+    <context>MapOnly</context>    
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Pawn/Animal/Chicken/Chicken_Pain</clipFolderPath>
+          </li>
+        </grains>
+        <volumeRange>25~35</volumeRange>
+        <pitchRange>0.9311765~1.091765</pitchRange>
+        <distRange>0~70</distRange>
+        <repeatMode>NeverTwice</repeatMode>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Pawn_Chicken_Death</defName>
+    <context>MapOnly</context>    
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Pawn/Animal/Chicken/Chicken_Death</clipFolderPath>
+          </li>
+        </grains>
+        <volumeRange>25~35</volumeRange>
+        <pitchRange>0.9311764~1.068824</pitchRange>
+        <distRange>0~70</distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+  
+  
+  <SoundDef>
+    <defName>Pawn_DogSmall_Call</defName>  
+    <context>MapOnly</context>      
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Pawn/Animal/DogSmall/DogSmall_Call</clipFolderPath>
+          </li>
+        </grains>      
+        <volumeRange>16~25</volumeRange>      
+        <pitchRange>0.9082353~1.114706</pitchRange>      
+        <distRange>0~50</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Pawn_DogSmall_Angry</defName>  
+    <context>MapOnly</context>      
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Pawn/Animal/DogSmall/DogSmall_Angry</clipFolderPath>
+          </li>
+        </grains>      
+        <volumeRange>32~32</volumeRange>      
+        <pitchRange>0.9311765~1.091765</pitchRange>      
+        <distRange>0~70</distRange>      
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Pawn_DogSmall_Injured</defName>  
+    <context>MapOnly</context>      
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Pawn/Animal/DogSmall/DogSmall_Injured</clipFolderPath>
+          </li>
+        </grains>      
+        <volumeRange>22~22</volumeRange>      
+        <pitchRange>1.206471~1</pitchRange>      
+        <distRange>0~70</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Pawn_DogSmall_Dead</defName>
+    <context>MapOnly</context>    
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Pawn/Animal/DogSmall/DogSmall_Dead</clipFolderPath>
+          </li>
+        </grains>
+        <volumeRange>32~32</volumeRange>
+        <pitchRange>1.504706~1.596471</pitchRange>
+        <distRange>0~70</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+  
+  
+  
+  <SoundDef>
+    <defName>Pawn_Dog_Call</defName>  
+    <context>MapOnly</context>      
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Pawn/Animal/Dog/Dog_Call</clipFolderPath>
+          </li>
+        </grains>      
+        <volumeRange>16~25</volumeRange>      
+        <pitchRange>0.9082353~1.114706</pitchRange>      
+        <distRange>0~50</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Pawn_Dog_Angry</defName>  
+    <context>MapOnly</context>      
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Pawn/Animal/Dog/Dog_Angry</clipFolderPath>
+          </li>
+        </grains>      
+        <volumeRange>32~32</volumeRange>      
+        <pitchRange>0.9311765~1.091765</pitchRange>      
+        <distRange>0~70</distRange>      
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Pawn_Dog_Injured</defName>  
+    <context>MapOnly</context>      
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Pawn/Animal/Dog/Dog_Injured</clipFolderPath>
+          </li>
+        </grains>      
+        <volumeRange>22~22</volumeRange>      
+        <pitchRange>1.206471~1</pitchRange>      
+        <distRange>0~70</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Pawn_Dog_Death</defName>
+    <context>MapOnly</context>    
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Pawn/Animal/Dog/Dog_Dead</clipFolderPath>
+          </li>
+        </grains>
+        <volumeRange>32~32</volumeRange>
+        <pitchRange>1.504706~1.596471</pitchRange>
+        <distRange>0~70</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+  
+  
+  <SoundDef>
+    <defName>Pawn_Cat_Call</defName>
+    <context>MapOnly</context>    
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Pawn/Animal/Cat/Cat_Call</clipFolderPath>
+          </li>
+        </grains>
+        <volumeRange>8.5~8.5</volumeRange>
+        <pitchRange>0.9770588~1.137647</pitchRange>
+        <distRange>0~50.40025</distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Pawn_Cat_Angry</defName>
+    <context>MapOnly</context>    
+    <maxVoices>2</maxVoices>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Pawn/Animal/Cat/Cat_Angry</clipFolderPath>
+          </li>
+        </grains>
+        <volumeRange>25~25</volumeRange>
+        <pitchRange>0.9541176~1.137647</pitchRange>
+        <distRange>0~70</distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Pawn_Cat_Injured</defName>
+    <context>MapOnly</context>    
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Pawn/Animal/Cat/Cat_Injured</clipFolderPath>
+          </li>
+        </grains>
+        <volumeRange>17~17</volumeRange>
+        <pitchRange>0.9311765~1.091765</pitchRange>
+        <distRange>0~70</distRange>
+        <repeatMode>NeverTwice</repeatMode>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Pawn_Cat_Death</defName>
+    <context>MapOnly</context>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Pawn/Animal/Cat/Cat_Injured</clipFolderPath>
+          </li>
+        </grains>
+        <volumeRange>30~30</volumeRange>
+        <pitchRange>0.9311764~1.068824</pitchRange>
+        <distRange>0~70</distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+  
+</Defs>

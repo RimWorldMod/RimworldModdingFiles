@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  
+  <MeditationFocusDef>
+    <defName>Dignified</defName>
+    <label>dignified</label>
+    <requiresRoyalTitle>True</requiresRoyalTitle>
+  </MeditationFocusDef>
+  
+  <MeditationFocusDef>
+    <defName>Natural</defName>
+    <label>natural</label>
+    <requiredBackstoriesAny>
+      <li>
+        <categoryName>Tribal</categoryName>
+        <slot>Childhood</slot>
+      </li>
+    </requiredBackstoriesAny>
+  </MeditationFocusDef>
+
+  <MeditationFocusDef>
+    <defName>Artistic</defName>
+    <label>artistic</label>
+    <incompatibleBackstoriesAny>
+      <li>
+        <categoryName>Tribal</categoryName>
+        <slot>Childhood</slot>
+      </li>
+    </incompatibleBackstoriesAny>
+  </MeditationFocusDef>
+  
+  <MeditationFocusDef>
+    <defName>Morbid</defName>
+    <label>morbid</label>
+  </MeditationFocusDef>
+
+  <MeditationFocusDef>
+    <defName>Minimal</defName>
+    <label>minimal</label>
+  </MeditationFocusDef>
+
+  <MeditationFocusDef>
+    <defName>Flame</defName>
+    <label>flame</label>
+  </MeditationFocusDef>
+  
+</Defs>

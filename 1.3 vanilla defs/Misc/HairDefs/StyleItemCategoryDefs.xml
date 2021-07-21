@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- Categories -->
+
+  <StyleItemCategoryDef>
+    <defName>Minimal</defName>
+    <label>minimal</label>
+  </StyleItemCategoryDef>
+
+  <StyleItemCategoryDef>
+    <defName>Tribal</defName>
+    <label>tribal</label>
+  </StyleItemCategoryDef>
+
+  <StyleItemCategoryDef>
+    <defName>Cannibal</defName>
+    <label>cannibal</label>
+  </StyleItemCategoryDef>
+
+  <StyleItemCategoryDef>
+    <defName>Punk</defName>
+    <label>punk</label>
+  </StyleItemCategoryDef>
+
+  <StyleItemCategoryDef>
+    <defName>Urban</defName>
+    <label>urban</label>
+  </StyleItemCategoryDef>
+
+  <StyleItemCategoryDef>
+    <defName>Rural</defName>
+    <label>rural</label>
+  </StyleItemCategoryDef>
+
+  <StyleItemCategoryDef>
+    <defName>Royal</defName>
+    <label>royal</label>
+  </StyleItemCategoryDef>
+
+  <StyleItemCategoryDef>
+    <defName>Soldier</defName>
+    <label>soldier</label>
+  </StyleItemCategoryDef>
+
+  <StyleItemCategoryDef>
+    <defName>Moustache</defName>
+    <label>moustache</label>
+  </StyleItemCategoryDef>
+
+  <StyleItemCategoryDef>
+    <defName>Misc</defName>
+    <label>misc</label>
+  </StyleItemCategoryDef>
+
+</Defs>

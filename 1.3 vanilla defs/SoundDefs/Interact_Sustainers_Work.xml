@@ -1,0 +1,1143 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Defs>
+
+  <SoundDef>
+    <defName>Interact_ConstructMetal</defName>  
+    <sustain>True</sustain>  
+    <context>MapOnly</context>
+    <maxSimultaneous>1</maxSimultaneous>  
+    <priorityMode>PrioritizeNearest</priorityMode>  
+    <subSounds>
+      <li>
+        <muteWhenPaused>True</muteWhenPaused>      
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Interact/Work/Construct/Metal</clipFolderPath>
+          </li>
+        </grains>      
+        <volumeRange>17.05883~19.41177</volumeRange>      
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Interact_ConstructDirt</defName>  
+    <sustain>True</sustain>  
+    <context>MapOnly</context>
+    <maxSimultaneous>1</maxSimultaneous>  
+    <priorityMode>PrioritizeNearest</priorityMode>  
+    <subSounds>
+      <li>
+        <muteWhenPaused>True</muteWhenPaused>      
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Interact/Work/Construct/Dig</clipFolderPath>
+          </li>
+        </grains>      
+        <volumeRange>12~50</volumeRange>      
+        <sustainLoop>False</sustainLoop>      
+        <sustainIntervalRange>0.7948722~0.7948722</sustainIntervalRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Interact_GraveDig</defName>
+    <sustain>True</sustain>
+    <context>MapOnly</context>
+    <maxSimultaneous>1</maxSimultaneous>
+    <priorityMode>PrioritizeNearest</priorityMode>
+    <subSounds>
+      <li>
+        <muteWhenPaused>True</muteWhenPaused>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Interact/Work/Construct/Dig</clipFolderPath>
+          </li>
+        </grains>
+        <volumeRange>20~30</volumeRange>
+        <sustainLoop>False</sustainLoop>
+        <sustainIntervalRange>0.4~0.55</sustainIntervalRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+  
+  <SoundDef>
+    <defName>Harvest_Standard</defName>  
+    <sustain>True</sustain>  
+    <context>MapOnly</context>
+    <maxSimultaneous>1</maxSimultaneous>  
+    <priorityMode>PrioritizeNearest</priorityMode>  
+    <subSounds>
+      <li>
+        <muteWhenPaused>True</muteWhenPaused>      
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Interact/Work/Grow</clipFolderPath>
+          </li>
+        </grains>      
+        <volumeRange>9~10</volumeRange>      
+        <distRange>25~50</distRange>      
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Harvest_Standard_Finish</defName>  
+    <context>MapOnly</context>
+    <maxSimultaneous>1</maxSimultaneous>  
+    <priorityMode>PrioritizeNearest</priorityMode>  
+    <subSounds>
+      <li>
+        <muteWhenPaused>True</muteWhenPaused>      
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Interact/Work/Grow</clipFolderPath>
+          </li>
+        </grains>      
+        <volumeRange>9~10</volumeRange>      
+        <distRange>25~50</distRange>      
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Interact_Repair_Start</defName>  
+    <context>MapOnly</context>
+    <maxSimultaneous>1</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Interact/Work/Repair/WeldStart</clipPath>
+          </li>
+        </grains>      
+        <volumeRange>9.304348~12.56522</volumeRange>      
+        <pitchRange>0.8236416~1.14837</pitchRange>      
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Interact_Repair</defName>  
+    <sustain>True</sustain>  
+    <context>MapOnly</context>
+    <maxSimultaneous>1</maxSimultaneous>  
+    <priorityMode>PrioritizeNearest</priorityMode>  
+    <sustainStartSound>Interact_Repair_Start</sustainStartSound>  
+    <subSounds>
+      <li>
+        <muteWhenPaused>True</muteWhenPaused>      
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Interact/Work/Repair/WeldLoop</clipPath>
+          </li>
+        </grains>      
+        <volumeRange>17.17392~17.17392</volumeRange>      
+        <pitchRange>0.8304347~1.169566</pitchRange>      
+        <sustainLoopDurationRange>2.391304~0.9782609</sustainLoopDurationRange>      
+        <sustainIntervalRange>-0.3294118~-0.3294118</sustainIntervalRange>      
+        <sustainAttack>0.05882355</sustainAttack>      
+        <sustainRelease>0.4823529</sustainRelease>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Interact_Sow</defName>  
+    <sustain>True</sustain>  
+    <context>MapOnly</context>
+    <maxSimultaneous>1</maxSimultaneous>  
+    <priorityMode>PrioritizeNearest</priorityMode>  
+    <subSounds>
+      <li>
+        <muteWhenPaused>True</muteWhenPaused>      
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Interact/Work/Grow</clipFolderPath>
+          </li>
+        </grains>      
+        <volumeRange>3~6</volumeRange>      
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Interact_Research</defName>  
+    <sustain>True</sustain>  
+    <context>MapOnly</context>
+    <maxSimultaneous>1</maxSimultaneous>  
+    <priorityMode>PrioritizeNearest</priorityMode>  
+    <subSounds>
+      <li>
+        <muteWhenPaused>True</muteWhenPaused>      
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Interact/Work/Research</clipFolderPath>
+          </li>
+        </grains>      
+        <volumeRange>30~30</volumeRange>      
+        <pitchRange>0.8~1.2</pitchRange>      
+        <sustainLoop>False</sustainLoop>      
+        <sustainIntervalRange>5~5</sustainIntervalRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Harvest_Tree</defName>  
+    <sustain>True</sustain>  
+    <context>MapOnly</context>
+    <priorityMode>PrioritizeNearest</priorityMode>  
+    <subSounds>
+      <li>
+        <muteWhenPaused>True</muteWhenPaused>      
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Interact/Work/Construct/Trees/Tree_Chop</clipFolderPath>
+          </li>
+        </grains>      
+        <volumeRange>10~10</volumeRange>      
+        <pitchRange>0.9408336~1.207082</pitchRange>      
+        <repeatMode>NeverTwice</repeatMode>      
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Harvest_Tree_Finish</defName>  
+    <context>MapOnly</context>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Interact/Work/Construct/Trees/Tree_Felled</clipFolderPath>
+          </li>
+        </grains>      
+        <volumeRange>20~20</volumeRange>      
+        <repeatMode>NeverTwice</repeatMode>      
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Recipe_MakeWoodPlanks_Hand</defName>  
+    <sustain>True</sustain>  
+    <context>MapOnly</context>
+    <priorityMode>PrioritizeNearest</priorityMode>  
+    <subSounds>
+      <li>
+        <muteWhenPaused>True</muteWhenPaused>      
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Interact/Work/Construct/Wood/Wood_Saw_Hand</clipFolderPath>
+          </li>
+        </grains>      
+        <volumeRange>10~10</volumeRange>      
+        <pitchRange>0.9541177~1.091765</pitchRange>      
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Recipe_MakeWoodPlanks_Electric</defName>  
+    <sustain>True</sustain>  
+    <context>MapOnly</context>
+    <priorityMode>PrioritizeNearest</priorityMode>  
+    <sustainStopSound>Recipe_CircularSaw_Off</sustainStopSound>  
+    <subSounds>
+      <li>
+        <muteWhenPaused>True</muteWhenPaused>      
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Interact/Work/Construct/Wood/Wood_Saw_Circular</clipFolderPath>
+          </li>
+        </grains>      
+        <volumeRange>10.2504~11.1252</volumeRange>      
+        <pitchRange>0.9770588~1.068824</pitchRange>      
+        <sustainLoop>False</sustainLoop>      
+        <sustainIntervalRange>-1.102564~-1.102564</sustainIntervalRange>      
+        <sustainRelease>0.5314582</sustainRelease>
+      </li>    
+      <li>
+        <muteWhenPaused>True</muteWhenPaused>      
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Interact/Work/Construct/Circular_Saw/Saw_Circular_Cuts</clipFolderPath>
+          </li>
+        </grains>      
+        <volumeRange>12~12</volumeRange>      
+        <pitchRange>0.8986984~1.279892</pitchRange>      
+        <repeatMode>Any</repeatMode>      
+        <sustainLoop>False</sustainLoop>      
+        <sustainIntervalRange>1~1</sustainIntervalRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Recipe_CircularSaw_Off</defName>  
+    <context>MapOnly</context>
+    <maxVoices>2</maxVoices>  
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Interact/Work/Construct/Circular_Saw/Saw_Circular_Off/Wood_Saw_Circular_Off</clipPath>
+          </li>
+        </grains>      
+        <volumeRange>11~11</volumeRange>      
+        <pitchRange>0.9311764~1.137647</pitchRange>      
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Interact_ConstructWood</defName>  
+    <sustain>True</sustain>  
+    <context>MapOnly</context>
+    <maxVoices>2</maxVoices>  
+    <priorityMode>PrioritizeNearest</priorityMode>  
+    <sustainStopSound>Finish_Wood</sustainStopSound>  
+    <subSounds>
+      <li>
+        <muteWhenPaused>True</muteWhenPaused>      
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Interact/Work/Construct/Wood/Construct_Wood</clipFolderPath>
+          </li>
+        </grains>      
+        <volumeRange>12~12</volumeRange>      
+        <pitchRange>0.9541177~1.068824</pitchRange>      
+        <sustainLoop>False</sustainLoop>      
+        <sustainIntervalRange>-0.5128205~-0.5128205</sustainIntervalRange>
+      </li>    
+      <li>
+        <muteWhenPaused>True</muteWhenPaused>      
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Interact/Work/Construct/Wood/Rummage_Wood</clipFolderPath>
+          </li>
+        </grains>      
+        <volumeRange>5~6</volumeRange>      
+        <pitchRange>0.9311765~1.160588</pitchRange>      
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Finish_Wood</defName>  
+    <context>MapOnly</context>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Interact/Work/Construct/Wood/Finish_Wood</clipFolderPath>
+          </li>
+        </grains>      
+        <volumeRange>12~12</volumeRange>      
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Interact_CleanFilth</defName>  
+    <sustain>True</sustain>  
+    <context>MapOnly</context>
+    <maxVoices>2</maxVoices>  
+    <priorityMode>PrioritizeNearest</priorityMode>  
+    <subSounds>
+      <li>
+        <muteWhenPaused>True</muteWhenPaused>      
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Interact/Work/Clean/Cleaning_Sweeping</clipFolderPath>
+          </li>
+        </grains>      
+        <volumeRange>5~5</volumeRange>      
+        <pitchRange>1~1.114706</pitchRange>      
+        <distRange>0~44.41861</distRange>      
+        <repeatMode>NeverTwice</repeatMode>      
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Interact_CleanFilth_Scattered</defName>
+    <sustain>True</sustain>
+    <context>MapOnly</context>
+    <maxVoices>2</maxVoices>
+    <priorityMode>PrioritizeNearest</priorityMode>
+    <subSounds>
+      <li>
+        <muteWhenPaused>True</muteWhenPaused>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Interact/Work/Clean/Cleaning_Scattered</clipFolderPath>
+          </li>
+        </grains>
+        <volumeRange>4</volumeRange>
+        <pitchRange>1~1.1</pitchRange>
+        <distRange>0~40</distRange>
+        <repeatMode>NeverTwice</repeatMode>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Interact_CleanFilth_Fluid</defName>
+    <sustain>True</sustain>
+    <context>MapOnly</context>
+    <maxVoices>2</maxVoices>
+    <priorityMode>PrioritizeNearest</priorityMode>
+    <subSounds>
+      <li>
+        <muteWhenPaused>True</muteWhenPaused>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Interact/Work/Clean/Cleaning_Fluid</clipFolderPath>
+          </li>
+        </grains>
+        <volumeRange>5</volumeRange>
+        <pitchRange>1~1.1</pitchRange>
+        <distRange>0~40</distRange>
+        <repeatMode>NeverTwice</repeatMode>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Interact_CleanFilth_Dirt</defName>
+    <sustain>True</sustain>
+    <context>MapOnly</context>
+    <maxVoices>2</maxVoices>
+    <priorityMode>PrioritizeNearest</priorityMode>
+    <subSounds>
+      <li>
+        <muteWhenPaused>True</muteWhenPaused>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Interact/Work/Clean/Cleaning_Dirt</clipFolderPath>
+          </li>
+        </grains>
+        <volumeRange>5</volumeRange>
+        <pitchRange>1~1.1</pitchRange>
+        <distRange>0~40</distRange>
+        <repeatMode>NeverTwice</repeatMode>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Recipe_MakeStoneBlocks</defName>  
+    <sustain>True</sustain>  
+    <context>MapOnly</context>
+    <maxVoices>2</maxVoices>  
+    <priorityMode>PrioritizeNearest</priorityMode>  
+    <sustainStopSound>Finish_StoneBlock</sustainStopSound>  
+    <subSounds>
+      <li>
+        <muteWhenPaused>True</muteWhenPaused>      
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Interact/Work/Construct/Stone/Hammer_Stone</clipFolderPath>
+          </li>
+        </grains>      
+        <volumeRange>1.079137~10.56115</volumeRange>      
+        <pitchRange>0.9719425~1.022941</pitchRange>      
+        <distRange>25~50</distRange>      
+        <sustainLoop>False</sustainLoop>
+      </li>    
+      <li>
+        <muteWhenPaused>True</muteWhenPaused>      
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Interact/Work/Construct/Stone/Stone_Chunk_Light</clipFolderPath>
+          </li>
+        </grains>      
+        <volumeRange>3.578174~12</volumeRange>      
+        <pitchRange>1~1.185696</pitchRange>      
+        <distRange>25~50</distRange>      
+        <repeatMode>NeverTwice</repeatMode>      
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Finish_StoneBlock</defName>  
+    <context>MapOnly</context>
+    <maxVoices>1</maxVoices>  
+    <priorityMode>PrioritizeNearest</priorityMode>  
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Interact/Work/Construct/Stone/StoneBlock_Drop/StoneBlock_Drop_1a</clipPath>
+          </li>
+        </grains>      
+        <volumeRange>12~12</volumeRange>      
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Recipe_ButcherCorpseFlesh</defName>  
+    <sustain>True</sustain>  
+    <context>MapOnly</context>
+    <maxVoices>2</maxVoices>  
+    <priorityMode>PrioritizeNearest</priorityMode>  
+    <subSounds>
+      <li>
+        <muteWhenPaused>True</muteWhenPaused>      
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Interact/Work/Butcher/Butcher_Meat</clipFolderPath>
+          </li>
+        </grains>      
+        <volumeRange>12~12</volumeRange>      
+        <pitchRange>0.9311765~1.091765</pitchRange>      
+        <distRange>25~50</distRange>      
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Recipe_ButcherCorpseMechanoid</defName>  
+    <sustain>True</sustain>  
+    <context>MapOnly</context>
+    <maxVoices>2</maxVoices>  
+    <priorityMode>PrioritizeNearest</priorityMode>  
+    <subSounds>
+      <li>
+        <muteWhenPaused>True</muteWhenPaused>      
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Interact/Work/Butcher/Butcher_Mechanoid/Centipede</clipFolderPath>
+          </li>
+        </grains>      
+        <volumeRange>2~4</volumeRange>      
+        <pitchRange>0.9770588~1.068824</pitchRange>      
+        <distRange>25~50</distRange>      
+        <sustainLoop>False</sustainLoop>      
+        <sustainIntervalRange>-0.3076923~-0.3076923</sustainIntervalRange>
+      </li>    
+      <li>
+        <muteWhenPaused>True</muteWhenPaused>      
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Interact/Work/Butcher/Butcher_Mechanoid/Generic</clipFolderPath>
+          </li>
+        </grains>      
+        <volumeRange>5~5</volumeRange>      
+        <pitchRange>0.8529411~1</pitchRange>      
+        <distRange>25~50</distRange>      
+        <sustainLoop>False</sustainLoop>      
+        <sustainIntervalRange>0.5128205~0.5128205</sustainIntervalRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Recipe_SmashCorpseMechanoid</defName>
+    <sustain>True</sustain>
+    <context>MapOnly</context>
+    <maxVoices>2</maxVoices>
+    <priorityMode>PrioritizeNearest</priorityMode>
+    <subSounds>
+      <li>
+        <muteWhenPaused>True</muteWhenPaused>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Interact/Work/Construct/Stone/Stone_Chunk_Light</clipFolderPath>
+          </li>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Interact/Haul/Drop/MetalDrop</clipPath>
+          </li>
+        </grains>
+        <volumeRange>3~5</volumeRange>
+        <pitchRange>0.9770588~1.068824</pitchRange>
+        <distRange>25~50</distRange>
+        <sustainLoop>False</sustainLoop>
+        <sustainIntervalRange>-0.3076923~-0.3076923</sustainIntervalRange>
+      </li>
+      <li>
+        <muteWhenPaused>True</muteWhenPaused>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Interact/Work/Butcher/Butcher_Mechanoid/Generic</clipFolderPath>
+          </li>
+        </grains>
+        <volumeRange>5~5</volumeRange>
+        <pitchRange>0.8529411~1</pitchRange>
+        <distRange>25~50</distRange>
+        <sustainLoop>False</sustainLoop>
+        <sustainIntervalRange>0.5128205~0.5128205</sustainIntervalRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Crematorium_Stop</defName>  
+    <context>MapOnly</context>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Interact/Work/Cremate/Crematorium/Crematorium_Stop_1a</clipPath>
+          </li>
+        </grains>      
+        <volumeRange>6~6</volumeRange>      
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Recipe_Cremate</defName>  
+    <sustain>True</sustain>  
+    <context>MapOnly</context>
+    <priorityMode>PrioritizeNearest</priorityMode>  
+    <sustainStopSound>Crematorium_Stop</sustainStopSound>  
+    <subSounds>
+      <li>
+        <muteWhenPaused>True</muteWhenPaused>      
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Interact/Work/Cremate/Crematorium/Crematorium_Loop</clipPath>
+          </li>
+        </grains>      
+        <volumeRange>2.3</volumeRange>      
+        <pitchRange>1</pitchRange>
+        <distRange>10~38</distRange>
+      </li>    
+      <li>
+        <muteWhenPaused>True</muteWhenPaused>      
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Interact/Work/Cremate/Burning_Corpse</clipFolderPath>
+          </li>
+        </grains>
+        <volumeRange>15</volumeRange>
+        <pitchRange>1</pitchRange>
+        <distRange>10~38</distRange>
+        <sustainLoop>False</sustainLoop>
+        <sustainIntervalRange>0</sustainIntervalRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Smelt_Start</defName>  
+    <context>MapOnly</context>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Interact/Work/Smelt/ElectricSmelter/Start/ElectricSmelterStart_1a</clipPath>
+          </li>
+        </grains>      
+        <volumeRange>7.162788~7.162788</volumeRange>      
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Smelt_Stop</defName>  
+    <context>MapOnly</context>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Interact/Work/Smelt/ElectricSmelter/Stop/ElectricSmelterStop_1a</clipPath>
+          </li>
+        </grains>      
+        <volumeRange>6~6</volumeRange>      
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Recipe_Smelt</defName>  
+    <sustain>True</sustain>  
+    <context>MapOnly</context>
+    <priorityMode>PrioritizeNearest</priorityMode>  
+    <sustainStartSound>Smelt_Start</sustainStartSound>  
+    <sustainStopSound>Smelt_Stop</sustainStopSound>  
+    <subSounds>
+      <li>
+        <muteWhenPaused>True</muteWhenPaused>      
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Interact/Work/Smelt/ElectricSmelter/Loop/ElectricSmelterLoop_1a</clipPath>
+          </li>
+        </grains>      
+        <volumeRange>11.68263~11.68263</volumeRange>      
+        <pitchRange>1~1.013529</pitchRange>      
+        <distRange>10~38</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Recipe_CookMeal</defName>  
+    <sustain>True</sustain>  
+    <context>MapOnly</context>
+    <maxVoices>3</maxVoices>  
+    <priorityMode>PrioritizeNearest</priorityMode>  
+    <subSounds>
+      <li>
+        <muteWhenPaused>True</muteWhenPaused>      
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Interact/Work/Cook/Pan_Fry</clipFolderPath>
+          </li>
+        </grains>      
+        <volumeRange>7~7</volumeRange>      
+        <pitchRange>0.9541177~1.137647</pitchRange>      
+        <distRange>10~50</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Recipe_Sculpt</defName>  
+    <sustain>True</sustain>  
+    <context>MapOnly</context>
+    <maxVoices>3</maxVoices>  
+    <priorityMode>PrioritizeNearest</priorityMode>  
+    <sustainStartSound>Sculpt_Start</sustainStartSound>  
+    <sustainStopSound>Sculpt_Stop</sustainStopSound>  
+    <subSounds>
+      <li>
+        <muteWhenPaused>True</muteWhenPaused>      
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Interact/Work/Sculpt/Sculpting_Loop</clipFolderPath>
+          </li>
+        </grains>      
+        <volumeRange>10~10</volumeRange>      
+        <pitchRange>0.9541177~1.137647</pitchRange>      
+        <distRange>10~50</distRange>      
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Sculpt_Start</defName>  
+    <context>MapOnly</context>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Interact/Work/Sculpt/SculptingStart_1a</clipPath>
+          </li>
+        </grains>      
+        <volumeRange>10.70588~10.70588</volumeRange>      
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Sculpt_Stop</defName>  
+    <context>MapOnly</context>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Interact/Work/Sculpt/SculptingStop_1a</clipPath>
+          </li>
+        </grains>      
+        <volumeRange>10.70588~10.70588</volumeRange>      
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Recipe_Surgery</defName>  
+    <sustain>True</sustain>  
+    <context>MapOnly</context>
+    <maxVoices>3</maxVoices>  
+    <priorityMode>PrioritizeNearest</priorityMode>  
+    <subSounds>
+      <li>
+        <muteWhenPaused>True</muteWhenPaused>      
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Interact/Work/Surgery/Surgery_Loop</clipFolderPath>
+          </li>
+        </grains>      
+        <volumeRange>10~10</volumeRange>      
+        <pitchRange>0.9541177~1.137647</pitchRange>      
+        <distRange>10~50</distRange>      
+        <sustainLoop>False</sustainLoop>      
+        <sustainIntervalRange>0.4705882~0.8941177</sustainIntervalRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Recipe_Smith</defName>  
+    <sustain>True</sustain>  
+    <context>MapOnly</context>
+    <maxVoices>3</maxVoices>  
+    <priorityMode>PrioritizeNearest</priorityMode>  
+    <subSounds>
+      <li>
+        <muteWhenPaused>True</muteWhenPaused>      
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Interact/Work/Smith/Smithing_Loop</clipFolderPath>
+          </li>
+        </grains>      
+        <volumeRange>12~12</volumeRange>      
+        <pitchRange>0.9541177~1.137647</pitchRange>      
+        <distRange>10~50</distRange>      
+        <sustainLoop>False</sustainLoop>      
+        <sustainIntervalRange>0.4705882~0.8941177</sustainIntervalRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Tailor_Start</defName>
+    <context>MapOnly</context>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Interact/Work/Tailor/Tailoring_Start</clipFolderPath>
+          </li>
+        </grains>
+        <volumeRange>10.70588~10.70588</volumeRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Recipe_Tailor</defName>  
+    <sustain>True</sustain>  
+    <context>MapOnly</context>
+    <maxVoices>3</maxVoices>  
+    <priorityMode>PrioritizeNearest</priorityMode>  
+    <sustainStartSound>Tailor_Start</sustainStartSound>  
+    <sustainStopSound>Tailor_Start</sustainStopSound>  
+    <subSounds>
+      <li>
+        <muteWhenPaused>True</muteWhenPaused>      
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Interact/Work/Tailor/Tailoring_Loop</clipFolderPath>
+          </li>
+        </grains>      
+        <volumeRange>10~10</volumeRange>      
+        <pitchRange>0.9541177~1.137647</pitchRange>      
+        <distRange>10~50</distRange>      
+        <sustainLoop>False</sustainLoop>      
+        <sustainIntervalRange>0.4705882~0.8941177</sustainIntervalRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Tend_Start</defName>
+    <context>MapOnly</context>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Interact/Work/Tend/Tend_Start</clipFolderPath>
+          </li>
+        </grains>
+        <volumeRange>8~8</volumeRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Interact_Tend</defName>
+    <sustain>True</sustain>
+    <context>MapOnly</context>
+    <maxVoices>3</maxVoices>
+    <priorityMode>PrioritizeNearest</priorityMode>
+    <sustainStartSound>Tend_Start</sustainStartSound>
+    <subSounds>
+      <li>
+        <muteWhenPaused>True</muteWhenPaused>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Interact/Work/Tend/Tend_Loop</clipFolderPath>
+          </li>
+        </grains>
+        <volumeRange>10~10</volumeRange>
+        <pitchRange>0.9541177~1.137647</pitchRange>
+        <distRange>10~50</distRange>
+        <sustainLoop>False</sustainLoop>
+        <sustainIntervalRange>0.8~1.6</sustainIntervalRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Recipe_Machining</defName>  
+    <sustain>True</sustain>  
+    <context>MapOnly</context>
+    <maxVoices>3</maxVoices>  
+    <priorityMode>PrioritizeNearest</priorityMode>  
+    <sustainStopSound>Machining_Stop</sustainStopSound>  
+    <sustainFadeoutTime>0.25</sustainFadeoutTime>  
+    <subSounds>
+      <li>
+        <muteWhenPaused>True</muteWhenPaused>      
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Interact/Work/Machine/Loop</clipFolderPath>
+          </li>
+        </grains>      
+        <volumeRange>10~10</volumeRange>      
+        <pitchRange>0.9541177~1.137647</pitchRange>      
+        <distRange>10~50</distRange>      
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Machining_Stop</defName>
+    <context>MapOnly</context>  
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Interact/Work/Machine/Stop</clipFolderPath>
+          </li>
+        </grains>      
+        <volumeRange>10.70588~10.70588</volumeRange>      
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Recipe_Brewing</defName>  
+    <sustain>True</sustain>  
+    <context>MapOnly</context>
+    <maxVoices>3</maxVoices>  
+    <priorityMode>PrioritizeNearest</priorityMode>  
+    <sustainStartSound>Brewing_Start</sustainStartSound>  
+    <sustainStopSound>Brewing_Stop</sustainStopSound>  
+    <sustainFadeoutTime>0.25</sustainFadeoutTime>  
+    <subSounds>
+      <li>
+        <muteWhenPaused>True</muteWhenPaused>      
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Interact/Work/Brew/Loop</clipFolderPath>
+          </li>
+        </grains>      
+        <volumeRange>10~10</volumeRange>      
+        <pitchRange>0.9541177~1.137647</pitchRange>      
+        <distRange>10~50</distRange>      
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Brewing_Start</defName>  
+    <context>MapOnly</context>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Interact/Work/Brew/Start</clipFolderPath>
+          </li>
+        </grains>      
+        <volumeRange>10.70588~10.70588</volumeRange>      
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Brewing_Stop</defName>  
+    <context>MapOnly</context>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Interact/Work/Brew/Stop</clipFolderPath>
+          </li>
+        </grains>      
+        <volumeRange>8.380299~8.380299</volumeRange>      
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Recipe_Drug</defName>
+    <sustain>True</sustain>
+    <context>MapOnly</context>
+    <maxVoices>3</maxVoices>
+    <priorityMode>PrioritizeNearest</priorityMode>
+    <sustainStartSound>Recipe_Drug_Start</sustainStartSound>
+    <sustainStopSound>Recipe_Drug_Stop</sustainStopSound>
+    <sustainFadeoutTime>0.5</sustainFadeoutTime>
+    <subSounds>
+      <li>
+        <muteWhenPaused>True</muteWhenPaused>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Interact/Work/Produce/Producing_Drug/Recipe_ProduceDrug_Loop</clipPath>
+          </li>
+        </grains>
+        <volumeRange>12</volumeRange>
+        <distRange>10~50</distRange>
+        <sustainLoop>False</sustainLoop>
+        <sustainAttack>1.0</sustainAttack>
+        <startDelayRange>4.94</startDelayRange>
+      </li>
+      <li>
+        <muteWhenPaused>True</muteWhenPaused>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Interact/Work/Produce/Producing_Drug/Granule</clipFolderPath>
+          </li>
+        </grains>
+        <volumeRange>8~10</volumeRange>
+        <pitchRange>0.95~1.1</pitchRange>
+        <distRange>10~50</distRange>
+        <sustainAttack>1.0</sustainAttack>
+        <startDelayRange>4.94</startDelayRange>
+        <sustainIntervalRange>0.3~1.1</sustainIntervalRange>
+        <repeatMode>NeverTwice</repeatMode>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Recipe_Drug_Start</defName>
+    <context>MapOnly</context>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Interact/Work/Produce/Producing_Drug/Recipe_ProduceDrug_Start</clipPath>
+          </li>
+        </grains>
+        <volumeRange>15</volumeRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Recipe_Drug_Stop</defName>
+    <context>MapOnly</context>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Interact/Work/Produce/Producing_Drug/Recipe_ProduceDrug_Stop</clipPath>
+          </li>
+        </grains>
+        <volumeRange>10</volumeRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Recipe_MakeBow</defName>
+    <sustain>True</sustain>
+    <context>MapOnly</context>
+    <maxVoices>3</maxVoices>
+    <priorityMode>PrioritizeNearest</priorityMode>
+    <subSounds>
+      <li>
+        <muteWhenPaused>True</muteWhenPaused>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Interact/Work/Produce/Producing_Bow</clipFolderPath>
+          </li>
+        </grains>
+        <volumeRange>20~25</volumeRange>
+        <pitchRange>0.9~1.1</pitchRange>
+        <sustainIntervalRange>0~1</sustainIntervalRange>
+        <repeatMode>NeverTwice</repeatMode>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Speech_Throne_Male</defName>
+    <sustain>True</sustain>
+    <context>MapOnly</context>
+    <priorityMode>PrioritizeNearest</priorityMode>
+    <maxSimultaneous>1</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Misc/ThroneSpeech_Male</clipFolderPath>
+          </li>
+        </grains>
+        <muteWhenPaused>true</muteWhenPaused>
+        <tempoAffectedByGameSpeed>true</tempoAffectedByGameSpeed>
+        <gameSpeedRange>0~2</gameSpeedRange>
+        <volumeRange>8~10</volumeRange>
+        <distRange>20~40</distRange>
+        <sustainLoop>false</sustainLoop>
+        <sustainIntervalRange>0~0.25</sustainIntervalRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Speech_Throne_Female</defName>
+    <sustain>True</sustain>
+    <context>MapOnly</context>
+    <priorityMode>PrioritizeNearest</priorityMode>
+    <maxSimultaneous>1</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Misc/ThroneSpeech_Female</clipFolderPath>
+          </li>
+        </grains>
+        <muteWhenPaused>true</muteWhenPaused>
+        <tempoAffectedByGameSpeed>true</tempoAffectedByGameSpeed>
+        <gameSpeedRange>0~2</gameSpeedRange>
+        <volumeRange>12~14</volumeRange>
+        <distRange>20~40</distRange>
+        <sustainLoop>false</sustainLoop>
+        <sustainIntervalRange>0~0.25</sustainIntervalRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+</Defs>

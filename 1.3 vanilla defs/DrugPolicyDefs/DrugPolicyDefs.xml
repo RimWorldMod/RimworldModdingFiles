@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <DrugPolicyDef>
+    <defName>SocialDrugs</defName>
+    <label>social drugs</label>
+    <entries>
+      <li>
+        <drug>Beer</drug>
+        <allowedForJoy>true</allowedForJoy>
+      </li>
+      <li>
+        <drug>SmokeleafJoint</drug>
+        <allowedForJoy>true</allowedForJoy>
+      </li>
+    </entries>
+  </DrugPolicyDef>
+
+  <DrugPolicyDef>
+    <defName>NoDrugs</defName>
+    <label>no drugs</label>
+  </DrugPolicyDef>
+
+  <DrugPolicyDef>
+    <defName>Unrestricted</defName>
+    <label>unrestricted</label>
+    <allowPleasureDrugs>true</allowPleasureDrugs>
+  </DrugPolicyDef>
+
+  <DrugPolicyDef>
+    <defName>OneDrinkPerDay</defName>
+    <label>one drink per day</label>
+    <entries>
+      <li>
+        <drug>Beer</drug>
+        <allowedForJoy>true</allowedForJoy>
+        <allowScheduled>true</allowScheduled>
+        <takeToInventory>1</takeToInventory>
+        <daysFrequency>1</daysFrequency>
+      </li>
+      <li>
+        <drug>SmokeleafJoint</drug>
+        <allowedForJoy>true</allowedForJoy>
+      </li>
+    </entries>
+  </DrugPolicyDef>
+
+</Defs>
