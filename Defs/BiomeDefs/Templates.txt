@@ -10,7 +10,7 @@
 		<hideTerrain>true_or_false</hideTerrain>
 		<animalDensity>number</animalDensity>
 		<plantDensity>number</plantDensity>
-		<baseColor>(colour1, colour2, colour3)</baseColor>
+		<texture>Path/Texture</texture>
 		<soundsAmbient>
 			<li>Sound_reference</li>
 			<li>Sound_reference</li>
@@ -95,7 +95,7 @@
 		<workerClass>BiomeWorker_Biometype</workerClass>
 		<animalDensity>number</animalDensity>
 		<plantDensity>number</plantDensity>
-		<baseColor>(colour1, colour2, colour3)</baseColor>
+		<texture>Path/Texture</texture>
 		<soundsAmbient>
 			<li>Sound_reference</li>
 		</soundsAmbient>
@@ -151,5 +151,5 @@
 		<description>Biome_description.</description>
 		<workerClass>BiomeWorker_Biometype</workerClass>
 		<canBuildBase>false</canBuildBase>
-		<baseColor>(colour1, colour2, colour3)</baseColor>
+		<texture>Path/Texture</texture>
 	</BiomeDef>
