@@ -5,7 +5,6 @@
 		<label>biome_label</label>
 		<description>Biome_description.</description>
 		<workerClass>BiomeWorker_Biometype</workerClass>
-		<implemented>true_or_false</implemented>
 		<canBuildBase>true_or_false</canBuildBase>
 		<hideTerrain>true_or_false</hideTerrain>
 		<animalDensity>number</animalDensity>
