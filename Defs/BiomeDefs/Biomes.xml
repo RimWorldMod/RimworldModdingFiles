@@ -9,10 +9,10 @@
 		<defName>BiomeName</defName>
 		<!-- defName used to reference and use the biome -->
     
-		<label>biome_label</label>
+		<label>Biome_label</label>
 		<!-- Biome label (this is the actual name displayed in-game) -->
     
-		<description>Biome_description.</description>
+		<description>Biome_description</description>
 		<!-- A long-form description of the biome. Tip: include climate, terrain, vegetation, animals and optionally some flavour text -->
     
 		<workerClass>BiomeWorker_Biometype</workerClass>
