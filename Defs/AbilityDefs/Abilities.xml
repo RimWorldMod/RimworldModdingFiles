@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <defName>AbilityName</defName>
+  <!-- defName used to reference and use the Ability -->
+  
+  <label>Ability_label</label>
+  <!-- Ability label (this is the actual name displayed in-game) -->
+  
+  <description>Ability_description</description>
+  <!-- A long-form description of the Ability. -->
+  
+</Defs>

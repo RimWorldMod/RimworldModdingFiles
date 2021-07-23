@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <AbilityDef Name="PsycastBase" Abstract="True">
+    <abilityClass>Psycast</abilityClass>
+    <category>Psychic</category>
+    <statBases>
+      <Ability_Duration>0</Ability_Duration>
+    </statBases>
+    <warmupSound>PsycastCastLoop</warmupSound>
+    <verbProperties>
+      <verbClass>Verb_CastPsycast</verbClass>
+      <range>24.9</range>
+      <requireLineOfSight>True</requireLineOfSight>
+      <warmupTime>1</warmupTime>
+      <targetParams>
+        <canTargetBuildings>False</canTargetBuildings>
+        <canTargetAnimals>False</canTargetAnimals>
+        <thingCategory>Item</thingCategory>
+        <mapObjectTargetsMustBeAutoAttackable>False</mapObjectTargetsMustBeAutoAttackable>
+      </targetParams>
+    </verbProperties>
+  </AbilityDef>
+
+  <AbilityDef Abstract="True" Name="SpeechBase">
+    <iconPath>Things/Mote/SpeechSymbols/Speech</iconPath>
+    <hotKey>Misc12</hotKey>
+    <gizmoClass>Command_AbilitySpeech</gizmoClass>
+    <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
+    <disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
+    <targetRequired>False</targetRequired>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>-1</range>
+    </verbProperties>
+  </AbilityDef>
+
+</Defs>
