@@ -1,5 +1,6 @@
-	<!-- Base template -->
-	
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
 	<BiomeDef>
 		<defName>BiomeName</defName>
 		<label>biome_label</label>
@@ -152,3 +153,5 @@
 		<canBuildBase>false</canBuildBase>
 		<texture>Path/Texture</texture>
 	</BiomeDef>
+
+</Defs>
