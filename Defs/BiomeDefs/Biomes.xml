@@ -32,45 +32,43 @@
 		BiomeWorker_Tundra -->
     
     <allowFarmingCamps>true_or_false</allowFarmingCamps>
-    <!-- Need to update definition -->
-    <!-- Optional. Defaults to true. Decides if Farming Camps are allowed -->
+    <!-- Decides if Farming Camps are allowed -->
     
 		<canBuildBase>true_or_false</canBuildBase>
-		<!-- Optional. Defaults to true. Defines if a tile with this biome is choosable on the world map as a colony base -->
+		<!-- Defines if a tile with this biome is choosable on the world map as a colony base -->
     
     <allowRoads>true_or_false</allowRoads>
-    <!-- Optional. Defaults to true. Decides if roads are allowed in this biome -->
+    <!-- Decides if roads are allowed in this biome -->
     
     <allowRivers>true_or_false</allowRivers>
-    <!-- Optional. Defaults to true. Decides if rivers are allowed in this biome -->
+    <!-- Decides if rivers are allowed in this biome -->
 		
     <animalDensity>number</animalDensity>
-		<!-- Optional. Defaults to 0. Controls the amount of animals spawned. 0 to disable -->
+		<!-- Controls the amount of animals spawned. 0 to disable -->
     
     <hasVirtualPlants>true_or_false</hasVirtualPlants>
-    <!-- Need to update definition -->
-    <!-- Optional. Defaults to true. Decides if area is habitable for plants -->
+    <!-- Decides if area is habitable for plants -->
 		
     <plantDensity>number</plantDensity>
-		<!-- Optional. Defaults to 0. Controls the amount of plants spawned. 0 to disable -->
+		<!-- Controls the amount of plants spawned. 0 to disable -->
     
     <settlementSelectionWeight>number (0 - 1)</settlementSelectionWeight>
-    <!-- Optional. Defines chance that a faction will spawn a colony here during world generation -->
+    <!-- Defines chance that a faction will spawn a colony here during world generation -->
 
     <campSelectionWeight>number (0 - 1)</campSelectionWeight>
-		<!-- Optional. Defines chance that a faction will spawn a camp here during world generation -->
+		<!-- Defines chance that a faction will spawn a camp here during world generation -->
     
     <movementDifficulty>number</movementDifficulty>
-    <!-- Optional. Defines difficulty of movement (how fast pawns will walk) of a surface -->
+    <!-- Defines difficulty of movement (how fast pawns will walk) of a surface -->
     
     <texture>Path/filename</texture>
     <!-- Biome Texture. Do not include extension in filename -->
     
     <impassable>true</impassable>
-    <!-- Optional. Defaults to true. Decides if area can be crossed by pawns -->
+    <!-- Decides if area can be crossed by pawns -->
     
     <forageability>number (0 - 1)</forageability>
-    <!-- Optional. Defaults to 0. Defines the amount of foraging that can be done in the land. 0 to disable -->
+    <!-- Defines the amount of foraging that can be done in the land. 0 to disable -->
     
     <foragedFood>food</foragedFood>
     <!-- String used to identify raw foraged food. Available vanilla strings:
@@ -91,10 +89,10 @@
 		-->
 
     <wildPlantRegrowDays>27</wildPlantRegrowDays>
-    <!-- Optional. Defines the number of days it takes for wild plants to regrow -->
+    <!-- Defines the number of days it takes for wild plants to regrow -->
 
     <wildPlantsCareAboutLocalFertility>true_or_false</wildPlantsCareAboutLocalFertility>
-    <!-- Optional. Defines whether wild plants care about the fertility of the land they grow on -->
+    <!-- Defines whether wild plants care about the fertility of the land they grow on -->
 		
     <soundsAmbient>
 		<!-- Ambient sounds used in the biome. Can use one or more -->
@@ -171,7 +169,7 @@
 		</terrainsByFertility>
     
 		<terrainPatchMakers>
-		<!-- Optional. Generates small terrain patches -->
+		<!-- Generates small terrain patches -->
 			<li>
 				<perlinFrequency>number</perlinFrequency>
 				<!-- Perlin-noise is used in the generation formula. Default perlinFrequency is 0.01 -->
