@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  
+  <BeardDef>
+
+    <defName>defName</defName>
+    <!-- defName used to reference and use the beard -->
+    
+    <label>Name</label>
+    <!-- Beard label (this is the actual name displayed in-game) -->
+
+    <texPath>Path/Image</texPath>
+    <!-- Texture for the beard -->
+
+    <styleGender>Gender</styleGender>
+    <!-- Gender that can have this beard -->
+
+    <offsetNarrowEast>(x, y, z)</offsetNarrowEast>
+    <!-- Beard offset when facing east -->
+    
+    <offsetNarrowSouth>(x, y, z)</offsetNarrowSouth>
+    <!-- Beard offset when facing south -->
+    
+    <iconPath>Path/Image</iconPath>
+    <!-- Icon for the beard -->
+    
+    <category>Category</category>
+    <!-- The category the peard is in (e.g. Tribal, Punk, Minimal) -->
+    
+    <styleTags>
+      <!-- Tags to indicate style -->
+      
+      <li>StyleName</li>
+      <!-- Style name (e.g. BeardPunk, BeardShort, BeardTribal) -->
+      
+      <li>StyleName</li>
+      
+      <li>StyleName</li>
+      
+    </styleTags>
+    
+  </BeardDef>
+  
+</Defs>

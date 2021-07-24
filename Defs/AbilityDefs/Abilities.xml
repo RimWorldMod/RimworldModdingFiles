@@ -36,7 +36,7 @@
     <level>number</level>
     <!-- The level of the ability -->
 
-    <iconPath>Path/Icon</iconPath>
+    <iconPath>Path/Image</iconPath>
     <!-- Path for the ability icon -->
 
     <gizmoClass>gizmoClass</gizmoClass>
@@ -78,7 +78,7 @@
     <warmupMote>Mote_Name</warmupMote>
     <!-- Mote shown on warmup (a mote is a small icon used to represent stuff, e.g. Zzz when sleeping)-->
 
-    <warmupMoteSocialSymbol>(Path/) Mote_name</warmupMoteSocialSymbol>
+    <warmupMoteSocialSymbol>Path/Image</warmupMoteSocialSymbol>
     <!-- Social symbol displayed during warmup -->
 
     <moteOffsetAmountTowardsTarget>number</moteOffsetAmountTowardsTarget>

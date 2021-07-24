@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <BeardDef>
+    <defName>NoBeard</defName>
+    <label>no beard</label>
+    <texPath>Things/Mote/Transparent</texPath>
+    <!-- Invisible -->
+    <iconPath>Things/Mote/Transparent</iconPath>
+    <!-- Invisible -->
+    <category>Minimal</category>
+    <styleTags>
+      <li>NoBeard</li>
+    </styleTags>
+  </BeardDef>
+
+  <BeardDef>
+    <defName>Bushy</defName>
+    <label>bushy</label>
+    <texPath>Things/Pawn/Humanlike/Beards/BeardBalin</texPath>
+    <styleGender>Male</styleGender>
+    <category>Tribal</category>
+    <styleTags>
+      <li>BeardTribal</li>
+    </styleTags>
+  </BeardDef>
+
+  <BeardDef>
+    <defName>Circle</defName>
+    <label>circle</label>
+    <texPath>Things/Pawn/Humanlike/Beards/BeardCircle</texPath>
+    <styleGender>Male</styleGender>
+    <category>Urban</category>
+    <styleTags>
+      <li>BeardUrban</li>
+      <li>BeardRural</li>
+    </styleTags>
+  </BeardDef>
+  
+</Defs>
