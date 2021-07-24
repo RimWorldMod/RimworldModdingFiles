@@ -47,7 +47,7 @@
 		<!-- Controls the amount of animals spawned. 0 to disable -->
     
     <hasVirtualPlants>true_or_false</hasVirtualPlants>
-    <!-- Decides if area is habitable for plants -->
+    <!-- Decides whether animals can graze in this biome -->
 		
     <plantDensity>number</plantDensity>
 		<!-- Controls the amount of plants spawned. 0 to disable -->
