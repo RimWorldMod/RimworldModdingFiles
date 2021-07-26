@@ -1,4 +1,200 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
+  
+  <!--===================== Body Definitions ====================-->
+  
+  
+  <BodyDef>
+    <defName>BodyName</defName>
+    <!-- defName used to reference and use the body -->
+    
+    <label>body_label</label>
+    <!-- body label (this is the actual name displayed in-game) -->
+
+    <corePart>
+      <!-- Core part of the body -->
+      
+      <def>Body</def>
+      <!-- This should probably always be called body as all body parts are a subset of body -->
+      
+      <height>Middle</height>
+      <!-- The position of the part in the body -->
+      <!-- Can be 'Top', 'Middle' or 'Bottom' -->
+      
+      <depth>Depth</depth>
+      <!-- Whether the Part is inside or outside of the body -->
+      <!-- Can be 'Inside', or 'Outside' -->
+      
+      <parts>
+        <!-- Defining parts of the body -->
+        
+        <li>
+          <!-- Parts can be stacked as needed. (e.g. Feet can be added a sub parts of legs) -->
+          
+          <def>PartName</def>
+          <!-- Name of the body part -->
+
+          <customLabel>LabelName</customLabel>
+          <!-- Add a custom label, can be used to discern body parts from each other. (e.g. Left Lung, Right Lung, Left Foot, Right Foot) -->
+          
+          <coverage>number</coverage>
+          <!-- How much of the body the part covers -->
+          
+          <!-- Quoted from Tynan: -->
+          <!-- Each coverage value is relative to its parent.
+               Remaining body part coverage (100% minus coverage of all child nodes) is a chance to hit exactly this part.
+               Damage "starts" at corePart, and then "goes deeper" until it hits remaining body part coverage or leaf node
+               - this body part is then hit.
+            -->
+
+          <groups>
+            <!-- Can add part to a group (e.g. 'left food' and 'right foot' can be part of the group 'feet' ) -->
+            
+            <li>GroupName</li>
+            <!-- Name of the group -->
+            
+          </groups>
+
+          <parts>
+            <!-- Sub parts of above part -->
+            
+            <li>
+              <!-- Can define attributes here as above -->
+              
+            </li>
+            
+          </parts>
+          
+        </li>
+        
+      </parts>
+      
+    </corePart>
+    
+  </BodyDef>
+
+
+  <!--===================== Body Part Groups ====================-->
+  
+  
+  <BodyPartGroupDef>
+    <!-- Define body part group -->
+
+    <defName>GroupName</defName>
+    <!-- The name of the group -->
+
+    <label>Group_label</label>
+    <!-- The name of the group that appears in-game -->
+
+    <listOrder>number</listOrder>
+    <!-- The position it appears in the list -->
+
+  </BodyPartGroupDef>
+
+
+  <!--===================== Body Part definitions ====================-->
+  
+
+  <BodyPartDef>
+    <!-- Define Body parts -->
+    
+    <defName>PartName</defName>
+    <!-- The name of the part -->
+    
+    <label>Part_label</label>
+    <!-- The name of the part that appears in game -->
+    
+    <hitPoints>number</hitPoints>
+    <!-- The number of hitpoints the body part has -->
+
+    <frostbiteVulnerability>number</frostbiteVulnerability>
+    <!-- How vulnerable the part is to frostbite -->
+    
+    <permanentInjuryChanceFactor>number</permanentInjuryChanceFactor>
+    <!-- How likely the part is to sustain a permanent injury -->
+    
+    <solid>true_or_false</solid>
+    <!-- Whether the part is solid or not -->
+    
+    <alive>true_or_false</alive>
+    <!-- Whether the part is alive or not -->
+    
+    <bleedRate>number</bleedRate>
+    <!-- The speed at which the part will bleed when cut -->
+    
+    <skinCovered>true_or_false</skinCovered>
+    <!-- Whether the part is covered in skin or not -->
+
+    <canScarify>true_or_false</canScarify>
+    <!-- Whether part can scar -->
+
+    <socketed>true_or_false</socketed>
+    <!-- Whether part resides in a socket (mainly for eyes) -->
+
+    <beautyRelated>true_or_false</beautyRelated>
+    <!-- Whether a part's presence affects a persons beauty -->
+    
+    <canSuggestAmputation>true_or_false</canSuggestAmputation>
+    <!-- Whether a part can be amputated or not -->
+
+    <pawnGeneratorCanAmputate>true_or_false</pawnGeneratorCanAmputate>
+    <!-- Whether a pawn can be generated missing this part -->
+
+    <destroyableByDamage>true_or_false</destroyableByDamage>
+    <!-- Whether a part can be destroyed by being damaged or not -->
+
+    <spawnThingOnRemoved>ThingName</spawnThingOnRemoved>
+    <!-- What will spawn if the part is removed from the body -->
+
+    <conceptual>true_or_false</conceptual>
+    <!-- Defines if a part exists or is a general area. (e.g. Waist) -->
+
+    <tags>
+      <!-- Tags that describe the part -->
+      
+      <li>Tag</li>
+      <!-- Vanilla Strings: -->
+      <!-- BloodFiltrationKidney
+           BloodFiltrationLiver
+           BloodFiltrationSource
+           BloodPumpingSource
+           BreathingPathway
+           BreathingSource
+           BreathingSourceCage
+           ConsciousnessSource
+           EatingPathway
+           EatingSource
+           HearingSource
+           ManipulationLimbCore
+           ManipulationLimbDigit
+           ManipulationLimbSegment
+           MetabolismSource
+           MovingLimbCore
+           MovingLimbDigit
+           MovingLimbSegment
+           SightSource
+           TalkingPathway
+           TalkingSource
+      -->
+    </tags>
+
+    <hitChanceFactors>
+      <!-- What a part can be hit by -->
+      
+      <li>
+        <!-- Properties -->
+        
+        <key>HitType</key>
+        <!-- Weapon / hit type (e.g. Blunt ) -->
+        
+        <value>number</value>
+        <!-- The chance the hit has of affecting the part -->
+        
+      </li>
+      
+    </hitChanceFactors>
+
+  </BodyPartDef>
+  
 </Defs>
