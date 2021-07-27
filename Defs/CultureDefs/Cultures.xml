@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <CultureDef>
+    <defName>CultureName</defName>
+    <!-- defName used to reference and use the culture -->
+
+    <label>astropolitan</label>
+    <!-- Culture label (this is the actual name displayed in-game) -->
+
+    <description>Biome_description</description>
+    <!-- A long-form description of the culture. -->
+
+    <pawnNameMaker>NamerPersonName</pawnNameMaker>
+    <!-- Names of pawns that follow the ideoligion (for ideoligion maker). Should be written as NamerPersonName, where 'Name' is replaced by the culture name (e.g. NamerPersonAstropolitan) -->
+    
+    <ideoNameMaker MayRequire="Ludeon.RimWorld.Ideology">NamerIdeoName</ideoNameMaker>
+    <!-- Name of the ideoligion (for ideoligion maker). Should be written as NamerIdeoName, where 'Name' is replaced by the culture name (e.g. NamerIdeoAstropolitan) -->
+    
+    <deityNameMaker MayRequire="Ludeon.RimWorld.Ideology">NamerDeityName</deityNameMaker>
+    <!-- Name of the ideoligion's deity (for ideoligion maker). Should be written as NamerDeityName, where 'Name' is replaced by the culture name (e.g. NamerDeityAstropolitan) -->
+
+    <deityTypeMaker MayRequire="Ludeon.RimWorld.Ideology">DeityTypeMakerName</deityTypeMaker>
+    <!-- Ideoligion's deity type (for ideoligion maker). Should be written as DeityTypeMakerName, where 'Name' is replaced by the culture name (e.g. DeityTypeMakerAstropolitan) -->
+    
+    <leaderTitleMaker MayRequire="Ludeon.RimWorld.Ideology">LeaderTitleMaker_Name</leaderTitleMaker>
+    <!-- Ideoligion's leader title (for ideoligion maker). Should be written as LeaderTitleMaker_Name, where 'Name' is replaced by the culture name (e.g. LeaderTitleMaker_Astropolitan) -->
+    
+    <festivalNameMaker MayRequire="Ludeon.RimWorld.Ideology">NamerFestivalName</festivalNameMaker>
+    <!-- Ideoligion's festival name (for ideoligion maker). Should be written as NamerFestivalName, where 'Name' is replaced by the culture name (e.g. NamerFestivalAstropolitan )-->
+
+    <allowedPlaceTags>
+      <!-- Technology level that believes in the ideoligion -->
+      
+      <li>OriginName</li>
+      <!-- Vanilla examples -->
+      <!-- OriginSpacer
+           OriginTribal
+      -->
+      
+    </allowedPlaceTags>
+
+    <iconPath>Path/Image</iconPath>
+    <!-- Icon of the ideoligion -->
+    
+    <iconColor>(red, green, blue)</iconColor>
+    <!-- Colour of the icon -->
+
+    <preferredWeaponClasses>
+      <!-- Weapon class preferred by followers of the ideoligion -->
+      
+      <noble>WeaponGroup</noble>
+      <!-- Weapons considered noble (will give mood buff). (e.g. Neolithic) -->
+      
+      <despised>WeaponGroup</despised>
+      <!-- Weapons that are despised (will give mood debuff). (e.g. Ultratech) -->
+      
+    </preferredWeaponClasses>
+    
+    <thingStyleCategories>
+      <!-- Style of pawn's things that follow this ideology -->
+      <li MayRequire="Ludeon.RimWorld.Ideology">
+        <category>Rustic</category>
+        <!-- Vanilla examples -->
+        <!-- Rustic
+             Spikecore
+             Totemic
+        -->
+        
+        <priority>2</priority>
+        <!-- Priority of the style-->
+        
+      </li>
+    </thingStyleCategories>
+    
+    <styleItemTags>
+      <!-- Style of pawn's items that follow this ideoligion -->
+      <li>
+        <tag>Rural</tag>
+        <baseWeight>1</baseWeight>
+        <weightFactor>1</weightFactor>
+      </li>
+      <li>
+        <tag>NoBeard</tag>
+        <baseWeight>10</baseWeight>
+        <weightFactor>1</weightFactor>
+      </li>
+      <li>
+        <tag>BeardRural</tag>
+        <baseWeight>0.25</baseWeight>
+        <weightFactor>1</weightFactor>
+      </li>
+      <li>
+        <tag>NoTattoo</tag>
+        <baseWeight>1</baseWeight>
+        <weightFactor>1</weightFactor>
+      </li>
+    </styleItemTags>
+
+  </CultureDef>
+</Defs>

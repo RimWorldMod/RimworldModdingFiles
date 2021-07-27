@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <CultureDef>
+    <defName>Astropolitan</defName>
+    <label>astropolitan</label>
+    <description>A broad collection of cultures common among frequent space travelers.</description>
+    <ideoNameMaker MayRequire="Ludeon.RimWorld.Ideology">NamerIdeoAstropolitan</ideoNameMaker>
+    <deityNameMaker MayRequire="Ludeon.RimWorld.Ideology">NamerDeityAstropolitan</deityNameMaker>
+    <deityTypeMaker MayRequire="Ludeon.RimWorld.Ideology">DeityTypeMakerAstropolitan</deityTypeMaker>
+    <leaderTitleMaker MayRequire="Ludeon.RimWorld.Ideology">LeaderTitleMaker_Astropolitan</leaderTitleMaker>
+    <festivalNameMaker MayRequire="Ludeon.RimWorld.Ideology">NamerFestivalAstropolitan</festivalNameMaker>
+    <allowedPlaceTags>
+      <li>OriginSpacer</li>
+    </allowedPlaceTags>
+    <iconPath>UI/Cultures/Astropolitan</iconPath>
+    <iconColor>(0.8, 0.8, 0.8)</iconColor>
+    <styleItemTags>
+      <li>
+        <tag>Urban</tag>
+        <baseWeight>1</baseWeight>
+        <weightFactor>1</weightFactor>
+      </li>
+      <li>
+        <tag>NoBeard</tag>
+        <baseWeight>10</baseWeight>
+        <weightFactor>1</weightFactor>
+      </li>
+      <li>
+        <tag>BeardRural</tag>
+        <baseWeight>0.1</baseWeight>
+        <weightFactor>1</weightFactor>
+      </li>
+      <li>
+        <tag>BeardUrban</tag>
+        <baseWeight>0.2</baseWeight>
+        <weightFactor>1</weightFactor>
+      </li>
+      <li>
+        <tag>NoTattoo</tag>
+        <baseWeight>1</baseWeight>
+        <weightFactor>1</weightFactor>
+      </li>
+    </styleItemTags>
+  </CultureDef>
+
+  <CultureDef>
+    <defName>Corunan</defName>
+    <label>corunan</label>
+    <description>An ancient culture common among rimworld tribes.</description>
+    <pawnNameMaker>NamerPersonCorunan</pawnNameMaker>
+    <ideoNameMaker MayRequire="Ludeon.RimWorld.Ideology">NamerIdeoCorunan</ideoNameMaker>
+    <deityNameMaker MayRequire="Ludeon.RimWorld.Ideology">NamerDeityCorunan</deityNameMaker>
+    <deityTypeMaker MayRequire="Ludeon.RimWorld.Ideology">DeityTypeMakerCorunan</deityTypeMaker>
+    <festivalNameMaker MayRequire="Ludeon.RimWorld.Ideology">NamerFestivalCorunan</festivalNameMaker>
+    <leaderTitleMaker MayRequire="Ludeon.RimWorld.Ideology">LeaderTitleMaker_Corunan</leaderTitleMaker>
+    <allowedPlaceTags>
+      <li>OriginTribal</li>
+    </allowedPlaceTags>
+    <iconPath>World/WorldObjects/Expanding/Village</iconPath>
+    <iconColor>(0.8, 0.8, 0.8)</iconColor>
+    <preferredWeaponClasses>
+      <noble>Neolithic</noble>
+      <despised>Ultratech</despised>
+    </preferredWeaponClasses>
+    <thingStyleCategories>
+      <li MayRequire="Ludeon.RimWorld.Ideology">
+        <category>Totemic</category>
+        <priority>2</priority>
+      </li>
+    </thingStyleCategories>
+    <styleItemTags>
+      <li>
+        <tag>Tribal</tag>
+        <baseWeight>1</baseWeight>
+        <weightFactor>1</weightFactor>
+      </li>
+      <li>
+        <tag>NoBeard</tag>
+        <baseWeight>10</baseWeight>
+        <weightFactor>1</weightFactor>
+      </li>
+      <li>
+        <tag>BeardTribal</tag>
+        <baseWeight>0.3</baseWeight>
+        <weightFactor>1</weightFactor>
+      </li>
+      <li>
+        <tag>TattooFaceTribal</tag>
+        <baseWeight>0.4</baseWeight>
+        <weightFactor>1</weightFactor>
+      </li>
+      <li>
+        <tag>TattooBodyTribal</tag>
+        <baseWeight>0.4</baseWeight>
+        <weightFactor>1</weightFactor>
+      </li>
+      <li>
+        <tag>NoTattoo</tag>
+        <baseWeight>1</baseWeight>
+        <weightFactor>1</weightFactor>
+      </li>
+    </styleItemTags>
+  </CultureDef>
+  
+  <CultureDef>
+    <defName>Rustican</defName>
+    <label>rustican</label>
+    <description>A hardy industrial culture common among rimworld outlanders.</description>
+    <ideoNameMaker MayRequire="Ludeon.RimWorld.Ideology">NamerIdeoRustican</ideoNameMaker>
+    <deityNameMaker MayRequire="Ludeon.RimWorld.Ideology">NamerDeityRustican</deityNameMaker>
+    <deityTypeMaker MayRequire="Ludeon.RimWorld.Ideology">DeityTypeMakerRustican</deityTypeMaker>
+    <leaderTitleMaker MayRequire="Ludeon.RimWorld.Ideology">LeaderTitleMaker_Rustican</leaderTitleMaker>
+    <festivalNameMaker MayRequire="Ludeon.RimWorld.Ideology">NamerFestivalRustican</festivalNameMaker>
+    <allowedPlaceTags>
+      <li>OriginSpacer</li>
+    </allowedPlaceTags>
+    <iconPath>World/WorldObjects/Expanding/Town</iconPath>
+    <iconColor>(0.8, 0.8, 0.8)</iconColor>
+    <thingStyleCategories>
+      <li MayRequire="Ludeon.RimWorld.Ideology">
+        <category>Rustic</category>
+        <priority>2</priority>
+      </li>
+    </thingStyleCategories>
+    <styleItemTags>
+      <li>
+        <tag>Rural</tag>
+        <baseWeight>1</baseWeight>
+        <weightFactor>1</weightFactor>
+      </li>
+      <li>
+        <tag>NoBeard</tag>
+        <baseWeight>10</baseWeight>
+        <weightFactor>1</weightFactor>
+      </li>
+      <li>
+        <tag>BeardRural</tag>
+        <baseWeight>0.25</baseWeight>
+        <weightFactor>1</weightFactor>
+      </li>
+      <li>
+        <tag>NoTattoo</tag>
+        <baseWeight>1</baseWeight>
+        <weightFactor>1</weightFactor>
+      </li>
+    </styleItemTags>
+  </CultureDef>
+
+  <CultureDef>
+    <defName>Kriminul</defName>
+    <label>kriminul</label>
+    <description>A broad category describing the styles and practices of many pirate groups.</description>
+    <ideoNameMaker MayRequire="Ludeon.RimWorld.Ideology">NamerIdeoKriminul</ideoNameMaker>
+    <deityNameMaker MayRequire="Ludeon.RimWorld.Ideology">NamerDeityKriminul</deityNameMaker>
+    <deityTypeMaker MayRequire="Ludeon.RimWorld.Ideology">DeityTypeMakerKriminul</deityTypeMaker>
+    <leaderTitleMaker MayRequire="Ludeon.RimWorld.Ideology">LeaderTitleMaker_Kriminul</leaderTitleMaker>
+    <festivalNameMaker MayRequire="Ludeon.RimWorld.Ideology">NamerFestivalKriminul</festivalNameMaker>
+    <allowedPlaceTags>
+      <li>OriginSpacer</li>
+    </allowedPlaceTags>
+    <iconPath>World/WorldObjects/Expanding/PirateOutpost</iconPath>
+    <iconColor>(0.8, 0.8, 0.8)</iconColor>
+    <thingStyleCategories>
+      <li MayRequire="Ludeon.RimWorld.Ideology">
+        <category>Spikecore</category>
+        <priority>2</priority>
+      </li>
+    </thingStyleCategories>
+    <styleItemTags>
+      <li>
+        <tag>Punk</tag>
+        <baseWeight>1</baseWeight>
+        <weightFactor>1</weightFactor>
+      </li>
+      <li>
+        <tag>NoBeard</tag>
+        <baseWeight>10</baseWeight>
+        <weightFactor>1</weightFactor>
+      </li>
+      <li>
+        <tag>BeardPunk</tag>
+        <baseWeight>0.1</baseWeight>
+        <weightFactor>1</weightFactor>
+      </li>
+      <li>
+        <tag>NoTattoo</tag>
+        <baseWeight>1</baseWeight>
+        <weightFactor>1</weightFactor>
+      </li>
+      <li>
+        <tag>TattooFacePunk</tag>
+        <baseWeight>0.4</baseWeight>
+        <weightFactor>1</weightFactor>
+      </li>
+      <li>
+        <tag>TattooBodyPunk</tag>
+        <baseWeight>0.4</baseWeight>
+        <weightFactor>1</weightFactor>
+      </li>
+
+    </styleItemTags>
+  </CultureDef>
+
+</Defs>

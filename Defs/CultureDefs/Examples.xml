@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <AbilityDef Name="PsycastBase" Abstract="True">
+    <abilityClass>Psycast</abilityClass>
+    <category>Psychic</category>
+    <statBases>
+      <Ability_Duration>0</Ability_Duration>
+    </statBases>
+    <warmupSound>PsycastCastLoop</warmupSound>
+    <verbProperties>
+      <verbClass>Verb_CastPsycast</verbClass>
+      <range>24.9</range>
+      <requireLineOfSight>True</requireLineOfSight>
+      <warmupTime>1</warmupTime>
+      <targetParams>
+        <canTargetBuildings>False</canTargetBuildings>
+        <canTargetAnimals>False</canTargetAnimals>
+        <thingCategory>Item</thingCategory>
+        <mapObjectTargetsMustBeAutoAttackable>False</mapObjectTargetsMustBeAutoAttackable>
+      </targetParams>
+    </verbProperties>
+  </AbilityDef>
+
+  <AbilityDef ParentName="PsycastBase">
+    <defName>Stun</defName>
+    <label>stun</label>
+    <description>Momentarily disrupt motor function in the target's brain, preventing any movement.</description>
+    <level>1</level>
+    <iconPath>UI/Abilities/Stun</iconPath>
+    <writeCombatLog>True</writeCombatLog>
+    <hotKey>Misc3</hotKey>
+    <statBases>
+      <Ability_EntropyGain>12</Ability_EntropyGain>
+      <Ability_PsyfocusCost>0.01</Ability_PsyfocusCost>
+      <Ability_Duration>3</Ability_Duration>
+    </statBases>
+    <verbProperties>
+      <warmupTime>0.25</warmupTime>
+      <range>24.9</range>
+      <targetParams>
+        <canTargetAnimals>True</canTargetAnimals>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class = "CompProperties_AbilityEffectWithDuration">
+        <compClass>CompAbilityEffect_Stun</compClass>
+        <durationMultiplier>PsychicSensitivity</durationMultiplier>
+        <psychic>True</psychic>
+        <goodwillImpact>-15</goodwillImpact>
+      </li>
+      <li Class="CompProperties_AbilityFleckOnTarget">
+        <fleckDef>PsycastPsychicEffect</fleckDef>
+      </li>
+    </comps>
+  </AbilityDef>
+
+  <AbilityDef ParentName="PsycastBase">
+    <defName>Burden</defName>
+    <label>burden</label>
+    <description>Slow the target for a short time by suppressing motor activity in the brain.</description>
+    <level>1</level>
+    <iconPath>UI/Abilities/Burden</iconPath>
+    <writeCombatLog>True</writeCombatLog>
+    <hotKey>Misc4</hotKey>
+    <statBases>
+      <Ability_EntropyGain>8</Ability_EntropyGain>
+      <Ability_PsyfocusCost>0.01</Ability_PsyfocusCost>
+      <Ability_Duration>20</Ability_Duration>
+    </statBases>
+    <verbProperties>
+      <warmupTime>0.25</warmupTime>
+      <range>29.9</range>
+      <targetParams>
+        <canTargetAnimals>True</canTargetAnimals>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class = "CompProperties_AbilityGiveHediff">
+        <compClass>CompAbilityEffect_GiveHediff</compClass>
+        <hediffDef>PsychicBurden</hediffDef>
+        <psychic>True</psychic>
+        <goodwillImpact>-15</goodwillImpact>
+      </li>
+      <li Class="CompProperties_AbilityFleckOnTarget">
+        <fleckDef>PsycastPsychicEffect</fleckDef>
+      </li>
+    </comps>
+  </AbilityDef>
+  
+</Defs>
