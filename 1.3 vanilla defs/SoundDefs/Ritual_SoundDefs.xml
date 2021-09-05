@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <SoundDef>
+    <defName>RitualConclusion_Positive</defName>
+    <maxSimultaneous>1</maxSimultaneous>
+    <subSounds>
+      <li>
+        <onCamera>True</onCamera>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Misc/Rituals/ConclusionPositive</clipFolderPath>
+          </li>
+        </grains>
+        <volumeRange>30</volumeRange>
+        <distRange>15~30</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>RitualConclusion_Negative</defName>
+    <maxSimultaneous>1</maxSimultaneous>
+    <subSounds>
+      <li>
+        <onCamera>True</onCamera>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Misc/Rituals/ConclusionNegative</clipFolderPath>
+          </li>
+        </grains>
+        <volumeRange>30</volumeRange>
+        <distRange>15~30</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+  
+</Defs>

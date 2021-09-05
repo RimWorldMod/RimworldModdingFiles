@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <RecipeDef Abstract="True" Name="SurgeryFlesh">
+    <effectWorking>Surgery</effectWorking>
+    <soundWorking>Recipe_Surgery</soundWorking>
+    <workSpeedStat>MedicalOperationSpeed</workSpeedStat>
+    <workSkill>Medicine</workSkill>
+    <workSkillLearnFactor>16</workSkillLearnFactor>
+  </RecipeDef>
+
+  <RecipeDef ParentName="SurgeryFlesh">
+    <defName>Anesthetize</defName>
+    <label>anesthetize</label>
+    <description>Render a creature unconscious by administering general anesthetic.</description>
+    <workerClass>Recipe_Surgery</workerClass>
+    <jobString>Anesthetizing.</jobString>
+    <workAmount>0</workAmount>
+    <hideBodyPartNames>true</hideBodyPartNames>
+    <targetsBodyPart>false</targetsBodyPart>
+    <surgerySuccessChanceFactor>2</surgerySuccessChanceFactor>
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>Medicine</li>
+          </categories>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <categories>
+        <li>Medicine</li>
+      </categories>
+    </fixedIngredientFilter>
+  </RecipeDef>
+
+  <RecipeDef ParentName="SurgeryFlesh">
+    <defName>Euthanize</defName>
+    <label>euthanize by cut</label>
+    <description>Euthanize a creature by cutting.</description>
+    <workerClass>Recipe_ExecuteByCut</workerClass>
+    <jobString>Euthanizing by cutting.</jobString>
+    <workAmount>500</workAmount>
+    <hideBodyPartNames>true</hideBodyPartNames>
+    <isViolation>true</isViolation>
+    <targetsBodyPart>false</targetsBodyPart>
+    <surgerySuccessChanceFactor>5</surgerySuccessChanceFactor>
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>Medicine</li>
+          </categories>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <categories>
+        <li>Medicine</li>
+      </categories>
+    </fixedIngredientFilter>
+  </RecipeDef>
+
+  <RecipeDef ParentName="SurgeryFlesh">
+    <defName>RemoveBodyPart</defName>
+    <label>remove part</label>
+    <description>Remove a body part.</description>
+    <workerClass>Recipe_RemoveBodyPart</workerClass>
+    <jobString>Removing body part.</jobString>
+    <workAmount>2000</workAmount>
+    <surgerySuccessChanceFactor>1.2</surgerySuccessChanceFactor>
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>Medicine</li>
+          </categories>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <categories>
+        <li>Medicine</li>
+      </categories>
+    </fixedIngredientFilter>
+  </RecipeDef>
+  
+</Defs>

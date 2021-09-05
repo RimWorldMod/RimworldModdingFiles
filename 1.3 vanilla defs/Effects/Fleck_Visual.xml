@@ -1,0 +1,535 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <FleckDef Name="FleckBase" Abstract="True">
+    <fleckSystemClass>FleckSystemStatic</fleckSystemClass>
+    <graphicData>
+      <graphicClass>Graphic_Fleck</graphicClass>
+      <shaderType>Mote</shaderType>
+    </graphicData>
+    <altitudeLayer>MoteLow</altitudeLayer>
+  </FleckDef>
+
+  <FleckDef Name="FleckBase_RandomGraphic" Abstract="True">
+    <fleckSystemClass>FleckSystemStatic</fleckSystemClass>
+    <altitudeLayer>MoteLow</altitudeLayer>
+  </FleckDef>
+
+  <FleckDef ParentName="FleckBase">
+    <defName>ExplosionFlash</defName>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <solidTime>0.05</solidTime>
+    <fadeOutTime>0.1</fadeOutTime>
+    <graphicData>
+      <texPath>Things/Mote/ExplosionFlash</texPath>
+      <shaderType>MoteGlow</shaderType>
+    </graphicData>
+  </FleckDef>
+
+  <FleckDef ParentName="FleckBase" Name="FleckBase_Thrown" Abstract="True">
+    <fleckSystemClass>FleckSystemThrown</fleckSystemClass>
+  </FleckDef>
+
+  <FleckDef ParentName="FleckBase_RandomGraphic" Name="FleckBase_RandomGraphic_Thrown" Abstract="True">
+    <fleckSystemClass>FleckSystemThrown</fleckSystemClass>
+  </FleckDef>
+  
+  <!--=============== Puffs ==============-->
+  
+  <FleckDef ParentName="FleckBase_Thrown">
+    <defName>AirPuff</defName>
+    <graphicData>
+      <texPath>Things/Mote/AirPuff</texPath>
+      <renderInstanced>true</renderInstanced>
+    </graphicData>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <fadeInTime>0.04</fadeInTime>
+    <solidTime>0.03</solidTime>
+    <fadeOutTime>1</fadeOutTime>
+  </FleckDef>
+  
+  <FleckDef ParentName="FleckBase_Thrown">
+    <defName>DustPuff</defName>
+    <graphicData>
+      <texPath>Things/Mote/DustPuff</texPath>
+      <renderInstanced>true</renderInstanced>
+    </graphicData>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <fadeInTime>0.04</fadeInTime>
+    <solidTime>0.03</solidTime>
+    <fadeOutTime>1</fadeOutTime>
+  </FleckDef>
+
+  <FleckDef ParentName="FleckBase_Thrown">
+    <defName>DustPuffThick</defName>
+    <graphicData>
+      <texPath>Things/Mote/DustPuff</texPath>
+      <renderInstanced>true</renderInstanced>
+    </graphicData>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <fadeInTime>0.1</fadeInTime>
+    <solidTime>0.6</solidTime>
+    <fadeOutTime>1.4</fadeOutTime>
+  </FleckDef>
+  
+  <FleckDef ParentName="FleckBase_Thrown">
+    <defName>MetaPuff</defName>
+    <graphicData>
+      <texPath>Things/Mote/MetaPuff</texPath>
+      <renderInstanced>true</renderInstanced>
+    </graphicData>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <realTime>true</realTime>
+    <fadeInTime>0.04</fadeInTime>
+    <solidTime>0.03</solidTime>
+    <fadeOutTime>1</fadeOutTime>
+  </FleckDef>
+
+  <FleckDef ParentName="FleckBase_Thrown">
+    <defName>TornadoDustPuff</defName>
+    <graphicData>
+      <texPath>Things/Mote/MetaPuff</texPath>
+      <renderInstanced>true</renderInstanced>
+    </graphicData>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <fadeInTime>0.04</fadeInTime>
+    <solidTime>0.03</solidTime>
+    <fadeOutTime>1</fadeOutTime>
+  </FleckDef>
+
+  <FleckDef ParentName="FleckBase_Thrown">
+    <defName>Smoke</defName>
+    <graphicData>
+      <texPath>Things/Mote/Smoke</texPath>
+      <renderInstanced>true</renderInstanced>
+    </graphicData>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <fadeInTime>0.50</fadeInTime>
+    <solidTime>6</solidTime>
+    <fadeOutTime>3.2</fadeOutTime>
+    <growthRate>0.005</growthRate>
+  </FleckDef>
+
+  <FleckDef ParentName="FleckBase_Thrown">
+    <defName>DustSlow</defName>
+    <graphicData>
+      <texPath>Things/Mote/DustPuff</texPath>
+      <renderInstanced>true</renderInstanced>
+    </graphicData>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <fadeInTime>0.40</fadeInTime>
+    <solidTime>2</solidTime>
+    <fadeOutTime>2</fadeOutTime>
+  </FleckDef>
+
+  <!--=================== Visual - Fire ==================-->
+  
+  <FleckDef ParentName="FleckBase_Thrown">
+    <defName>FireGlow</defName>
+    <graphicData>
+      <texPath>Things/Mote/FireGlow</texPath>
+      <shaderType>MoteGlow</shaderType>
+    </graphicData>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <fadeInTime>0.75</fadeInTime>
+    <solidTime>1.08</solidTime>
+    <fadeOutTime>0.8</fadeOutTime>
+  </FleckDef>
+
+  <FleckDef ParentName="FleckBase_Thrown" Name="MicroSparks">
+    <defName>MicroSparks</defName>
+    <graphicData>
+      <texPath>Things/Mote/MicroSparks</texPath>
+      <shaderType>MoteGlow</shaderType>
+    </graphicData>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <fadeInTime>0.75</fadeInTime>
+    <solidTime>0.5</solidTime>
+    <fadeOutTime>0.65</fadeOutTime>
+  </FleckDef>
+
+  <FleckDef ParentName="MicroSparks">
+    <defName>MicroSparksFast</defName>
+    <fadeInTime>0.15</fadeInTime>
+    <solidTime>0.3</solidTime>
+    <fadeOutTime>0.45</fadeOutTime>
+  </FleckDef>
+
+  <!--=================== Visual - Heat ==================-->
+
+  <FleckDef ParentName="FleckBase_Thrown">
+    <defName>HeatGlow</defName>
+    <graphicData>
+      <texPath>Things/Mote/FireGlow</texPath>
+      <shaderType>MoteGlow</shaderType>
+    </graphicData>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <fadeInTime>2.6</fadeInTime>
+    <solidTime>1.5</solidTime>
+    <fadeOutTime>3.3</fadeOutTime>
+  </FleckDef>
+
+
+  <!--=================== Visual - Lightning ==================-->
+
+  <FleckDef ParentName="FleckBase_Thrown">
+    <defName>LightningGlow</defName>
+    <graphicData>
+      <texPath>Things/Mote/LightningGlow</texPath>
+      <shaderType>MoteGlow</shaderType>
+    </graphicData>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <fadeInTime>0.08</fadeInTime>
+    <solidTime>0.08</solidTime>
+    <fadeOutTime>0.35</fadeOutTime>
+  </FleckDef>
+
+  <!--=============== Flashes ================-->
+
+  <FleckDef ParentName="FleckBase">
+    <defName>ShotFlash</defName>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <solidTime>0.05</solidTime>
+    <fadeOutTime>0.05</fadeOutTime>
+    <graphicData>
+      <texPath>Things/Mote/ShotFlash</texPath>
+      <shaderType>MoteGlow</shaderType>
+    </graphicData>
+  </FleckDef>
+
+  <FleckDef ParentName="FleckBase">
+    <defName>SparkFlash</defName>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <solidTime>0.05</solidTime>
+    <fadeOutTime>0.1</fadeOutTime>
+    <graphicData>
+      <texPath>Things/Mote/SparkFlash</texPath>
+      <shaderType>MoteGlow</shaderType>
+    </graphicData>
+  </FleckDef>
+
+  <FleckDef ParentName="FleckBase">
+    <defName>YellowSparkFlash</defName>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <solidTime>0.05</solidTime>
+    <fadeOutTime>0.1</fadeOutTime>
+    <graphicData>
+      <texPath>Things/Mote/YellowSparkFlash</texPath>
+      <shaderType>MoteGlow</shaderType>
+    </graphicData>
+  </FleckDef>
+
+  <FleckDef ParentName="FleckBase">
+    <defName>BloodSplash</defName>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <solidTime>0.07</solidTime>
+    <fadeOutTime>0.08</fadeOutTime>
+    <graphicData>
+      <texPath>Things/Mote/BloodSplash</texPath>
+      <shaderType>Mote</shaderType>
+    </graphicData>
+  </FleckDef>
+
+  <FleckDef ParentName="FleckBase_Thrown">
+    <defName>BloodSplashLong</defName>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <solidTime>0.5</solidTime>
+    <fadeOutTime>0.2</fadeOutTime>
+    <graphicData>
+      <texPath>Things/Mote/BloodSplash</texPath>
+      <shaderType>Mote</shaderType>
+      <color>(0.9,0,0,0.8)</color>
+    </graphicData>
+  </FleckDef>
+
+  <FleckDef ParentName="FleckBase">
+    <defName>BodyImpact</defName>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <solidTime>0.07</solidTime>
+    <fadeOutTime>0.05</fadeOutTime>
+    <graphicData>
+      <texPath>Things/Mote/BodyImpact</texPath>
+      <shaderType>MoteGlow</shaderType>
+    </graphicData>
+  </FleckDef>
+
+  <FleckDef ParentName="FleckBase">
+    <defName>GrowingFlash</defName>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <solidTime>0.2</solidTime>
+    <fadeOutTime>0.3</fadeOutTime>
+    <growthRate>57</growthRate>
+    <graphicData>
+      <texPath>Things/Mote/PlainFlash</texPath>
+      <shaderType>MoteGlow</shaderType>
+    </graphicData>
+  </FleckDef>
+
+  <FleckDef ParentName="FleckBase">
+    <defName>GrowingFlashSmall</defName>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <solidTime>0.2</solidTime>
+    <fadeOutTime>0.3</fadeOutTime>
+    <growthRate>20</growthRate>
+    <graphicData>
+      <texPath>Things/Mote/BrightFlash</texPath>
+      <shaderType>MoteGlow</shaderType>
+    </graphicData>
+  </FleckDef>
+
+  <FleckDef ParentName="FleckBase">
+    <defName>PlainFlash</defName>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <solidTime>0.05</solidTime>
+    <fadeOutTime>0.05</fadeOutTime>
+    <graphicData>
+      <texPath>Things/Mote/PlainFlash</texPath>
+      <shaderType>MoteGlow</shaderType>
+    </graphicData>
+  </FleckDef>
+
+  <FleckDef ParentName="FleckBase">
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <defName>ActivatorCountdownFlash</defName>
+    <solidTime>0.15</solidTime>
+    <fadeOutTime>0.1</fadeOutTime>
+    <growthRate>37</growthRate>
+    <graphicData>
+      <drawSize>0.32</drawSize>
+      <color>(135, 215, 40, 200)</color>
+      <texPath>Things/Mote/BrightFlash</texPath>
+      <shaderType>MoteGlow</shaderType>
+    </graphicData>
+  </FleckDef>
+
+  <!--=============== Psycasts ==============-->
+
+  <FleckDef Abstract="True" Name="FleckGlowDistortBackground" ParentName="FleckBase">
+    <graphicData>
+      <shaderType>MoteGlowDistortBackground</shaderType>
+      <shaderParameters>
+        <_DistortionTex>/Things/Mote/PsycastDistortionMask</_DistortionTex>
+      </shaderParameters>
+    </graphicData>
+  </FleckDef>
+
+
+  <FleckDef ParentName="FleckGlowDistortBackground" Name="FleckPsycastAreaEffect">
+    <defName>PsycastAreaEffect</defName>
+    <altitudeLayer>MoteLow</altitudeLayer>
+    <fadeInTime>0.02</fadeInTime>
+    <fadeOutTime>0.6</fadeOutTime>
+    <solidTime>0.12</solidTime>
+    <growthRate>1.5</growthRate>
+    <graphicData>
+      <texPath>Things/Mote/Black</texPath>
+      <shaderParameters>
+        <_distortionIntensity>0.05</_distortionIntensity>
+        <_brightnessMultiplier>1.15</_brightnessMultiplier>
+      </shaderParameters>
+      <drawSize>2.3</drawSize>
+    </graphicData>
+  </FleckDef>
+
+  <FleckDef ParentName="FleckGlowDistortBackground">
+    <defName>PsycastPsychicLine</defName>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <fadeInTime>0.04</fadeInTime>
+    <fadeOutTime>0.1</fadeOutTime>
+    <solidTime>0.0</solidTime>
+    <graphicData>
+      <texPath>Things/Mote/PsycastPsychicLine</texPath>
+      <shaderParameters>
+        <_distortionIntensity>0.15</_distortionIntensity>
+        <_DistortionTex>/Things/Mote/PsycastPsychicLineMask</_DistortionTex>
+      </shaderParameters>
+    </graphicData>
+  </FleckDef>
+
+  <FleckDef ParentName="FleckGlowDistortBackground">
+    <defName>PsycastPsychicEffect</defName>
+    <fleckSystemClass>FleckSystemThrown</fleckSystemClass>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <fadeInTime>0.03</fadeInTime>
+    <fadeOutTime>0.05</fadeOutTime>
+    <solidTime>0.15</solidTime>
+    <growthRate>1.5</growthRate>
+    <graphicData>
+      <texPath>Things/Mote/Black</texPath>
+      <shaderParameters>
+        <_distortionIntensity>0.024</_distortionIntensity>
+        <_brightnessMultiplier>1.1</_brightnessMultiplier>
+      </shaderParameters>
+      <drawSize>2.5</drawSize>
+    </graphicData>
+  </FleckDef>
+
+  <!--=============== Misc visuals ================-->
+
+  <FleckDef ParentName="FleckBase">
+    <defName>ShotHit_Dirt</defName>
+    <graphicData>
+      <texPath>Things/Mote/ShotHit_Dirt</texPath>
+      <shaderType>Transparent</shaderType>
+    </graphicData>
+    <altitudeLayer>MoteLow</altitudeLayer>
+    <solidTime>0.03</solidTime>
+    <fadeOutTime>0.1</fadeOutTime>
+  </FleckDef>
+
+  <FleckDef ParentName="FleckBase">
+    <defName>SandInEyes</defName>
+    <graphicData>
+      <texPath>Things/Mote/SandInEyes</texPath>
+    </graphicData>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <fadeInTime>0.04</fadeInTime>
+    <solidTime>0.5</solidTime>
+    <fadeOutTime>2</fadeOutTime>
+  </FleckDef>
+
+  <FleckDef ParentName="FleckBase">
+    <defName>WoodBit</defName>
+    <graphicData>
+      <texPath>Things/Mote/WoodBit</texPath>
+      <shaderType>Transparent</shaderType>
+    </graphicData>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <fadeInTime>0.04</fadeInTime>
+    <solidTime>0.15</solidTime>
+    <fadeOutTime>0.1</fadeOutTime>
+  </FleckDef>
+
+  <FleckDef ParentName="FleckBase_Thrown">
+    <defName>Music</defName>
+    <graphicData>
+      <texPath>Things/Mote/MusicNote</texPath>
+    </graphicData>
+    <altitudeLayer>MetaOverlays</altitudeLayer>
+    <fadeInTime>0.08</fadeInTime>
+    <solidTime>1.4</solidTime>
+    <fadeOutTime>1.5</fadeOutTime>
+  </FleckDef>
+  
+  <FleckDef ParentName="FleckBase_Thrown">
+    <defName>HarvestWood</defName>
+    <graphicData>
+      <texPath>Things/Mote/WoodBit</texPath>
+    </graphicData>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <fadeInTime>0.04</fadeInTime>
+    <solidTime>0.15</solidTime>
+    <fadeOutTime>0.1</fadeOutTime>
+    <speedPerTime>-40</speedPerTime>
+  </FleckDef>
+  
+  <FleckDef ParentName="FleckBase_Thrown">
+    <defName>DirtBits</defName>
+    <graphicData>
+      <texPath>Things/Mote/WoodBit</texPath>
+    </graphicData>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <fadeInTime>0.04</fadeInTime>
+    <solidTime>0.15</solidTime>
+    <fadeOutTime>0.1</fadeOutTime>
+    <speedPerTime>-40</speedPerTime>
+  </FleckDef>
+  
+  <FleckDef ParentName="FleckBase_Thrown">
+    <defName>SnowBits</defName>
+    <graphicData>
+      <texPath>Things/Mote/SnowBit</texPath>
+    </graphicData>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <fadeInTime>0.04</fadeInTime>
+    <solidTime>0.15</solidTime>
+    <fadeOutTime>0.1</fadeOutTime>
+    <speedPerTime>-40</speedPerTime>
+  </FleckDef>
+  
+  <FleckDef ParentName="FleckBase_Thrown">
+    <defName>ResearchPage</defName>
+    <graphicData>
+      <texPath>Things/Mote/ResearchPage</texPath>
+    </graphicData>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <fadeInTime>0.04</fadeInTime>
+    <solidTime>1</solidTime>
+    <fadeOutTime>0.1</fadeOutTime>
+    <speedPerTime>-40</speedPerTime>
+  </FleckDef>
+  
+  <!--=============== Explosions ================-->
+
+  <FleckDef ParentName="FleckBase">
+    <defName>BlastDry</defName>
+    <graphicData>
+      <texPath>Things/Mote/BlastDry</texPath>
+      <shaderType>TransparentPostLight</shaderType>
+      <renderInstanced>true</renderInstanced>
+    </graphicData>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <solidTime>0</solidTime>
+    <fadeOutTime>0.2</fadeOutTime>
+  </FleckDef>
+  
+  <FleckDef ParentName="FleckBase">
+    <defName>BlastEMP</defName>
+    <graphicData>
+      <texPath>Things/Mote/BlastEMP</texPath>
+      <shaderType>TransparentPostLight</shaderType>
+      <renderInstanced>true</renderInstanced>
+    </graphicData>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <solidTime>0</solidTime>
+    <fadeOutTime>0.2</fadeOutTime>
+  </FleckDef>
+
+  <FleckDef ParentName="FleckBase">
+    <defName>LineEMP</defName>
+    <graphicData>
+      <texPath>Things/Mote/LineEMP</texPath>
+      <shaderType>TransparentPostLight</shaderType>
+      <renderInstanced>true</renderInstanced>
+    </graphicData>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <solidTime>0</solidTime>
+    <fadeOutTime>0.4</fadeOutTime>
+  </FleckDef>
+  
+  <FleckDef ParentName="FleckBase">
+    <defName>BlastFlame</defName>
+    <graphicData>
+      <texPath>Things/Mote/BlastFlame</texPath>
+      <shaderType>TransparentPostLight</shaderType>
+      <renderInstanced>true</renderInstanced>
+    </graphicData>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <solidTime>0</solidTime>
+    <fadeOutTime>0.2</fadeOutTime>
+  </FleckDef>
+  
+  <FleckDef ParentName="FleckBase">
+    <defName>ElectricalSpark</defName>
+    <graphicData>
+      <texPath>Things/Mote/ElectricalSpark</texPath>
+      <shaderType>MoteGlow</shaderType>
+    </graphicData>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <fadeInTime>0.04</fadeInTime>
+    <solidTime>0.08</solidTime>
+    <fadeOutTime>0.13</fadeOutTime>
+  </FleckDef>
+  
+  <FleckDef ParentName="FleckBase">
+    <defName>BlastExtinguisher</defName>
+    <graphicData>
+      <texPath>Things/Mote/BlastExtinguisher</texPath>
+      <shaderType>TransparentPostLight</shaderType>
+    </graphicData>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <solidTime>0</solidTime>
+    <fadeOutTime>0.2</fadeOutTime>
+  </FleckDef>
+
+  </Defs>

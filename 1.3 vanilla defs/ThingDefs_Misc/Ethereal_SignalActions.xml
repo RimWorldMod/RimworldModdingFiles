@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef Name="SignalActionBase" ParentName="EtherealThingBase" Abstract="True">
+    <receivesSignals>true</receivesSignals>
+  </ThingDef>
+
+  <ThingDef ParentName="SignalActionBase">
+    <defName>SignalAction_Letter</defName>
+    <thingClass>SignalAction_Letter</thingClass>
+  </ThingDef>
+
+  <ThingDef ParentName="SignalActionBase">
+    <defName>SignalAction_Ambush</defName>
+    <thingClass>SignalAction_Ambush</thingClass>
+  </ThingDef>
+
+  <ThingDef ParentName="SignalActionBase">
+    <defName>SignalAction_Message</defName>
+    <thingClass>SignalAction_Message</thingClass>
+  </ThingDef>
+
+  <ThingDef ParentName="SignalActionBase">
+    <defName>SignalAction_SoundOneShot</defName>
+    <thingClass>SignalAction_SoundOneShot</thingClass>
+  </ThingDef>
+
+  <ThingDef ParentName="SignalActionBase">
+    <defName>SignalAction_OpenDoor</defName>
+    <thingClass>SignalAction_OpenDoor</thingClass>
+  </ThingDef>
+
+  <ThingDef ParentName="SignalActionBase">
+    <defName>SignalAction_Incident</defName>
+    <thingClass>SignalAction_Incident</thingClass>
+  </ThingDef>
+
+  <ThingDef Abstract="True" Name="SignalActionDelay" ParentName="SignalActionBase">
+    <tickerType>Normal</tickerType>
+  </ThingDef>
+
+  <ThingDef ParentName="SignalActionDelay">
+    <defName>SignalAction_OpenCasket</defName>
+    <thingClass>SignalAction_OpenCasket</thingClass>
+  </ThingDef>
+
+  <ThingDef ParentName="SignalActionDelay">
+    <defName>SignalAction_Infestation</defName>
+    <thingClass>SignalAction_Infestation</thingClass>
+  </ThingDef>
+
+  <ThingDef ParentName="SignalActionDelay">
+    <defName>SignalAction_DormancyWakeUp</defName>
+    <thingClass>SignalAction_DormancyWakeUp</thingClass>
+  </ThingDef>
+
+  <ThingDef ParentName="SignalActionDelay">
+    <defName>SignalAction_StartWick</defName>
+    <thingClass>SignalAction_StartWick</thingClass>
+  </ThingDef>
+
+  <ThingDef ParentName="SignalActionDelay">
+    <defName>SignalAction_Delay</defName>
+    <thingClass>SignalAction_Delay</thingClass>
+  </ThingDef>
+
+</Defs>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <InventoryStockGroupDef>
+    <defName>Medicine</defName>
+    <thingDefs>
+      <li>MedicineHerbal</li>
+      <li>MedicineIndustrial</li>
+      <li>MedicineUltratech</li>
+    </thingDefs>
+    <defaultThingDef>MedicineIndustrial</defaultThingDef>
+  </InventoryStockGroupDef>
+
+</Defs>

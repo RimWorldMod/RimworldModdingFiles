@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <IssueDef>
+    <defName>SlaveTrading</defName>
+    <label>slave trading</label>
+    <iconPath>UI/Issues/SlaveTrading</iconPath>
+  </IssueDef>
+
+  <HistoryEventDef>
+    <defName>SoldSlave</defName>
+    <label>sold slave</label>
+  </HistoryEventDef>
+
+  <PreceptDef>
+    <defName>Slavery_Classic</defName>
+    <issue>SlaveTrading</issue>
+    <impact>Low</impact>
+    <classic>true</classic>
+    <visible>false</visible>
+    <approvesOfSlavery>true</approvesOfSlavery>
+    <comps>
+      <li Class="PreceptComp_KnowsMemoryThought">
+        <eventDef>SoldSlave</eventDef>
+        <thought>KnowPrisonerSold</thought>
+      </li>
+    </comps>
+  </PreceptDef>
+
+</Defs>

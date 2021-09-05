@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <QuestScriptDef>
+    <defName>OpportunitySite_PeaceTalks</defName>
+    <rootSelectionWeight>1</rootSelectionWeight>
+    <rootMinProgressScore>10</rootMinProgressScore>
+    <autoAccept>true</autoAccept>
+    <defaultChallengeRating>1</defaultChallengeRating>
+    <questNameRules>
+      <rulesStrings>
+        <li>questName->[faction_leader_nameDef]'s [peaceTalks]</li>
+        <li>questName->[peaceTalks] with [faction_leader_nameDef]</li>
+        <li>questName->The [peaceTalks]</li>
+        <li>questName->[peaceTalks]</li>
+        <li>peaceTalks->Peace Talks</li>
+        <li>peaceTalks->Diplomacy</li>
+        <li>peaceTalks->Meeting</li>
+      </rulesStrings>
+    </questNameRules>
+    <questDescriptionRules>
+      <rulesStrings>
+        <li>questDescription->[faction_leader_nameFull], [faction_leaderTitle] of [faction_name], has sent us a message. [faction_leader_pronoun] wants to talk with us in a nearby location.
+\nIt could be a great opportunity to improve relations with their faction and receive gifts, but beware - a poor negotiator can cause more harm than good and may even anger them.[extraLeaderPart][favorRewardDetails]</li>
+
+        <li>favorRewardDetails(faction_leader_royalInCurrentFaction==True,priority=1)->\n\nSuccessful peace talks can earn your negotiator a small amount of personal [faction_royalFavorLabel] with [faction_name].</li>
+        <li>favorRewardDetails-></li>
+        <li MayRequire="Ludeon.RimWorld.Ideology">extraLeaderPart(priority=1)->\n\n[leaderRoleEffect].[leaderPawnInfo]</li>
+        <li>extraLeaderPart-></li>
+        <li>leaderRoleEffect->Other factions will respect you more if you send your leader to handle the negotiations</li>
+        <li>leaderPawnInfo(playerFaction_hasLeader==True,priority=1)-> [playerFaction_leaderTitle] [playerFaction_leader_nameFull] will get a bonus to the chance of a successful outcome.</li>
+        <li>leaderPawnInfo-></li>
+      </rulesStrings>
+    </questDescriptionRules>
+    <root Class="QuestNode_Sequence">
+      <nodes>
+        <li Class="QuestNode_Set">
+          <name>siteDistRange</name>
+          <value>5~13</value>
+        </li>
+        
+        <li Class="QuestNode_GetMap" />
+        <li Class="QuestNode_GetFaction">
+          <storeAs>faction</storeAs>
+          <allowEnemy>true</allowEnemy>
+          <allowPermanentEnemy>false</allowPermanentEnemy>
+          <playerCantBeAttackingCurrently>true</playerCantBeAttackingCurrently>
+          <peaceTalksCantExist>true</peaceTalksCantExist>
+          <leaderMustBeSafe>true</leaderMustBeSafe>
+          <mustHaveGoodwillRewardsEnabled>true</mustHaveGoodwillRewardsEnabled>
+        </li>
+
+        <li Class="QuestNode_GetPlayerFaction">
+          <storeAs>playerFaction</storeAs>
+        </li>
+        
+        <li Class="QuestNode_QuestUnique">
+          <tag>PeaceTalks</tag>
+          <faction>$faction</faction>
+        </li>
+        
+        <li Class="QuestNode_GetSiteTile">
+          <storeAs>tile</storeAs>
+        </li>
+        
+        <li Class="QuestNode_GenerateWorldObject">
+          <def>PeaceTalks</def>
+          <tile>$tile</tile>
+          <faction>$faction</faction>
+          <storeAs>peaceTalks</storeAs>
+        </li>
+        <li Class="QuestNode_SpawnWorldObjects">
+          <worldObjects>$peaceTalks</worldObjects>
+          <tile>$tile</tile>
+        </li>
+
+        <li Class="QuestNode_Delay">
+          <delayTicks>$(randInt(12,28)*60000)</delayTicks>
+          <outSignalComplete>PeaceTalksTimeout</outSignalComplete>
+        </li>
+        
+        <li Class="QuestNode_DestroyWorldObject">
+          <inSignal>PeaceTalksTimeout</inSignal>
+          <worldObject>$peaceTalks</worldObject>
+        </li>
+        <li Class="QuestNode_Signal">
+          <inSignal>PeaceTalksTimeout</inSignal>
+          <node Class="QuestNode_Sequence">
+            <nodes>
+              <li Class="QuestNode_Letter">
+                <label TKey="LetterLabelQuestExpired">Quest expired: [resolvedQuestName]</label>
+                <text TKey="LetterTextQuestExpired">The offer of peace talks with [faction_name] has expired. You have failed the quest [resolvedQuestName].</text>
+              </li>
+              <li Class="QuestNode_End">
+                <outcome>Fail</outcome>
+              </li>
+            </nodes>
+          </node>
+        </li>
+        
+        <li Class="QuestNode_End">
+          <inSignal>peaceTalks.Resolved</inSignal>
+          <outcome>Success</outcome>
+        </li>
+      </nodes>
+    </root>
+  </QuestScriptDef>
+</Defs>

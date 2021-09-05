@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs> 
+  <QuestScriptDef>
+    <defName>DelayedRewardDropPods</defName>
+    <questNameRules>
+      <rulesStrings>
+        <li>questName->delayed reward</li>
+      </rulesStrings>
+    </questNameRules>
+    <questDescriptionRules>
+      <rulesStrings>
+        <li>questDescription->delayed reward</li>
+      </rulesStrings>
+    </questDescriptionRules>
+    <defaultHidden>true</defaultHidden>
+    <root Class="QuestNode_Root_DelayedRewardDropPods" />
+  </QuestScriptDef>
+</Defs>

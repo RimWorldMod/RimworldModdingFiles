@@ -1,0 +1,411 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- Missing body part -->
+
+  <HediffDef>
+    <defName>MissingBodyPart</defName>
+    <label>missing body part</label>
+    <labelNoun>a missing body part</labelNoun>
+    <labelNounPretty>missing a {1}</labelNounPretty>
+    <description>A body part is entirely missing.</description>
+    <hediffClass>Hediff_MissingPart</hediffClass>
+    <defaultLabelColor>(0.5, 0.5, 0.5)</defaultLabelColor>
+    <tendable>true</tendable>
+    <displayWound>true</displayWound>
+    <injuryProps>
+      <bleedRate>0.12</bleedRate>
+      <painPerSeverity>0.0125</painPerSeverity>
+    </injuryProps>
+    <comps>
+      <li Class="HediffCompProperties_TendDuration">
+        <showTendQuality>false</showTendQuality>
+      </li>
+    </comps>
+  </HediffDef>
+
+  <!-- Injuries -->
+
+  <HediffDef Name="InjuryBase" Abstract="True">
+    <hediffClass>Hediff_Injury</hediffClass>
+    <tendable>true</tendable>
+    <displayWound>true</displayWound>
+    <labelNounPretty>{0} in the {1}</labelNounPretty>
+  </HediffDef>
+
+  <HediffDef ParentName="InjuryBase">
+    <defName>Misc</defName>
+    <label>misc</label>
+    <labelNoun>an injury</labelNoun>
+    <description>Miscellanous injuries.</description>
+    <comps>
+      <li Class="HediffCompProperties_TendDuration">
+        <labelTendedWell>bandaged</labelTendedWell>
+        <labelTendedWellInner>sutured</labelTendedWellInner>
+        <labelSolidTendedWell>set</labelSolidTendedWell>
+      </li>
+      <li Class="HediffCompProperties_GetsPermanent">
+        <permanentLabel>scar</permanentLabel>
+      </li>
+    </comps>
+    <injuryProps>
+      <painPerSeverity>0.0125</painPerSeverity>
+      <bleedRate>0.06</bleedRate>
+      <canMerge>false</canMerge>
+      <destroyedLabel>Destroyed</destroyedLabel>
+    </injuryProps>
+  </HediffDef>
+
+  <HediffDef ParentName="InjuryBase">
+    <defName>Burn</defName>
+    <label>burn</label>
+    <labelNoun>a burn</labelNoun>
+    <description>A burn.</description>
+    <comps>
+      <li Class="HediffCompProperties_TendDuration">
+        <labelTendedWell>bandaged</labelTendedWell>
+        <labelTendedWellInner>tended</labelTendedWellInner>
+        <labelSolidTendedWell>tended</labelSolidTendedWell>
+      </li>
+      <li Class="HediffCompProperties_Infecter">
+        <infectionChance>0.30</infectionChance>
+      </li>
+      <li Class="HediffCompProperties_GetsPermanent">
+        <permanentLabel>burn scar</permanentLabel>
+      </li>
+    </comps>
+    <injuryProps>
+      <painPerSeverity>0.01875</painPerSeverity>
+      <averagePainPerSeverityPermanent>0.00625</averagePainPerSeverityPermanent>
+      <canMerge>true</canMerge>
+      <destroyedLabel>Burned off</destroyedLabel>
+      <destroyedOutLabel>Burned out</destroyedOutLabel>
+    </injuryProps>
+  </HediffDef>
+
+  <HediffDef ParentName="InjuryBase">
+    <defName>ChemicalBurn</defName>
+    <label>chemical burn</label>
+    <labelNoun>a chemical burn</labelNoun>
+    <description>A chemical burn.</description>
+    <comps>
+      <li Class="HediffCompProperties_TendDuration">
+        <labelTendedWell>bandaged</labelTendedWell>
+        <labelTendedWellInner>tended</labelTendedWellInner>
+        <labelSolidTendedWell>tended</labelSolidTendedWell>
+      </li>
+      <li Class="HediffCompProperties_Infecter">
+        <infectionChance>0.30</infectionChance>
+      </li>
+      <li Class="HediffCompProperties_GetsPermanent">
+        <permanentLabel>chemical burn scar</permanentLabel>
+      </li>
+    </comps>
+    <injuryProps>
+      <painPerSeverity>0.01875</painPerSeverity>
+      <averagePainPerSeverityPermanent>0.00625</averagePainPerSeverityPermanent>
+      <canMerge>true</canMerge>
+      <destroyedLabel>Burned off (chemical)</destroyedLabel>
+      <destroyedOutLabel>Burned out (chemical)</destroyedOutLabel>
+    </injuryProps>
+  </HediffDef>
+
+  <HediffDef ParentName="InjuryBase">
+    <defName>Crush</defName>
+    <label>crush</label>
+    <labelNoun>a crush wound</labelNoun>
+    <description>A crushing wound.</description>
+    <comps>
+      <li Class="HediffCompProperties_TendDuration">
+        <labelTendedWell>bandaged</labelTendedWell>
+        <labelTendedWellInner>sutured</labelTendedWellInner>
+        <labelSolidTendedWell>set</labelSolidTendedWell>
+      </li>
+      <li Class="HediffCompProperties_Infecter">
+        <infectionChance>0.15</infectionChance>
+      </li>
+      <li Class="HediffCompProperties_GetsPermanent">
+        <permanentLabel>mangled scar</permanentLabel>
+      </li>
+    </comps>
+    <injuryProps>
+      <painPerSeverity>0.0125</painPerSeverity>
+      <averagePainPerSeverityPermanent>0.00625</averagePainPerSeverityPermanent>
+      <bleedRate>0.01</bleedRate>
+      <canMerge>true</canMerge>
+      <destroyedLabel>Crushed</destroyedLabel>
+    </injuryProps>
+  </HediffDef>
+
+  <HediffDef ParentName="InjuryBase">
+    <defName>Crack</defName>
+    <label>crack</label>
+    <labelNoun>a crack wound</labelNoun>
+    <description>A crack.</description>
+    <comps>
+      <li Class="HediffCompProperties_TendDuration">
+        <labelTendedWell>set</labelTendedWell>
+        <labelTendedWellInner>set</labelTendedWellInner>
+        <labelSolidTendedWell>set</labelSolidTendedWell>
+      </li>
+      <li Class="HediffCompProperties_GetsPermanent">
+        <permanentLabel>permanent crack</permanentLabel>
+      </li>
+    </comps>
+    <injuryProps>
+      <painPerSeverity>0.01</painPerSeverity>
+      <averagePainPerSeverityPermanent>0.00625</averagePainPerSeverityPermanent>
+      <destroyedLabel>Shattered</destroyedLabel>
+    </injuryProps>
+  </HediffDef>
+
+  <HediffDef ParentName="InjuryBase">
+    <defName>Cut</defName>
+    <label>cut</label>
+    <labelNoun>a cut</labelNoun>
+    <description>A cut.</description>
+    <comps>
+      <li Class="HediffCompProperties_TendDuration">
+        <labelTendedWell>bandaged</labelTendedWell>
+        <labelTendedWellInner>sutured</labelTendedWellInner>
+        <labelSolidTendedWell>set</labelSolidTendedWell>
+      </li>
+      <li Class="HediffCompProperties_Infecter">
+        <infectionChance>0.15</infectionChance>
+      </li>
+      <li Class="HediffCompProperties_GetsPermanent">
+        <permanentLabel>cut scar</permanentLabel>
+      </li>
+    </comps>
+    <injuryProps>
+      <painPerSeverity>0.0125</painPerSeverity>
+      <averagePainPerSeverityPermanent>0.00625</averagePainPerSeverityPermanent>
+      <bleedRate>0.06</bleedRate>
+      <canMerge>false</canMerge>
+      <destroyedLabel>Cut off</destroyedLabel>
+      <destroyedOutLabel>Cut out</destroyedOutLabel>
+    </injuryProps>
+  </HediffDef>
+
+  <HediffDef ParentName="InjuryBase">
+    <defName>SurgicalCut</defName>
+    <label>surgical cut</label>
+    <labelNoun>a surgical cut</labelNoun>
+    <description>A cut made during surgery.</description>
+    <comps>
+      <li Class="HediffCompProperties_TendDuration">
+        <labelTendedWell>bandaged</labelTendedWell>
+        <labelTendedWellInner>sutured</labelTendedWellInner>
+        <labelSolidTendedWell>set</labelSolidTendedWell>
+      </li>
+      <li Class="HediffCompProperties_GetsPermanent">
+        <permanentLabel>surgical scar</permanentLabel>
+      </li>
+    </comps>
+    <injuryProps>
+      <painPerSeverity>0.0125</painPerSeverity>
+      <averagePainPerSeverityPermanent>0.00625</averagePainPerSeverityPermanent>
+      <bleedRate>0.06</bleedRate>
+      <canMerge>false</canMerge>
+      <useRemovedLabel>true</useRemovedLabel>
+    </injuryProps>
+  </HediffDef>
+
+  <HediffDef ParentName="InjuryBase">
+    <defName>ExecutionCut</defName>
+    <label>cut</label>
+    <labelNoun>a cut</labelNoun>
+    <description>A cut made during execution.</description>
+    <injuryProps>
+      <canMerge>false</canMerge>
+    </injuryProps>
+  </HediffDef>
+
+  <HediffDef ParentName="InjuryBase">
+    <defName>Scratch</defName>
+    <label>scratch</label>
+    <labelNoun>a scratch</labelNoun>
+    <description>A scratch or tear.</description>
+    <comps>
+      <li Class="HediffCompProperties_TendDuration">
+        <labelTendedWell>bandaged</labelTendedWell>
+        <labelTendedWellInner>sutured</labelTendedWellInner>
+        <labelSolidTendedWell>set</labelSolidTendedWell>
+      </li>
+      <li Class="HediffCompProperties_Infecter">
+        <infectionChance>0.15</infectionChance>
+      </li>
+      <li Class="HediffCompProperties_GetsPermanent">
+        <permanentLabel>scratch scar</permanentLabel>
+      </li>
+    </comps>
+    <injuryProps>
+      <painPerSeverity>0.0125</painPerSeverity>
+      <averagePainPerSeverityPermanent>0.00625</averagePainPerSeverityPermanent>
+      <bleedRate>0.06</bleedRate>
+      <canMerge>false</canMerge>
+      <destroyedLabel>Torn off</destroyedLabel>
+      <destroyedOutLabel>Torn out</destroyedOutLabel>
+    </injuryProps>
+  </HediffDef>
+
+  <HediffDef ParentName="InjuryBase">
+    <defName>Bite</defName>
+    <label>bite</label>
+    <labelNoun>a bite wound</labelNoun>
+    <description>A bite wound.</description>
+    <comps>
+      <li Class="HediffCompProperties_TendDuration">
+        <labelTendedWell>bandaged</labelTendedWell>
+        <labelTendedWellInner>sutured</labelTendedWellInner>
+        <labelSolidTendedWell>set</labelSolidTendedWell>
+      </li>
+      <li Class="HediffCompProperties_Infecter">
+        <infectionChance>0.30</infectionChance>
+      </li>
+      <li Class="HediffCompProperties_GetsPermanent">
+        <permanentLabel>bite scar</permanentLabel>
+      </li>
+    </comps>
+    <injuryProps>
+      <painPerSeverity>0.0125</painPerSeverity>
+      <averagePainPerSeverityPermanent>0.00625</averagePainPerSeverityPermanent>
+      <bleedRate>0.06</bleedRate>
+      <canMerge>false</canMerge>
+      <destroyedLabel>Bitten off</destroyedLabel>
+      <destroyedOutLabel>Bitten out</destroyedOutLabel>
+    </injuryProps>
+  </HediffDef>
+
+  <HediffDef ParentName="InjuryBase">
+    <defName>Stab</defName>
+    <label>stab</label>
+    <labelNoun>a stab wound</labelNoun>
+    <description>A stab wound.</description>
+    <comps>
+      <li Class="HediffCompProperties_TendDuration">
+        <labelTendedWell>bandaged</labelTendedWell>
+        <labelTendedWellInner>sutured</labelTendedWellInner>
+        <labelSolidTendedWell>set</labelSolidTendedWell>
+      </li>
+      <li Class="HediffCompProperties_Infecter">
+        <infectionChance>0.15</infectionChance>
+      </li>
+      <li Class="HediffCompProperties_GetsPermanent">
+        <permanentLabel>stab scar</permanentLabel>
+      </li>
+    </comps>
+    <injuryProps>
+      <painPerSeverity>0.0125</painPerSeverity>
+      <averagePainPerSeverityPermanent>0.00625</averagePainPerSeverityPermanent>
+      <bleedRate>0.06</bleedRate>
+      <canMerge>false</canMerge>
+      <destroyedLabel>Cut off</destroyedLabel>
+      <destroyedOutLabel>Cut out</destroyedOutLabel>
+    </injuryProps>
+  </HediffDef>
+
+  <HediffDef ParentName="InjuryBase">
+    <defName>Gunshot</defName>
+    <label>gunshot</label>
+    <labelNoun>a gunshot wound</labelNoun>
+    <description>A gunshot wound.</description>
+    <comps>
+      <li Class="HediffCompProperties_TendDuration">
+        <labelTendedWell>bandaged</labelTendedWell>
+        <labelTendedWellInner>sutured</labelTendedWellInner>
+        <labelSolidTendedWell>set</labelSolidTendedWell>
+      </li>
+      <li Class="HediffCompProperties_Infecter">
+        <infectionChance>0.15</infectionChance>
+      </li>
+      <li Class="HediffCompProperties_GetsPermanent">
+        <permanentLabel>old gunshot</permanentLabel>
+        <instantlyPermanentLabel>permanent gunshot injury</instantlyPermanentLabel>
+      </li>
+    </comps>
+    <injuryProps>
+      <painPerSeverity>0.0125</painPerSeverity>
+      <averagePainPerSeverityPermanent>0.00625</averagePainPerSeverityPermanent>
+      <bleedRate>0.06</bleedRate>
+      <canMerge>false</canMerge>
+      <destroyedLabel>Shot off</destroyedLabel>
+      <destroyedOutLabel>Shot out</destroyedOutLabel>
+    </injuryProps>
+  </HediffDef>
+
+  <HediffDef ParentName="InjuryBase">
+    <defName>Shredded</defName>
+    <label>shredded</label>
+    <labelNoun>a shredded wound</labelNoun>
+    <description>A part of the body has been shredded and torn.</description>
+    <comps>
+      <li Class="HediffCompProperties_TendDuration">
+        <labelTendedWell>bandaged</labelTendedWell>
+        <labelTendedWellInner>sutured</labelTendedWellInner>
+        <labelSolidTendedWell>set</labelSolidTendedWell>
+      </li>
+      <li Class="HediffCompProperties_Infecter">
+        <infectionChance>0.20</infectionChance>
+      </li>
+      <li Class="HediffCompProperties_GetsPermanent">
+        <permanentLabel>shredded scar</permanentLabel>
+      </li>
+    </comps>
+    <injuryProps>
+      <painPerSeverity>0.0125</painPerSeverity>
+      <averagePainPerSeverityPermanent>0.00625</averagePainPerSeverityPermanent>
+      <bleedRate>0.06</bleedRate>
+      <canMerge>true</canMerge>
+      <destroyedLabel>Torn off</destroyedLabel>
+      <destroyedOutLabel>Torn out</destroyedOutLabel>
+    </injuryProps>
+  </HediffDef>
+
+  <HediffDef ParentName="InjuryBase">
+    <defName>Bruise</defName>
+    <label>bruise</label>
+    <labelNoun>a bruise</labelNoun>
+    <description>A bruise.</description>
+    <comps>
+      <li Class="HediffCompProperties_TendDuration">
+        <labelTendedWell>bandaged</labelTendedWell>
+        <labelTendedWellInner>tended</labelTendedWellInner>
+        <labelSolidTendedWell>set</labelSolidTendedWell>
+      </li>
+    </comps>
+    <injuryProps>
+      <painPerSeverity>0.0125</painPerSeverity>
+      <averagePainPerSeverityPermanent>0.00625</averagePainPerSeverityPermanent>
+      <canMerge>false</canMerge>
+      <destroyedLabel>Destroyed</destroyedLabel>
+    </injuryProps>
+  </HediffDef>
+
+  <HediffDef ParentName="InjuryBase">
+    <defName>Frostbite</defName>
+    <label>frostbite</label>
+    <description>Frozen tissue caused by exposure to cold without adequate protection. Frostbite is very painful, and frostbitten body parts are often lost.</description>
+    <displayWound>false</displayWound>
+    <comps>
+      <li Class="HediffCompProperties_TendDuration">
+        <labelTendedWell>bandaged</labelTendedWell>
+        <labelTendedWellInner>tended</labelTendedWellInner>
+        <labelSolidTendedWell>tended</labelSolidTendedWell>
+      </li>
+      <li Class="HediffCompProperties_Infecter">
+        <infectionChance>0.25</infectionChance>
+      </li>
+      <li Class="HediffCompProperties_GetsPermanent">
+        <permanentLabel>frostbite scar</permanentLabel>
+      </li>
+    </comps>
+    <injuryProps>
+      <painPerSeverity>0.0125</painPerSeverity>
+      <averagePainPerSeverityPermanent>0.00625</averagePainPerSeverityPermanent>
+      <canMerge>true</canMerge>
+      <destroyedLabel>Lost to frostbite</destroyedLabel>
+    </injuryProps>
+  </HediffDef>
+
+</Defs>

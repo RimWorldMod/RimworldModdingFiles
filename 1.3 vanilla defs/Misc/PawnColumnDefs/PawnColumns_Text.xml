@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <PawnColumnDef>
+    <defName>ManhunterOnDamageChance</defName>
+    <workerClass>PawnColumnWorker_ManhunterOnDamageChance</workerClass>
+    <headerIcon>World/WorldObjects/Expanding/Sites/Manhunters</headerIcon>
+    <headerTip>The chance this creature will attack when harmed.\n\nThis chance increases up to three times if the attacker is closer.\n\nThis chance is applied each time damage is taken. This means that so slower-firing, higher-damage weapons are less likely to trigger it while hunting.</headerTip>
+    <width>45</width>
+    <sortable>true</sortable>
+  </PawnColumnDef>
+
+
+  <PawnColumnDef>
+    <defName>ManhunterOnTameFailChance</defName>
+    <workerClass>PawnColumnWorker_ManhunterOnTameFailChance</workerClass>
+    <headerIcon>World/WorldObjects/Expanding/Sites/Manhunters</headerIcon>
+    <headerTip>The chance that this creature will attack when a tamer tries to tame it and fails.</headerTip>
+    <width>45</width>
+    <sortable>true</sortable>
+  </PawnColumnDef>
+
+</Defs>

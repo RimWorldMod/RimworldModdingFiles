@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!--=============== Bases ==============-->
+
+  <FleckDef Name="FleckBase_Water" ParentName="FleckBase" Abstract="True">
+    <fleckSystemClass>FleckSystemSplash</fleckSystemClass>
+    <graphicData>
+      <shaderType>MoteWater</shaderType>
+    </graphicData>
+  </FleckDef>
+
+  <!--=============== Splash ================-->
+
+  <FleckDef ParentName="FleckBase_Water">
+    <defName>WaterSplash</defName>
+    <fadeInTime>0</fadeInTime>
+    <solidTime>500</solidTime>
+    <fadeOutTime>0</fadeOutTime>
+    <graphicData>
+      <graphicClass>Graphic_FleckSplash</graphicClass>
+      <texPath>Things/Mote/Horseshoe</texPath>  <!-- actually unused atm, this is just a stub to avoid errors -->
+    </graphicData>
+  </FleckDef>
+
+</Defs>

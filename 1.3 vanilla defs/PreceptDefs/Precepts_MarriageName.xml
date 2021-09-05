@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- Issue -->
+
+  <IssueDef>
+    <defName>MarriageName</defName>
+    <label>marriage name</label>
+    <iconPath>UI/Issues/MarriageName</iconPath>
+  </IssueDef>
+
+  <!-- History events -->
+
+  <HistoryEventDef>
+    <defName>GotMarried_TookWomansName</defName>
+    <label>taking woman's name</label>
+  </HistoryEventDef>
+
+  <HistoryEventDef>
+    <defName>GotMarried_TookMansName</defName>
+    <label>taking man's name</label>
+  </HistoryEventDef>
+
+  <HistoryEventDef>
+    <defName>GotMarried_KeptName</defName>
+    <label>keeping name</label>
+  </HistoryEventDef>
+
+  <!-- Precept -->
+
+  <PreceptDef>
+    <defName>MarriageName_UsuallyMans</defName>
+    <issue>MarriageName</issue>
+    <label>usually man's</label>
+    <description>Most couples share the man's name.</description>
+    <impact>Low</impact>
+    <classic>true</classic>
+    <displayOrderInIssue>0</displayOrderInIssue>
+    <defaultSelectionWeight>1</defaultSelectionWeight>
+    <comps>
+      <li Class="PreceptComp_UnwillingToDo_Chance">
+        <eventDef>GotMarried_TookWomansName</eventDef>
+        <chance>0.95</chance>
+      </li>
+      <li Class="PreceptComp_UnwillingToDo_Chance">
+        <eventDef>GotMarried_KeptName</eventDef>
+        <chance>0.75</chance>
+      </li>
+    </comps>
+  </PreceptDef>
+
+</Defs>

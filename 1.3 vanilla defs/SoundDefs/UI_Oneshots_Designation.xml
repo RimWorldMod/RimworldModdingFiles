@@ -1,0 +1,348 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Defs>
+
+  <SoundDef Name="Designate_DragStandard_Changed" Abstract="True">
+    <maxSimultaneous>1</maxSimultaneous>
+    <subSounds>
+      <li>
+        <onCamera>True</onCamera>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>UI/Designate/DragStandard2</clipPath>
+          </li>
+        </grains>
+        <volumeRange>10.4</volumeRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef ParentName="Designate_DragStandard_Changed">
+    <defName>Designate_DragStandard_Changed</defName>
+    <priorityMode>PrioritizeNearest</priorityMode>
+  </SoundDef>
+
+  <SoundDef ParentName="Designate_DragStandard_Changed">
+    <defName>Designate_DragStandard_Changed_NoCam</defName>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Designate_DragBuilding_Start</defName>    
+    <maxSimultaneous>1</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <onCamera>True</onCamera>      
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>UI/Designate/DragBuildingStart</clipPath>
+          </li>
+        </grains>      
+        <volumeRange>25</volumeRange>      
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Designate_DragAreaAdd_Start</defName>    
+    <maxSimultaneous>1</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <onCamera>True</onCamera>      
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>UI/Designate/CreateZone_Start2</clipPath>
+          </li>
+        </grains>      
+        <volumeRange>3.3</volumeRange>      
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Designate_DragAreaDelete_Start</defName>    
+    <maxSimultaneous>1</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <onCamera>True</onCamera>      
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>UI/Designate/CreateZone_Start2</clipPath>
+          </li>
+        </grains>      
+        <volumeRange>3.3</volumeRange>      
+        <pitchRange>0.9</pitchRange>   
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Designate_PlaceBuilding</defName>    
+    <maxSimultaneous>1</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <onCamera>True</onCamera>      
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>UI/Designate/PlaceBuilding</clipFolderPath>
+          </li>
+        </grains>      
+        <volumeRange>7</volumeRange>      
+        <pitchRange>0.93~1</pitchRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Designate_Cancel</defName>    
+    <maxSimultaneous>1</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <onCamera>True</onCamera>      
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>UI/Designate/Cancel5</clipPath>
+          </li>
+        </grains>      
+        <volumeRange>15</volumeRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Designate_Deconstruct</defName>    
+    <maxSimultaneous>1</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <onCamera>True</onCamera>      
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>UI/Designate/Deconstruct</clipFolderPath>
+          </li>
+        </grains>      
+        <volumeRange>8</volumeRange>      
+        <pitchRange>0.9~1.1</pitchRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Designate_Mine</defName>    
+    <maxSimultaneous>1</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <onCamera>True</onCamera>      
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>UI/Designate/Mine</clipPath>
+          </li>
+        </grains>      
+        <volumeRange>20</volumeRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Designate_Failed</defName>    
+    <maxSimultaneous>1</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <onCamera>True</onCamera>      
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>UI/Designate/DesignateFailed</clipPath>
+          </li>
+        </grains>      
+        <volumeRange>18</volumeRange>      
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Designate_ZoneAdd</defName>  
+    <maxSimultaneous>1</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <onCamera>True</onCamera>      
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>UI/Designate/CreateZone_End2</clipPath>
+          </li>
+        </grains>      
+        <volumeRange>2</volumeRange>      
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Designate_ZoneDelete</defName>  
+    <maxSimultaneous>1</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <onCamera>True</onCamera>      
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>UI/Designate/DeleteZone</clipPath>
+          </li>
+        </grains>      
+        <volumeRange>12</volumeRange>      
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Designate_Haul</defName>    
+    <maxSimultaneous>1</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <onCamera>True</onCamera>      
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>UI/Designate/Haul</clipPath>
+          </li>
+        </grains>      
+        <volumeRange>16</volumeRange>      
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Designate_Hunt</defName>    
+    <maxSimultaneous>1</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <onCamera>True</onCamera>      
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>UI/Designate/Hunt2</clipPath>
+          </li>
+        </grains>      
+        <volumeRange>16</volumeRange>      
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Designate_ReleaseToWild</defName>    
+    <maxSimultaneous>1</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <onCamera>True</onCamera>      
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipPath>UI/Designate/ReleaseToWild</clipPath>
+          </li>
+        </grains>      
+        <volumeRange>16</volumeRange>      
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Designate_CutPlants</defName>    
+    <maxSimultaneous>1</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <onCamera>True</onCamera>      
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>UI/Designate/CutPlants</clipPath>
+          </li>
+        </grains>      
+        <volumeRange>15</volumeRange>      
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Designate_Harvest</defName>    
+    <maxSimultaneous>1</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <onCamera>True</onCamera>      
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>UI/Designate/Harvest</clipPath>
+          </li>
+        </grains>      
+        <volumeRange>14</volumeRange>      
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Designate_SmoothSurface</defName>    
+    <maxSimultaneous>1</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <onCamera>True</onCamera>      
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>UI/Designate/SmoothSurface</clipPath>
+          </li>
+        </grains>      
+        <volumeRange>15</volumeRange>      
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Designate_PlanAdd</defName>    
+    <maxSimultaneous>1</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <onCamera>True</onCamera>      
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>UI/Designate/PlanAdd</clipPath>
+          </li>
+        </grains>      
+        <volumeRange>8</volumeRange>      
+        <pitchRange>0.9~1.1</pitchRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Designate_PlanRemove</defName>    
+    <maxSimultaneous>1</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <onCamera>True</onCamera>      
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>UI/Designate/PlanRemove1</clipPath>
+          </li>
+        </grains>      
+        <volumeRange>10</volumeRange>      
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Designate_Claim</defName>    
+    <maxSimultaneous>1</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <onCamera>True</onCamera>      
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>UI/Designate/Claim</clipPath>
+          </li>
+        </grains>      
+        <volumeRange>15</volumeRange>      
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+</Defs>

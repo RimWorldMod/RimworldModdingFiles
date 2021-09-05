@@ -1,0 +1,196 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ResearchProjectDef>
+    <defName>MultiAnalyzer</defName>
+    <label>multi-analyzer</label>
+    <description>Build multi-analyzers which increase research speed and allow higher-level research projects.</description>
+    <baseCost>4000</baseCost>
+    <techLevel>Industrial</techLevel>
+    <prerequisites>
+      <li>MicroelectronicsBasics</li>
+    </prerequisites>
+    <hiddenPrerequisites>
+      <li>Machining</li>
+    </hiddenPrerequisites>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <researchViewX>13.00</researchViewX>
+    <researchViewY>2.90</researchViewY>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>VitalsMonitor</defName>
+    <label>vitals monitor</label>
+    <description>Build vitals monitors which improve medical outcomes when placed next to hospital beds.</description>
+    <baseCost>2500</baseCost>
+    <techLevel>Industrial</techLevel>
+    <prerequisites>
+      <li>MultiAnalyzer</li>
+      <li>HospitalBed</li>
+    </prerequisites>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <requiredResearchFacilities>
+      <li>MultiAnalyzer</li>
+    </requiredResearchFacilities>
+    <researchViewX>14.00</researchViewX>
+    <researchViewY>1.50</researchViewY>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>Fabrication</defName>
+    <label>fabrication</label>
+    <description>Build fabrication benches, capable of high-tech projects ranging from component assembly to power armor construction.</description>
+    <baseCost>4000</baseCost>
+    <techLevel>Industrial</techLevel>
+    <prerequisites>
+      <li>MultiAnalyzer</li>
+    </prerequisites>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <requiredResearchFacilities>
+      <li>MultiAnalyzer</li>
+    </requiredResearchFacilities>
+    <researchViewX>14.00</researchViewX>
+    <researchViewY>2.90</researchViewY>
+    <discoveredLetterTitle>About: Getting advanced components</discoveredLetterTitle>
+    <discoveredLetterText>You now have the technology to build a fabrication bench - but it also requires some advanced components to get started. You can collect advanced components several ways:\n\n  -All outlander settlements sell advanced components. Send a caravan to buy some.\n  -Some visiting traders sell advanced components. Invite or wait for them.\n  -Some quests are rewarded with advanced components.</discoveredLetterText>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>AdvancedFabrication</defName>
+    <label>advanced fabrication</label>
+    <description>Fabricate advanced components from standard components and other materials.</description>
+    <baseCost>4000</baseCost>
+    <techLevel>Industrial</techLevel>
+    <prerequisites>
+      <li>Fabrication</li>
+    </prerequisites>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <requiredResearchFacilities>
+      <li>MultiAnalyzer</li>
+    </requiredResearchFacilities>
+    <researchViewX>16.00</researchViewX>
+    <researchViewY>2.90</researchViewY>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>Cryptosleep</defName>
+    <label>cryptosleep casket</label>
+    <description>Construct cryptosleep caskets, which can put living beings in a state of indefinite suspended animation.</description>
+    <baseCost>2000</baseCost>
+    <techLevel>Spacer</techLevel>
+    <prerequisites>
+      <li>MultiAnalyzer</li>
+    </prerequisites>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <requiredResearchFacilities>
+      <li>MultiAnalyzer</li>
+    </requiredResearchFacilities>
+    <researchViewX>14.00</researchViewX>
+    <researchViewY>2.20</researchViewY>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>ReconArmor</defName>
+    <label>recon armor</label>
+    <description>Craft recon armor, a light powered armor suit used by scout troops who need protection on the move. Note that these also require advanced components.</description>
+    <baseCost>6000</baseCost>
+    <techLevel>Spacer</techLevel>
+    <prerequisites>
+      <li>Fabrication</li>
+    </prerequisites>
+    <hiddenPrerequisites>
+      <li>ComplexClothing</li>
+    </hiddenPrerequisites>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <requiredResearchFacilities>
+      <li>MultiAnalyzer</li>
+    </requiredResearchFacilities>
+    <researchViewX>15.00</researchViewX>
+    <researchViewY>1.50</researchViewY>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>PoweredArmor</defName>
+    <label>marine armor</label>
+    <description>Build marine armor, a general-use powered armor suit used by high-tech shock troops. Note that these also require advanced components.</description>
+    <baseCost>6000</baseCost>
+    <techLevel>Spacer</techLevel>
+    <prerequisites>
+      <li>ReconArmor</li>
+    </prerequisites>
+    <hiddenPrerequisites>
+      <li>ComplexClothing</li>
+    </hiddenPrerequisites>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <requiredResearchFacilities>
+      <li>MultiAnalyzer</li>
+    </requiredResearchFacilities>
+    <researchViewX>16.00</researchViewX>
+    <researchViewY>1.50</researchViewY>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>ChargedShot</defName>
+    <label>pulse-charged munitions</label>
+    <description>Build weapons which fire pulse-charged munitions for extra damage. Note that these also require advanced components.</description>
+    <baseCost>3000</baseCost>
+    <techLevel>Spacer</techLevel>
+    <prerequisites>
+      <li>Fabrication</li>
+    </prerequisites>
+    <hiddenPrerequisites>
+      <li>PrecisionRifling</li>
+    </hiddenPrerequisites>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <requiredResearchFacilities>
+      <li>MultiAnalyzer</li>
+    </requiredResearchFacilities>
+    <researchViewX>15.00</researchViewX>
+    <researchViewY>3.8</researchViewY>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>Bionics</defName>
+    <label>bionic replacements</label>
+    <description>Build high-tech bionic body parts to replace lost limbs and eyes. Requires a skilled doctor to attach.</description>
+    <baseCost>2000</baseCost>
+    <techLevel>Spacer</techLevel>
+    <prerequisites>
+      <li>Fabrication</li>
+    </prerequisites>
+    <hiddenPrerequisites>
+      <li>Prosthetics</li>
+    </hiddenPrerequisites>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <requiredResearchFacilities>
+      <li>MultiAnalyzer</li>
+    </requiredResearchFacilities>
+    <researchViewX>16.00</researchViewX>
+    <researchViewY>3.80</researchViewY>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>SniperTurret</defName>
+    <label>uranium slug turret</label>
+    <description>Produce the armor-penetrating uranium slug turret. It fires uranium slugs which tear through plasteel like paper, but it's less effective at close range.</description>
+    <baseCost>3000</baseCost>
+    <techLevel>Industrial</techLevel>
+    <prerequisites>
+      <li>MultiAnalyzer</li>
+    </prerequisites>
+    <hiddenPrerequisites>
+      <li>HeavyTurrets</li>
+      <li>PrecisionRifling</li>
+    </hiddenPrerequisites>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <requiredResearchFacilities>
+      <li>MultiAnalyzer</li>
+    </requiredResearchFacilities>
+    <hideWhen>
+      <turretsDisabled>true</turretsDisabled>
+    </hideWhen>
+    <researchViewX>14.00</researchViewX>
+    <researchViewY>3.60</researchViewY>
+  </ResearchProjectDef>
+
+</Defs>

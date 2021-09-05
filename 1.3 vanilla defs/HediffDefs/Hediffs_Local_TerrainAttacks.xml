@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <HediffDef>
+    <defName>SandInEyes</defName>
+    <label>sand</label>
+    <labelNoun>sand</labelNoun>
+    <description>Sand in the eyes. It impairs vision, but can be cleared within a few moments.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <battleStateLabel>blind</battleStateLabel>
+    <maxSeverity>1</maxSeverity>
+    <stages>
+      <li>
+        <partEfficiencyOffset>-0.5</partEfficiencyOffset>
+      </li>
+    </stages>
+    <comps>
+      <li Class="HediffCompProperties_SelfHeal">
+        <healAmount>0.02</healAmount>
+      </li>
+    </comps>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>DirtInEyes</defName>
+    <label>dirt</label>
+    <labelNoun>dirt</labelNoun>
+    <description>Dirt in the eyes. It impairs vision, but can be cleared in a few moments.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <battleStateLabel>blind</battleStateLabel>
+    <maxSeverity>1</maxSeverity>
+    <stages>
+      <li>
+        <partEfficiencyOffset>-0.8</partEfficiencyOffset>
+      </li>
+    </stages>
+    <comps>
+      <li Class="HediffCompProperties_SelfHeal">
+        <healAmount>0.05</healAmount>
+      </li>
+    </comps>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>MudInEyes</defName>
+    <label>mud</label>
+    <labelNoun>mud</labelNoun>
+    <description>Mud in the eyes. It impairs vision, but can be cleared in a few moments.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <battleStateLabel>blind</battleStateLabel>
+    <maxSeverity>1</maxSeverity>
+    <stages>
+      <li>
+        <partEfficiencyOffset>-0.8</partEfficiencyOffset>
+      </li>
+    </stages>
+    <comps>
+      <li Class="HediffCompProperties_SelfHeal">
+        <healAmount>0.05</healAmount>
+      </li>
+    </comps>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>GravelInEyes</defName>
+    <label>gravel</label>
+    <labelNoun>gravel</labelNoun>
+    <description>Gravel in the eyes. It impairs vision, but can be cleared in a few moments.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <battleStateLabel>blind</battleStateLabel>
+    <maxSeverity>1</maxSeverity>
+    <stages>
+      <li>
+        <partEfficiencyOffset>-0.8</partEfficiencyOffset>
+      </li>
+    </stages>
+    <comps>
+      <li Class="HediffCompProperties_SelfHeal">
+        <healAmount>0.1</healAmount>
+      </li>
+    </comps>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>WaterInEyes</defName>
+    <label>water</label>
+    <labelNoun>water</labelNoun>
+    <description>Water in the eyes. It impairs vision, but can be cleared in a few moments.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <battleStateLabel>blind</battleStateLabel>
+    <maxSeverity>1</maxSeverity>
+    <stages>
+      <li>
+        <partEfficiencyOffset>-0.5</partEfficiencyOffset>
+      </li>
+    </stages>
+    <comps>
+      <li Class="HediffCompProperties_SelfHeal">
+        <healAmount>0.1</healAmount>
+      </li>
+    </comps>
+  </HediffDef>
+  
+</Defs>

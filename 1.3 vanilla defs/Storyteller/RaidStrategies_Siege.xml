@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- Note: Mechs don't use this strategy. They use the separate MechCluster incident to make their
+             mech cluster sieges. -->
+
+  <RaidStrategyDef>
+    <defName>Siege</defName>
+    <workerClass>RaidStrategyWorker_Siege</workerClass>
+    <minPawns>4</minPawns>
+    <raidLootValueFactor>0</raidLootValueFactor>
+    <arriveModes>
+      <li>EdgeDrop</li>
+      <li>EdgeWalkIn</li>
+    </arriveModes>
+    <pointsFactorCurve>
+      <points>
+        <li>0, 0.80</li>
+        <li>5000, 0.65</li>
+      </points>
+    </pointsFactorCurve>
+    <selectionWeightPerPointsCurve>
+      <points>
+        <li>(300,  0)</li>
+        <li>(700,  2)</li>
+        <li>(1400, 3)</li>
+        <li>(2800, 5)</li>
+      </points>
+    </selectionWeightPerPointsCurve>
+    <letterLabelEnemy>Siege</letterLabelEnemy>
+    <arrivalTextEnemy>It looks like they want to besiege the colony and pound you with mortars from a distance. You can try to wait them out - or go get them.</arrivalTextEnemy>
+    <letterLabelFriendly>Friendlies</letterLabelFriendly>
+    <arrivalTextFriendly>It looks like they want to use siege tactics to help you.</arrivalTextFriendly>
+  </RaidStrategyDef>
+
+</Defs>

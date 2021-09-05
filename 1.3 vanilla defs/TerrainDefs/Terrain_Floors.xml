@@ -1,0 +1,257 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <TerrainDef Name="FloorBase" Abstract="True">
+    <layerable>true</layerable>
+    <affordances>
+      <li>Light</li>
+      <li>Medium</li>
+      <li>Heavy</li>
+    </affordances>
+    <tags>
+      <li>Floor</li>
+    </tags>
+    <designationCategory>Floors</designationCategory>
+    <fertility>0</fertility>
+    <constructEffect>ConstructDirt</constructEffect>
+    <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+  </TerrainDef>
+
+  <!-- ================= Misc ================= -->
+
+  <TerrainDef ParentName="FloorBase">
+    <defName>StrawMatting</defName>
+    <label>straw matting</label>
+    <description>Rough straw matting for use in animal barns. It is cheap and accepts very little filth.</description>
+    <texturePath>Terrain/Surfaces/StrawMatting</texturePath>
+    <edgeType>Hard</edgeType>
+    <renderPrecedence>240</renderPrecedence>
+    <burnedDef>BurnedStrawMatting</burnedDef>
+    <pathCost>1</pathCost>
+    <statBases>
+      <Beauty>-1</Beauty>
+      <Cleanliness>-0.1</Cleanliness>
+      <WorkToBuild>120</WorkToBuild>
+      <FilthMultiplier>0.05</FilthMultiplier>
+      <Flammability>1.5</Flammability>
+    </statBases>
+    <costList>
+      <Hay>2</Hay>
+    </costList>
+    <designationHotKey>Misc6</designationHotKey>
+  </TerrainDef>
+
+  <TerrainDef ParentName="FloorBase">
+    <defName>Concrete</defName>
+    <label>concrete</label>
+    <description>Rough concrete. It is cheap and quick to build, but is also quite ugly.</description>
+    <texturePath>Terrain/Surfaces/Concrete</texturePath>
+    <edgeType>Hard</edgeType>
+    <renderPrecedence>70</renderPrecedence>
+    <statBases>
+      <Beauty>-1</Beauty>
+      <WorkToBuild>100</WorkToBuild>
+    </statBases>
+    <costList>
+      <Steel>1</Steel>
+    </costList>
+    <designationHotKey>Misc6</designationHotKey>
+    <researchPrerequisites>
+      <li>Stonecutting</li>
+    </researchPrerequisites>
+  </TerrainDef>
+
+  <TerrainDef ParentName="FloorBase">
+    <defName>PavedTile</defName>
+    <label>paved tile</label>
+    <renderPrecedence>230</renderPrecedence>
+    <description>Concrete tiles. Cheap, but neutral in terms of looks and slow to build.</description>
+    <texturePath>Terrain/Surfaces/PavedTile</texturePath>
+    <statBases>
+      <WorkToBuild>300</WorkToBuild>
+    </statBases>
+    <costList>
+      <Steel>2</Steel>
+    </costList>
+    <designationHotKey>Misc8</designationHotKey>
+    <researchPrerequisites>
+      <li>Stonecutting</li>
+    </researchPrerequisites>
+  </TerrainDef>
+
+  <TerrainDef  ParentName="FloorBase">
+    <defName>WoodPlankFloor</defName>
+    <label>wood floor</label>
+    <renderPrecedence>250</renderPrecedence>
+    <description>Wood plank flooring for that warm, homey feeling. While it is quick to lay, it is also very flammable.</description>
+    <texturePath>Terrain/Surfaces/WoodFloor</texturePath>
+    <burnedDef>BurnedWoodPlankFloor</burnedDef>
+    <color>(108,78,55)</color>
+    <statBases>
+      <WorkToBuild>85</WorkToBuild>
+      <Flammability>0.22</Flammability>
+    </statBases>
+    <costList>
+      <WoodLog>3</WoodLog>
+    </costList>
+    <constructEffect>ConstructWood</constructEffect>
+    <designationHotKey>Misc9</designationHotKey>
+  </TerrainDef>
+
+  <!-- ================= Metal Tiles ================= -->
+
+  <TerrainDef Abstract="True" ParentName="FloorBase" Name="TileMetalBase">
+    <texturePath>Terrain/Surfaces/GenericFloorTile</texturePath>
+    <designatorDropdown>Floor_Tile_Metal</designatorDropdown>
+    <constructEffect>ConstructMetal</constructEffect>
+    <researchPrerequisites>
+      <li>Smithing</li>
+    </researchPrerequisites>
+    <constructionSkillPrerequisite>3</constructionSkillPrerequisite>
+  </TerrainDef>
+
+  <TerrainDef ParentName="TileMetalBase">
+    <defName>MetalTile</defName>
+    <label>steel tile</label>
+    <renderPrecedence>240</renderPrecedence>
+    <description>Steel tiles, for that spaceship look. They are pretty, and the smooth tile surface gets a bonus to cleanliness.</description>
+    <color>(0.369, 0.369, 0.369)</color>
+    <statBases>
+      <WorkToBuild>800</WorkToBuild>
+      <Beauty>1</Beauty>
+      <Cleanliness>0.2</Cleanliness>
+    </statBases>
+    <costList>
+      <Steel>7</Steel>
+    </costList>
+    <designationHotKey>Misc7</designationHotKey>
+  </TerrainDef>
+  
+  <TerrainDef ParentName="TileMetalBase">
+    <defName>SilverTile</defName>
+    <label>silver tile</label>
+    <renderPrecedence>241</renderPrecedence>
+    <description>For a futuristic but royal look, silver tiles fit perfectly into luxurious rooms. They get a bonus to cleanliness.</description>
+    <color>(0.45, 0.45, 0.45)</color>
+    <statBases>
+      <Beauty>5</Beauty>
+      <WorkToBuild>800</WorkToBuild>
+      <Cleanliness>0.2</Cleanliness>
+    </statBases>
+    <costList>
+      <Silver>70</Silver>
+    </costList>
+    <designationHotKey>Misc2</designationHotKey>
+    <tags>
+      <li>FineFloor</li>
+    </tags>
+  </TerrainDef>
+  
+  <TerrainDef ParentName="TileMetalBase">
+    <defName>GoldTile</defName>
+    <label>gold tile</label>
+    <renderPrecedence>242</renderPrecedence>
+    <description>For overbearing extravagance, nothing beats gold tiles. They are exceptionally expensive, and exceptionally beautiful, and people will think you're exceptionally snobbish if you actually live on them.</description>
+    <color>(0.65, 0.65, 0.35)</color>
+    <statBases>
+      <Beauty>12</Beauty>
+      <WorkToBuild>800</WorkToBuild>
+      <Cleanliness>0.2</Cleanliness>
+    </statBases>
+    <costList>
+      <Gold>70</Gold>
+    </costList>
+    <designationHotKey>Misc3</designationHotKey>
+    <tags>
+      <li>FineFloor</li>
+    </tags>
+  </TerrainDef>
+  
+  <!-- ================= Misc Tiles ================= -->
+
+  <TerrainDef ParentName="FloorBase">
+    <defName>SterileTile</defName>
+    <label>sterile tile</label>
+    <renderPrecedence>243</renderPrecedence>
+    <description>Sterile tiles with special cleanliness-enhancing properties. Extra-clean rooms improve outcomes in hospitals and research labs. This tile is very slow to build.</description>
+    <texturePath>Terrain/Surfaces/GenericFloorTile</texturePath>
+    <color>(0.71, 0.71, 0.71)</color>
+    <statBases>
+      <WorkToBuild>1600</WorkToBuild>
+      <Cleanliness>0.6</Cleanliness>
+    </statBases>
+    <costList>
+      <Steel>3</Steel>
+      <Silver>12</Silver>
+    </costList>
+    <constructEffect>ConstructMetal</constructEffect>
+    <designationHotKey>Misc4</designationHotKey>
+    <constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+    <researchPrerequisites>
+      <li>SterileMaterials</li>
+    </researchPrerequisites>
+  </TerrainDef>
+
+  <!-- ================= Carpets ================= -->
+
+  <TerrainDef Name="CarpetBase" ParentName="FloorBase" Abstract="True">
+    <texturePath>Terrain/Surfaces/Carpet</texturePath>
+    <researchPrerequisites><li>CarpetMaking</li></researchPrerequisites>
+    <burnedDef>BurnedCarpet</burnedDef>
+    <costList>
+      <Cloth>7</Cloth>
+    </costList>
+    <designatorDropdown>Floor_Carpet</designatorDropdown>
+    <statBases>
+      <Beauty>2</Beauty>
+      <Flammability>0.32</Flammability>
+      <WorkToBuild>800</WorkToBuild>
+    </statBases>
+  </TerrainDef>
+  
+  <TerrainDef ParentName="CarpetBase">
+    <defName>CarpetRed</defName>
+    <label>red carpet</label>
+    <renderPrecedence>200</renderPrecedence>
+    <description>Plush carpet in a lovely rose hue.</description>
+    <color>(118,49,57)</color>
+    <designationHotKey>Misc8</designationHotKey>
+  </TerrainDef>
+
+  <TerrainDef ParentName="CarpetBase">
+    <defName>CarpetGreen</defName>
+    <label>green carpet</label>
+    <renderPrecedence>199</renderPrecedence>
+    <description>Naturalistic-feeling green carpet. Earth tones, dude.</description>
+    <color>(89,105,62)</color>
+    <designationHotKey>Misc9</designationHotKey>
+  </TerrainDef>
+
+  <TerrainDef ParentName="CarpetBase">
+    <defName>CarpetBlue</defName>
+    <label>blue carpet</label>
+    <renderPrecedence>198</renderPrecedence>
+    <description>Toe-hugging plush carpet in a cool blue color.</description>
+    <color>(24,65,121)</color>
+    <designationHotKey>Misc10</designationHotKey>
+  </TerrainDef>
+
+  <TerrainDef ParentName="CarpetBase">
+    <defName>CarpetCream</defName>
+    <label>cream carpet</label>
+    <renderPrecedence>197</renderPrecedence>
+    <description>Inviting cream-colored carpet.</description>
+    <color>(195,192,176)</color>
+    <designationHotKey>Misc11</designationHotKey>
+  </TerrainDef>
+
+  <TerrainDef ParentName="CarpetBase">
+    <defName>CarpetDark</defName>
+    <label>dark carpet</label>
+    <renderPrecedence>196</renderPrecedence>
+    <description>Professional-looking dark gray carpet.</description>
+    <color>(81,81,81)</color>
+    <designationHotKey>Misc12</designationHotKey>
+  </TerrainDef>
+
+</Defs>

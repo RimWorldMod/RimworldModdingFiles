@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <PawnKindDef>
+    <defName>Slave</defName>
+    <label>slave</label>
+    <combatPower>30</combatPower>
+    <race>Human</race>
+    <baseRecruitDifficulty>0.30</baseRecruitDifficulty>
+    <backstoryFiltersOverride>
+      <li>
+        <categories>
+          <li>Offworld</li>
+          <li>Outlander</li>
+          <li>Outsider</li>
+        </categories>
+      </li>
+    </backstoryFiltersOverride>
+    <defaultFactionType>OutlanderCivil</defaultFactionType>
+    <itemQuality>Poor</itemQuality>
+    <backstoryCryptosleepCommonality>0.10</backstoryCryptosleepCommonality>
+    <isFighter>false</isFighter>
+    <chemicalAddictionChance>0.05</chemicalAddictionChance>
+    <gearHealthRange>0.2~0.8</gearHealthRange>
+    <apparelTags>
+      <li>IndustrialBasic</li>
+    </apparelTags>
+    <apparelMoney>0~350</apparelMoney>
+    <apparelAllowHeadgearChance>0</apparelAllowHeadgearChance>
+    <techHediffsChance>0.03</techHediffsChance>
+    <techHediffsMoney>50~800</techHediffsMoney>
+    <techHediffsTags>
+      <li>Poor</li>
+    </techHediffsTags>
+    <apparelIgnoreSeasons>true</apparelIgnoreSeasons>
+    <invNutrition>1</invNutrition>
+    <invFoodDef>Pemmican</invFoodDef>
+    <initialWillRange>0~0</initialWillRange>
+    <initialResistanceRange>10~17</initialResistanceRange>
+  </PawnKindDef>
+
+  <PawnKindDef>
+    <defName>WildMan</defName>
+    <label>wild man</label>
+    <labelPlural>wild men</labelPlural>
+    <labelFemale>wild woman</labelFemale>
+    <labelFemalePlural>wild women</labelFemalePlural>
+    <combatPower>30</combatPower>
+    <race>Human</race>
+    <acceptArrestChanceFactor>0.5</acceptArrestChanceFactor>
+    <backstoryFilters>
+      <li>
+        <categories>
+          <li>Offworld</li>
+          <li>Pirate</li>
+          <li>Tribal</li>
+        </categories>
+      </li>
+    </backstoryFilters>
+    <backstoryCryptosleepCommonality>0.1</backstoryCryptosleepCommonality>
+    <baseRecruitDifficulty>0.50</baseRecruitDifficulty>
+    <itemQuality>Poor</itemQuality>
+    <chemicalAddictionChance>0.03</chemicalAddictionChance>
+    <apparelIgnoreSeasons>true</apparelIgnoreSeasons>
+    <techHediffsChance>0.03</techHediffsChance>
+    <techHediffsMoney>50~50</techHediffsMoney>
+    <techHediffsTags>
+      <li>Poor</li>
+    </techHediffsTags>
+    <initialWillRange>2~4</initialWillRange>
+    <initialResistanceRange>28~44</initialResistanceRange>
+  </PawnKindDef>
+
+  <PawnKindDef>
+    <defName>StrangerInBlack</defName>
+    <label>stranger in black</label>
+    <labelMale>man in black</labelMale>
+    <labelFemale>woman in black</labelFemale>
+    <labelPlural>strangers in black</labelPlural>
+    <race>Human</race>
+    <defaultFactionType>OutlanderCivil</defaultFactionType>
+    <combatPower>55</combatPower>
+    <minGenerationAge>20</minGenerationAge>
+    <maxGenerationAge>55</maxGenerationAge>
+    <isFighter>true</isFighter>
+    <chemicalAddictionChance>0.05</chemicalAddictionChance>
+    <backstoryCryptosleepCommonality>0.05</backstoryCryptosleepCommonality>
+    <backstoryFiltersOverride>
+      <li>
+        <categories>
+          <li>Offworld</li>
+          <li>Outlander</li>
+          <li>Outsider</li>
+        </categories>
+      </li>
+    </backstoryFiltersOverride>
+    <requiredWorkTags>
+      <li>Violent</li>
+      <li>Caring</li>
+    </requiredWorkTags>
+    <invNutrition>10.0</invNutrition>
+    <inventoryOptions>
+      <subOptionsChooseOne>
+        <li>
+          <thingDef>MedicineIndustrial</thingDef>
+          <countRange>5</countRange>
+        </li>
+      </subOptionsChooseOne>
+    </inventoryOptions>
+    <gearHealthRange>1~1</gearHealthRange>
+    <itemQuality>Good</itemQuality>
+    <weaponMoney>500~500</weaponMoney>
+    <weaponTags>
+      <li>Revolver</li>
+    </weaponTags>
+    <apparelTags>
+      <li>IndustrialBasic</li>
+      <li>IndustrialAdvanced</li>
+    </apparelTags>
+    <apparelRequired>
+      <li>Apparel_CollarShirt</li>
+      <li>Apparel_Pants</li>
+      <li>Apparel_Duster</li>
+      <li>Apparel_FlakVest</li>
+      <li>Apparel_CowboyHat</li>
+    </apparelRequired>
+    <apparelColor>(58,58,58)</apparelColor>
+    <initialWillRange>0~0</initialWillRange>
+    <initialResistanceRange>0~2</initialResistanceRange>
+  </PawnKindDef>
+
+</Defs>

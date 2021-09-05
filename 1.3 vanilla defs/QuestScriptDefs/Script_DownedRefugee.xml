@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <QuestScriptDef>
+    <defName>OpportunitySite_DownedRefugee</defName>
+    <rootSelectionWeight>1</rootSelectionWeight>
+    <rootMinPoints>0</rootMinPoints>
+    <rootIncreasesPopulation>true</rootIncreasesPopulation>
+    <autoAccept>true</autoAccept>
+    <questNameRules>
+      <rulesStrings>
+        <li>questName->Saving [refugee_nameDef]</li>
+        <li>questName->The Rescue of [refugee_nameDef]</li>
+        <li>questName->[refugee_nameDef]'s Rescue</li>
+        <li>questName->[refugee_nameDef]'s Salvation</li>
+      </rulesStrings>
+    </questNameRules>
+    <questDescriptionRules>
+      <rulesStrings>
+        <!-- No asker -->
+        <li>questDescription(askerIsNull==true)->[refugee_nameDef] contacts you and requests help. [refugee_pronoun] is wounded and unable to move.
+\n[refugee_nameDef] is a [refugee_age]-year-old [refugee_title]. [refugee_pronoun] promises to join you if you rescue [refugee_objective].
+\n[refugee_nameDef] says that [allSitePartsDescriptionsExceptFirst][pawnInvolvedInQuestInfo]</li>
+        
+        <!-- Faction leader asker -->
+        <li>questDescription(asker_factionLeader==True)->[asker_nameDef], [asker_faction_leaderTitle] of [asker_faction_name], says that [asker_possessive] friend has been wounded while traveling. The victim is [refugee_nameIndef], a [refugee_age]-year-old [refugee_title].
+\n[asker_nameDef] has nobody to spare to rescue [refugee_nameDef], but says that if you can make it to [refugee_nameDef]'s position and rescue [refugee_objective], [refugee_pronoun] will join you.
+\n[asker_nameDef] says that [allSitePartsDescriptionsExceptFirst][pawnInvolvedInQuestInfo]</li>
+
+        <li>pawnInvolvedInQuestInfo(priority=1)->[refugee_pawnInvolvedInQuestInfo]</li>
+        <li>pawnInvolvedInQuestInfo-></li>
+      </rulesStrings>
+    </questDescriptionRules>
+    <root Class="QuestNode_Sequence">
+      <nodes>
+        <li Class="QuestNode_SubScript">
+          <def>Util_RandomizePointsChallengeRating</def>
+          <parms>
+            <pointsFactorTwoStar>1.5</pointsFactorTwoStar>
+            <pointsFactorThreeStar>2</pointsFactorThreeStar>
+          </parms>
+        </li>
+        <li Class="QuestNode_SubScript">
+          <def>Util_GetDefaultRewardValueFromPoints</def>
+        </li>
+        <li Class="QuestNode_SubScript">
+          <def>Util_AdjustPointsForDistantFight</def>
+        </li>
+        <li Class="QuestNode_GetMap" />
+
+        <li Class="QuestNode_RandomNode">
+          <nodes>
+            <li Class="QuestNode_Set">
+              <name>askerIsNull</name>
+              <value>true</value>
+              <selectionWeight>0.2</selectionWeight>
+            </li>
+            <li Class="QuestNode_GetPawn">
+              <storeAs>asker</storeAs>
+              <mustBeFactionLeader>true</mustBeFactionLeader>
+              <mustBeNonHostileToPlayer>true</mustBeNonHostileToPlayer>
+              <hostileWeight>0.15</hostileWeight>
+              <selectionWeight>0.3</selectionWeight>
+            </li>
+          </nodes>
+        </li>
+
+        <li Class="QuestNode_GetSiteTile">
+          <storeAs>siteTile</storeAs>
+          <preferCloserTiles>true</preferCloserTiles>
+        </li>
+
+        <li Class="QuestNode_ViolentQuestsAllowed">
+          <node Class="QuestNode_Set">
+            <name>siteThreatChance</name>
+            <value>0.7</value>
+          </node>
+          <elseNode Class="QuestNode_Set">
+            <name>siteThreatChance</name>
+            <value>0</value>
+          </elseNode>
+        </li>
+
+        <li Class="QuestNode_GetSitePartDefsByTagsAndFaction">
+          <storeAs>sitePartDefs</storeAs>
+          <storeFactionAs>siteFaction</storeFactionAs>
+          <sitePartsTags>
+            <li>
+              <tag>DownedRefugee</tag>
+            </li>
+            <li>
+              <tag>DownedRefugeeQuestThreat</tag>
+              <chance>$siteThreatChance</chance>
+            </li>
+          </sitePartsTags>
+        </li>
+
+        <li Class="QuestNode_GetDefaultSitePartsParams">
+          <tile>$siteTile</tile>
+          <faction>$siteFaction</faction>
+          <sitePartDefs>$sitePartDefs</sitePartDefs>
+          <storeSitePartsParamsAs>sitePartsParams</storeSitePartsParamsAs>
+        </li>
+
+        <li Class="QuestNode_SubScript">
+          <def>Util_GenerateSite</def>
+          <parms>
+            <hiddenSitePartsPossible>true</hiddenSitePartsPossible>
+          </parms>
+        </li>
+        
+        <li Class="QuestNode_SpawnWorldObjects">
+          <worldObjects>$site</worldObjects>
+        </li>
+
+        <li Class="QuestNode_WorldObjectTimeout">
+          <worldObject>$site</worldObject>
+          <isQuestTimeout>true</isQuestTimeout>
+          <delayTicks>$(randInt(7,15)*60000)</delayTicks>
+          <inSignalDisable>site.MapGenerated</inSignalDisable>
+          <node Class="QuestNode_Sequence">
+            <nodes>
+              <li Class="QuestNode_Letter">
+                <label TKey="LetterLabelQuestExpired">Quest expired: [resolvedQuestName]</label>
+                <text TKey="LetterTextQuestExpired">[refugee_nameDef]'s signal has been lost, and [refugee_pronoun] can no longer be rescued. The quest [resolvedQuestName] has expired.</text>
+              </li>
+              <li Class="QuestNode_End">
+                <outcome>Fail</outcome>
+              </li>
+            </nodes>
+          </node>
+        </li>
+
+        <li Class="QuestNode_AddPawnReward">
+          <pawn>$refugee</pawn>
+          <inSignalChoiceUsed>site.MapGenerated</inSignalChoiceUsed>
+          <rewardDetailsHidden>true</rewardDetailsHidden>
+        </li>
+
+        <li Class="QuestNode_NoWorldObject">
+          <worldObject>$site</worldObject>
+          <node Class="QuestNode_End" />
+        </li>
+      </nodes>
+    </root>
+  </QuestScriptDef>
+</Defs>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  
+  <SitePartDef>
+    <defName>PrisonerWillingToJoin</defName>
+    <label>prisoner camp</label>
+    <description>A prisoner being held by enemies. Rescue him and he will join you.</description>
+    <workerClass>SitePartWorker_PrisonerWillingToJoin</workerClass>
+    <siteTexture>World/WorldObjects/Sites/GenericSite</siteTexture>
+    <expandingIconTexture>World/WorldObjects/Expanding/Sites/Prisoner</expandingIconTexture>
+    <forceExitAndRemoveMapCountdownDurationDays>6</forceExitAndRemoveMapCountdownDurationDays>
+    <requiresFaction>true</requiresFaction>
+    <increasesPopulation>true</increasesPopulation>
+    <handlesWorldObjectTimeoutInspectString>true</handlesWorldObjectTimeoutInspectString>
+    <tags>
+      <li>PrisonerWillingToJoin</li>
+    </tags>
+  </SitePartDef>
+
+  <GenStepDef>
+    <defName>PrisonerWillingToJoin</defName>
+    <linkWithSite>PrisonerWillingToJoin</linkWithSite>
+    <order>460</order>
+    <genStep Class="GenStep_PrisonerWillingToJoin">
+      <count>1</count>
+      <nearMapCenter>true</nearMapCenter>
+    </genStep>
+  </GenStepDef>
+
+</Defs>

@@ -1,0 +1,361 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- Randomize the challenge rating and the points with it -->
+  <QuestScriptDef>
+    <defName>Util_RandomizePointsChallengeRating</defName>
+    <root Class="QuestNode_Sequence">
+      <nodes>
+        <!-- Record the original points for external use -->
+        <li Class="QuestNode_Set">
+          <name>pointsOriginal</name>
+          <value>$points</value>
+        </li>
+
+        <!-- Set various parms default if not set already -->
+        <li Class="QuestNode_IsSet">
+          <name>pointsFactorTwoStar</name>
+          <elseNode Class="QuestNode_Set">
+            <name>pointsFactorTwoStar</name>
+            <value>2</value>
+          </elseNode>
+        </li>
+        <li Class="QuestNode_IsSet">
+          <name>pointsFactorThreeStar</name>
+          <elseNode Class="QuestNode_Set">
+            <name>pointsFactorThreeStar</name>
+            <value>3</value>
+          </elseNode>
+        </li>
+        <li Class="QuestNode_IsSet">
+          <name>selectionWeightOneStar</name>
+          <elseNode Class="QuestNode_Set">
+            <name>selectionWeightOneStar</name>
+            <value>0.60</value>
+          </elseNode>
+        </li>
+        <li Class="QuestNode_IsSet">
+          <name>selectionWeightTwoStar</name>
+          <elseNode Class="QuestNode_Set">
+            <name>selectionWeightTwoStar</name>
+            <value>0.25</value>
+          </elseNode>
+        </li>
+        <li Class="QuestNode_IsSet">
+          <name>selectionWeightThreeStar</name>
+          <elseNode Class="QuestNode_Set">
+            <name>selectionWeightThreeStar</name>
+            <value>0.15</value>
+          </elseNode>
+        </li>
+        <li Class="QuestNode_IsSet">
+          <name>minPointsTwoStar</name>
+          <elseNode Class="QuestNode_Set">
+            <name>minPointsTwoStar</name>
+            <value>0</value>
+          </elseNode>
+        </li>
+        <li Class="QuestNode_IsSet">
+          <name>minPointsThreeStar</name>
+          <elseNode Class="QuestNode_Set">
+            <name>minPointsThreeStar</name>
+            <value>0</value>
+          </elseNode>
+        </li>
+
+        <!-- Set to not select challenge ratings outside our points limits -->
+        <li Class="QuestNode_Less">
+          <value1>$points</value1>
+          <value2>$minPointsThreeStar</value2>
+          <node Class="QuestNode_Set">
+            <name>selectionWeightThreeStar</name>
+            <value>0</value>
+          </node>
+        </li>
+        <li Class="QuestNode_Less">
+          <value1>$points</value1>
+          <value2>$minPointsTwoStar</value2>
+          <node Class="QuestNode_Set">
+            <name>selectionWeightTwoStar</name>
+            <value>0</value>
+          </node>
+        </li>
+
+        <!-- Choose a rating and set points factor -->
+        <li Class="QuestNode_RandomNode">
+          <nodes>
+            <li Class="QuestNode_Sequence">  <!-- rating 1 -->
+              <selectionWeight>$selectionWeightOneStar</selectionWeight>
+              <nodes>
+                <li Class="QuestNode_Set">  <!-- Set challengeRating slate var so we can read it later -->
+                  <name>challengeRating</name>
+                  <value>1</value>
+                </li>
+                <li Class="QuestNode_Set">
+                  <name>pointsFactor</name>
+                  <value>1</value>
+                </li>
+              </nodes>
+            </li>
+            <li Class="QuestNode_Sequence">  <!-- rating 2 -->
+              <selectionWeight>$selectionWeightTwoStar</selectionWeight>
+              <nodes>
+                <li Class="QuestNode_Set">  <!-- Set challengeRating slate var so we can read it later -->
+                  <name>challengeRating</name>
+                  <value>2</value>
+                </li>
+                <li Class="QuestNode_Set">
+                  <name>pointsFactor</name>
+                  <value>$pointsFactorTwoStar</value>
+                </li>
+              </nodes>
+            </li>
+            <li Class="QuestNode_Sequence">  <!-- rating 3 -->
+              <selectionWeight>$selectionWeightThreeStar</selectionWeight>
+              <nodes>
+                <li Class="QuestNode_Set">  <!-- Set challengeRating slate var so we can read it later -->
+                    <name>challengeRating</name>
+                    <value>3</value>
+                  </li>
+                <li Class="QuestNode_Set">
+                  <name>pointsFactor</name>
+                  <value>$pointsFactorThreeStar</value>
+                </li>
+              </nodes>
+            </li>
+          </nodes>
+        </li>
+        <li Class="QuestNode_ViolentQuestsAllowed">
+          <elseNode Class="QuestNode_IsSet">
+            <name>peacefulChallengeRating</name>
+            <node Class="QuestNode_Set">
+              <name>challengeRating</name>
+              <value>$peacefulChallengeRating</value>
+            </node>
+          </elseNode>
+        </li>
+        <li Class="QuestNode_Multiply">
+          <value1>$points</value1>
+          <value2>$pointsFactor</value2>
+          <storeAs>points</storeAs>
+        </li>
+        <li Class="QuestNode_SetChallengeRating">
+          <challengeRating>$challengeRating</challengeRating>
+        </li>
+      </nodes>
+    </root>
+  </QuestScriptDef>
+
+  <!-- Adjust points for a fight we need to caravan to. Such fights are much easier because the base points
+       assume you have an entrenched base defense. -->
+  <QuestScriptDef>
+    <defName>Util_AdjustPointsForDistantFight</defName>
+    <root Class="QuestNode_Sequence">
+      <nodes>
+        <li Class="QuestNode_EvaluateSimpleCurve">
+          <value>$points</value>
+          <storeAs>points</storeAs>
+          <curve>
+            <points>
+              <li>   35,   35</li>
+              <li>  400,  175</li>
+              <li> 1000,  300</li>
+              <li> 2000,  425</li>
+              <li> 3000,  700</li>
+              <li> 4000,  800</li>
+              <li> 5000,  900</li>
+              <li>10000, 1250</li>
+            </points>
+          </curve>
+        </li>
+      </nodes>
+    </root>
+  </QuestScriptDef>
+
+  <!-- Send a single raid to attack the player. 
+  Params:
+    map           : Map where the raid arrives
+    enemyFaction  : Raid faction
+    customLetterX : Custom letter texts
+  -->
+  <QuestScriptDef>
+    <defName>Util_Raid</defName>
+    <questDescriptionRules>
+      <rulesStrings>
+        <li>threatDescription->[enemyFaction_pawnsPlural] from [enemyFaction_name] will attack you. Their group is composed of:\n\n[raidPawnKinds]\n\n[raidArrivalModeInfo]</li>
+      </rulesStrings>
+    </questDescriptionRules>
+    <root Class="QuestNode_Sequence">
+      <nodes>
+        <li Class="QuestNode_Raid">
+          <tag>$tag</tag>
+          <customLetterLabel>$customLetterLabel</customLetterLabel>
+          <customLetterText>$customLetterText</customLetterText>
+          <customLetterLabelRules>$customLetterLabelRules</customLetterLabelRules>
+          <customLetterTextRules>$customLetterTextRules</customLetterTextRules>
+          <arrivalMode>$arrivalMode</arrivalMode>
+          <canTimeoutOrFlee>$canTimeoutOrFlee</canTimeoutOrFlee>
+          <raidPawnKind>$raidPawnKind</raidPawnKind>
+          <inSignalLeave>EndRaid</inSignalLeave>
+        </li>
+      </nodes>
+    </root>
+  </QuestScriptDef>
+
+  <!-- Send a mech cluster to attack the player. 
+Params:
+  map           : Map where the raid arrives
+-->
+  <QuestScriptDef>
+    <defName>Util_MechCluster</defName>
+    <questDescriptionRules>
+      <rulesStrings>
+        <li>threatDescription->a mech cluster will land at [map_definite] containing:\n\n[allThreats]</li>
+      </rulesStrings>
+    </questDescriptionRules>
+    <root Class="QuestNode_Sequence">
+      <nodes>
+        <li Class="QuestNode_SpawnMechCluster" />
+      </nodes>
+    </root>
+  </QuestScriptDef>
+
+  <!-- Send a series of raids to attack the player, with a fixed time interval between each raid.
+  Params:
+    map                   : Map where the raids arrive.
+    firstRaidDelayTicks   : delay before first raid
+    raidCount             : number of raids
+    raidX/raidDelayTicks  : optional specific delay for raid X
+  Constants:
+    time between raids    : 9000 ticks
+     -->
+  <QuestScriptDef>
+    <defName>Util_RaidDelayRepeatable</defName>
+    <questDescriptionRules>
+      <rulesStrings>
+        <li>pawnKindsParagraph(raidCount==1)->The group of [enemyFaction_pawnsPlural] is composed of: \n\n[raid0/raidPawnKinds]\n\n[raid0/raidArrivalModeInfo]</li>
+        <li>pawnKindsParagraph(raidCount==2)->The first group of [enemyFaction_pawnsPlural] is composed of: \n\n[raid0/raidPawnKinds]\n\nThe second similar-sized group will follow soon after.</li>
+        <li>pawnKindsParagraph(raidCount==3)->The first group of [enemyFaction_pawnsPlural] is composed of: \n\n[raid0/raidPawnKinds]\n\nTwo similar-sized groups will follow soon after.</li>
+        <li>pawnKindsParagraph(raidCount>=4)->The first group of [enemyFaction_pawnsPlural] is composed of: \n\n[raid0/raidPawnKinds]\n\n[raidCountMinusOne] similar-sized groups will follow soon after.</li>
+        <li>numGroupsOf(raidCount==1)-></li>
+        <li>numGroupsOf(raidCount==2)->two groups of</li>
+        <li>numGroupsOf(raidCount==3)->three groups of</li>
+        <li>numGroupsOf(raidCount>=4)->[raidCount] groups of</li>
+      </rulesStrings>
+    </questDescriptionRules>
+    <root Class="QuestNode_Sequence">
+      <nodes>
+        <li Class="QuestNode_GetFaction"> <!-- does nothing if acceptable faction is already stored -->
+          <allowEnemy>true</allowEnemy>
+          <mustBePermanentEnemy>true</mustBePermanentEnemy>
+          <storeAs>enemyFaction</storeAs>
+        </li>
+
+        <li Class="QuestNode_Set">
+          <name>nextRaidDelayTicks</name>
+          <value>$firstRaidDelayTicks</value>
+        </li>
+
+        <li Class="QuestNode_Set">
+          <name>raidCountMinusOne</name>
+          <value>$raidCount</value>
+        </li>
+        <li Class="QuestNode_Subtract">
+          <value1>$raidCountMinusOne</value1>
+          <value2>1</value2>
+          <storeAs>raidCountMinusOne</storeAs>
+        </li>
+
+        <li Class="QuestNode_LoopCount">
+          <loopCount>$raidCount</loopCount>
+          <storeLoopCounterAs>raidLoopCounter</storeLoopCounterAs>
+          <node Class="QuestNode_Sequence">
+            <nodes>
+              <!-- Try using specific delay -->
+              <li Class="QuestNode_IsNull">
+                <value>$raid(($raidLoopCounter))/raidDelayTicks</value>
+                <elseNode Class="QuestNode_Set">
+                  <name>nextRaidDelayTicks</name>
+                  <value>$raid(($raidLoopCounter))/raidDelayTicks</value>
+                </elseNode>
+              </li>
+
+              <li Class="QuestNode_Delay">
+                <delayTicks>$nextRaidDelayTicks</delayTicks>
+                <node Class="QuestNode_Sequence">
+                  <nodes>
+                    <li Class="QuestNode_SubScript">
+                      <prefix>raid$raidLoopCounter</prefix>
+                      <def>Util_Raid</def>
+                      <parms>
+                        <tag>lord</tag>
+                        <inSignal>$inSignal</inSignal>
+                        <map>$map</map>
+                        <enemyFaction>$enemyFaction</enemyFaction>
+                        <points>$points</points>
+                        <walkInSpot>$walkInSpot</walkInSpot>
+                        <customLetterLabel>$customLetterLabel</customLetterLabel>
+                        <customLetterText>$customLetterText</customLetterText>
+                        <customLetterLabelRules>$customLetterLabelRules</customLetterLabelRules>
+                        <customLetterTextRules>$customLetterTextRules</customLetterTextRules>
+                      </parms>
+                    </li>
+                    <li Class="QuestNode_Equal">
+                      <value1>$raidLoopCounter</value1>
+                      <value2>$($raidCount - 1)</value2>
+                      <compareAs>int</compareAs>
+                      <node Class="QuestNode_SendSignals">
+                        <outSignals>AllRaidsSent</outSignals>
+                      </node>
+                    </li>
+                  </nodes>
+                </node>
+              </li>
+              <li Class="QuestNode_Add"> <!-- next raid comes 9000 ticks after the previous -->
+                <value1>$nextRaidDelayTicks</value1>
+                <value2>9000</value2>
+                <storeAs>nextRaidDelayTicks</storeAs>
+              </li>
+            </nodes>
+          </node>
+        </li>
+      </nodes>
+    </root>
+  </QuestScriptDef>
+
+  <QuestScriptDef>
+    <defName>Util_GenerateSite</defName>
+    <root Class="QuestNode_GenerateSite">
+      <sitePartsParams>$sitePartsParams</sitePartsParams>
+      <hiddenSitePartsPossible>$hiddenSitePartsPossible</hiddenSitePartsPossible>
+      <storeAs>site</storeAs>
+      <faction>$siteFaction</faction>
+      <tile>$siteTile</tile>
+      <singleSitePartRules>
+        <rulesStrings>
+          <li>root(priority=1,sitePart==ClimateAdjuster)->there's (*Threat)a climate adjuster machine(/Threat) there shifting the regional temperature by [temperatureOffset]</li>
+          <li>root(priority=1,sitePart==PsychicDroner)->there's (*Threat)a psychic droner machine(/Threat) there tuned to the [affectedGender] gender</li>
+          <li>root(priority=1,sitePart==PsychicSuppressor)->there's (*Threat)a psychic suppressor machine(/Threat) there tuned to the [affectedGender] gender</li>
+          <li>root(priority=1,sitePart==WeatherController)->there's (*Threat)a weather controller machine(/Threat) there forcing weather in the whole region to [weather_label]</li>
+          <li>root(priority=1,sitePart==SmokeSpewer)->there's (*Threat)a smoke spewer machine(/Threat) there belching smoke over the whole region</li>
+          <li>root(priority=1,sitePart==SunBlocker)->there's (*Threat)a sun blocker machine(/Threat) there shadowing the whole region</li>
+          <li>root(priority=1,sitePart==EMIDynamo)->there's (*Threat)an EMI dynamo machine(/Threat) there which can disable electrical devices across the region</li>
+          <li>root(priority=1,sitePart==ToxicSpewer)->there's (*Threat)a toxic spewer machine(/Threat) there blanketing the whole region in poison</li>
+          <li>root(priority=1,sitePart==RaidSource)->there's a military staging area guarded by (*Threat)[enemiesCount] [enemiesLabel](/Threat) that will launch raids on you every [mtbDays]</li>
+          <li>root(priority=1,sitePart==Outpost)->there's an enemy outpost at the site guarded by (*Threat)[enemiesCount] [enemiesLabel](/Threat)</li>
+          <li>root(priority=1,sitePart==BanditCamp)->there's a bandit camp at the site guarded by (*Threat)[enemiesCount] [enemiesLabel](/Threat)</li>
+          <li>root(priority=1,sitePart==Manhunters,count==1)->(*Threat)a manhunting [kindLabel](/Threat) is wandering nearby</li>
+          <li>root(priority=1,sitePart==Manhunters,count>1)->(*Threat)[count] manhunting [kindLabel](/Threat) are wandering nearby</li>
+          <li>root(priority=1,sitePart==SleepingMechanoids,count==1)->(*Threat)a mechanoid(/Threat) is sleeping nearby</li>
+          <li>root(priority=1,sitePart==SleepingMechanoids,count>1)->(*Threat)[count] mechanoids(/Threat) are sleeping nearby</li>
+          <li>root(priority=1,sitePart==Turrets)->(*Threat)[threatsInfo](/Threat) defend the site</li>
+          <li>root(priority=1,sitePart==AmbushEdge)->(*Threat)an enemy force(/Threat) is waiting to ambush anyone who comes near</li>
+          <li>root(priority=1,sitePart==AmbushHidden)->(*Threat)an enemy force(/Threat) is waiting to ambush anyone who comes near</li>
+          <li>root(priority=1,sitePart==MechCluster)->there's (*Threat)a cluster of hostile mechanoid structures(/Threat)</li>
+          <li>root(priority=1,sitePart==PossibleUnknownThreatMarker)->there may be an (*Threat)unknown threat(/Threat)</li>
+          <li>root->there's a [label]</li>
+        </rulesStrings>
+      </singleSitePartRules>
+    </root>
+  </QuestScriptDef>
+</Defs>

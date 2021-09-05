@@ -1,0 +1,254 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!--=============== Bases ==============-->
+
+  <ThingDef Name="MoteBase" Abstract="True">
+    <thingClass>MoteThrown</thingClass>
+    <label>Mote</label>
+    <category>Mote</category>
+    <graphicData>
+      <graphicClass>Graphic_Mote</graphicClass>
+      <shaderType>Mote</shaderType>
+    </graphicData>
+    <altitudeLayer>MoteLow</altitudeLayer>
+    <tickerType>Normal</tickerType>
+    <useHitPoints>false</useHitPoints>
+    <isSaveable>false</isSaveable>
+    <rotatable>false</rotatable>
+  </ThingDef>
+
+  <!--=============== Flashes ================-->
+
+  <ThingDef ParentName="MoteBase">
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <defName>Mote_ActivatorCountdownGlow</defName>
+    <mote>
+      <fadeInTime>0.1</fadeInTime>
+      <solidTime>999999999</solidTime>
+      <fadeOutTime>0.5</fadeOutTime>
+      <needsMaintenance>True</needsMaintenance>
+    </mote>
+    <graphicData>
+      <drawSize>1.3</drawSize>
+      <drawOffset>(0,0,1)</drawOffset>
+      <color>(135, 215, 40, 140)</color>
+      <texPath>Things/Mote/BrightFlash</texPath>
+      <shaderType>MoteGlow</shaderType>
+    </graphicData>
+  </ThingDef>
+
+  <ThingDef ParentName="MoteBase">
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <defName>Mote_ActivatorProximityGlow</defName>
+    <mote>
+      <fadeInTime>0.1</fadeInTime>
+      <solidTime>999999999</solidTime>
+      <fadeOutTime>0.5</fadeOutTime>
+      <needsMaintenance>True</needsMaintenance>
+    </mote>
+    <graphicData>
+      <drawSize>1.1</drawSize>
+      <drawOffset>(0,0,0.65)</drawOffset>
+      <color>(235, 75, 40, 150)</color>
+      <texPath>Things/Mote/BrightFlash</texPath>
+      <shaderType>MoteGlow</shaderType>
+    </graphicData>
+  </ThingDef>
+
+  <!--=============== Misc visuals ================-->
+
+  <ThingDef ParentName="MoteBase">
+    <defName>Mote_Leaf</defName>
+    <thingClass>MoteLeaf</thingClass>
+    <mote>
+      <fadeInTime>1</fadeInTime>
+      <solidTime>4</solidTime>
+      <fadeOutTime>2</fadeOutTime>
+    </mote>
+    <altitudeLayer>Building</altitudeLayer>
+    <graphicData>
+      <texPath>Things/Mote/FoodBitVegetarian</texPath>
+      <drawSize>0.40</drawSize>
+    </graphicData>
+  </ThingDef>
+
+
+  <!--=================== Eating ==================-->
+
+  <ThingDef ParentName="MoteBase" Name="FoodBitBase" Abstract="True">
+    <graphicData>
+      <shaderType>Cutout</shaderType>
+    </graphicData>
+    <altitudeLayer>Projectile</altitudeLayer>
+    <mote>
+      <fadeInTime>0.08</fadeInTime>
+      <solidTime>0.4</solidTime>
+      <fadeOutTime>0.25</fadeOutTime>
+    </mote>
+  </ThingDef>
+  
+  <ThingDef ParentName="FoodBitBase">
+    <defName>Mote_FoodBitVegetarian</defName>
+    <graphicData>
+      <texPath>Things/Mote/FoodBitVegetarian</texPath>
+      <shaderType>Mote</shaderType>
+    </graphicData>
+  </ThingDef>
+  
+  <ThingDef ParentName="FoodBitBase">
+    <defName>Mote_FoodBitMeat</defName>
+    <graphicData>
+      <texPath>Things/Mote/FoodBitMeat</texPath>
+      <shaderType>Mote</shaderType>
+    </graphicData>
+  </ThingDef>
+  
+  <ThingDef ParentName="FoodBitBase">
+    <defName>Mote_StoneBit</defName>
+    <graphicData>
+      <texPath>Things/Mote/StoneBit</texPath>
+      <shaderType>Mote</shaderType>
+    </graphicData>
+  </ThingDef>
+  
+  <ThingDef ParentName="FoodBitBase">
+    <defName>Mote_CookBit</defName>
+    <graphicData>
+      <texPath>Things/Mote/CookBit</texPath>
+      <shaderType>Mote</shaderType>
+    </graphicData>
+  </ThingDef>
+  
+  <ThingDef ParentName="FoodBitBase">
+    <defName>Mote_VomitBit</defName>
+    <graphicData>
+      <texPath>Things/Mote/VomitBit</texPath>
+      <shaderType>Mote</shaderType>
+    </graphicData>
+  </ThingDef>
+
+  <!-- Bombardment -->
+
+  <ThingDef ParentName="MoteBase">
+    <defName>Mote_Bombardment</defName>
+    <graphicData>
+      <texPath>Things/Mote/Bombardment</texPath>
+      <shaderType>MoteGlow</shaderType>
+    </graphicData>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <drawOffscreen>true</drawOffscreen>
+    <mote>
+      <fadeInTime>0.5</fadeInTime>
+      <solidTime>6.8</solidTime>
+      <fadeOutTime>1.0</fadeOutTime>
+    </mote>
+  </ThingDef>
+
+  <ThingDef ParentName="MoteBase">
+    <defName>Mote_PowerBeam</defName>
+    <graphicData>
+      <texPath>Things/Mote/PowerBeam</texPath>
+      <shaderType>MoteGlow</shaderType>
+    </graphicData>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <drawOffscreen>true</drawOffscreen>
+    <mote>
+      <fadeInTime>0.5</fadeInTime>
+      <solidTime>9.3</solidTime>
+      <fadeOutTime>1.0</fadeOutTime>
+    </mote>
+  </ThingDef>
+
+  <ThingDef ParentName="MoteBase">
+    <defName>Mote_GiantExplosion</defName>
+    <graphicData>
+      <texPath>Things/Mote/PowerBeam</texPath>
+      <shaderType>MoteGlow</shaderType>
+    </graphicData>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <drawOffscreen>true</drawOffscreen>
+    <mote>
+      <fadeInTime>0.01</fadeInTime>
+      <solidTime>0</solidTime>
+      <fadeOutTime>0.4</fadeOutTime>
+      <growthRate>325</growthRate>
+    </mote>
+  </ThingDef>
+
+  <ThingDef ParentName="MoteBase">
+    <defName>Mote_GiantExplosionInner</defName>
+    <graphicData>
+      <texPath>Things/Mote/PowerBeam</texPath>
+      <shaderType>MoteGlow</shaderType>
+    </graphicData>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <drawOffscreen>true</drawOffscreen>
+    <mote>
+      <fadeInTime>0.01</fadeInTime>
+      <solidTime>0</solidTime>
+      <fadeOutTime>0.4</fadeOutTime>
+      <growthRate>200</growthRate>
+    </mote>
+  </ThingDef>
+
+  <ThingDef Name="Mote_PsychicConditionCauserEffect" ParentName="MoteBase">
+    <defName>Mote_PsychicConditionCauserEffect</defName>
+    <mote>
+      <fadeInTime>0.1</fadeInTime>
+      <solidTime>0.62</solidTime>
+      <fadeOutTime>0.5</fadeOutTime>
+    </mote>
+    <graphicData>
+      <graphicClass>Graphic_MotePulse</graphicClass>
+      <texPath>Things/Mote/PsychicConditionCauserMask</texPath>
+      <shaderType>MotePsychicConditionCauser</shaderType>
+      <shaderParameters>
+        <_distortionIntensity>0.015</_distortionIntensity>
+        <_brightnessMultiplier>1.1</_brightnessMultiplier>
+        <_distortionScale>40</_distortionScale>
+      </shaderParameters>
+      <drawSize>30</drawSize>
+    </graphicData>
+  </ThingDef>
+
+  <ThingDef ParentName="Mote_PsychicConditionCauserEffect">
+    <defName>Mote_PsychicEmanatorEffect</defName>
+    <graphicData>
+      <shaderParameters>
+        <_distortionIntensity>0.006</_distortionIntensity>
+        <_brightnessMultiplier>1.075</_brightnessMultiplier>
+        <_distortionScale>25</_distortionScale>
+      </shaderParameters>
+      <drawSize>8</drawSize>
+    </graphicData>
+  </ThingDef>
+  
+  <ThingDef Name="ForceJob" ParentName="MoteBase">
+    <defName>Mote_ForceJob</defName>
+    <thingClass>MoteBubble</thingClass>
+    <altitudeLayer>MetaOverlays</altitudeLayer>
+    <mote>
+      <attachedDrawOffset>(0.85, 0, 0.85)</attachedDrawOffset>
+      <fadeInTime>0.1</fadeInTime>
+      <fadeOutTime>0.1</fadeOutTime>
+      <solidTime>0.7</solidTime>
+    </mote>
+    <graphicData>
+      <texPath>Things/Mote/Thought</texPath>
+      <shaderType>TransparentPostLight</shaderType>
+      <drawSize>1.25</drawSize>
+    </graphicData>
+  </ThingDef>
+  
+  <ThingDef ParentName="ForceJob">
+    <defName>Mote_ForceJobMaintained</defName>
+    <mote>
+      <fadeInTime>0.1</fadeInTime>
+      <fadeOutTime>0.1</fadeOutTime>
+      <solidTime>999999</solidTime>
+      <needsMaintenance>True</needsMaintenance>
+    </mote>
+  </ThingDef>
+  
+</Defs>

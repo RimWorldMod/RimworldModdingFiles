@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <PawnKindDef Name="TribalBase" Abstract="True">
+    <race>Human</race>
+    <defaultFactionType>TribeCivil</defaultFactionType>
+    <maxGenerationAge>60</maxGenerationAge>
+    <chemicalAddictionChance>0.05</chemicalAddictionChance>
+    <invNutrition>2.55</invNutrition>
+    <invFoodDef>Pemmican</invFoodDef>
+    <apparelTags>
+      <li>Neolithic</li>
+    </apparelTags>
+  </PawnKindDef>
+
+  <!-- Poverty tier - penitent -->
+
+  <PawnKindDef ParentName="TribalBase">
+    <defName>Tribal_Penitent</defName>
+    <label>penitent</label>
+    <combatPower>40</combatPower>
+    <chemicalAddictionChance>0.10</chemicalAddictionChance>
+    <invNutrition>0</invNutrition>
+    <itemQuality>Poor</itemQuality>
+    <gearHealthRange>0.2~1.1</gearHealthRange>
+    <apparelMoney>50~100</apparelMoney>
+    <weaponMoney>90~150</weaponMoney>
+    <weaponTags>
+      <li>NeolithicMeleeBasic</li>
+    </weaponTags>
+    <techHediffsMoney>50~50</techHediffsMoney>
+    <techHediffsTags>
+      <li>Poor</li>
+    </techHediffsTags>
+    <techHediffsChance>0.15</techHediffsChance>
+    <initialWillRange>0~1</initialWillRange>
+    <initialResistanceRange>10~17</initialResistanceRange>
+  </PawnKindDef>
+
+  <!-- Low tier - archer -->
+
+  <PawnKindDef ParentName="TribalBase">
+    <defName>Tribal_Archer</defName>
+    <label>archer</label>
+    <combatPower>45</combatPower>
+    <itemQuality>Poor</itemQuality>
+    <gearHealthRange>0.5~1.8</gearHealthRange>
+    <apparelMoney>180~350</apparelMoney>
+    <weaponMoney>80~80</weaponMoney>
+    <weaponTags>
+      <li>NeolithicRangedBasic</li>
+    </weaponTags>
+    <disallowedTraits>
+      <li>Brawler</li>
+    </disallowedTraits>
+    <techHediffsMoney>50~50</techHediffsMoney>
+    <techHediffsTags>
+      <li>Poor</li>
+    </techHediffsTags>
+    <techHediffsChance>0.03</techHediffsChance>
+    <initialWillRange>1~3</initialWillRange>
+    <initialResistanceRange>17~27</initialResistanceRange>
+  </PawnKindDef>
+
+  <!-- Mid tier - warrior, breacher, hunter, trader -->
+  
+  <PawnKindDef ParentName="TribalBase">
+    <defName>Tribal_Warrior</defName>
+    <label>warrior</label>
+    <combatPower>50</combatPower>
+    <itemQuality>Poor</itemQuality>
+    <canBeSapper>true</canBeSapper>
+    <gearHealthRange>0.5~1.8</gearHealthRange>
+    <apparelMoney>200~300</apparelMoney>
+    <apparelRequired>
+      <li>Apparel_WarVeil</li>
+    </apparelRequired>
+    <weaponMoney>150~150</weaponMoney>
+    <weaponTags>
+      <li>NeolithicMeleeDecent</li>
+    </weaponTags>
+    <initialWillRange>1~3</initialWillRange>
+    <initialResistanceRange>5~9</initialResistanceRange>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="TribalBase" Name="Tribal_Hunter">
+    <defName>Tribal_Hunter</defName>
+    <label>hunter</label>
+    <combatPower>60</combatPower>
+    <backstoryFiltersOverride>
+      <li>
+        <categoriesAdulthood>
+          <li>TribalHunter</li>
+        </categoriesAdulthood>
+      </li>
+    </backstoryFiltersOverride>
+    <gearHealthRange>0.5~1.8</gearHealthRange>
+    <apparelMoney>200~300</apparelMoney>
+    <apparelRequired>
+      <li>Apparel_WarVeil</li>
+    </apparelRequired>
+    <weaponMoney>100~100</weaponMoney>
+    <weaponTags>
+      <li>NeolithicRangedDecent</li>
+    </weaponTags>
+    <disallowedTraits>
+      <li>Brawler</li>
+    </disallowedTraits>
+    <initialWillRange>2~4</initialWillRange>
+    <initialResistanceRange>10~16</initialResistanceRange>
+  </PawnKindDef>
+  
+  <PawnKindDef ParentName="Tribal_Hunter">
+    <defName>Tribal_Trader</defName>
+    <label>trader</label>
+    <trader>true</trader>
+    <apparelRequired Inherit="False">
+      <li>Apparel_TribalHeaddress</li>
+    </apparelRequired>
+    <initialWillRange>2~4</initialWillRange>
+    <initialResistanceRange>9~15</initialResistanceRange>
+  </PawnKindDef>
+
+  <!-- High tier - berserker, heavy archer, chief melee, chief ranged -->
+
+  <PawnKindDef ParentName="TribalBase">
+    <defName>Tribal_Berserker</defName>
+    <label>berserker</label>
+    <combatPower>65</combatPower>
+    <canBeSapper>true</canBeSapper>
+    <apparelMoney>200~550</apparelMoney>
+    <apparelRequired>
+      <li>Apparel_WarMask</li>
+    </apparelRequired>
+    <weaponMoney>300~300</weaponMoney>
+    <weaponTags>
+      <li>NeolithicMeleeAdvanced</li>
+    </weaponTags>
+    <initialWillRange>2~4</initialWillRange>
+    <initialResistanceRange>13~20</initialResistanceRange>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="TribalBase">
+    <defName>Tribal_HeavyArcher</defName>
+    <label>heavy archer</label>
+    <combatPower>75</combatPower>
+    <apparelMoney>200~550</apparelMoney>
+    <apparelRequired>
+      <li>Apparel_WarMask</li>
+    </apparelRequired>
+    <weaponMoney>250~250</weaponMoney>
+    <weaponTags>
+      <li>NeolithicRangedHeavy</li>
+    </weaponTags>
+    <disallowedTraits>
+      <li>Brawler</li>
+    </disallowedTraits>
+    <initialWillRange>2~4</initialWillRange>
+    <initialResistanceRange>14~22</initialResistanceRange>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="TribalBase" Name="TribalChiefBase" Abstract="True">
+    <defName>Tribal_ChiefMelee</defName>
+    <combatPower>85</combatPower>
+    <baseRecruitDifficulty>0.90</baseRecruitDifficulty>
+    <minGenerationAge>30</minGenerationAge>
+    <maxGenerationAge>999</maxGenerationAge>
+    <itemQuality>Normal</itemQuality>
+    <factionLeader>true</factionLeader>
+    <canBeSapper>true</canBeSapper>
+    <apparelMoney>450~750</apparelMoney>
+    <apparelRequired>
+      <li>Apparel_TribalHeaddress</li>
+      <li>Apparel_PlateArmor</li>
+    </apparelRequired>
+    <weaponMoney>500~1000</weaponMoney>
+    <initialWillRange>3~5</initialWillRange>
+    <initialResistanceRange>19~30</initialResistanceRange>
+  </PawnKindDef>
+  
+  <PawnKindDef ParentName="TribalChiefBase">
+    <defName>Tribal_ChiefMelee</defName>
+    <label>berserker chief</label>
+    <weaponTags>
+      <li>NeolithicMeleeAdvanced</li>
+      <li>MedievalMeleeAdvanced</li>
+    </weaponTags>
+    <initialResistanceRange>38~58</initialResistanceRange>
+  </PawnKindDef>
+  
+  <PawnKindDef ParentName="TribalChiefBase">
+    <defName>Tribal_ChiefRanged</defName>
+    <label>archer chief</label>
+    <weaponTags>
+      <li>NeolithicRangedChief</li>
+    </weaponTags>
+    <disallowedTraits>
+      <li>Brawler</li>
+    </disallowedTraits>
+    <initialResistanceRange>16~26</initialResistanceRange>
+  </PawnKindDef>
+
+</Defs>

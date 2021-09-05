@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!--=============== Activity icons ================-->
+
+  <ThingDef ParentName="MoteBase">
+    <defName>Mote_Clean</defName>
+    <thingClass>MoteDualAttached</thingClass>
+    <altitudeLayer>MetaOverlays</altitudeLayer>
+    <mote>
+      <solidTime>600</solidTime>
+    </mote>
+    <graphicData>
+      <texPath>Things/Mote/Clean</texPath>
+    </graphicData>
+  </ThingDef>
+
+  <ThingDef ParentName="MoteBase">
+    <defName>Mote_Sow</defName>
+    <thingClass>MoteDualAttached</thingClass>
+    <altitudeLayer>MetaOverlays</altitudeLayer>
+    <mote>
+      <solidTime>600</solidTime>
+    </mote>
+    <graphicData>
+      <texPath>Things/Mote/Sow</texPath>
+    </graphicData>
+  </ThingDef>
+
+  <ThingDef ParentName="MoteBase">
+    <defName>Mote_Harvest</defName>
+    <thingClass>MoteDualAttached</thingClass>
+    <altitudeLayer>MetaOverlays</altitudeLayer>
+    <mote>
+      <solidTime>600</solidTime>
+    </mote>
+    <graphicData>
+      <texPath>Things/Mote/Harvest</texPath>
+    </graphicData>
+  </ThingDef>
+
+  <ThingDef ParentName="MoteBase">
+    <defName>Mote_ClearSnow</defName>
+    <thingClass>MoteDualAttached</thingClass>
+    <altitudeLayer>MetaOverlays</altitudeLayer>
+    <mote>
+      <solidTime>600</solidTime>
+    </mote>
+    <graphicData>
+      <texPath>Things/Mote/ClearSnow</texPath>
+    </graphicData>
+  </ThingDef>
+  
+  <ThingDef ParentName="MoteBase">
+    <defName>Mote_Cards</defName>
+    <thingClass>MoteDualAttached</thingClass>
+    <altitudeLayer>MetaOverlays</altitudeLayer>
+    <mote>
+      <solidTime>600</solidTime>
+      <rotateTowardsTarget>true</rotateTowardsTarget>
+    </mote>
+    <graphicData>
+      <texPath>Things/Mote/Cards</texPath>
+    </graphicData>
+  </ThingDef>
+
+</Defs>

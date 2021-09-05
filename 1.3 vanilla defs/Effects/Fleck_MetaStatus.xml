@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <FleckDef ParentName="FleckBase_Thrown">
+    <defName>Meditating</defName>
+    <graphicData>
+      <texPath>Things/Mote/Meditate</texPath>
+      <renderInstanced>true</renderInstanced>
+    </graphicData>
+    <altitudeLayer>MetaOverlays</altitudeLayer>
+    <fadeInTime>0.08</fadeInTime>
+    <solidTime>1.4</solidTime>
+    <fadeOutTime>1.5</fadeOutTime>
+  </FleckDef>
+
+  <FleckDef ParentName="FleckBase_Thrown">
+    <defName>Heart</defName>
+    <graphicData>
+      <texPath>Things/Mote/Heart</texPath>
+    </graphicData>
+    <altitudeLayer>MetaOverlays</altitudeLayer>
+    <fadeInTime>0.08</fadeInTime>
+    <solidTime>1.4</solidTime>
+    <fadeOutTime>1.5</fadeOutTime>
+  </FleckDef>
+
+  <FleckDef ParentName="FleckBase_Thrown">
+    <defName>HealingCross</defName>
+    <graphicData>
+      <texPath>Things/Mote/HealingCross</texPath>
+    </graphicData>
+    <altitudeLayer>MetaOverlays</altitudeLayer>
+    <fadeInTime>0.08</fadeInTime>
+    <solidTime>1.4</solidTime>
+    <fadeOutTime>1.5</fadeOutTime>
+  </FleckDef>
+
+  <FleckDef ParentName="FleckBase_Thrown">
+    <defName>SleepZ</defName>
+    <graphicData>
+      <texPath>Things/Mote/SleepZ</texPath>
+    </graphicData>
+    <altitudeLayer>MetaOverlays</altitudeLayer>
+    <fadeInTime>0.08</fadeInTime>
+    <solidTime>1.4</solidTime>
+    <fadeOutTime>1.5</fadeOutTime>
+  </FleckDef>
+
+  <FleckDef ParentName="FleckBase_Thrown">
+    <defName>IncapIcon</defName>
+    <graphicData>
+      <texPath>Things/Mote/IncapIcon</texPath>
+    </graphicData>
+    <altitudeLayer>MetaOverlays</altitudeLayer>
+    <fadeInTime>0.08</fadeInTime>
+    <solidTime>1.4</solidTime>
+    <fadeOutTime>1.5</fadeOutTime>
+  </FleckDef>
+
+</Defs>

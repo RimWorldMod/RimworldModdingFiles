@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef Name="BasePawn" Abstract="True">
+    <thingClass>Pawn</thingClass>
+    <category>Pawn</category>
+    <selectable>true</selectable>
+    <tickerType>Normal</tickerType>
+    <altitudeLayer>Pawn</altitudeLayer>
+    <useHitPoints>false</useHitPoints>
+    <hasTooltip>true</hasTooltip>
+    <soundImpactDefault>BulletImpact_Flesh</soundImpactDefault>
+    <statBases>
+      <Mass>60</Mass>
+      <Flammability>0.7</Flammability>
+    </statBases>
+    <inspectorTabs>
+      <li>ITab_Pawn_Health</li>
+      <li>ITab_Pawn_Needs</li>
+      <li>ITab_Pawn_Character</li>
+      <li>ITab_Pawn_Training</li>
+      <li>ITab_Pawn_Social</li>
+      <li>ITab_Pawn_Guest</li>
+      <li>ITab_Pawn_Prisoner</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">ITab_Pawn_Slave</li>
+      <li>ITab_Pawn_FormingCaravan</li>
+      <li>ITab_Pawn_Gear</li>
+      <li>ITab_Pawn_Log</li>
+    </inspectorTabs>
+    <comps>
+      <li>
+        <compClass>CompAttachBase</compClass>
+      </li>
+    </comps>
+    <drawGUIOverlay>true</drawGUIOverlay>
+  </ThingDef>
+
+  <ThingDef ParentName="BasePawn" Name="AnimalThingBase" Abstract="True">
+    <statBases>
+      <LeatherAmount>40</LeatherAmount>
+      <ToxicSensitivity>0.5</ToxicSensitivity>
+    </statBases>
+    <race>
+      <thinkTreeMain>Animal</thinkTreeMain>
+      <thinkTreeConstant>AnimalConstant</thinkTreeConstant>
+      <hasGenders>true</hasGenders>
+      <nameGenerator>NamerAnimalGenericMale</nameGenerator>
+      <nameGeneratorFemale>NamerAnimalGenericFemale</nameGeneratorFemale>
+      <trainability>None</trainability>
+      <hediffGiverSets>
+        <li>OrganicStandard</li>
+      </hediffGiverSets>
+    </race>
+    <thingCategories>
+      <li>Animals</li>
+    </thingCategories>
+    <recipes>
+      <li>ExciseCarcinoma</li>
+      <li>AdministerMechSerumHealer</li>
+      <li>RemoveBodyPart</li>
+      <li>Euthanize</li>
+      <li>Anesthetize</li>
+      <li>CureScaria</li>
+      <li>Sterilize</li>
+      <li MayRequire="Ludeon.RimWorld.Royalty">CureBloodRot</li>
+    </recipes>
+  </ThingDef>
+
+  <PawnKindDef Name="AnimalKindBase" Abstract="True">
+  </PawnKindDef>
+  
+</Defs>

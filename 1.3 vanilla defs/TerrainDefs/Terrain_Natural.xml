@@ -1,0 +1,314 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <TerrainDef Name="NaturalTerrainBase" Abstract="True">
+    <filthAcceptanceMask>
+      <li>Unnatural</li>
+    </filthAcceptanceMask>
+  </TerrainDef>
+
+  <!-- Standard soils -->
+
+  <TerrainDef ParentName="NaturalTerrainBase">
+    <defName>Soil</defName>
+    <label>soil</label>
+    <texturePath>Terrain/Surfaces/Soil</texturePath>
+    <edgeType>FadeRough</edgeType>
+    <renderPrecedence>340</renderPrecedence>
+    <pathCost>2</pathCost>
+    <statBases>
+      <Beauty>-1</Beauty>
+      <Cleanliness>-1</Cleanliness>
+    </statBases>
+    <scatterType>Rocky</scatterType>
+    <affordances>
+      <li>Light</li>
+      <li>Medium</li>
+      <li>Heavy</li>
+      <li>GrowSoil</li>
+      <li>Diggable</li>
+    </affordances>
+    <generatedFilth>Filth_Dirt</generatedFilth>
+    <fertility>1.0</fertility>
+    <takeFootprints>True</takeFootprints>
+    <tools>
+      <li>
+        <label>dirt</label>
+        <capacities>
+          <li>KickMaterialInEyes</li>
+        </capacities>
+        <hediff>DirtInEyes</hediff>
+        <cooldownTime>1.5</cooldownTime>
+      </li>
+    </tools>
+    <tags>
+      <li>Soil</li>
+    </tags>
+  </TerrainDef>
+
+  <TerrainDef ParentName="NaturalTerrainBase">
+    <defName>MossyTerrain</defName>
+    <label>lichen-covered soil</label>
+    <texturePath>Terrain/Surfaces/Mossy</texturePath>
+    <edgeType>FadeRough</edgeType>
+    <renderPrecedence>315</renderPrecedence>
+    <pathCost>3</pathCost>
+    <statBases>
+      <Beauty>-1</Beauty>
+      <Cleanliness>-1</Cleanliness>
+    </statBases>
+    <generatedFilth>Filth_Dirt</generatedFilth>
+    <affordances>
+      <li>Light</li>
+      <li>Medium</li>
+      <li>Heavy</li>
+      <li>GrowSoil</li>
+      <li>Diggable</li>
+    </affordances>
+    <fertility>1</fertility>
+    <takeFootprints>True</takeFootprints>
+    <avoidWander>false</avoidWander>
+    <tags>
+      <li>Soil</li>
+    </tags>
+  </TerrainDef>
+
+  <TerrainDef ParentName="NaturalTerrainBase">
+    <defName>MarshyTerrain</defName>
+    <label>marshy soil</label>
+    <texturePath>Terrain/Surfaces/MarshyTerrain</texturePath>
+    <edgeType>FadeRough</edgeType>
+    <renderPrecedence>337</renderPrecedence>
+    <pathCost>14</pathCost>
+    <statBases>
+      <Beauty>-2</Beauty>
+      <Cleanliness>-2</Cleanliness>
+    </statBases>
+    <scatterType>Rocky</scatterType>
+    <affordances>
+      <li>Light</li>
+      <li>GrowSoil</li>
+      <li>Diggable</li>
+      <li>Bridgeable</li>
+    </affordances>
+    <generatedFilth>Filth_Dirt</generatedFilth>
+    <fertility>1.0</fertility>
+    <takeFootprints>True</takeFootprints>
+    <driesTo>Soil</driesTo>
+    <tools>
+      <li>
+        <label>mud</label>
+        <capacities>
+          <li>KickMaterialInEyes</li>
+        </capacities>
+        <hediff>MudInEyes</hediff>
+        <cooldownTime>1.5</cooldownTime>
+      </li>
+    </tools>
+    <tags>
+      <li>Soil</li>
+    </tags>
+  </TerrainDef>
+
+  <!-- Rich soils -->
+
+  <TerrainDef ParentName="NaturalTerrainBase">
+    <defName>SoilRich</defName>
+    <label>rich soil</label>
+    <texturePath>Terrain/Surfaces/SoilRich</texturePath>
+    <edgeType>FadeRough</edgeType>
+    <renderPrecedence>335</renderPrecedence>
+    <pathCost>2</pathCost>
+    <statBases>
+      <Beauty>-1</Beauty>
+      <Cleanliness>-1</Cleanliness>
+    </statBases>
+    <affordances>
+      <li>Light</li>
+      <li>Medium</li>
+      <li>Heavy</li>
+      <li>GrowSoil</li>
+      <li>Diggable</li>
+    </affordances>
+    <generatedFilth>Filth_Dirt</generatedFilth>
+    <fertility>1.4</fertility>
+    <takeFootprints>True</takeFootprints>
+    <tools>
+      <li>
+        <label>dirt</label>
+        <capacities>
+          <li>KickMaterialInEyes</li>
+        </capacities>
+        <hediff>DirtInEyes</hediff>
+        <cooldownTime>1.5</cooldownTime>
+      </li>
+    </tools>
+    <tags>
+      <li>Soil</li>
+    </tags>
+  </TerrainDef>
+
+  <!-- Poor soils -->
+
+  <TerrainDef ParentName="NaturalTerrainBase">
+    <defName>Gravel</defName>
+    <label>stony soil</label>
+    <texturePath>Terrain/Surfaces/Gravel</texturePath>
+    <edgeType>FadeRough</edgeType>
+    <renderPrecedence>320</renderPrecedence>
+    <pathCost>2</pathCost>
+    <statBases>
+      <Beauty>-1</Beauty>
+      <Cleanliness>-1</Cleanliness>
+    </statBases>
+    <scatterType>Rocky</scatterType>
+    <affordances>
+      <li>Light</li>
+      <li>Medium</li>
+      <li>Heavy</li>
+      <li>GrowSoil</li>
+      <li>Diggable</li>
+    </affordances>
+    <generatedFilth>Filth_Dirt</generatedFilth>
+    <fertility>0.7</fertility>
+    <takeFootprints>True</takeFootprints>
+    <tools>
+      <li>
+        <label>gravel</label>
+        <capacities>
+          <li>KickMaterialInEyes</li>
+        </capacities>
+        <hediff>GravelInEyes</hediff>
+        <cooldownTime>1.5</cooldownTime>
+      </li>
+    </tools>
+    <tags>
+      <li>Soil</li>
+    </tags>
+  </TerrainDef>
+
+  <!-- Sand -->
+
+  <TerrainDef ParentName="NaturalTerrainBase">
+    <defName>Sand</defName>
+    <label>sand</label>
+    <texturePath>Terrain/Surfaces/Sand</texturePath>
+    <edgeType>FadeRough</edgeType>
+    <renderPrecedence>350</renderPrecedence>
+    <pathCost>4</pathCost>
+    <statBases>
+      <Beauty>-1</Beauty>
+      <Cleanliness>-1</Cleanliness>
+    </statBases>
+    <scatterType>SoftDry</scatterType>
+    <affordances>
+      <li>Light</li>
+      <li>Medium</li>
+      <li>Heavy</li>
+      <li>Diggable</li>
+    </affordances>
+    <generatedFilth>Filth_Sand</generatedFilth>
+    <fertility>0.10</fertility>
+    <takeFootprints>True</takeFootprints>
+    <tools>
+      <li>
+        <label>sand</label>
+        <capacities>
+          <li>KickMaterialInEyes</li>
+        </capacities>
+        <hediff>SandInEyes</hediff>
+        <cooldownTime>1.5</cooldownTime>
+      </li>
+    </tools>
+  </TerrainDef>
+
+  <TerrainDef ParentName="NaturalTerrainBase">
+    <defName>SoftSand</defName>
+    <label>soft sand</label>
+    <texturePath>Terrain/Surfaces/SoftSand</texturePath>
+    <edgeType>FadeRough</edgeType>
+    <renderPrecedence>352</renderPrecedence>
+    <pathCost>14</pathCost>
+    <driesTo>Sand</driesTo>
+    <statBases>
+      <Beauty>-1</Beauty>
+      <Cleanliness>-1</Cleanliness>
+    </statBases>
+    <affordances>
+      <li>Light</li>
+      <li>Diggable</li>
+    </affordances>
+    <generatedFilth>Filth_Sand</generatedFilth>
+    <fertility>0</fertility>
+    <takeFootprints>true</takeFootprints>
+    <tools>
+      <li>
+        <label>sand</label>
+        <capacities>
+          <li>KickMaterialInEyes</li>
+        </capacities>
+        <hediff>SandInEyes</hediff>
+        <cooldownTime>1.5</cooldownTime>
+      </li>
+    </tools>
+  </TerrainDef>
+
+
+  <!-- Infertile ground -->
+
+  <TerrainDef ParentName="NaturalTerrainBase">
+    <defName>Mud</defName>
+    <label>mud</label>
+    <texturePath>Terrain/Surfaces/Mud</texturePath>
+    <edgeType>FadeRough</edgeType>
+    <renderPrecedence>330</renderPrecedence>
+    <pathCost>14</pathCost>
+    <statBases>
+      <Beauty>-2</Beauty>
+      <Cleanliness>-2</Cleanliness>
+    </statBases>
+    <affordances>
+      <li>Bridgeable</li>
+    </affordances>
+    <generatedFilth>Filth_Dirt</generatedFilth>
+    <fertility>0</fertility>
+    <takeFootprints>True</takeFootprints>
+    <avoidWander>true</avoidWander>
+    <driesTo>Soil</driesTo>
+    <tools>
+      <li>
+        <label>mud</label>
+        <capacities>
+          <li>KickMaterialInEyes</li>
+        </capacities>
+        <hediff>MudInEyes</hediff>
+        <cooldownTime>1.5</cooldownTime>
+      </li>
+    </tools>
+  </TerrainDef>
+
+  <!-- Ice -->
+
+  <TerrainDef ParentName="NaturalTerrainBase">
+    <defName>Ice</defName>
+    <label>Ice</label>
+    <texturePath>Terrain/Surfaces/Ice</texturePath>
+    <edgeType>FadeRough</edgeType>
+    <renderPrecedence>350</renderPrecedence>
+    <pathCost>14</pathCost>
+    <statBases>
+      <Beauty>-1</Beauty>
+    </statBases>
+    <scatterType>SoftGray</scatterType>
+    <affordances>
+      <li>Light</li>
+      <li>Medium</li>
+      <li>Heavy</li>
+      <li>Diggable</li>
+    </affordances>
+    <generatedFilth>Filth_Dirt</generatedFilth>
+    <fertility>0.00</fertility>
+    <takeFootprints>True</takeFootprints>
+  </TerrainDef>
+
+</Defs>

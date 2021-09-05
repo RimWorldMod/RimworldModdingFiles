@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  
+  <SitePartDef>
+    <defName>PossibleUnknownThreatMarker</defName>
+    <label>possible unknown threat</label>
+    <workerClass>SitePartWorker_UnknownThreatMarker</workerClass>
+    <description>A possible, unknown threat.</description>
+    <siteTexture>World/WorldObjects/Sites/GenericSite</siteTexture>
+    <expandingIconTexture>World/WorldObjects/Expanding/Sites/Ambush</expandingIconTexture>
+    <tags>
+      <li>PossibleUnknownThreatMarker</li>
+    </tags>
+  </SitePartDef>
+
+</Defs>

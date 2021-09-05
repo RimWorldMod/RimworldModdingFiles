@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <SketchResolverDef>
+    <defName>Monument</defName>
+    <isRoot>true</isRoot>
+    <resolver Class="SketchResolver_Monument" />
+  </SketchResolverDef>
+
+  <SketchResolverDef>
+    <defName>Symmetry</defName>
+    <resolver Class="SketchResolver_Symmetry" />
+  </SketchResolverDef>
+
+  <SketchResolverDef>
+    <defName>AssignRandomStuff</defName>
+    <resolver Class="SketchResolver_AssignRandomStuff" />
+  </SketchResolverDef>
+
+  <SketchResolverDef>
+    <defName>FloorFill</defName>
+    <resolver Class="SketchResolver_FloorFill" />
+  </SketchResolverDef>
+
+  <SketchResolverDef>
+    <defName>AddColumns</defName>
+    <resolver Class="SketchResolver_AddColumns" />
+  </SketchResolverDef>
+
+  <SketchResolverDef>
+    <defName>AddCornerThings</defName>
+    <resolver Class="SketchResolver_AddCornerThings" />
+  </SketchResolverDef>
+
+  <SketchResolverDef>
+    <defName>AddThingsCentral</defName>
+    <resolver Class="SketchResolver_AddThingsCentral" />
+  </SketchResolverDef>
+
+  <SketchResolverDef>
+    <defName>AddWallEdgeThings</defName>
+    <resolver Class="SketchResolver_AddWallEdgeThings" />
+  </SketchResolverDef>
+
+  <SketchResolverDef>
+    <defName>AddInnerMonuments</defName>
+    <resolver Class="SketchResolver_AddInnerMonuments" />
+  </SketchResolverDef>
+
+  <SketchResolverDef>
+    <defName>DamageBuildings</defName>
+    <resolver Class="SketchResolver_DamageBuildings" />
+  </SketchResolverDef>
+
+  <SketchResolverDef>
+    <defName>MonumentRuin</defName>
+    <isRoot>true</isRoot>
+    <resolver Class="SketchResolver_MonumentRuin" />
+  </SketchResolverDef>
+
+</Defs>

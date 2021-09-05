@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!--============================ Breaching ============================-->
+
+  <RaidStrategyDef Abstract="True" Name="BreachingBase">
+    <pointsFactorCurve>
+      <points>
+        <li>100,  1.0</li>
+        <li>1000, 0.7</li>
+        <li>5000, 0.5</li>
+      </points>
+    </pointsFactorCurve>
+    <selectionWeightPerPointsCurve> <!-- Note both breach strats use this, so it's in some sense doubled -->
+      <points>
+        <li>(500,  0.0)</li>
+        <li>(1000, 0.7)</li>
+        <li>(2000, 1.1)</li>
+        <li>(4000, 1.6)</li>
+      </points>
+    </selectionWeightPerPointsCurve>
+    <arriveModes>
+      <li>EdgeDrop</li>
+      <li>EdgeWalkIn</li>
+      <li>CenterDrop</li>
+      <li>RandomDrop</li>
+    </arriveModes>
+    <letterLabelEnemy>Raid</letterLabelEnemy>
+    <letterLabelFriendly>Friendlies</letterLabelFriendly>
+    <arrivalTextFriendly>They are moving in to help you immediately.</arrivalTextFriendly>
+  </RaidStrategyDef>
+
+  <RaidStrategyDef ParentName="BreachingBase">
+    <defName>ImmediateAttackBreaching</defName>
+    <workerClass>RaidStrategyWorker_ImmediateAttackBreaching</workerClass>
+    <arrivalTextEnemy>They are attacking immediately.\n\nThese raiders intend to breach your walls. They'll determine their own path into your colony and destroy anything in their way.</arrivalTextEnemy>
+  </RaidStrategyDef>
+
+  <RaidStrategyDef ParentName="BreachingBase">
+    <defName>ImmediateAttackBreachingSmart</defName>
+    <workerClass>RaidStrategyWorker_ImmediateAttackBreachingSmart</workerClass>
+    <arrivalTextEnemy>They are attacking immediately.\n\nThese raiders intend to breach your walls. They'll determine their own path into your colony and destroy anything in their way.\n\nWatch out - they appear to be unusually clever with their tactics. They'll avoid your turrets' fields of fire and notice some of your traps.</arrivalTextEnemy>
+  </RaidStrategyDef>
+
+</Defs>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <IssueDef>
+    <defName>OrganUse</defName>
+    <label>organ use</label>
+    <iconPath>UI/Issues/OrganUse</iconPath>
+  </IssueDef>
+
+  <HistoryEventDef>
+    <defName>HarvestedOrganFromColonist</defName>
+    <label>harvested colonist organ</label>
+  </HistoryEventDef>
+
+  <HistoryEventDef>
+    <defName>HarvestedOrganFromGuest</defName>
+    <label>harvested guest organ</label>
+  </HistoryEventDef>
+
+  <PreceptDef>
+    <defName>OrganUse_Classic</defName>
+    <issue>OrganUse</issue>
+    <impact>Low</impact>
+    <classic>true</classic>
+    <visible>false</visible>
+    <comps>
+      <li Class="PreceptComp_KnowsMemoryThought">
+        <eventDef>HarvestedOrganFromColonist</eventDef>
+        <thought>KnowColonistOrganHarvested</thought>
+      </li>
+      <li Class="PreceptComp_KnowsMemoryThought">
+        <eventDef>HarvestedOrganFromGuest</eventDef>
+        <thought>KnowGuestOrganHarvested</thought>
+      </li>
+    </comps>
+  </PreceptDef>
+
+</Defs>

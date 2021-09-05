@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <QuestScriptDef>
+    <defName>EndGame_ShipEscape</defName>
+    <autoAccept>true</autoAccept>
+    <defaultChallengeRating>4</defaultChallengeRating>
+    <isRootSpecial>true</isRootSpecial>
+    <questNameRules>
+      <rulesStrings>
+        <li>questName->Ship to the Stars</li>
+      </rulesStrings>
+    </questNameRules>
+    <questDescriptionRules>
+      <rulesStrings>
+        <li>questDescription->A friendly AI from your past named (*Name)Charlon Whitestone(/Name) has sent you a message!
+\nHe reveals that he has a starship hidden on this planet, and sends you its world coordinates.
+\nThe starship is in deep hibernation mode. You'll have to start it up when you arrive, then defend it from raiders trying to steal it until the startup sequence completes. It will be a long, difficult series of battles.
+\nIf you can get the ship off the ground, (*Name)Charlon Whitestone(/Name) will take you off this rimworld, to the stars.</li>
+      </rulesStrings>
+    </questDescriptionRules>
+    <root Class="QuestNode_Sequence">
+      <nodes>
+        <li Class="QuestNode_QuestUnique">
+          <tag>EndGame_ShipEscape</tag>
+        </li>
+        
+        <!-- Add reward info -->
+        <li Class="QuestNode_AddPassageOffworldReward">
+          <inSignalChoiceUsed>escapeShip.LaunchedShip</inSignalChoiceUsed>
+        </li>
+        
+        <li Class="QuestNode_EndGame_ShipEscape_FindShipTile">
+          <storeAs>tile</storeAs>
+        </li>
+        <li Class="QuestNode_GenerateWorldObject">
+          <def>EscapeShip</def>
+          <storeAs>escapeShip</storeAs>
+        </li>
+        <li Class="QuestNode_SpawnWorldObjects">
+          <worldObjects>$escapeShip</worldObjects>
+          <tile>$tile</tile>
+        </li>
+
+        <!-- Ending -->
+        
+        <!-- World object destroyed -->
+        <li Class="QuestNode_NoWorldObject">
+          <worldObject>$escapeShip</worldObject>
+          <node Class="QuestNode_End">
+            <outcome>Fail</outcome>
+          </node>
+        </li>
+        
+        <!-- Reactor destroyed -->
+        <li Class="QuestNode_Signal">
+          <inSignal>escapeShip.ReactorDestroyed</inSignal>
+          <node Class="QuestNode_End">
+            <outcome>Fail</outcome>
+          </node>
+        </li>
+        
+        <!-- Launched ship -->
+        <li Class="QuestNode_End">
+          <inSignal>escapeShip.LaunchedShip</inSignal>
+          <outcome>Success</outcome>
+        </li>
+      </nodes>
+    </root>
+  </QuestScriptDef>
+</Defs>

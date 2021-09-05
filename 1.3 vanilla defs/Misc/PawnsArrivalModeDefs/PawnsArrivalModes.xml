@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <PawnsArrivalModeDef>
+    <defName>EdgeWalkIn</defName>
+    <workerClass>PawnsArrivalModeWorker_EdgeWalkIn</workerClass>
+    <selectionWeightCurve>
+      <points>
+        <li>(300, 1.0)</li>
+        <li>(700, 0.4)</li>
+      </points>
+    </selectionWeightCurve>
+    <textEnemy>A group of {0} from {1} have arrived nearby.</textEnemy>
+    <textFriendly>A group of friendly {0} from {1} have arrived nearby.</textFriendly>
+    <textWillArrive>{0_pawnsPluralDef} will arrive on foot.</textWillArrive>
+    <walkIn>true</walkIn>
+  </PawnsArrivalModeDef>
+
+  <PawnsArrivalModeDef>
+    <defName>EdgeDrop</defName>
+    <workerClass>PawnsArrivalModeWorker_EdgeDrop</workerClass>
+    <selectionWeightCurve>
+      <points>
+        <li>(300, 0)</li>
+        <li>(700, 0.30)</li>
+      </points>
+    </selectionWeightCurve>
+    <minTechLevel>Industrial</minTechLevel>
+    <textEnemy>A group of {0} from {1} have arrived in transport pods nearby.</textEnemy>
+    <textFriendly>A group of friendly {0} from {1} have arrived in transport pods nearby.</textFriendly>
+    <textWillArrive>{0_pawnsPluralDef} will arrive in transport pods.</textWillArrive>
+  </PawnsArrivalModeDef>
+
+  <PawnsArrivalModeDef>
+    <defName>EdgeWalkInGroups</defName>
+    <workerClass>PawnsArrivalModeWorker_EdgeWalkInGroups</workerClass>
+    <selectionWeightCurve>
+      <points>
+        <li>(100, 0)</li>
+        <li>(300, 0.3)</li>
+        <li>(700, 0.5)</li>
+      </points>
+    </selectionWeightCurve>
+    <pointsFactorCurve>
+      <points>
+        <li>0, 0.9</li>
+      </points>
+    </pointsFactorCurve>
+    <textEnemy>{0} from {1} have arrived nearby, approaching from multiple angles.</textEnemy>
+    <textFriendly>Friendly {0} from {1} have arrived nearby, approaching from multiple angles.</textFriendly>
+    <textWillArrive>{0_pawnsPluralDef} will arrive on foot, approaching from several angles at once.</textWillArrive>
+    <walkIn>true</walkIn>
+  </PawnsArrivalModeDef>
+
+  <PawnsArrivalModeDef>
+    <defName>EdgeDropGroups</defName>
+    <workerClass>PawnsArrivalModeWorker_EdgeDropGroups</workerClass>
+    <selectionWeightCurve>
+      <points>
+        <li>(100, 0)</li>
+        <li>(300, 0.2)</li>
+        <li>(700, 0.5)</li>
+      </points>
+    </selectionWeightCurve>
+    <pointsFactorCurve>
+      <points>
+        <li>0, 0.9</li>
+      </points>
+    </pointsFactorCurve>
+    <minTechLevel>Industrial</minTechLevel>
+    <textEnemy>Several separate groups of {0} from {1} have arrived in transport pods nearby.</textEnemy>
+    <textFriendly>Several separate groups of friendly {0} from {1} have arrived in transport pods nearby.</textFriendly>
+    <textWillArrive>Several separate groups of {0_pawnsPluralDef} will arrive in transport pods.</textWillArrive>
+  </PawnsArrivalModeDef>
+
+  <PawnsArrivalModeDef>
+    <defName>CenterDrop</defName>
+    <workerClass>PawnsArrivalModeWorker_CenterDrop</workerClass>
+    <selectionWeightCurve> <!-- not usable in many strategies and by many factions, so this gets boosted -->
+      <points>
+        <li>(300, 0.0)</li>
+        <li>(1000, 3.5)</li>
+      </points>
+    </selectionWeightCurve>
+    <pointsFactorCurve>
+      <points>
+        <li>0, 0.5</li>
+        <li>5000, 0.3</li>
+      </points>
+    </pointsFactorCurve>
+    <minTechLevel>Industrial</minTechLevel>
+    <textEnemy>A group of {0} from {1} have dropped in right on top of you!</textEnemy>
+    <textFriendly>A group of friendly {0} from {1} have dropped in right on top of you!</textFriendly>
+    <textWillArrive>{0_pawnsPluralDef} will arrive in transport pods right on top of you.</textWillArrive>
+  </PawnsArrivalModeDef>
+
+  <PawnsArrivalModeDef>
+    <defName>RandomDrop</defName>
+    <workerClass>PawnsArrivalModeWorker_RandomDrop</workerClass>
+    <selectionWeightCurve> <!-- not usable in many strategies and by many factions, so this gets boosted -->
+      <points>
+        <li>(300, 0)</li>
+        <li>(1000, 1.9)</li>
+      </points>
+    </selectionWeightCurve>
+    <pointsFactorCurve>
+      <points>
+        <li>0, 0.70</li>
+        <li>5000, 0.45</li>
+      </points>
+    </pointsFactorCurve>
+    <minTechLevel>Industrial</minTechLevel>
+    <textEnemy>A group of {0} from {1} have arrived in transport pods. Their pods went haywire and are landing scattered all over the area!</textEnemy>
+    <textFriendly>A group of friendly {0} from {1} have arrived in transport pods. Their pods went haywire and are landing scattered all over the area!</textFriendly>
+    <textWillArrive>{0_pawnsPluralDef} will arrive in transport pods.</textWillArrive>
+  </PawnsArrivalModeDef>
+
+  <PawnsArrivalModeDef>
+    <defName>MechClusterDrop</defName>
+    <workerClass>PawnsArrivalModeWorker_ClusterDrop</workerClass>
+    <textEnemy>A cluster of {0} have landed in drop pods nearby.</textEnemy>
+    <textWillArrive>The mech cluster will arrive in drop pods.</textWillArrive>
+    <selectionWeightCurve>
+      <points>
+        <li>(0, 1)</li> <!--Constant 1 -->
+      </points>
+    </selectionWeightCurve>
+  </PawnsArrivalModeDef>
+  
+</Defs>

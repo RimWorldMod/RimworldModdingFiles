@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- Quests -->
+
+  <HistoryEventDef>
+    <defName>QuestGoodwillReward</defName>
+    <label>quest completed</label>
+  </HistoryEventDef>
+
+  <HistoryEventDef>
+    <defName>QuestPawnLost</defName>
+    <label>member lost at colony</label>
+  </HistoryEventDef>
+
+  <HistoryEventDef>
+    <defName>QuestPawnArrested</defName>
+    <label>member arrested</label>
+  </HistoryEventDef>
+
+  <HistoryEventDef>
+    <defName>ShuttleCommanderMissedShuttle</defName>
+    <label>shuttle commander missed shuttle</label>
+  </HistoryEventDef>
+
+  <HistoryEventDef>
+    <defName>ShuttleGuardsMissedShuttle</defName>
+    <label>shuttle guards missed shuttle</label>
+  </HistoryEventDef>
+
+  <HistoryEventDef>
+    <defName>MonumentConstructionExpired</defName>
+    <label>monument construction expired</label>
+  </HistoryEventDef>
+
+  <HistoryEventDef>
+    <defName>MonumentConstructionMapRemoved</defName>
+    <label>monument construction abandoned</label>
+  </HistoryEventDef>
+
+  <HistoryEventDef>
+    <defName>FailedToKeepLodgersHappy</defName>
+    <label>failed to keep guests happy</label>
+  </HistoryEventDef>
+
+  <HistoryEventDef>
+    <defName>QuestPrisonerRecruited</defName>
+    <label>recruited lent prisoner</label>
+  </HistoryEventDef>
+
+  <HistoryEventDef>
+    <defName>QuestPrisonerEnslaved</defName>
+    <label>enslaved lent prisoner</label>
+  </HistoryEventDef>
+
+  <HistoryEventDef>
+    <defName>MemberMissedShuttle</defName>
+    <label>member missed shuttle</label>
+  </HistoryEventDef>
+
+  <HistoryEventDef>
+    <defName>MonumentDestroyed</defName>
+    <label>destroyed monument</label>
+  </HistoryEventDef>
+
+  <HistoryEventDef>
+    <defName>AcceptedDeserter</defName>
+    <label>accepted deserter</label>
+  </HistoryEventDef>
+
+</Defs>

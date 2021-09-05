@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- Some of the naming here is poor, so be careful. Old names kept for legacy/compatibility reasons. -->
+
+  <!-- ThingDefs for body parts and implants in item form -->
+
+  <ThingDef Name="BodyPartBase" Abstract="True">
+    <thingClass>ThingWithComps</thingClass>
+    <category>Item</category>
+    <drawerType>MapMeshOnly</drawerType>
+    <useHitPoints>true</useHitPoints>
+    <selectable>true</selectable>
+    <altitudeLayer>Item</altitudeLayer>
+    <tickerType>Never</tickerType>
+    <alwaysHaulable>true</alwaysHaulable>
+    <isTechHediff>true</isTechHediff>
+    <pathCost>14</pathCost>
+    <statBases>
+      <MaxHitPoints>50</MaxHitPoints>
+      <Flammability>0.7</Flammability>
+      <Beauty>-4</Beauty>
+      <DeteriorationRate>2.0</DeteriorationRate>
+      <Mass>1</Mass>
+    </statBases>
+    <tradeTags>
+      <li>TechHediff</li>
+    </tradeTags>
+    <comps>
+      <li Class="CompProperties_Forbiddable"/>
+    </comps>
+  </ThingDef>
+
+  <!-- The hediff defining the installed parts -->
+
+  <!-- These go in natural parts, but don't replace them -->
+  <HediffDef Name="ImplantHediffBase" Abstract="True">
+    <hediffClass>Hediff_Implant</hediffClass>
+    <defaultLabelColor>(0.6, 0.6, 1.0)</defaultLabelColor>
+    <isBad>false</isBad>
+    <priceImpact>true</priceImpact>
+    <countsAsAddedPartOrImplant>true</countsAsAddedPartOrImplant>
+  </HediffDef>
+
+  <!-- These replace natural parts entirely -->
+  <HediffDef Name="AddedBodyPartBase" ParentName="ImplantHediffBase" Abstract="True">
+    <hediffClass>Hediff_AddedPart</hediffClass>
+    <priceImpact>true</priceImpact>
+  </HediffDef>
+
+  <!-- The surgery recipes to install parts in a pawn -->
+
+  <RecipeDef Name="SurgeryInstallImplantBase" ParentName="SurgeryFlesh" Abstract="True">
+    <workerClass>Recipe_InstallImplant</workerClass>
+    <workAmount>2500</workAmount>
+    <skillRequirements>
+      <Medicine>5</Medicine>
+    </skillRequirements>
+    <recipeUsers>
+      <li>Human</li>
+    </recipeUsers>
+    <ingredients>
+      <li>
+        <filter><categories><li>Medicine</li></categories></filter>
+        <count>2</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <categories>
+        <li>Medicine</li>
+      </categories>
+    </fixedIngredientFilter>
+  </RecipeDef>
+
+  <RecipeDef Name="SurgeryInstallBodyPartArtificialBase" ParentName="SurgeryInstallImplantBase" Abstract="True">
+    <workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+  </RecipeDef>
+
+  <RecipeDef Name="SurgeryInstallBodyPartNaturalBase" ParentName="SurgeryInstallImplantBase" Abstract="True">
+    <workerClass>Recipe_InstallNaturalBodyPart</workerClass>
+  </RecipeDef>
+
+  <!-- The surgery recipes to remove parts in a pawn -->
+
+  <RecipeDef Name="SurgeryRemoveImplantBase" ParentName="SurgeryFlesh" Abstract="True">
+    <workerClass>Recipe_RemoveImplant</workerClass>
+    <workAmount>2500</workAmount>
+    <isViolation>true</isViolation>
+    <skillRequirements>
+      <Medicine>5</Medicine>
+    </skillRequirements>
+    <recipeUsers>
+      <li>Human</li>
+    </recipeUsers>
+    <ingredients>
+      <li>
+        <filter><categories><li>Medicine</li></categories></filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <categories>
+        <li>Medicine</li>
+      </categories>
+    </fixedIngredientFilter>
+  </RecipeDef>
+
+</Defs>

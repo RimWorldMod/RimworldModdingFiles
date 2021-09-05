@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <IncidentCategoryDef>
+    <defName>Special</defName>
+  </IncidentCategoryDef>
+
+  <IncidentCategoryDef>
+    <defName>Misc</defName>
+  </IncidentCategoryDef>
+
+  <IncidentCategoryDef>
+    <defName>ThreatSmall</defName>
+    <needsParmsPoints>true</needsParmsPoints>
+  </IncidentCategoryDef>
+
+  <IncidentCategoryDef>
+    <defName>ThreatBig</defName>
+    <needsParmsPoints>true</needsParmsPoints>
+    <tale>MajorThreat</tale>
+  </IncidentCategoryDef>
+
+  <IncidentCategoryDef>
+    <defName>FactionArrival</defName>
+  </IncidentCategoryDef>
+
+  <IncidentCategoryDef>
+    <defName>OrbitalVisitor</defName>
+  </IncidentCategoryDef>
+
+  <IncidentCategoryDef>
+    <defName>ShipChunkDrop</defName>
+  </IncidentCategoryDef>
+
+  <IncidentCategoryDef>
+    <defName>DiseaseHuman</defName>
+  </IncidentCategoryDef>
+
+  <IncidentCategoryDef>
+    <defName>DiseaseAnimal</defName>
+  </IncidentCategoryDef>
+
+  <IncidentCategoryDef>
+    <defName>AllyAssistance</defName>
+  </IncidentCategoryDef>
+
+  <IncidentCategoryDef>
+    <defName>EndGame_ShipEscape</defName>
+  </IncidentCategoryDef>
+
+  <IncidentCategoryDef>
+    <defName>GiveQuest</defName>
+    <needsParmsPoints>true</needsParmsPoints>
+  </IncidentCategoryDef>
+
+  <IncidentCategoryDef>
+    <defName>DeepDrillInfestation</defName>
+    <needsParmsPoints>true</needsParmsPoints>
+  </IncidentCategoryDef>
+
+</Defs>

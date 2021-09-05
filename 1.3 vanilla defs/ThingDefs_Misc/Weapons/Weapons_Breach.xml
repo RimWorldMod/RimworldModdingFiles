@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- Thump Cannon -->
+
+  <ThingDef ParentName="BaseGunWithQuality">
+    <defName>Gun_ThumpCannon</defName>
+    <label>thump cannon</label>
+    <description>A breaching explosive launcher used by mechanoids. It fires a concussion bomb that is extremely effective against walls and structures, but does much less damage to small targets.</description>
+    <techLevel>Spacer</techLevel>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/ThumpCannon</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <tradeability>None</tradeability>
+    <destroyOnDrop>true</destroyOnDrop>
+    <statBases>
+      <MarketValue>1400</MarketValue>
+      <Mass>20</Mass>
+      <AccuracyTouch>0.80</AccuracyTouch>
+      <AccuracyShort>0.87</AccuracyShort>
+      <AccuracyMedium>0.77</AccuracyMedium>
+      <AccuracyLong>0.64</AccuracyLong>
+      <RangedWeapon_Cooldown>4</RangedWeapon_Cooldown>
+    </statBases>
+    <relicChance>0</relicChance>
+    <weaponTags>
+      <li>MechanoidGunBreach</li>
+    </weaponTags>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_ThumpCannon</defaultProjectile>
+        <ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
+        <forcedMissRadius>1.9</forcedMissRadius>
+        <warmupTime>1</warmupTime>
+        <range>25.9</range>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+        <soundCast>ThumpCannon_Fire</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+        <noiseRadius>4</noiseRadius>
+      </li>
+    </verbs>
+    <tools>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2.6</cooldownTime>
+      </li>
+    </tools>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_ThumpCannon</defName>
+    <label>thump bomb</label>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Thump</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <thingClass>Projectile_Explosive</thingClass>
+    <projectile>
+      <damageDef>Thump</damageDef>
+      <damageAmountBase>9</damageAmountBase>
+      <explosionRadius>1.9</explosionRadius >
+      <stoppingPower>3</stoppingPower>
+      <speed>50</speed>
+      <soundExplode>ThumpCannon_Impact</soundExplode>
+    </projectile>
+  </ThingDef>
+
+</Defs>

@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!--########################### Utilities just for JoinerThreat ############################### -->
+
+  <QuestScriptDef>
+    <defName>Util_JoinerThreat_Joiner</defName>
+    <root Class="QuestNode_Sequence">
+      <nodes>
+        <li Class="QuestNode_Delay">
+          <delayTicks>$(randInt(600,1200))</delayTicks>
+          <node Class="QuestNode_Sequence">
+            <nodes>
+              <li Class="QuestNode_SubScript">
+                <def>Util_JoinerWalkIn</def>
+              </li>
+              <li Class="QuestNode_SendSignals">
+                <outSignals>JoinerArrived</outSignals>
+              </li>
+            </nodes>
+          </node>
+        </li>
+      </nodes>
+    </root>
+  </QuestScriptDef>
+
+  <!--########################### JoinerThreat quest roots ############################### -->
+  <!--Note: Other quests in this pattern are in expansions -->
+
+  <QuestScriptDef>
+    <defName>ThreatReward_Raid_Joiner</defName>
+    <rootSelectionWeight>0.6</rootSelectionWeight>
+    <rootMinPoints>0</rootMinPoints>
+    <expireDaysRange>0.3</expireDaysRange>
+    <rootIncreasesPopulation>true</rootIncreasesPopulation>
+    <defaultCharity>true</defaultCharity>
+    <successHistoryEvent MayRequire="Ludeon.RimWorld.Ideology">CharityFulfilled_ThreatReward_Joiner</successHistoryEvent>
+    <failedOrExpiredHistoryEvent MayRequire="Ludeon.RimWorld.Ideology">CharityRefused_ThreatReward_Joiner</failedOrExpiredHistoryEvent>
+    <questNameRules>
+      <rulesStrings>
+        <li>questName->Saving [runnerIndef]</li>
+        <li>questName->The Salvation of [runnerIndef]</li>
+        <li>questName->Helping [runnerIndef]</li>
+        <li>questName->Accepting [runnerIndef]</li>
+        <li>questName->[enemyFaction_pawnsPlural] hunting [runnerIndef]</li>
+        <li>questName->[runnerIndef] on the Run</li>
+        <li>questName->[runnerIndef] Seeks a Home</li>
+        <li>questName->[runnerIndef] Chased by [enemyFaction_pawnsPlural]</li>
+        <li>questName->[runnerIndef] and [enemyFaction_pawnsPlural]</li>
+        <li>runnerIndef->[joiner_titleIndef]</li>
+        <li>runnerIndef->[joiner_nameIndef]</li>
+        <li>runnerIndef->a Refugee</li>
+      </rulesStrings>
+    </questNameRules>
+    <questDescriptionRules>
+      <rulesStrings>
+        <li>questDescription->A [joiner_age]-year-old [joiner_title] named [joiner_nameDef] is calling from nearby. [joiner_pronoun] is being chased by [enemyFaction_pawnsPlural] from [enemyFaction_name]!
+\n[joiner_pronoun] begs for safety and offers to join you at [map_definite].[joiner_relationInfo]
+\nIf you accept, you'll have to fight off the [enemyFaction_pawnsPluralDef] on [joiner_possessive] tail. The group of [enemyFaction_pawnsPlural] is composed of: \n\n[raid/raidPawnKinds]
+\n[joiner_nameDef] is too frantic to offer more information.</li>
+      </rulesStrings>
+    </questDescriptionRules>
+    <root Class="QuestNode_Sequence">
+      <nodes>
+        <li Class="QuestNode_SubScript">
+          <def>Util_RandomizePointsChallengeRating</def>
+        </li>
+        <li Class="QuestNode_GetMap" />
+
+        <!-- Get a walk-in spot so joiner and raid come from the same spot -->
+        <li Class="QuestNode_GetWalkInSpot" /> 
+
+        <!-- Get raider faction -->
+        <li Class="QuestNode_GetFaction">
+          <allowEnemy>true</allowEnemy>
+          <mustBePermanentEnemy>true</mustBePermanentEnemy>
+          <storeAs>enemyFaction</storeAs>
+        </li>
+
+         <!-- Charity on accept -->
+        <li Class="QuestNode_RecordHistoryEvent" MayRequire="Ludeon.RimWorld.Ideology">
+          <historyDef>CharityFulfilled_ThreatReward_Joiner</historyDef>
+        </li>
+
+        <!-- Joiner arrives -->
+        <li Class="QuestNode_SubScript">
+          <def>Util_JoinerThreat_Joiner</def>
+        </li>
+
+        <!-- Raid arrives -->
+        <!-- Note that the joiner has a delay, so the raid needs an even longer delay -->
+        <li Class="QuestNode_Set">
+          <name>raidDelayTicks</name>
+          <value>$(roundToTicksRough(randInt(1800, 2400)))</value>
+        </li>
+        <li Class="QuestNode_Delay">
+          <delayTicks>$raidDelayTicks</delayTicks>
+          <node Class="QuestNode_SubScript">
+            <def>Util_Raid</def>
+            <prefix>raid</prefix>
+            <parms>
+              <inSignal>$inSignal</inSignal>
+              <map>$map</map>
+              <points>$points</points>
+              <enemyFaction>$enemyFaction</enemyFaction>
+              <walkInSpot>$walkInSpot</walkInSpot>
+              <customLetterLabel TKey="LetterLabelCashing">{BASELABEL} chasing [../joiner_nameDef]</customLetterLabel>
+              <customLetterText TKey="LetterTextCashing">{BASETEXT}
+              \nThe [enemyFaction_pawnsPlural] have come to get [../joiner_nameDef].</customLetterText>
+            </parms>
+          </node>
+        </li>
+
+        <!-- End a few seconds after raid arrives -->
+        <li Class="QuestNode_Delay">
+          <delayTicks>$($raidDelayTicks+600)</delayTicks>
+          <node Class="QuestNode_End" />
+        </li>
+      </nodes>
+    </root>
+  </QuestScriptDef>
+
+</Defs>

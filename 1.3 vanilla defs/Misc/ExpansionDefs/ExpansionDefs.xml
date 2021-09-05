@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <ExpansionDef>
+    <defName>Core</defName>
+    <label>Core</label>
+    <description>Core RimWorld content.</description>
+    <linkedMod>Ludeon.RimWorld</linkedMod>
+    <iconPath>UI/HeroArt/RimWorldLogo</iconPath>
+    <backgroundPath>UI/HeroArt/BGPlanet</backgroundPath>
+    <isCore>True</isCore>
+  </ExpansionDef>
+
+  <ExpansionDef>
+    <defName>Royalty</defName>
+    <label>Royalty</label>
+    <description>Fight or ally with the new Shattered Empire faction.
+
+Gain psychic powers through noble right, tribal nature communion, or artifact theft. Strengthen them through meditation, and use them to win battles and socially influence people. Strengthen your psychic power by meditating in grand thronerooms, in nature, before flames, the dead or blank walls.
+
+Complete quests to earn honor and titles, or riches and gear. Host rich nobles, poor refugees, animals, prisoners, and more. Defend crashed shuttles, serve as aerial shock troops, build monuments, defeat enemies, and recruit visitors.
+
+Use the special privileges of nobility to call Imperial troops, shuttles, and orbital strikes.
+
+New mechanoid clusters may deploy on your map. Wear them down with artillery, do sneaky sabotage, or lure enemies into the danger.
+
+Wield persona weapons with unique traits. Use jump packs for tactical flight and shield packs for emergency defense. Wear cataphract armor, locust armor, grenadier armor, and phoenix armor, each with different tools. Install new body implants to augment brains, stomachs, arms, and skin.
+
+Enjoy a new album of music by Alistair Lindsay.
+
+Host and protect the Stellarch and his guards complete the new royal endgame quest.</description>
+    <linkedMod>Ludeon.RimWorld.Royalty</linkedMod>
+    <steamUrl>steam://url/StoreAppPage/1149640</steamUrl>
+    <siteUrl>https://rimworldgame.com/</siteUrl>
+    <iconPath>UI/HeroArt/ExpansionIcon_Royalty</iconPath>
+    <notOwnedIconPath>UI/HeroArt/NotOwned_Royalty</notOwnedIconPath>
+    <backgroundPath>UI/HeroArt/MenuBG_Royalty</backgroundPath>
+    <previewImagesFolderPath>UI/HeroArt/Preview_Royalty</previewImagesFolderPath>
+  </ExpansionDef>
+
+  <ExpansionDef>
+    <defName>Ideology</defName>
+    <label>Ideology</label>
+    <description>Create your own belief system with fine control over behaviors, preferences, rituals, symbols, and more. Play as pirate nudist cannibals, blind undergrounder mole people, charitable ranching cowboys, machine-obsessed transhumanists, and more.
+
+Assign social roles like leader, moral guide, and specialist to your colonists.
+
+Hold unforgettable rituals: Dance parties, cannibal feasts, burn and smoke circles, skylantern festivals, sacrifices, gladiator duels, blindings, scarifications, funerals, and more.
+
+Connect with Gauranlen trees and command the dryads that live inside them.
+
+Hunt for ancient relics. Explore long-forgotten ruins, hack downed spacedrones, and infiltrate tribal villages. Attract wealthy pilgrims by presenting your relics in reliquaries. Plunder ancient complexes for treasure. Raid temporary encampments. Help beggars in need, or betray them.
+
+Enslave prisoners to perform work or fight for you.
+
+Place many new buildings linked to belief systems, and see the many visual styles of different beliefs.
+
+Use new apparel, tattoos, and hairstyles desired by believers.
+
+Seek transcendence through a machine god in the new archonexus endgame.</description>
+    <linkedMod>Ludeon.RimWorld.Ideology</linkedMod>
+    <steamUrl>https://store.steampowered.com/app/1392840</steamUrl>
+    <siteUrl>https://rimworldgame.com/</siteUrl>
+    <iconPath>UI/HeroArt/ExpansionIcon_Ideology</iconPath>
+    <notOwnedIconPath>UI/HeroArt/NotOwned_Ideology</notOwnedIconPath>
+    <backgroundPath>UI/HeroArt/MenuBG_Ideology</backgroundPath>
+    <previewImagesFolderPath>UI/HeroArt/Preview_Ideology</previewImagesFolderPath>
+  </ExpansionDef>
+
+</Defs>

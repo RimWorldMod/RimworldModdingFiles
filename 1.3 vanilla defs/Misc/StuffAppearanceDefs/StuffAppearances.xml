@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <StuffAppearanceDef>
+    <defName>Smooth</defName>
+  </StuffAppearanceDef>
+
+  <StuffAppearanceDef>
+    <defName>Planks</defName>
+  </StuffAppearanceDef>
+
+  <StuffAppearanceDef>
+    <defName>Bricks</defName>
+  </StuffAppearanceDef>
+
+  <StuffAppearanceDef>
+    <defName>Metal</defName>
+  </StuffAppearanceDef>
+
+</Defs>

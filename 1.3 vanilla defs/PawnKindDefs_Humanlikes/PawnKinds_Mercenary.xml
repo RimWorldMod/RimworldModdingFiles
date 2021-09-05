@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <PawnKindDef Name="MercenaryBase" Abstract="True">
+    <race>Human</race>
+    <defaultFactionType>Pirate</defaultFactionType>
+    <chemicalAddictionChance>0.1</chemicalAddictionChance>
+    <invNutrition>2.55</invNutrition>
+    <itemQuality>Normal</itemQuality>
+    <backstoryCryptosleepCommonality>0.08</backstoryCryptosleepCommonality>
+    <maxGenerationAge>65</maxGenerationAge>
+    <combatEnhancingDrugsChance>0.15</combatEnhancingDrugsChance>
+    <combatEnhancingDrugsCount>0~2</combatEnhancingDrugsCount>
+    <biocodeWeaponChance>0.1</biocodeWeaponChance>
+  </PawnKindDef>
+
+  <!-- Low merc tier - grenadiers -->
+
+  <PawnKindDef Abstract="True" Name="GrenadierBase" ParentName="MercenaryBase">
+    <race>Human</race>
+    <gearHealthRange>0.7~2.3</gearHealthRange>
+    <initialWillRange>1~3</initialWillRange>
+    <apparelTags>
+      <li>IndustrialBasic</li>
+      <li>IndustrialAdvanced</li>
+      <li>IndustrialMilitaryBasic</li>
+      <li>BeltDefensePop</li>
+    </apparelTags>
+    <apparelMoney>400~700</apparelMoney>
+    <apparelAllowHeadgearChance>0.5</apparelAllowHeadgearChance>
+    <weaponMoney>500~500</weaponMoney>
+    <techHediffsChance>0.05</techHediffsChance>
+    <techHediffsMoney>500~500</techHediffsMoney>
+    <techHediffsTags>
+      <li>Poor</li>
+      <li>Simple</li>
+      <li>ImplantEmpireCommon</li>
+    </techHediffsTags>
+    <disallowedTraits>
+      <li>Brawler</li>
+    </disallowedTraits>
+    <inventoryOptions>
+      <skipChance>0.95</skipChance>
+      <subOptionsChooseOne>
+        <li>
+          <thingDef>MedicineIndustrial</thingDef>
+          <countRange>1</countRange>
+        </li>
+      </subOptionsChooseOne>
+    </inventoryOptions>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="GrenadierBase">
+    <defName>Grenadier_Destructive</defName>
+    <label>grenadier</label>
+    <combatPower>70</combatPower>
+    <canBeSapper>true</canBeSapper>
+    <isGoodBreacher>true</isGoodBreacher>
+    <weaponTags>
+      <li>GrenadeDestructive</li>
+    </weaponTags>
+    <initialResistanceRange>10~16</initialResistanceRange>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="GrenadierBase">
+    <defName>Grenadier_EMP</defName>
+    <label>EMP grenadier</label>
+    <combatPower>55</combatPower>
+    <weaponTags>
+      <li>GrenadeEMP</li>
+    </weaponTags>
+    <initialResistanceRange>15~24</initialResistanceRange>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="GrenadierBase">
+    <defName>Grenadier_Smoke</defName>
+    <label>smoke grenadier</label>
+    <combatPower>55</combatPower>
+    <weaponTags>
+      <li>GrenadeSmoke</li>
+    </weaponTags>
+    <weaponMoney>400~400</weaponMoney>
+    <initialResistanceRange>18~28</initialResistanceRange>
+  </PawnKindDef>
+
+  <!-- Mid merc tier - gunner, slasher, sniper, heavy -->
+
+  <PawnKindDef ParentName="MercenaryBase" Name="MercenaryMidTierBase" Abstract="True">
+    <techHediffsChance>0.15</techHediffsChance>
+    <techHediffsMoney>700~1200</techHediffsMoney>
+    <techHediffsTags>
+      <li>Simple</li>
+      <li>Advanced</li>
+      <li>ImplantEmpireCommon</li>
+    </techHediffsTags>
+    <biocodeWeaponChance>0.2</biocodeWeaponChance>
+    <initialWillRange>2~4</initialWillRange>
+  </PawnKindDef>
+
+    <PawnKindDef ParentName="MercenaryMidTierBase" Name="MercenaryGunnerBase" Abstract="True">
+    <label>mercenary gunner</label>
+    <combatPower>85</combatPower>
+    <gearHealthRange>0.7~3.2</gearHealthRange>
+    <apparelTags>
+      <li>IndustrialBasic</li>
+      <li>IndustrialAdvanced</li>
+      <li>IndustrialMilitaryBasic</li>
+      <li>IndustrialMilitaryAdvanced</li>
+      <li>BeltDefensePop</li>
+    </apparelTags>
+    <apparelMoney>1000~1500</apparelMoney>
+    <apparelAllowHeadgearChance>0.5</apparelAllowHeadgearChance>
+    <weaponMoney>330~650</weaponMoney>
+    <weaponTags>
+      <li>Gun</li>
+    </weaponTags>
+    <disallowedTraits>
+      <li>Brawler</li>
+    </disallowedTraits>
+    <combatEnhancingDrugsChance>0.05</combatEnhancingDrugsChance>
+    <combatEnhancingDrugsCount>0~2</combatEnhancingDrugsCount>
+    <inventoryOptions>
+      <skipChance>0.9</skipChance>
+      <subOptionsChooseOne>
+        <li>
+          <thingDef>MedicineIndustrial</thingDef>
+          <countRange>1</countRange>
+        </li>
+      </subOptionsChooseOne>
+    </inventoryOptions>
+    <skills>
+      <li>
+        <skill>Shooting</skill>
+        <range>4~20</range>
+      </li>
+    </skills>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="MercenaryGunnerBase">
+    <defName>Mercenary_Gunner</defName>
+    <initialResistanceRange>6~10</initialResistanceRange>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="MercenaryGunnerBase">
+    <defName>Mercenary_Gunner_Acidifier</defName>
+    <techHediffsRequired>
+      <li>DeathAcidifier</li>
+    </techHediffsRequired>
+    <initialResistanceRange>10~16</initialResistanceRange>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="MercenaryMidTierBase" Name="MercenarySniperBase" Abstract="True">
+    <label>mercenary sniper</label>
+    <combatPower>110</combatPower>
+    <gearHealthRange>0.7~3.2</gearHealthRange>
+    <apparelTags>
+      <li>IndustrialBasic</li>
+      <li>IndustrialAdvanced</li>
+      <li>IndustrialMilitaryBasic</li>
+      <li>IndustrialMilitaryAdvanced</li>
+    </apparelTags>
+    <apparelMoney>1000~1500</apparelMoney>
+    <apparelAllowHeadgearChance>0.5</apparelAllowHeadgearChance>
+    <weaponMoney>600~600</weaponMoney>
+    <weaponTags>
+      <li>SniperRifle</li>
+    </weaponTags>
+    <inventoryOptions>
+      <skipChance>0.9</skipChance>
+      <subOptionsChooseOne>
+        <li>
+          <thingDef>MedicineIndustrial</thingDef>
+          <countRange>1</countRange>
+        </li>
+      </subOptionsChooseOne>
+    </inventoryOptions>
+    <skills>
+      <li>
+        <skill>Shooting</skill>
+        <range>6~20</range>
+      </li>
+    </skills>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="MercenarySniperBase">
+    <defName>Mercenary_Sniper</defName>
+    <initialResistanceRange>13~20</initialResistanceRange>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="MercenarySniperBase">
+    <defName>Mercenary_Sniper_Acidifier</defName>
+    <techHediffsRequired>
+      <li>DeathAcidifier</li>
+    </techHediffsRequired>
+    <initialResistanceRange>14~23</initialResistanceRange>
+  </PawnKindDef>
+  
+  <PawnKindDef ParentName="MercenaryMidTierBase" Name="MercenarySlasherBase" Abstract="True">
+    <defName>Mercenary_Slasher</defName>
+    <label>mercenary slasher</label>
+    <combatPower>140</combatPower>
+    <canBeSapper>true</canBeSapper>
+    <gearHealthRange>0.7~3.2</gearHealthRange>
+    <apparelTags>
+      <li>IndustrialBasic</li>
+      <li>IndustrialAdvanced</li>
+      <li>IndustrialMilitaryBasic</li>
+      <li>IndustrialMilitaryAdvanced</li>
+    </apparelTags>
+    <apparelRequired>
+      <li>Apparel_ShieldBelt</li>
+    </apparelRequired>
+    <apparelMoney>300~1400</apparelMoney>
+    <apparelAllowHeadgearChance>0</apparelAllowHeadgearChance>
+    <weaponMoney>200~500</weaponMoney>
+    <weaponTags>
+      <li>MedievalMeleeDecent</li>
+      <li>MedievalMeleeAdvanced</li>
+    </weaponTags>
+    <inventoryOptions>
+      <skipChance>0.9</skipChance>
+      <subOptionsChooseOne>
+        <li>
+          <thingDef>MedicineIndustrial</thingDef>
+          <countRange>1</countRange>
+        </li>
+      </subOptionsChooseOne>
+    </inventoryOptions>
+    <initialResistanceRange>19~29</initialResistanceRange>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="MercenarySlasherBase">
+    <defName>Mercenary_Slasher</defName>
+    <initialResistanceRange>10~16</initialResistanceRange>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="MercenarySlasherBase">
+    <defName>Mercenary_Slasher_Acidifier</defName>
+    <techHediffsRequired>
+      <li>DeathAcidifier</li>
+    </techHediffsRequired>
+    <initialResistanceRange>9~15</initialResistanceRange>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="MercenaryMidTierBase">
+    <defName>Mercenary_Heavy</defName>
+    <label>heavy mercenary</label>
+    <labelPlural>heavy mercenaries</labelPlural>
+    <combatPower>140</combatPower>
+    <gearHealthRange>0.7~3.2</gearHealthRange>
+    <apparelTags>
+      <li>IndustrialBasic</li>
+      <li>IndustrialAdvanced</li>
+      <li>IndustrialMilitaryBasic</li>
+      <li>IndustrialMilitaryAdvanced</li>
+      <li>BeltDefensePop</li>
+    </apparelTags>
+    <apparelMoney>200~350</apparelMoney>
+    <apparelAllowHeadgearChance>0.5</apparelAllowHeadgearChance>
+    <weaponMoney>1200~1200</weaponMoney>
+    <weaponTags>
+      <li>GunHeavy</li>
+      <li>GunSingleUse</li>
+    </weaponTags>
+    <initialResistanceRange>14~23</initialResistanceRange>
+  </PawnKindDef>
+
+  <!-- Elite tier - merc elite, pirate boss -->
+  
+  <PawnKindDef Abstract="True" Name="MercenaryEliteTierBase" ParentName="MercenaryBase">
+    <combatPower>130</combatPower>
+    <maxGenerationAge>45</maxGenerationAge>
+    <backstoryCryptosleepCommonality>0.25</backstoryCryptosleepCommonality>
+    <gearHealthRange>1~1</gearHealthRange>
+    <apparelTags>
+      <li>IndustrialBasic</li>
+      <li>IndustrialAdvanced</li>
+      <li>IndustrialMilitaryBasic</li>
+      <li>IndustrialMilitaryAdvanced</li>
+      <li>SpacerMilitary</li>
+      <li>BeltDefensePop</li>
+    </apparelTags>
+    <apparelMoney>2500~3500</apparelMoney>
+    <apparelAllowHeadgearChance>0.9</apparelAllowHeadgearChance>
+    <weaponMoney>500~1400</weaponMoney>
+    <weaponTags>
+      <li>IndustrialGunAdvanced</li>
+    </weaponTags>
+    <disallowedTraits>
+      <li>Brawler</li>
+    </disallowedTraits>
+    <techHediffsMoney>1000~1200</techHediffsMoney>
+    <techHediffsTags>
+      <li>Advanced</li>
+      <li>ImplantEmpireCommon</li>
+    </techHediffsTags>
+    <techHediffsChance>0.35</techHediffsChance>
+    <combatEnhancingDrugsChance>0.80</combatEnhancingDrugsChance>
+    <combatEnhancingDrugsCount>1~2</combatEnhancingDrugsCount>
+    <biocodeWeaponChance>0.3</biocodeWeaponChance>
+    <initialWillRange>3~5</initialWillRange>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="MercenaryEliteTierBase">
+    <defName>PirateBoss</defName>
+    <label>boss</label>
+    <labelPlural>bosses</labelPlural>
+    <factionLeader>true</factionLeader>
+    <baseRecruitDifficulty>0.90</baseRecruitDifficulty>
+    <canBeSapper>true</canBeSapper>
+    <initialResistanceRange>17~27</initialResistanceRange>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="MercenaryEliteTierBase" Name="MercenaryEliteBase" Abstract="True">
+    <label>elite mercenary</label>
+    <labelPlural>elite mercenaries</labelPlural>
+    <inventoryOptions>
+      <skipChance>0.9</skipChance>
+      <subOptionsChooseOne>
+        <li>
+          <thingDef>MedicineIndustrial</thingDef>
+          <countRange>1</countRange>
+        </li>
+      </subOptionsChooseOne>
+    </inventoryOptions>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="MercenaryEliteBase">
+    <defName>Mercenary_Elite</defName>
+    <initialResistanceRange>15~23</initialResistanceRange>
+  </PawnKindDef>
+  
+  <PawnKindDef ParentName="MercenaryEliteBase">
+    <defName>Mercenary_Elite_Acidifier</defName>
+    <techHediffsRequired>
+      <li>DeathAcidifier</li>
+    </techHediffsRequired>
+    <initialResistanceRange>12~20</initialResistanceRange>
+  </PawnKindDef>
+
+</Defs>

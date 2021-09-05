@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <SitePartDef ParentName="Outpost">
+    <defName>BanditCamp</defName>
+    <label>bandit camp</label>
+    <description>A bandit camp.</description>
+    <tags Inherit="False">
+      <li>BanditCamp</li>
+    </tags>
+  </SitePartDef>
+
+  <GenStepDef>
+    <defName>BanditCamp</defName>
+    <linkWithSite>BanditCamp</linkWithSite>
+    <order>450</order>
+    <genStep Class="GenStep_Outpost"/>
+  </GenStepDef>
+
+  <GenStepDef>
+    <defName>BanditCampPower</defName>
+    <linkWithSite>BanditCamp</linkWithSite>
+    <order>451</order>
+    <genStep Class="GenStep_Power"/>
+  </GenStepDef>
+
+</Defs>

@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <AbilityDef>
+
+    <defName>AbilityName</defName>
+    <!-- defName used to reference and use the Ability -->
+
+    <label>Ability_label</label>
+    <!-- Ability label (this is the actual name displayed in-game) -->
+
+    <description>Ability_description</description>
+    <!-- A long-form description of the Ability. -->
+
+    <groupDef>group (e.g. Leader)</groupDef>
+    <!-- What group can use the ability. -->
+
+    <jobDef>job</jobDef>
+    <!-- What job represents the ability (example from idealogy: CastAbilityOnThingMelee) -->
+    
+    <targetRequired>true_or_false</targetRequired>
+    <!-- Decides whether a target is required to use ability -->
+
+    <stunTargetWhileCasting>true_or_false</stunTargetWhileCasting>
+    <!-- Decides if target is stunned (won't move) while ability is casted -->
+
+    <showPsycastEffects>true_or_false</showPsycastEffects>
+    <!-- Show or hide pyscast effects -->
+
+    <showCastingProgressBar>true_or_false</showCastingProgressBar>
+    <!-- Show or hide the progress bar for the ability -->
+
+    <targetWorldCell>true_or_false</targetWorldCell>
+    <!-- Allows a world cell to be used as the target of an ability -->
+    
+    <level>number</level>
+    <!-- The level of the ability -->
+
+    <iconPath>Path/Image</iconPath>
+    <!-- Path for the ability icon -->
+
+    <gizmoClass>gizmoClass</gizmoClass>
+    <!-- The gizmo class (A gizmo is the button that you press to use the ability) -->
+    
+    <uiOrder>number</uiOrder>
+    <!-- The order to be displayed in the ui -->
+
+    <overrideGroupCooldown>true_or_false</overrideGroupCooldown>
+    <!-- Override cooldown of group -->
+    
+    <cooldownTicksRange>number</cooldownTicksRange>
+    <!-- Range of cooldown tick -->
+
+    <displayGizmoWhileUndrafted>true_or_false</displayGizmoWhileUndrafted>
+    <!-- Display Gizmo when pawn is undrafted -->
+    
+    <disableGizmoWhileUndrafted>true_or_false</disableGizmoWhileUndrafted>
+    <!-- Disable Gizmo when pawn is undrafted -->
+
+    <showGizmoOnWorldView>true_or_false</showGizmoOnWorldView>
+    <!-- Allows gizmo to be shown in world view -->
+
+    <canUseAoeToGetTargets>true_or_false</canUseAoeToGetTargets>
+    <!-- Effects targets within area of effect -->
+
+    <writeCombatLog>true_or_false</writeCombatLog>
+    <!-- Write ability use to the combat log -->
+
+    <hotKey>Hotkey</hotKey>
+    <!-- Hotkey for ability. Can see available hotkeys in-game -> (options -> keyboard configuration) -->
+
+    <emittedFleck>FleckName</emittedFleck>
+    <!-- Icon that is emitted when ability is in use -->
+    
+    <emissionInterval>number</emissionInterval>
+    <!-- The time between the emission of each Fleck (ticks) -->
+    
+    <warmupMote>Mote_Name</warmupMote>
+    <!-- Mote shown on warmup (a mote is a small icon used to represent stuff, e.g. Zzz when sleeping)-->
+
+    <warmupMoteSocialSymbol>Path/Image</warmupMoteSocialSymbol>
+    <!-- Social symbol displayed during warmup -->
+
+    <moteOffsetAmountTowardsTarget>number</moteOffsetAmountTowardsTarget>
+    <!-- The amount the mote is offset towards the target -->
+
+    <warmupStartSound>StartWarmup_Sound</warmupStartSound>
+    <!-- Sound played at the start of the ability warmup-->
+    
+    <warmupSound>Warmup_Sound</warmupSound>
+    <!-- Sound played when warming up ability -->
+
+    <warmupPreEndSound>PreEndWarmup_Sound</warmupPreEndSound>
+    <!-- Sound played before the end of the warmup -->
+    
+    <warmupPreEndSoundSeconds>number</warmupPreEndSoundSeconds>
+    <!-- Time before the end of the warmup that the warmupPreEndSound is played-->
+    
+    <category>Category</category>
+    <!-- Ability Category -->
+
+    <cooldownTicks>180000</cooldownTicks>
+    <!-- Number of ticks for ability to cooldown -->
+    
+    
+    
+    <statBases>
+    <!-- Stats for ability -->
+      
+      <Ability_EntropyGain>number</Ability_EntropyGain>
+      <!-- Optional. Amount of neural heat gained after use (large amounts of neural heat can cause psychic shock or psychic breakdown) -->
+      
+      <Ability_PsyfocusCost>number</Ability_PsyfocusCost>
+      <!-- The amount of Psyfocus it costs to use the ability -->
+      
+      <Ability_Duration>number</Ability_Duration>
+      <!-- How long the ability lasts (seconds) -->
+      
+      <Ability_EffectRadius>number</Ability_EffectRadius>
+      <!-- Radius of effect of the ability (tiles) -->
+      
+    </statBases>
+
+    <verbProperties>
+      <verbClass>Verb_Class</verbClass>
+      <!-- Class the verb belongs to -->
+      
+      <range>number</range>
+      <!-- Range of the ability -->
+      
+      <requireLineOfSight>true_or_false</requireLineOfSight>
+      <!-- Whether ability requires line of sight or not-->
+      
+      <warmupTime>number</warmupTime>
+      <!-- Amount of time it takes for the ability to warmup (seconds) -->
+      
+      <drawAimPie>true_or_false</drawAimPie>
+      <!-- Show or hide range circle -->
+      
+      <targetParams>
+        <!-- What can be targeted by the ability -->
+        <!-- Available options: -->
+        
+        <canTargetAnimals>true_or_false</canTargetAnimals>
+        <canTargetBuildings>true_or_false</canTargetBuildings>
+        <canTargetHumans>true_or_false</canTargetHumans>
+        <canTargetItems>true_or_false</canTargetItems>
+        <canTargetLocations>true_or_false</canTargetLocations>
+        <canTargetMechs>true_or_false</canTargetMechs>
+        <canTargetPawns>true_or_false</canTargetPawns>
+        <canTargetPlants>true_or_false</canTargetPlants>
+        <canTargetSelf>true_or_false</canTargetSelf>
+
+        <mapObjectTargetsMustBeAutoAttackable>true_or_false</mapObjectTargetsMustBeAutoAttackable>
+        
+        <neverTargetHostileFaction>true_or_false</neverTargetHostileFaction>
+        <neverTargetIncapacitated>true_or_false</neverTargetIncapacitated>
+
+        <onlyTargetAnimaTrees>true_or_false</onlyTargetAnimaTrees>
+        <onlyTargetColonists>true_or_false</onlyTargetColonists>
+        <onlyTargetColonistsOrPrisonersOrSlavesAllowMinorMentalBreaks>true_or_false</onlyTargetColonistsOrPrisonersOrSlavesAllowMinorMentalBreaks>
+        <onlyTargetControlledPawns>true_or_false</onlyTargetControlledPawns>
+        <onlyTargetPrisonersOfColony>true_or_false</onlyTargetPrisonersOfColony>
+
+        <thingCategory>thing (e.g. Item)</thingCategory>
+        
+      </targetParams>
+      
+    </verbProperties>
+
+    <comps>
+      <!-- Can also define custom components here -->
+      
+    </comps>
+
+    
+    <requiredMemes>
+      <!-- What memes are required to use this ability -->
+      
+      <li>memeName</li>
+      <!-- Meme name, can add multiple required memes -->
+      
+    </requiredMemes>
+
+  </AbilityDef>
+  
+</Defs>

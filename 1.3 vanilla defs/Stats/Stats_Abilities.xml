@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <StatDef>
+    <defName>Ability_RequiredPsylink</defName>
+    <label>psylink level</label>
+    <category>Ability</category>
+    <description>The minimum psylink level required to use this ability.</description>
+    <defaultBaseValue>0</defaultBaseValue>
+    <minValue>0</minValue>
+    <hideAtValue>0</hideAtValue>
+    <showIfUndefined>false</showIfUndefined>
+    <displayPriorityInCategory>1005</displayPriorityInCategory>
+    <showIfModsLoaded><li>ludeon.rimworld.royalty</li></showIfModsLoaded>
+  </StatDef>
+  
+  <StatDef>
+    <defName>Ability_CastingTime</defName>
+    <label>casting time</label>
+    <category>Ability</category>
+    <description>How long it takes to perform this ability.</description>
+    <defaultBaseValue>1</defaultBaseValue>
+    <minValue>0</minValue>
+    <formatString>{0} s</formatString>
+    <toStringStyle>FloatOne</toStringStyle>
+    <showIfUndefined>false</showIfUndefined>
+    <displayPriorityInCategory>1004</displayPriorityInCategory>
+    <showIfModsLoaded><li>ludeon.rimworld.royalty</li></showIfModsLoaded>
+  </StatDef>
+
+  <StatDef>
+    <defName>Ability_EntropyGain</defName>
+    <label>neural heat gain</label>
+    <category>Ability</category>
+    <description>How much neural heat will be added as a result of performing this ability.</description>
+    <defaultBaseValue>5</defaultBaseValue>
+    <minValue>0</minValue>
+    <showIfUndefined>false</showIfUndefined>
+    <displayPriorityInCategory>1003</displayPriorityInCategory>
+    <showIfModsLoaded><li>ludeon.rimworld.royalty</li></showIfModsLoaded>
+  </StatDef>
+
+  <StatDef>
+    <defName>Ability_PsyfocusCost</defName>
+    <label>psyfocus cost</label>
+    <category>Ability</category>
+    <description>How much psyfocus must be spent to perform this ability.</description>
+    <workerClass>StatWorker_PsyfocusCost</workerClass>
+    <toStringStyle>PercentOne</toStringStyle>
+    <defaultBaseValue>0</defaultBaseValue>
+    <minValue>0</minValue>
+    <showIfUndefined>false</showIfUndefined>
+    <displayPriorityInCategory>1002</displayPriorityInCategory>
+    <showIfModsLoaded><li>ludeon.rimworld.royalty</li></showIfModsLoaded>
+  </StatDef>
+
+  <StatDef>
+    <defName>Ability_Range</defName>
+    <label>range</label>
+    <category>Ability</category>
+    <description>The maximum distance to a target of this ability, or to the center of the target location.</description>
+    <defaultBaseValue>25</defaultBaseValue>
+    <minValue>0</minValue>
+    <hideAtValue>0</hideAtValue>
+    <showIfUndefined>false</showIfUndefined>
+    <displayPriorityInCategory>1001</displayPriorityInCategory>
+  </StatDef>
+
+  <StatDef>
+    <defName>Ability_Duration</defName>
+    <label>duration</label>
+    <category>Ability</category>
+    <description>How long the effects of this ability last.</description>
+    <defaultBaseValue>0</defaultBaseValue>
+    <minValue>0</minValue>
+    <hideAtValue>0</hideAtValue>
+    <formatString>{0} s</formatString>
+    <showIfUndefined>false</showIfUndefined>
+    <displayPriorityInCategory>999</displayPriorityInCategory>
+  </StatDef>
+
+  <StatDef>
+    <defName>Ability_EffectRadius</defName>
+    <label>effect radius</label>
+    <category>Ability</category>
+    <description>The radius of the area of effect of this ability.</description>
+    <defaultBaseValue>0</defaultBaseValue>
+    <minValue>0</minValue>
+    <hideAtValue>0</hideAtValue>
+    <showIfUndefined>false</showIfUndefined>
+    <displayPriorityInCategory>998</displayPriorityInCategory>
+  </StatDef>
+
+  <StatDef>
+    <defName>Ability_GoodwillImpact</defName>
+    <label>goodwill impact</label>
+    <category>Ability</category>
+    <description>How casting this ability on someone will impact relations with their faction.</description>
+    <defaultBaseValue>0</defaultBaseValue>
+    <hideAtValue>0</hideAtValue>
+    <showIfUndefined>false</showIfUndefined>
+    <displayPriorityInCategory>997</displayPriorityInCategory>
+  </StatDef>
+
+  <StatDef>
+    <defName>Ability_DetectChancePerEntropy</defName>
+    <label>detection chance</label>
+    <category>Ability</category>
+    <description>The likelihood of this psychic power being detected when it is used.\n\nSome factions try to enforce laws which restrict some powers to those holding specific titles. When you use a power, there is a chance that the psychic signature will be detected at a distance, which leads to diplomatic consequences.</description>
+    <defaultBaseValue>0</defaultBaseValue>
+    <minValue>0</minValue>
+    <showIfUndefined>false</showIfUndefined>
+    <hideAtValue>0</hideAtValue>
+    <toStringStyle>PercentZero</toStringStyle>
+    <displayPriorityInCategory>996</displayPriorityInCategory>
+    <showIfModsLoaded><li>ludeon.rimworld.royalty</li></showIfModsLoaded>
+    <statFactors>
+      <li>Ability_EntropyGain</li>
+    </statFactors>
+  </StatDef>
+  
+</Defs>

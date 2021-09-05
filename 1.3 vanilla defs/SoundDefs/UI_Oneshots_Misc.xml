@@ -1,0 +1,1031 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Defs>
+
+  <SoundDef>
+    <defName>GameStartSting</defName>    
+    <maxVoices>1</maxVoices>  
+    <maxSimultaneous>1</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <onCamera>True</onCamera>      
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>UI/Stings/Game_Start_Sting_1a</clipPath>
+          </li>
+        </grains>      
+        <volumeRange>30~30</volumeRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>TinyBell</defName>    
+    <maxSimultaneous>1</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <onCamera>True</onCamera>      
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>UI/TinyBell</clipPath>
+          </li>
+        </grains>      
+        <volumeRange>9~9</volumeRange>      
+        <pitchRange>0.85~1.15</pitchRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>TabOpen</defName>    
+    <maxSimultaneous>1</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <onCamera>True</onCamera>      
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>UI/TabOpen</clipPath>
+          </li>
+        </grains>      
+        <volumeRange>15.88235~15.88235</volumeRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>TabClose</defName>    
+    <maxSimultaneous>1</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <onCamera>True</onCamera>      
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>UI/TabClose</clipPath>
+          </li>
+        </grains>      
+        <volumeRange>15.88235~15.88235</volumeRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>PageChange</defName>
+    <maxSimultaneous>1</maxSimultaneous>
+    <subSounds>
+      <li>
+        <onCamera>True</onCamera>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>UI/PageChange</clipPath>
+          </li>
+        </grains>
+        <volumeRange>15~15</volumeRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Tick_Tiny</defName>   
+    <maxSimultaneous>1</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <onCamera>True</onCamera>      
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>UI/TickTiny</clipFolderPath>
+          </li>
+        </grains>      
+        <volumeRange>30~30</volumeRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>DragElement</defName>   
+    <maxSimultaneous>1</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <onCamera>True</onCamera>      
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>UI/DragElement</clipFolderPath>
+          </li>
+        </grains>      
+        <volumeRange>30~30</volumeRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>DropElement</defName>   
+    <maxSimultaneous>1</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <onCamera>True</onCamera>      
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>UI/DropElement</clipFolderPath>
+          </li>
+        </grains>      
+        <volumeRange>30~30</volumeRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>CancelMode</defName>    
+    <maxSimultaneous>1</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <onCamera>True</onCamera>      
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>UI/TickTiny</clipPath>
+          </li>
+        </grains>      
+        <volumeRange>30~30</volumeRange>      
+        <pitchRange>2~2</pitchRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Tick_Low</defName>    
+    <maxSimultaneous>1</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <onCamera>True</onCamera>      
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>UI/TickLow</clipPath>
+          </li>
+        </grains>      
+        <volumeRange>15~15</volumeRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Tick_High</defName>    
+    <maxSimultaneous>1</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <onCamera>True</onCamera>      
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>UI/TickHigh</clipPath>
+          </li>
+        </grains>      
+        <volumeRange>30~30</volumeRange>      
+        <pitchRange>1.045882~1</pitchRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Crunch</defName>
+    <maxSimultaneous>1</maxSimultaneous>
+    <subSounds>
+      <li>
+        <onCamera>True</onCamera>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>UI/Crunch</clipPath>
+          </li>
+        </grains>
+        <volumeRange>30~30</volumeRange>
+        <pitchRange>0.9~1.1</pitchRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Click</defName>    
+    <maxSimultaneous>1</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <onCamera>True</onCamera>      
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>UI/Click</clipPath>
+          </li>
+        </grains>      
+        <volumeRange>30~30</volumeRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>ClickReject</defName>    
+    <maxSimultaneous>1</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <onCamera>True</onCamera>      
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>UI/ClickReject</clipPath>
+          </li>
+        </grains>      
+        <volumeRange>30~30</volumeRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Mouseover_ButtonToggle</defName>    
+    <maxSimultaneous>1</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <onCamera>True</onCamera>      
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>UI/ToggleButton_Mouseover</clipPath>
+          </li>
+        </grains>      
+        <volumeRange>10~10</volumeRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>TutorMessageAppear</defName>    
+    <maxSimultaneous>1</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <onCamera>True</onCamera>      
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>UI/GentleBeep</clipPath>
+          </li>
+        </grains>      
+        <volumeRange>30~30</volumeRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>ArchitectCategorySelect</defName>    
+    <maxSimultaneous>1</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <onCamera>True</onCamera>      
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>UI/SubmenuSelect</clipPath>
+          </li>
+        </grains>      
+        <volumeRange>15~15</volumeRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>ExecuteTrade</defName>    
+    <maxSimultaneous>1</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <onCamera>True</onCamera>      
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>UI/BuyThing</clipPath>
+          </li>
+        </grains>      
+        <volumeRange>15~15</volumeRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Mouseover_Standard</defName>    
+    <maxSimultaneous>1</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <onCamera>True</onCamera>   
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>UI/Mouseovers/MouseoverButtonCategory</clipFolderPath>
+          </li>
+        </grains>
+        <volumeRange>4~4</volumeRange>
+        <pitchRange>1.2~1.3</pitchRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Mouseover_Thump</defName>    
+    <maxSimultaneous>1</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <onCamera>True</onCamera>      
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>UI/Mouseovers/Meta_Mouseover_2</clipFolderPath>
+          </li>
+        </grains>      
+        <volumeRange>7~7</volumeRange>      
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Mouseover_Category</defName>    
+    <maxSimultaneous>4</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <onCamera>True</onCamera>      
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>UI/Mouseovers/MouseoverButtonCategory</clipFolderPath>
+          </li>
+        </grains>      
+        <volumeRange>5~5</volumeRange>      
+        <pitchRange>0.95~1.05</pitchRange>      
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Mouseover_Command</defName>    
+    <maxSimultaneous>4</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <onCamera>True</onCamera>      
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>UI/Mouseovers/OptionMouseoverThump</clipFolderPath>
+          </li>
+        </grains>      
+        <volumeRange>5~5</volumeRange>      
+        <pitchRange>1~1.091764</pitchRange>      
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>FloatMenu_Open</defName>    
+    <maxSimultaneous>1</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <onCamera>True</onCamera>      
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>UI/FloatMenuOpen</clipPath>
+          </li>
+        </grains>      
+        <volumeRange>5~5</volumeRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>FloatMenu_Cancel</defName>    
+    <maxSimultaneous>1</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <onCamera>True</onCamera>      
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>UI/FloatMenuCancel</clipPath>
+          </li>
+        </grains>      
+        <volumeRange>5~5</volumeRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>LetterArrive</defName>    
+    <maxSimultaneous>1</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <onCamera>True</onCamera>      
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>UI/LetterArrive</clipPath>
+          </li>
+        </grains>      
+        <volumeRange>41~41</volumeRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>LetterArrive_BadUrgent</defName>    
+    <maxSimultaneous>1</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <onCamera>True</onCamera>      
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>UI/LetterArriveBadUrgent</clipPath>
+          </li>
+        </grains>      
+        <volumeRange>45~45</volumeRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>LetterArrive_BadUrgentBig</defName>
+    <maxSimultaneous>1</maxSimultaneous>
+    <subSounds>
+      <li>
+        <onCamera>True</onCamera>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>UI/LetterArriveBadUrgentBig</clipPath>
+          </li>
+        </grains>
+        <volumeRange>70~70</volumeRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>LetterArrive_BadUrgentSmall</defName>
+    <maxSimultaneous>1</maxSimultaneous>
+    <subSounds>
+      <li>
+        <onCamera>True</onCamera>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>UI/LetterArriveBadUrgentSmall</clipPath>
+          </li>
+        </grains>
+        <volumeRange>41~41</volumeRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>LetterArrive_Good</defName>
+    <maxSimultaneous>1</maxSimultaneous>
+    <subSounds>
+      <li>
+        <onCamera>True</onCamera>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>UI/LetterArriveGood</clipPath>
+          </li>
+        </grains>
+        <volumeRange>41~41</volumeRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>DraftOn</defName>    
+    <maxSimultaneous>4</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <onCamera>True</onCamera>      
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>UI/DraftOn</clipFolderPath>
+          </li>
+        </grains>      
+        <volumeRange>15~15</volumeRange>      
+        <pitchRange>1.114706~1</pitchRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>DraftOff</defName>    
+    <maxSimultaneous>1</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <onCamera>True</onCamera>      
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>UI/DraftOff</clipPath>
+          </li>
+        </grains>      
+        <volumeRange>15~15</volumeRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>ResearchStart</defName>    
+    <maxSimultaneous>1</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <onCamera>True</onCamera>      
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>UI/ResearchStart</clipPath>
+          </li>
+        </grains>      
+        <volumeRange>15~15</volumeRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>ThingSelected</defName>  
+    <maxSimultaneous>1</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <onCamera>True</onCamera>      
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>UI/SelectThing</clipPath>
+          </li>
+        </grains>      
+        <volumeRange>15~15</volumeRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>MapSelected</defName>    
+    <maxSimultaneous>1</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <onCamera>True</onCamera>      
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>UI/SelectMap</clipPath>
+          </li>
+        </grains>      
+        <volumeRange>15~15</volumeRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>ColonistSelected</defName>    
+    <maxSimultaneous>1</maxSimultaneous>  
+    <slot>Radio</slot>  
+    <subSounds>
+      <li>
+        <onCamera>True</onCamera>      
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>UI/Radio/RadioFuzzOpen</clipPath>
+          </li>
+        </grains>      
+        <volumeRange>4~4</volumeRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>ColonistOrdered</defName>    
+    <maxSimultaneous>1</maxSimultaneous>  
+    <slot>Radio</slot>  
+    <subSounds>
+      <li>
+        <onCamera>True</onCamera>      
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>UI/Radio/RadioFuzzClose</clipPath>
+          </li>
+        </grains>      
+        <volumeRange>4~4</volumeRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>DragGoto</defName>
+    <maxSimultaneous>1</maxSimultaneous>
+    <subSounds>
+      <li>
+        <onCamera>True</onCamera>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>UI/DragGoto</clipFolderPath>
+          </li>
+        </grains>
+        <volumeRange>6~6</volumeRange>
+        <pitchRange>0.93~1.07</pitchRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Message_NeutralEvent</defName>    
+    <maxSimultaneous>1</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <onCamera>True</onCamera>      
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>UI/Alerts/AlertBasic</clipPath>
+          </li>
+        </grains>      
+        <volumeRange>20~20</volumeRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Message_PositiveEvent</defName>    
+    <maxSimultaneous>1</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <onCamera>True</onCamera>      
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>UI/Alerts/HappyPop</clipPath>
+          </li>
+        </grains>      
+        <volumeRange>40~40</volumeRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Message_NegativeEvent</defName>    
+    <maxSimultaneous>1</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <onCamera>True</onCamera>      
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>UI/Alerts/AlertNegative</clipPath>
+          </li>
+        </grains>      
+        <volumeRange>20~20</volumeRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Message_ThreatBig</defName>    
+    <maxSimultaneous>1</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <onCamera>True</onCamera>      
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>UI/Alerts/AlertRed</clipPath>
+          </li>
+        </grains>      
+        <volumeRange>50~50</volumeRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Message_ThreatSmall</defName>
+    <maxSimultaneous>1</maxSimultaneous>
+    <subSounds>
+      <li>
+        <onCamera>True</onCamera>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>UI/Alerts/AlertYellow</clipPath>
+          </li>
+        </grains>
+        <volumeRange>50~50</volumeRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Message_PawnDeath</defName>
+    <maxSimultaneous>1</maxSimultaneous>
+    <subSounds>
+      <li>
+        <onCamera>True</onCamera>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>UI/Alerts/PawnDeath</clipPath>
+          </li>
+        </grains>
+        <volumeRange>80~80</volumeRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Message_NegativeHealthEvent</defName>
+    <maxSimultaneous>1</maxSimultaneous>
+    <subSounds>
+      <li>
+        <onCamera>True</onCamera>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>UI/Alerts/NegativeHealthEvent</clipPath>
+          </li>
+        </grains>
+        <volumeRange>40~40</volumeRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Message_TaskCompletion</defName>
+    <maxSimultaneous>1</maxSimultaneous>
+    <subSounds>
+      <li>
+        <onCamera>True</onCamera>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>UI/Alerts/TaskCompletion</clipPath>
+          </li>
+        </grains>
+        <volumeRange>25~25</volumeRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>DialogBoxAppear</defName>    
+    <maxSimultaneous>1</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <onCamera>True</onCamera>      
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>UI/FlickWhoosh</clipPath>
+          </li>
+        </grains>      
+        <volumeRange>10.58823~10.58823</volumeRange>      
+        <pitchRange>0.9311765~1.045882</pitchRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>CommsWindow_Open</defName>    
+    <maxSimultaneous>1</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <onCamera>True</onCamera>      
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>UI/CommsWindow_Open</clipPath>
+          </li>
+        </grains>      
+        <volumeRange>19~19</volumeRange>      
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>CommsWindow_Close</defName>    
+    <maxSimultaneous>1</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <onCamera>True</onCamera>      
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>UI/CommsWindow_Close</clipPath>
+          </li>
+        </grains>      
+        <volumeRange>19~19</volumeRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>InfoCard_Open</defName>    
+    <maxSimultaneous>1</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <onCamera>True</onCamera>      
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>UI/InfoCard_Open</clipFolderPath>
+          </li>
+        </grains>      
+        <volumeRange>15~15</volumeRange>      
+        <pitchRange>1~1.091764</pitchRange>      
+        <distRange>20.29412~70</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>InfoCard_Close</defName>    
+    <maxSimultaneous>1</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <onCamera>True</onCamera>      
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>UI/InfoCard_Close</clipPath>
+          </li>
+        </grains>      
+        <volumeRange>15~15</volumeRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>DragSlider</defName>  
+    <maxSimultaneous>4</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <onCamera>True</onCamera>      
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>UI/DragSlider</clipFolderPath>
+          </li>
+        </grains>      
+        <volumeRange>15~15</volumeRange>      
+        <pitchRange>1~1.091764</pitchRange>      
+        <distRange>20.29412~70</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>RowTabSelect</defName>    
+    <subSounds>
+      <li>
+        <onCamera>True</onCamera>      
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>UI/RowTabSelect</clipFolderPath>
+          </li>
+        </grains>      
+        <volumeRange>15~15</volumeRange>      
+        <pitchRange>1~1.091764</pitchRange>      
+        <distRange>20.29412~70</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Mouseover_Tab</defName>    
+    <subSounds>
+      <li>
+        <onCamera>True</onCamera>      
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>UI/OptionMouseoverThump</clipFolderPath>
+          </li>
+        </grains>      
+        <volumeRange>15~15</volumeRange>      
+        <pitchRange>1~1.091764</pitchRange>      
+        <distRange>20.29412~70</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Checkbox_TurnedOn</defName>    
+    <maxSimultaneous>1</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <onCamera>True</onCamera>      
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>UI/TickHigh</clipPath>
+          </li>
+        </grains>      
+        <volumeRange>14~14</volumeRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Checkbox_TurnedOff</defName>    
+    <maxSimultaneous>1</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <onCamera>True</onCamera>      
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>UI/TickLow</clipPath>
+          </li>
+        </grains>      
+        <volumeRange>14~14</volumeRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Lesson_Activated</defName>
+    <maxSimultaneous>1</maxSimultaneous>
+    <subSounds>
+      <li>
+        <onCamera>True</onCamera>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>UI/Tutor/LessonActivated</clipPath>
+          </li>
+        </grains>
+        <volumeRange>15~15</volumeRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Lesson_Deactivated</defName>
+    <maxSimultaneous>1</maxSimultaneous>
+    <subSounds>
+      <li>
+        <onCamera>True</onCamera>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>UI/Tutor/LessonDeactivated</clipPath>
+          </li>
+        </grains>
+        <volumeRange>15~15</volumeRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>PlanetkillerImpact</defName>
+    <maxVoices>1</maxVoices>
+    <maxSimultaneous>1</maxSimultaneous>
+    <subSounds>
+      <li>
+        <onCamera>True</onCamera>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Misc/PlanetkillerImpact</clipPath>
+          </li>
+        </grains>
+        <volumeRange>50~50</volumeRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Quest_Accepted</defName>
+    <maxSimultaneous>1</maxSimultaneous>
+    <subSounds>
+      <li>
+        <onCamera>True</onCamera>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>UI/Quests/Quest_Accepted_01a</clipPath>
+          </li>
+        </grains>
+        <volumeRange>40</volumeRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Quest_Succeded</defName>
+    <maxSimultaneous>1</maxSimultaneous>
+    <subSounds>
+      <li>
+        <onCamera>True</onCamera>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>UI/Quests/Quest_Succeeded_01a</clipPath>
+          </li>
+        </grains>
+        <volumeRange>50</volumeRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Quest_Concluded</defName>
+    <maxSimultaneous>1</maxSimultaneous>
+    <subSounds>
+      <li>
+        <onCamera>True</onCamera>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>UI/Quests/Quest_Concluded_01a</clipPath>
+          </li>
+        </grains>
+        <volumeRange>40</volumeRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Quest_Failed</defName>
+    <maxSimultaneous>1</maxSimultaneous>
+    <subSounds>
+      <li>
+        <onCamera>True</onCamera>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>UI/Quests/Quest_Failed_01a</clipPath>
+          </li>
+        </grains>
+        <volumeRange>40</volumeRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>PlaceholderSoundDef</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>1</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>PlaceholderWav</clipPath>
+          </li>
+        </grains>
+        <volumeRange>40</volumeRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+  
+</Defs>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <TattooDef>
+    <defName>NoTattoo_Face</defName>
+    <label>none</label>
+    <texPath>Things/Mote/Transparent</texPath> <!-- Invisible -->
+    <iconPath>Things/Mote/Transparent</iconPath> <!-- Invisible -->
+    <tattooType>Face</tattooType>
+    <category>Minimal</category>
+    <styleTags>
+      <li>NoTattoo</li>
+    </styleTags>
+  </TattooDef>
+
+  <TattooDef>
+    <defName>NoTattoo_Body</defName>
+    <label>none</label>
+    <texPath>Things/Mote/Transparent</texPath> <!-- Invisible -->
+    <iconPath>Things/Mote/Transparent</iconPath> <!-- Invisible -->
+    <tattooType>Body</tattooType>
+    <category>Minimal</category>
+    <styleTags>
+      <li>NoTattoo</li>
+    </styleTags>
+  </TattooDef>
+
+</Defs>

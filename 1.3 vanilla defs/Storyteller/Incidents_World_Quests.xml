@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <IncidentDef Abstract="True" Name="GiveQuestBase" >
+    <category>GiveQuest</category>
+    <targetTags>
+      <li>World</li>
+    </targetTags>
+    <workerClass>IncidentWorker_GiveQuest</workerClass>
+    <letterDef>NewQuest</letterDef>
+    <baseChance>1</baseChance>
+  </IncidentDef>
+
+  <IncidentDef ParentName="GiveQuestBase">
+    <defName>GiveQuest_Random</defName>
+    <label>quest</label>
+    <earliestDay>2</earliestDay>
+    <letterLabel>Quest available</letterLabel>
+  </IncidentDef>
+
+  <IncidentDef ParentName="GiveQuestBase">
+    <defName>GiveQuest_EndGame_ShipEscape</defName>
+    <label>journey offer</label>
+    <letterLabel>Journey offer</letterLabel>
+    <questScriptDef>EndGame_ShipEscape</questScriptDef>
+    <baseChance>0</baseChance> <!-- given by a special storyteller comp -->
+  </IncidentDef>
+
+</Defs>

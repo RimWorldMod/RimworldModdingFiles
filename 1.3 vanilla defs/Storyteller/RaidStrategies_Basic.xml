@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <RaidStrategyDef Name="ImmediateAttack">
+    <defName>ImmediateAttack</defName>
+    <workerClass>RaidStrategyWorker_ImmediateAttack</workerClass>
+    <selectionWeightPerPointsCurve>
+      <points>
+        <li>(100,0.75)</li>
+        <li>(700,0.25)</li>
+      </points>
+    </selectionWeightPerPointsCurve>
+    <pointsFactorCurve>
+      <points>
+        <li>0, 1</li>
+      </points>
+    </pointsFactorCurve>
+    <arriveModes>
+      <li>EdgeDrop</li>
+      <li>EdgeWalkIn</li>
+      <li>CenterDrop</li>
+      <li>RandomDrop</li>
+      <li>EdgeDropGroups</li>
+      <li>EdgeWalkInGroups</li>
+    </arriveModes>
+    <letterLabelEnemy>Raid</letterLabelEnemy>
+    <arrivalTextEnemy>They are attacking immediately.</arrivalTextEnemy>
+    <letterLabelFriendly>Friendlies</letterLabelFriendly>
+    <arrivalTextFriendly>They are moving in to help you immediately.</arrivalTextFriendly>
+  </RaidStrategyDef>
+
+  <RaidStrategyDef ParentName="ImmediateAttack">
+    <defName>ImmediateAttackFriendly</defName>
+    <workerClass>RaidStrategyWorker_ImmediateAttackFriendly</workerClass>
+    <pawnsCanBringFood>True</pawnsCanBringFood>
+  </RaidStrategyDef>
+
+  <RaidStrategyDef>
+    <defName>ImmediateAttackSmart</defName>
+    <workerClass>RaidStrategyWorker_ImmediateAttackSmart</workerClass>
+    <selectionWeightPerPointsCurve>
+      <points>
+        <li>(100,0)</li>
+        <li>(700,0.75)</li>
+      </points>
+    </selectionWeightPerPointsCurve>
+    <pointsFactorCurve>
+      <points>
+        <li>0, 0.95</li>
+      </points>
+    </pointsFactorCurve>
+    <arriveModes>
+      <li>EdgeDrop</li>
+      <li>EdgeWalkIn</li>
+      <li>CenterDrop</li>
+      <li>RandomDrop</li>
+      <li>EdgeDropGroups</li>
+      <li>EdgeWalkInGroups</li>
+    </arriveModes>
+    <letterLabelEnemy>Raid</letterLabelEnemy>
+    <arrivalTextEnemy>They are attacking immediately.\n\nWatch out - they appear to be unusually clever with their tactics. They'll avoid your turrets' fields of fire and notice some of your traps.</arrivalTextEnemy>
+    <letterLabelFriendly>Friendlies</letterLabelFriendly>
+    <arrivalTextFriendly>They are moving in to help you immediately.</arrivalTextFriendly>
+  </RaidStrategyDef>
+
+  <RaidStrategyDef>
+    <defName>StageThenAttack</defName>
+    <workerClass>RaidStrategyWorker_StageThenAttack</workerClass>
+    <selectionWeightPerPointsCurve>
+      <points>
+        <li>(0,1.25)</li>
+      </points>
+    </selectionWeightPerPointsCurve>
+    <pointsFactorCurve>
+      <points>
+        <li>0, 1</li>
+      </points>
+    </pointsFactorCurve>
+    <arriveModes>
+      <li>EdgeDrop</li>
+      <li>EdgeWalkIn</li>
+      <li>EdgeDropGroups</li>
+      <li>EdgeWalkInGroups</li>
+    </arriveModes>
+    <letterLabelEnemy>Raid</letterLabelEnemy>
+    <arrivalTextEnemy>They will prepare for a while, then attack.\n\nPrepare a defense or attack them pre-emptively.</arrivalTextEnemy>
+    <letterLabelFriendly>Friendlies</letterLabelFriendly>
+    <arrivalTextFriendly>They will prepare for a while before moving in to help you.</arrivalTextFriendly>
+  </RaidStrategyDef>
+
+</Defs>

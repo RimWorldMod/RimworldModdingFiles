@@ -1,0 +1,426 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="BasePawn" Name="BaseMechanoid" Abstract="True">
+    <soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
+    <statBases>
+      <PsychicSensitivity>0.5</PsychicSensitivity>
+      <ToxicSensitivity>0</ToxicSensitivity>
+      <Flammability>0</Flammability>
+      <ComfyTemperatureMin>-100</ComfyTemperatureMin>
+      <ComfyTemperatureMax>250</ComfyTemperatureMax>
+      <MeatAmount>0</MeatAmount>
+      <ArmorRating_Heat>2.00</ArmorRating_Heat>
+    </statBases>
+    <receivesSignals>true</receivesSignals>
+    <race>
+      <fleshType>Mechanoid</fleshType>
+      <needsRest>false</needsRest>
+      <hasGenders>false</hasGenders>
+      <foodType>None</foodType>
+      <lifeExpectancy>2500</lifeExpectancy>
+      <bloodDef>Filth_MachineBits</bloodDef>
+    </race>
+    <comps>
+      <li Class="CompProperties_CanBeDormant" />
+      <li Class="CompProperties_WakeUpDormant">
+        <wakeUpOnDamage>true</wakeUpOnDamage>
+        <anyColonistCloseCheckRadius>30</anyColonistCloseCheckRadius>
+        <wakeUpSound>MechanoidsWakeUp</wakeUpSound>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <PawnKindDef Name="BaseMechanoidKind" Abstract="True">
+    <defaultFactionType>Mechanoid</defaultFactionType>
+    <aiAvoidCover>true</aiAvoidCover>
+    <destroyGearOnDrop>true</destroyGearOnDrop>
+  </PawnKindDef>
+
+  <!-- Centipede -->
+  
+  <ThingDef ParentName="BaseMechanoid">
+    <defName>Mech_Centipede</defName>
+    <label>centipede</label>
+    <description>Heavy combat mechanoids that glide on dozens of tiny legs. Their thick carpace and firepower makes them very effective against bunched-up static defenders. They are somewhat vulnerable to mobile hit-and-run tactics.</description>
+    <statBases>
+      <MoveSpeed>1.9</MoveSpeed>
+      <ArmorRating_Blunt>0.22</ArmorRating_Blunt>
+      <ArmorRating_Sharp>0.72</ArmorRating_Sharp>
+      <PsychicSensitivity>0.75</PsychicSensitivity>
+    </statBases>
+    <tools>
+      <li>
+        <label>head</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>17</power>
+        <cooldownTime>2.6</cooldownTime>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+        <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+      </li>
+    </tools>
+    <race>
+      <intelligence>ToolUser</intelligence>
+      <thinkTreeMain>Mechanoid</thinkTreeMain>
+      <body>MechanicalCentipede</body>
+      <baseBodySize>1.8</baseBodySize>
+      <baseHealthScale>4.32</baseHealthScale>
+      <lifeStageAges>
+        <li>
+          <def>MechanoidFullyFormed</def>
+          <minAge>0</minAge>
+          <soundWounded>Pawn_Mech_Centipede_Wounded</soundWounded>
+          <soundDeath>Pawn_Mech_Centipede_Death</soundDeath>
+          <soundCall>Pawn_Mech_Centipede_Call</soundCall>
+        </li>
+      </lifeStageAges>
+      <soundCallIntervalRange>1000~2000</soundCallIntervalRange>
+      <soundMeleeHitPawn>Pawn_Melee_MechanoidBash_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Melee_MechanoidBash_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_MechanoidBash_Miss</soundMeleeMiss>
+    </race>
+    <butcherProducts>
+      <Steel>30</Steel>
+      <Plasteel>10</Plasteel>
+    </butcherProducts>
+  </ThingDef>
+
+  <PawnKindDef Abstract="true" Name="BaseMechCentipede" ParentName="BaseMechanoidKind">
+    <race>Mech_Centipede</race>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Mechanoid/Centipede</texPath>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>3</drawSize>
+          <shadowData>
+            <volume>(0.6, 0.8, 0.6)</volume>
+          </shadowData>
+        </bodyGraphicData>
+      </li>
+    </lifeStages>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="BaseMechCentipede">
+    <defName>Mech_Centipede</defName>
+    <label>centipede</label>
+    <combatPower>400</combatPower>
+    <weaponMoney>9999~9999</weaponMoney>
+    <weaponTags>
+      <li>MechanoidGunHeavy</li>
+    </weaponTags>
+  </PawnKindDef>
+
+  <!-- Walker (lancer/scyther) base -->
+
+  <ThingDef ParentName="BaseMechanoid" Name="BaseMechanoidWalker" Abstract="True">
+    <statBases>
+      <MoveSpeed>4.7</MoveSpeed>
+      <ArmorRating_Blunt>0.20</ArmorRating_Blunt>
+      <ArmorRating_Sharp>0.40</ArmorRating_Sharp>
+    </statBases>
+    <race>
+      <intelligence>ToolUser</intelligence>
+      <thinkTreeMain>Mechanoid</thinkTreeMain>
+      <baseBodySize>1.0</baseBodySize>
+      <lifeStageAges>
+        <li>
+          <def>MechanoidFullyFormed</def>
+          <minAge>0</minAge>
+          <soundWounded>Pawn_Mech_Scyther_Wounded</soundWounded>
+          <soundDeath>Pawn_Mech_Scyther_Death</soundDeath>
+          <soundCall>Pawn_Mech_Scyther_Call</soundCall>
+        </li>
+      </lifeStageAges>
+      <soundCallIntervalRange>1000~2000</soundCallIntervalRange>
+    </race>
+    <butcherProducts>
+      <Steel>15</Steel>
+    </butcherProducts>
+  </ThingDef>
+
+  <!-- Lancer - fast mid-range shooter -->
+  
+  <ThingDef ParentName="BaseMechanoidWalker">
+    <defName>Mech_Lancer</defName>
+    <label>lancer</label>
+    <description>Fast human-sized combat mechanoids built for medium and long-range combat. Their bodies are light, making them vulnerable targets at close range - especially in melee combat.</description>
+    <tools>
+      <li>
+        <label>left fist</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>12.0</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+        <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+      </li>
+      <li>
+        <label>right fist</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>12.0</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+        <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+      </li>
+      <li>
+        <label>head</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>8.5</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+        <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+        <chanceFactor>0.2</chanceFactor>
+      </li>
+    </tools>
+    <race>
+      <body>Lancer</body>
+      <baseHealthScale>0.72</baseHealthScale>
+      <soundMeleeHitPawn>Pawn_Melee_Punch_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Melee_Punch_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_Punch_Miss</soundMeleeMiss>
+    </race>
+  </ThingDef>
+
+  <PawnKindDef ParentName="BaseMechanoidKind">
+    <defName>Mech_Lancer</defName>
+    <label>lancer</label>
+    <race>Mech_Lancer</race>
+    <combatPower>150</combatPower>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Mechanoid/Lancer</texPath>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>1.5</drawSize>
+          <shadowData>
+            <volume>(0.4, 0.8, 0.4)</volume>
+          </shadowData>
+        </bodyGraphicData>
+      </li>
+    </lifeStages>
+    <weaponMoney>9999~9999</weaponMoney>
+    <weaponTags>
+      <li>MechanoidGunMedium</li>
+    </weaponTags>
+  </PawnKindDef>
+
+
+  <!-- Scyther - fast melee -->
+
+  <ThingDef ParentName="BaseMechanoidWalker">
+    <defName>Mech_Scyther</defName>
+    <label>scyther</label>
+    <description>Fast, spindly, human-sized combat mechanoids specializing in rapid approach and close-range combat. Their bodies are covered in points and blades, but their mostly use two arm blades to lop off limbs or gut their victims alive.</description>
+    <tools>
+      <li>
+        <label>left blade</label>
+        <capacities>
+          <li>Cut</li>
+          <li>Stab</li>
+        </capacities>
+        <power>20</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>LeftBlade</linkedBodyPartsGroup>
+        <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+      </li>
+      <li>
+        <label>right blade</label>
+        <capacities>
+          <li>Cut</li>
+          <li>Stab</li>
+        </capacities>
+        <power>20</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>RightBlade</linkedBodyPartsGroup>
+        <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+      </li>
+      <li>
+        <label>head</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+        <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+        <chanceFactor>0.2</chanceFactor>
+      </li>
+    </tools>
+    <race>
+      <body>Scyther</body>
+      <baseHealthScale>1.32</baseHealthScale>
+      <soundMeleeHitPawn>Pawn_Melee_MechanoidSlash_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Melee_MechanoidSlash_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_MechanoidSlash_Miss</soundMeleeMiss>
+    </race>
+  </ThingDef>
+
+  <PawnKindDef ParentName="BaseMechanoidKind">
+    <defName>Mech_Scyther</defName>
+    <label>scyther</label>
+    <race>Mech_Scyther</race>
+    <combatPower>150</combatPower>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Mechanoid/Scyther</texPath>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>1.5</drawSize>
+          <shadowData>
+            <volume>(0.4, 0.8, 0.4)</volume>
+          </shadowData>
+        </bodyGraphicData>
+      </li>
+    </lifeStages>
+    <weaponMoney>0~0</weaponMoney>
+    <defendPointRadius>0</defendPointRadius>
+    <weaponTags>
+    </weaponTags>
+  </PawnKindDef>
+
+  <!-- Pikeman - slow sniper weak at close range -->
+  
+  <ThingDef ParentName="BaseMechanoidWalker">
+    <defName>Mech_Pikeman</defName>
+    <label>pikeman</label>
+    <description>A clunky multi-legged combat mechanoid specialized as a long-range weapons platform. While effective at distance, it is weak in close-range fights and in melee combat.\n\nVeterans of mechanoid wars know that often, the safest place to be around a pikeman is touching it.</description>
+    <statBases>
+      <MoveSpeed>2.5</MoveSpeed>
+    </statBases>
+    <tools>
+      <li>
+        <label>front left leg</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>12.0</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>FrontLeftLeg</linkedBodyPartsGroup>
+        <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+      </li>
+      <li>
+        <label>front right leg</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>12.0</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>FrontRightLeg</linkedBodyPartsGroup>
+        <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+      </li>
+      <li>
+        <label>head</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>8.5</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+        <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+        <chanceFactor>0.2</chanceFactor>
+      </li>
+    </tools>
+    <race>
+      <body>Pikeman</body>
+      <baseHealthScale>0.85</baseHealthScale>
+      <soundMeleeHitPawn>Pawn_Melee_Punch_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Melee_Punch_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_Punch_Miss</soundMeleeMiss>
+      <lifeStageAges Inherit="False">
+        <li>
+          <def>MechanoidFullyFormed</def>
+          <minAge>0</minAge>
+          <soundWounded>Pawn_Mech_Pikeman_Wounded</soundWounded>
+          <soundDeath>Pawn_Mech_Pikeman_Death</soundDeath>
+          <soundCall>Pawn_Mech_Pikeman_Call</soundCall>
+        </li>
+      </lifeStageAges>
+    </race>
+  </ThingDef>
+
+  <PawnKindDef ParentName="BaseMechanoidKind">
+    <defName>Mech_Pikeman</defName>
+    <label>pikeman</label>
+    <labelPlural>pikemen</labelPlural>
+    <race>Mech_Pikeman</race>
+    <combatPower>110</combatPower>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Mechanoid/Pikeman</texPath>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>2.4</drawSize>
+          <shadowData>
+            <volume>(0.4, 0.8, 0.4)</volume>
+          </shadowData>
+        </bodyGraphicData>
+      </li>
+    </lifeStages>
+    <weaponMoney>9999~9999</weaponMoney>
+    <weaponTags>
+      <li>MechanoidGunLongRange</li>
+    </weaponTags>
+  </PawnKindDef>
+
+  <!-- Termite -->
+
+  <ThingDef ParentName="BaseMechanoid">
+    <defName>Mech_Termite</defName>
+    <label>termite</label>
+    <description>A medium-sized mechanoid. Termites specialize in burrowing, digging, and breaking through defensive structures. Defenders need to decide whether to try to eliminate the termite before it can dig through their defenses, or take it where it emerges.</description>
+    <statBases>
+      <MoveSpeed>2.1</MoveSpeed>
+      <ArmorRating_Blunt>0.22</ArmorRating_Blunt>
+      <ArmorRating_Sharp>0.56</ArmorRating_Sharp>
+      <PsychicSensitivity>0.75</PsychicSensitivity>
+    </statBases>
+    <tools>
+      <li>
+        <label>head</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>17</power>
+        <cooldownTime>2.6</cooldownTime>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+        <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+      </li>
+    </tools>
+    <race>
+      <intelligence>ToolUser</intelligence>
+      <thinkTreeMain>Mechanoid</thinkTreeMain>
+      <body>MechanicalTermite</body>
+      <baseBodySize>1.6</baseBodySize>
+      <baseHealthScale>2.16</baseHealthScale>
+      <lifeStageAges>
+        <li>
+          <def>MechanoidFullyFormed</def>
+          <minAge>0</minAge>
+          <soundWounded>Pawn_Mech_Termite_Wounded</soundWounded>
+          <soundDeath>Pawn_Mech_Termite_Death</soundDeath>
+          <soundCall>Pawn_Mech_Termite_Call</soundCall>
+        </li>
+      </lifeStageAges>
+      <soundCallIntervalRange>1000~2000</soundCallIntervalRange>
+      <soundMeleeHitPawn>Pawn_Melee_MechanoidBash_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Melee_MechanoidBash_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_MechanoidBash_Miss</soundMeleeMiss>
+    </race>
+    <butcherProducts>
+      <Steel>30</Steel>
+      <Plasteel>10</Plasteel>
+    </butcherProducts>
+  </ThingDef>
+
+
+
+
+</Defs>

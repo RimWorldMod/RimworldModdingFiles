@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <GatheringDef>
+    <defName>Party</defName>
+    <label>party</label>
+    <randomSelectionWeight>1</randomSelectionWeight>
+    <letterTitle>Party</letterTitle>
+    <letterText>{ORGANIZER_labelShort} is throwing a party! Everyone who goes will gain recreation and social energy, and a lasting positive mood boost.</letterText>
+    <calledOffMessage>The party has been called off.</calledOffMessage>
+    <finishedMessage>The party has finished.</finishedMessage>
+    <duty>Party</duty>
+    <workerClass>GatheringWorker_Party</workerClass>
+    <gatherSpotDefs>
+      <li>PartySpot</li>
+    </gatherSpotDefs>
+  </GatheringDef>
+  
+  <GatheringDef>
+    <defName>MarriageCeremony</defName>
+    <label>marriage ceremony</label>
+    <respectTimetable>false</respectTimetable>
+    <workerClass>GatheringWorker_MarriageCeremony</workerClass>
+  </GatheringDef>
+</Defs>

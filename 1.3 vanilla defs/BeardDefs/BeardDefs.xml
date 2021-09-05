@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <BeardDef>
+    <defName>NoBeard</defName>
+    <label>no beard</label>
+    <texPath>Things/Mote/Transparent</texPath> <!-- Invisible -->
+    <iconPath>Things/Mote/Transparent</iconPath> <!-- Invisible -->
+    <category>Minimal</category>
+    <styleTags>
+      <li>NoBeard</li>
+    </styleTags>
+  </BeardDef>
+
+  <BeardDef>
+    <defName>Anchor</defName>
+    <label>anchor</label>
+    <texPath>Things/Pawn/Humanlike/Beards/BeardAnchor</texPath>
+    <styleGender>Male</styleGender>
+    <category>Punk</category>
+    <styleTags>
+      <li>BeardPunk</li>
+      <li>BeardShort</li>
+    </styleTags>
+  </BeardDef>
+
+  <BeardDef>
+    <defName>Bushy</defName>
+    <label>bushy</label>
+    <texPath>Things/Pawn/Humanlike/Beards/BeardBalin</texPath>
+    <styleGender>Male</styleGender>
+    <category>Tribal</category>
+    <styleTags>
+      <li>BeardTribal</li>
+    </styleTags>
+  </BeardDef>
+
+  <BeardDef>
+    <defName>Norse</defName>
+    <label>norse</label>
+    <texPath>Things/Pawn/Humanlike/Beards/BeardBifur</texPath>
+    <styleGender>Male</styleGender>
+    <category>Tribal</category>
+    <styleTags>
+      <li>BeardTribal</li>
+    </styleTags>
+  </BeardDef>
+
+  <BeardDef>
+    <defName>Boxed</defName>
+    <label>boxed</label>
+    <texPath>Things/Pawn/Humanlike/Beards/BeardBoxed</texPath>
+    <styleGender>Male</styleGender>
+    <category>Urban</category>
+    <styleTags>
+      <li>BeardUrban</li>
+      <li>BeardRural</li>
+    </styleTags>
+  </BeardDef>
+
+  <BeardDef>
+    <defName>Circle</defName>
+    <label>circle</label>
+    <texPath>Things/Pawn/Humanlike/Beards/BeardCircle</texPath>
+    <styleGender>Male</styleGender>
+    <category>Urban</category>
+    <styleTags>
+      <li>BeardUrban</li>
+      <li>BeardRural</li>
+    </styleTags>
+  </BeardDef>
+
+  <BeardDef>
+    <defName>BeardCurly</defName>
+    <label>curly</label>
+    <texPath>Things/Pawn/Humanlike/Beards/BeardCurly</texPath>
+    <styleGender>Male</styleGender>
+    <category>Tribal</category>
+    <styleTags>
+      <li>BeardTribal</li>
+    </styleTags>
+  </BeardDef>
+
+  <BeardDef>
+    <defName>Curtain</defName>
+    <label>curtain</label>
+    <texPath>Things/Pawn/Humanlike/Beards/BeardCurtain</texPath>
+    <styleGender>Male</styleGender>
+    <category>Urban</category>
+    <styleTags>
+      <li>BeardUrban</li>
+      <li>BeardRural</li>
+    </styleTags>
+  </BeardDef>
+
+  <BeardDef>
+    <defName>BushyStyled</defName>
+    <label>bushy styled</label>
+    <texPath>Things/Pawn/Humanlike/Beards/BeardDori</texPath>
+    <styleGender>Male</styleGender>
+    <category>Urban</category>
+    <styleTags>
+      <li>BeardUrban</li>
+      <li>BeardRural</li>
+      <li>BeardTribal</li>
+    </styleTags>
+  </BeardDef>
+
+  <BeardDef>
+    <defName>Ducktail</defName>
+    <label>ducktail</label>
+    <texPath>Things/Pawn/Humanlike/Beards/BeardDucktail</texPath>
+    <styleGender>Male</styleGender>
+    <category>Urban</category>
+    <styleTags>
+      <li>BeardUrban</li>
+      <li>BeardRural</li>
+    </styleTags>
+  </BeardDef>
+
+  <BeardDef>
+    <defName>StacheAndChops</defName>
+    <label>stache and chops</label>
+    <texPath>Things/Pawn/Humanlike/Beards/BeardDwalin</texPath>
+    <styleGender>Male</styleGender>
+    <category>Tribal</category>
+    <styleTags>
+      <li>BeardTribal</li>
+    </styleTags>
+  </BeardDef>
+
+  <BeardDef>
+    <defName>Fork</defName>
+    <label>fork</label>
+    <texPath>Things/Pawn/Humanlike/Beards/BeardFork</texPath>
+    <styleGender>Male</styleGender>
+    <category>Punk</category>
+    <styleTags>
+      <li>BeardPunk</li>
+    </styleTags>
+  </BeardDef>
+
+  <BeardDef>
+    <defName>French</defName>
+    <label>french</label>
+    <texPath>Things/Pawn/Humanlike/Beards/BeardFrench</texPath>
+    <styleGender>Male</styleGender>
+    <category>Urban</category>
+    <styleTags>
+      <li>BeardUrban</li>
+    </styleTags>
+  </BeardDef>
+
+  <BeardDef>
+    <defName>Full</defName>
+    <label>full</label>
+    <texPath>Things/Pawn/Humanlike/Beards/BeardFull</texPath>
+    <styleGender>Male</styleGender>
+    <category>Urban</category>
+    <styleTags>
+      <li>BeardUrban</li>
+    </styleTags>
+  </BeardDef>
+
+  <BeardDef>
+    <defName>Goatee</defName>
+    <label>goatee</label>
+    <texPath>Things/Pawn/Humanlike/Beards/BeardGoatee</texPath>
+    <styleGender>Male</styleGender>
+    <offsetNarrowEast>(-0.01,0,0.03)</offsetNarrowEast>
+    <offsetNarrowSouth>(0,0,0.05)</offsetNarrowSouth>
+    <category>Urban</category>
+    <styleTags>
+      <li>BeardUrban</li>
+    </styleTags>
+  </BeardDef>
+
+  <BeardDef>
+    <defName>Classy</defName>
+    <label>classy</label>
+    <texPath>Things/Pawn/Humanlike/Beards/BeardImperial</texPath>
+    <styleGender>Male</styleGender>
+    <category>Urban</category>
+    <styleTags>
+      <li>BeardUrban</li>
+    </styleTags>
+  </BeardDef>
+
+  <BeardDef>
+    <defName>Braided</defName>
+    <label>braided</label>
+    <texPath>Things/Pawn/Humanlike/Beards/BeardKhal</texPath>
+    <styleGender>Male</styleGender>
+    <category>Tribal</category>
+    <styleTags>
+      <li>BeardTribal</li>
+    </styleTags>
+  </BeardDef>
+
+  <BeardDef>
+    <defName>Lincoln</defName>
+    <label>lincoln</label>
+    <texPath>Things/Pawn/Humanlike/Beards/BeardLincoln</texPath>
+    <styleGender>Male</styleGender>
+    <offsetNarrowEast>(-0.05,0,0)</offsetNarrowEast>
+    <category>Rural</category>
+    <styleTags>
+      <li>BeardRural</li>
+    </styleTags>
+  </BeardDef>
+
+  <BeardDef>
+    <defName>LongDutch</defName>
+    <label>long dutch</label>
+    <texPath>Things/Pawn/Humanlike/Beards/BeardLongDutch</texPath>
+    <styleGender>Male</styleGender>
+    <category>Rural</category>
+    <styleTags>
+      <li>BeardRural</li>
+    </styleTags>
+  </BeardDef>
+
+  <BeardDef>
+    <defName>Machete</defName>
+    <label>machete</label>
+    <texPath>Things/Pawn/Humanlike/Beards/BeardMachete</texPath>
+    <styleGender>Male</styleGender>
+    <category>Moustache</category>
+    <styleTags>
+      <li>BeardPunk</li>
+      <li>MoustacheOnly</li>
+    </styleTags>
+  </BeardDef>
+
+  <BeardDef>
+    <defName>Moustache</defName>
+    <label>moustache</label>
+    <texPath>Things/Pawn/Humanlike/Beards/BeardMoustache</texPath>
+    <styleGender>Male</styleGender>
+    <category>Moustache</category>
+    <styleTags>
+      <li>BeardUrban</li>
+      <li>MoustacheOnly</li>
+    </styleTags>
+  </BeardDef>
+
+  <BeardDef>
+    <defName>MuttonChops</defName>
+    <label>mutton chops</label>
+    <texPath>Things/Pawn/Humanlike/Beards/BeardMuttonChops</texPath>
+    <styleGender>Male</styleGender>
+    <category>Rural</category>
+    <styleTags>
+      <li>BeardRural</li>
+    </styleTags>
+  </BeardDef>
+
+  <BeardDef>
+    <defName>TriBraid</defName>
+    <label>tri-braid</label>
+    <texPath>Things/Pawn/Humanlike/Beards/BeardNori</texPath>
+    <styleGender>Male</styleGender>
+    <category>Tribal</category>
+    <styleTags>
+      <li>BeardTribal</li>
+    </styleTags>
+  </BeardDef>
+
+  <BeardDef>
+    <defName>OldDutch</defName>
+    <label>old dutch</label>
+    <texPath>Things/Pawn/Humanlike/Beards/BeardOldDutch</texPath>
+    <styleGender>Male</styleGender>
+    <offsetNarrowEast>(-0.05,0,0)</offsetNarrowEast>
+    <category>Rural</category>
+    <styleTags>
+      <li>BeardRural</li>
+    </styleTags>
+  </BeardDef>
+
+  <BeardDef>
+    <defName>Seer</defName>
+    <label>seer</label>
+    <texPath>Things/Pawn/Humanlike/Beards/BeardSeer</texPath>
+    <styleGender>Male</styleGender>
+    <category>Tribal</category>
+    <styleTags>
+      <li>BeardTribal</li>
+    </styleTags>
+  </BeardDef>
+
+  <BeardDef>
+    <defName>SideWhiskers</defName>
+    <label>side whiskers</label>
+    <texPath>Things/Pawn/Humanlike/Beards/BeardSideWhiskers</texPath>
+    <styleGender>Male</styleGender>
+    <category>Rural</category>
+    <styleTags>
+      <li>BeardRural</li>
+    </styleTags>
+  </BeardDef>
+
+  <BeardDef>
+    <defName>SoulPatch</defName>
+    <label>soul patch</label>
+    <texPath>Things/Pawn/Humanlike/Beards/BeardSoulPatch</texPath>
+    <styleGender>Male</styleGender>
+    <offsetNarrowEast>(-0.04,0,0)</offsetNarrowEast>
+    <offsetNarrowSouth>(0,0,0.02)</offsetNarrowSouth>
+    <category>Punk</category>
+    <styleTags>
+      <li>BeardPunk</li>
+    </styleTags>
+  </BeardDef>
+
+  <BeardDef>
+    <defName>Stubble</defName>
+    <label>stubble</label>
+    <texPath>Things/Pawn/Humanlike/Beards/BeardStubble</texPath>
+    <styleGender>Male</styleGender>
+    <offsetNarrowSouth>(0,0,0.02)</offsetNarrowSouth>
+    <category>Minimal</category>
+    <styleTags>
+      <li>BeardPunk</li>
+      <li>BeardUrban</li>
+      <li>BeardRural</li>
+    </styleTags>
+  </BeardDef>
+
+  <BeardDef>
+    <defName>Urist</defName>
+    <label>urist</label>
+    <texPath>Things/Pawn/Humanlike/Beards/BeardUrist</texPath>
+    <styleGender>Male</styleGender>
+    <category>Tribal</category>
+    <styleTags>
+      <li>BeardTribal</li>
+    </styleTags>
+  </BeardDef>
+
+  <BeardDef>
+    <defName>VanDyke</defName>
+    <label>VanDyke</label>
+    <texPath>Things/Pawn/Humanlike/Beards/BeardVanDyke</texPath>
+    <styleGender>Male</styleGender>
+    <category>Urban</category>
+    <styleTags>
+      <li>BeardUrban</li>
+    </styleTags>
+  </BeardDef>
+
+  <BeardDef>
+    <defName>Wizard</defName>
+    <label>wizard</label>
+    <texPath>Things/Pawn/Humanlike/Beards/BeardWizard</texPath>
+    <styleGender>Male</styleGender>
+    <category>Rural</category>
+    <styleTags>
+      <li>BeardRural</li>
+    </styleTags>
+  </BeardDef>
+
+</Defs>

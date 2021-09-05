@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <HistoryEventDef>
+    <defName>CutTree</defName>
+    <label>cut tree</label>
+  </HistoryEventDef>
+
+  <HistoryEventDef>
+    <defName>Mined</defName>
+    <label>mined</label>
+  </HistoryEventDef>
+
+  <HistoryEventDef>
+    <defName>SowedPlant</defName>
+    <label>sowed plant</label>
+  </HistoryEventDef>
+
+  <HistoryEventDef>
+    <defName>SowedHumanFoodPlant</defName>
+    <label>sowed food plant</label>
+  </HistoryEventDef>
+
+  <HistoryEventDef>
+    <defName>InstalledProsthetic</defName>
+    <label>installed prosthetic</label>
+  </HistoryEventDef>
+
+  <HistoryEventDef>
+    <defName>Researching</defName>
+    <label>researching</label>
+  </HistoryEventDef>
+
+  <HistoryEventDef>
+    <defName>AteHumanMeat</defName>
+    <label>ate human meat</label>
+  </HistoryEventDef>
+
+  <HistoryEventDef> <!-- defined as any drug, whether medical or recreational -->
+    <defName>IngestedDrug</defName> 
+    <label>used drug</label>
+  </HistoryEventDef>
+
+  <HistoryEventDef> <!-- defined as drugs that aren't medical -->
+    <defName>IngestedRecreationalDrug</defName>
+    <label>used recreational drug</label>
+  </HistoryEventDef>
+
+  <HistoryEventDef> <!-- defined as drugs that aren't medical or social -->
+    <defName>IngestedHardDrug</defName>
+    <label>used hard drug</label>
+  </HistoryEventDef>
+
+  <HistoryEventDef> <!-- defined as any drug, whether medical or recreational -->
+    <defName>AdministeredDrug</defName> 
+    <label>administered drug</label>
+  </HistoryEventDef>
+
+  <HistoryEventDef> <!-- defined as drugs that aren't medical -->
+    <defName>AdministeredRecreationalDrug</defName>
+    <label>administered recreational drug</label>
+  </HistoryEventDef>
+
+  <HistoryEventDef> <!-- defined as drugs that aren't medical or social -->
+    <defName>AdministeredHardDrug</defName>
+    <label>administered hard drug</label>
+  </HistoryEventDef>
+
+</Defs>

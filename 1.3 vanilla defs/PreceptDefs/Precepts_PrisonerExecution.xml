@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- Issue -->
+
+  <IssueDef>
+    <defName>Execution</defName>
+    <label>execution</label>
+    <iconPath>UI/Issues/Execution</iconPath>
+  </IssueDef>
+
+  <HistoryEventDef>
+    <defName>ExecutedPrisoner</defName>
+    <label>executed prisoner</label>
+  </HistoryEventDef>
+
+  <HistoryEventDef>
+    <defName>ExecutedPrisonerGuilty</defName>
+    <label>executed guilty prisoner</label>
+  </HistoryEventDef>
+
+  <HistoryEventDef>
+    <defName>ExecutedPrisonerInnocent</defName>
+    <label>executed innocent prisoner</label>
+  </HistoryEventDef>
+
+  <HistoryEventDef>
+    <defName>ExecutedColonist</defName>
+    <label>executed colonist</label>
+  </HistoryEventDef>
+
+  <HistoryEventDef>
+    <defName>ExecutedGuest</defName>
+    <label>executed guest</label>
+  </HistoryEventDef>
+
+  <!-- Precepts -->
+
+  <PreceptDef>
+    <defName>Execution_Classic</defName>
+    <issue>Execution</issue>
+    <impact>Low</impact>
+    <classic>true</classic>
+    <visible>false</visible>
+    <comps>
+      <li Class="PreceptComp_KnowsMemoryThought">
+        <eventDef>InnocentPrisonerDied</eventDef>
+        <thought>KnowPrisonerDiedInnocent</thought>
+      </li>
+      <li Class="PreceptComp_KnowsMemoryThought">
+        <eventDef>ExecutedColonist</eventDef>
+        <thought>KnowColonistExecuted</thought>
+      </li>
+      <li Class="PreceptComp_KnowsMemoryThought">
+        <eventDef>ExecutedGuest</eventDef>
+        <thought>KnowGuestExecuted</thought>
+      </li>
+      <li Class="PreceptComp_KnowsMemoryThought">
+        <eventDef>ExecutedPrisoner</eventDef>
+        <thought>KnowGuestExecuted</thought> <!-- vanilla uses the same thought -->
+      </li>
+    </comps>
+  </PreceptDef>
+
+</Defs>

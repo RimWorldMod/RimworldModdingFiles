@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!--
+    Cutout:
+      The default material for cutout world objects
+      Will draw in correct Z order with respect to each other
+  -->
+  <ShaderTypeDef>
+    <defName>Cutout</defName>
+    <shaderPath>Map/Cutout</shaderPath>
+  </ShaderTypeDef>
+
+  <ShaderTypeDef>
+    <defName>CutoutFlying</defName>
+    <shaderPath>Map/CutoutFlying</shaderPath>
+  </ShaderTypeDef>
+
+  <ShaderTypeDef>
+    <defName>CutoutFlying01</defName>
+    <shaderPath>Map/CutoutFlying01</shaderPath>
+  </ShaderTypeDef>
+
+  <ShaderTypeDef>
+    <defName>CutoutPlant</defName>
+    <shaderPath>Map/CutoutPlant</shaderPath>
+  </ShaderTypeDef>
+
+  <ShaderTypeDef>
+    <defName>CutoutComplex</defName>
+    <shaderPath>Map/CutoutComplex</shaderPath>
+  </ShaderTypeDef>
+
+  <ShaderTypeDef>
+    <defName>CutoutSkin</defName>
+    <shaderPath>Map/CutoutSkin</shaderPath>
+  </ShaderTypeDef>
+
+  <!--
+    Transparent:
+      Non-alpha affecting non-Z-writing version of default material
+      Will draw in correct Z order with respect to UnlitCutout (because it does a ZTest)
+      Will _not_ draw in consistent Z order with respect to each other (because it does not ZWrite).
+  -->
+  <ShaderTypeDef>
+    <defName>Transparent</defName>
+    <shaderPath>Map/Transparent</shaderPath>
+  </ShaderTypeDef>
+  
+  <ShaderTypeDef>
+    <defName>TransparentPostLight</defName>
+    <shaderPath>Map/TransparentPostLight</shaderPath>
+  </ShaderTypeDef>
+
+  <ShaderTypeDef>
+    <defName>TransparentPlant</defName>
+    <shaderPath>Map/TransparentPlant</shaderPath>
+  </ShaderTypeDef>
+
+  <ShaderTypeDef>
+    <defName>MetaOverlay</defName>
+    <shaderPath>Map/MetaOverlay</shaderPath>
+  </ShaderTypeDef>
+
+  <ShaderTypeDef>
+    <defName>Mote</defName>
+    <shaderPath>Map/Mote</shaderPath>
+  </ShaderTypeDef>
+
+  <ShaderTypeDef>
+    <defName>MoteGlow</defName>
+    <shaderPath>Map/MoteGlow</shaderPath>
+  </ShaderTypeDef>
+
+  <ShaderTypeDef>
+    <defName>MoteGlowDistorted</defName>
+    <shaderPath>Map/MoteGlowDistorted</shaderPath>
+  </ShaderTypeDef>
+
+  <ShaderTypeDef>
+    <defName>MoteDistorted</defName>
+    <shaderPath>Map/MoteDistorted</shaderPath>
+  </ShaderTypeDef>
+
+  <ShaderTypeDef>
+    <defName>MoteGlowDistortBackground</defName>
+    <shaderPath>Map/MoteGlowDistortBackground</shaderPath>
+  </ShaderTypeDef>
+
+  <ShaderTypeDef>
+    <defName>MoteGlowPulseLink</defName>
+    <shaderPath>Map/MoteGlowPulseLink</shaderPath>
+  </ShaderTypeDef>
+
+  <ShaderTypeDef>
+    <defName>MotePsychicConditionCauser</defName>
+    <shaderPath>Map/MotePsychicConditionCauser</shaderPath>
+  </ShaderTypeDef>
+
+  <ShaderTypeDef>
+    <defName>PsyfocusMeditationPulse</defName>
+    <shaderPath>Map/PsyfocusMeditationPulse</shaderPath>
+  </ShaderTypeDef>
+
+  <ShaderTypeDef>
+    <defName>MoteProximityScannerRadius</defName>
+    <shaderPath>Map/MoteProximityScannerRadius</shaderPath>
+  </ShaderTypeDef>
+
+  <ShaderTypeDef>
+    <defName>MoteGlowPulse</defName>
+    <shaderPath>Map/MoteGlowPulse</shaderPath>
+  </ShaderTypeDef>
+
+  <ShaderTypeDef>
+    <defName>MoteWater</defName>
+    <shaderPath>Map/MoteWater</shaderPath>
+  </ShaderTypeDef>
+  
+  <ShaderTypeDef>
+    <defName>EdgeDetect</defName>
+    <shaderPath>Map/EdgeDetect</shaderPath>
+  </ShaderTypeDef>
+
+  <ShaderTypeDef>
+    <defName>MotePsychicWarmupWordOf</defName>
+    <shaderPath>Map/MotePsychicWarmupWordOf</shaderPath>
+  </ShaderTypeDef>
+
+  <ShaderTypeDef>
+    <defName>MotePsychicWarmupNeuroquake</defName>
+    <shaderPath>Map/MotePsychicWarmupNeuroquake</shaderPath>
+  </ShaderTypeDef>
+
+  <ShaderTypeDef>
+    <defName>MotePsychicNeuroquake</defName>
+    <shaderPath>Map/MotePsychicNeuroquake</shaderPath>
+  </ShaderTypeDef>
+
+  <ShaderTypeDef>
+    <defName>CutoutAnimated</defName>
+    <shaderPath>Map/CutoutAnimated</shaderPath>
+  </ShaderTypeDef>
+
+  <ShaderTypeDef>
+    <defName>AdditiveChangeHue</defName>
+    <shaderPath>Map/AdditiveChangeHue</shaderPath>
+  </ShaderTypeDef>
+
+  <ShaderTypeDef>
+    <defName>RitualStencil</defName>
+    <shaderPath>Map/RitualStencil</shaderPath>
+  </ShaderTypeDef>
+  
+</Defs>

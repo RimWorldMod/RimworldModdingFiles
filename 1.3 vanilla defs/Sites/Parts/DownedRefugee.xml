@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  
+  <SitePartDef>
+    <defName>DownedRefugee</defName>
+    <label>incapacitated refugee</label>
+    <description>A stranded, incapacitated refugee begging for help.</description>
+    <workerClass>SitePartWorker_DownedRefugee</workerClass>
+    <siteTexture>World/WorldObjects/Sites/GenericSite</siteTexture>
+    <expandingIconTexture>World/WorldObjects/Expanding/Sites/DownedRefugee</expandingIconTexture>
+    <forceExitAndRemoveMapCountdownDurationDays>16</forceExitAndRemoveMapCountdownDurationDays>
+    <increasesPopulation>true</increasesPopulation>
+    <handlesWorldObjectTimeoutInspectString>true</handlesWorldObjectTimeoutInspectString>
+    <tags>
+      <li>DownedRefugee</li>
+    </tags>
+  </SitePartDef>
+
+  <GenStepDef>
+    <defName>DownedRefugee</defName>
+    <linkWithSite>DownedRefugee</linkWithSite>
+    <order>480</order>
+    <genStep Class="GenStep_DownedRefugee">
+      <count>1</count>
+      <nearMapCenter>true</nearMapCenter>
+    </genStep>
+  </GenStepDef>
+
+</Defs>

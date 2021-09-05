@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <BeardDef>
+
+    <defName>defName</defName>
+
+    <label>Name</label>
+
+    <texPath>Path/Image</texPath>
+
+    <styleGender>Gender</styleGender>
+
+    <offsetNarrowEast>(x, y, z)</offsetNarrowEast>
+
+    <offsetNarrowSouth>(x, y, z)</offsetNarrowSouth>
+    
+    <iconPath>Path/Image</iconPath>
+
+    <category>Category</category>
+
+    <styleTags>
+
+      <li>StyleName</li>
+
+      <li>StyleName</li>
+      
+      <li>StyleName</li>
+      
+    </styleTags>
+    
+  </BeardDef>
+
+</Defs>

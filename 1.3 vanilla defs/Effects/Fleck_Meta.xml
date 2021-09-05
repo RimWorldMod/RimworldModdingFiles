@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!--=============== Interface feedback ==============-->
+
+  <FleckDef ParentName="FleckBase" Name="FleckFeedbackBase" Abstract="True">
+    <altitudeLayer>MetaOverlays</altitudeLayer>
+    <realTime>true</realTime>
+    <solidTime>0.25</solidTime>
+    <fadeOutTime>0.15</fadeOutTime>
+    <growthRate>-0.3</growthRate>
+    <graphicData>
+      <drawSize>1.25</drawSize>
+    </graphicData>
+  </FleckDef>
+  
+  <FleckDef ParentName="FleckFeedbackBase">
+    <defName>FeedbackGoto</defName>
+    <graphicData>
+      <texPath>Things/Mote/FeedbackGoto</texPath>
+    </graphicData>
+  </FleckDef>
+
+  <FleckDef ParentName="FleckFeedbackBase">
+    <defName>FeedbackShoot</defName>
+    <graphicData>
+      <texPath>Things/Mote/FeedbackShoot</texPath>
+    </graphicData>
+  </FleckDef>
+
+  <FleckDef ParentName="FleckFeedbackBase">
+    <defName>FeedbackMelee</defName>
+    <graphicData>
+      <texPath>Things/Mote/FeedbackMelee</texPath>
+    </graphicData>
+  </FleckDef>
+
+  <FleckDef ParentName="FleckFeedbackBase">
+    <defName>FeedbackEquip</defName>
+    <graphicData>
+      <texPath>Things/Mote/FeedbackEquip</texPath>
+    </graphicData>
+  </FleckDef>
+
+  <FleckDef ParentName="FleckFeedbackBase">
+    <defName>FeedbackExtinguish</defName>
+    <graphicData>
+      <texPath>Things/Mote/FeedbackExtinguish</texPath>
+    </graphicData>
+  </FleckDef>
+
+</Defs>

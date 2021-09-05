@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <TipSetDef>
+    <defName>GameplayTips</defName>
+    <tips>
+      <!-- Interface -->
+      <li TKey="DismissLetters">You can dismiss letters by right-clicking on them.</li>
+      <li TKey="QueueOrders">You can hold the shift key to queue orders on your colonists.</li>
+      <li TKey="ReorderColonistbar">You can right-click and drag to reorder colonists on the colonist bar.</li>
+      <li TKey="SelectPrevNextColonist">You can select previous/next colonist with the , and . keys.</li>
+      <li TKey="SettingPainting">Many menus allow you to click and drag a setting to 'paint' it over many entries. This even works for things like outfits or food restrictions.</li>
+      <li TKey="ManualPriorities">In the work tab's manual priorities mode, 1 is first priority, while 4 is last priority.</li>
+      <li TKey="ColonistMood">Each colonists' mood is displayed in the background of their icon in the colonist bar at the top of the screen.</li>
+      <li TKey="WorkTabChangeAllColonists">Shift-clicking the name of a work type in the Work tab changes settings for all colonists at once.</li>
+      <li TKey="WorkTabDecreasePriority">Right-clicking a number in the Work tab using manual priorities will reduce the priority instead of increasing it.</li>
+
+      <!-- Combat -->
+      <li TKey="GunfightCover">In a gunfight, always be behind cover! Right-click and drag to have your drafted fighters form a line.</li>
+      <li TKey="GunfightSpread">Right-click and drag to have your drafted fighters form a line. Bunched-up targets are easy to hit!</li>
+      <li TKey="ShootingAccuracySmoke">Smoke totally prevents turrets from detecting targets, but people can still shoot with reduced accuracy.</li>
+      <li TKey="DesignDefenses">When designing defences, assume enemies will get inside using drop pods or tunnels. Build internal defensive positions.</li>
+      <li TKey="ShootingAccuracyFogRain">Foggy or rainy weather reduces the accuracy of ranged weapons.</li>
+      <li TKey="ShootingTooltip">You can analyze the chance a shot will hit by selecting the shooter and placing the mouse over the target.</li>
+      <li TKey="TurretsExplode">Turrets explode when they take a lot of damage. Don't put them too close together, and don't put your people too close to them.</li>
+      <li TKey="AnimalDeathExplosion">Some animals explode upon death. You can use transport pods to drop animals on enemies. Think about it.</li>
+      <li TKey="CallAllies">If you need help in a fight, call your allies using the comms console.</li>
+      <li TKey="MaddenedAnimals">Maddened animals will attack any human, including your enemies. You can use this.</li>
+      <li TKey="EMPDisablesTurretsShields">EMP bursts will temporarily disable turrets and shields.</li>
+      <li TKey="EMPDisablesPersonalShields">EMP bursts instantly break personal shields.</li>
+
+      <!-- Hunting -->
+      <li TKey="HunterStealth">The hunter stealth stat reduces the chance of animal attacks. It is affected by the hunter's animals and shooting skills.</li>
+      <li TKey="AnimalsAttackCloseRange">Animals are more likely to attack when harmed from close range. Long-range, slow-firing weapons are safest for hunting.</li>
+      <li TKey="AnimalsMayAttack">Entire herds of animals may attack you when you try to hunt them. Accept the risk before hunting, or choose weaker prey.</li>
+      <li TKey="AnimalDeathExplosionRain">If you hunt boomrats and boomalopes when it's raining, their deaths won't cause forest fires.</li>
+      <li TKey="GreaterSlaughterYield">Carefully-slaughtered animals yield more meat and leather than those who were killed violently.</li>
+
+      <!-- Caravans -->
+      <li TKey="CaravanPackingSpot">Place a caravan packing spot to designate where you want your caravans to form up.</li>
+      <li TKey="CaravanSinglePerson">Single-person caravans can be very useful in certain situations.</li>
+      <li TKey="CaravanRideableAnimals">Caravans move faster if they include rideable animals like horses, donkeys and dromedaries.</li>
+      <li TKey="CaravanSmallerLessVisible">Smaller caravans get attacked less often because they're less visible.</li>
+      <li TKey="CaravanStockpileNearPackingSpot">Before forming a caravan, collect the items you want to send in a stockpile near your caravan packing spot. This will make packing much faster.</li>
+      <li TKey="CaravanUntrainedAnimals">If you have untrained animals in your caravan, you can split them into a separate caravan before attacking an enemy, to keep them out of the fight.</li>
+      <li>Don't forget to pack medicine on your caravans.</li>
+
+      <!-- Game style -->
+      <li TKey="StoryGenerator">RimWorld is a story generator, not a skill test. A ruined colony is a dramatic tragedy, not a failure.</li>
+      <li TKey="BadAllies">Some colonists are worse than useless. Bad allies are part of the challenge.</li>
+      <li TKey="MakeCaravanRunBeforeDefeat">If you can't defend against a threat, make a caravan and run. You may lose your home, but your story can continue.</li>
+
+      <!-- Building -->
+      <li TKey="StoneDoors">Avoid using stone for doors. They open very slowly, which wastes your colonists' time.</li>
+      <li TKey="ChairsWorkbench">Put chairs in front of workbenches so workers can sit comfortably while working.</li>
+      <li TKey="MechanicalBreakdown">Mechanical structures break down and require replacement components. Don't build things you don't need.</li>
+      <li TKey="CarefulConstructionOnBridges">Be careful what you construct on bridges. Bridges collapse easily under explosions, and your buildings will go with them.</li>
+      <li TKey="CleanRooms">Clean rooms increase research speed, improve medical outcomes, and reduce food poisoning. Sterile tiles make rooms extra-clean.</li>
+      <li TKey="ColonyOneStructure">Building your whole colony in one structure saves resources, but also makes it difficult to contain fires.</li>
+      <li TKey="TerrainMovementSpeed">Terrain affects movement speed. Build floors to help your colonists get around quicker.</li>
+      <li TKey="TerrainCleanliness">Different terrain has different inherent cleanliness levels. Tiles are inherently clean; dirt is inherently dirty.</li>
+
+      <!-- Diplomacy -->
+      <li TKey="PrisonersAsGifts">You can give prisoners as gifts. Giving a prisoner back to his own faction will be highly appreciated.</li>
+      <li TKey="RequestTradeCaravans">You can request specific types of trade caravans using the comms console.</li>
+      <li TKey="TransportPodsSendGift">You can use transport pods to send gifts directly to other factions' bases - even your enemies. This improves faction relations.</li>
+
+      <!-- Misc -->
+      <li TKey="KeepingPrisonersTogether">Keeping prisoners together saves space. However, prisoners kept together will try to break out together.</li>
+      <li TKey="EnemyFactionBaseDefenses">Enemy faction bases are very well-defended. You don't need to attack them - but be well-prepared if you choose to try.</li>
+      <li TKey="AnimalNuzzle">Cute tame animals will nuzzle your colonists, improving their mood.</li>
+      <li TKey="AnimalHerbivorousGrassArea">Assign your herbivorous animals to areas with lots of grass. They'll eat the grass and spare you the need to feed them.</li>
+      <li TKey="RemoveLimbInfection">If someone has a serious infection in a limb, you can remove the limb to save their life.</li>
+      <li TKey="SloshingWater">Sloshing through water makes people unhappy. Build a bridge when you can.</li>
+      <li TKey="Luciferium">Luciferium can heal scars - even those on the eye or brain. It is, however, a permanent commitment.</li>
+      <li TKey="WorkMovementSpeedLighting">Work and movement speed are affected by lighting. Everything is slower in the dark.</li>
+      <li TKey="DeepCavesTemperature">Deep underground caverns have a naturally stable temperature, even if it's very hot or cold outside.</li>
+      <li TKey="MountainBases">Mountain bases are easy to defend. The downside is that people go crazy spending too long underground. And giant insects.</li>
+      <li TKey="PrisonersGoodMood">Prisoners will join much quicker and attempt fewer breakouts when they're in a good mood.</li>
+      <li TKey="MultipleResearchers">You can have multiple researchers working simultaneously at multiple research tables.</li>
+      <li TKey="GeysersHeatRooms">Geysers heat up rooms if enclosed. This can be dangerous, or useful.</li>
+      <li TKey="ExtinguishFireArtillery">Explosions extinguish fires in their blast radius. This makes artillery shells useful for stopping fires when there is no other choice.</li>
+      <li TKey="BestStoriesFromDarkestSituations">Even serious setbacks don't mean the game has to end. Try playing out a lost battle - often the best stories come from the darkest situations.</li>
+      <li>Keep weapon stockpiles away from your prisons. Prison breaks are much more dangerous with guns and explosives.</li>
+      <li>When taming animals, make sure you have enough food of the correct type to feed them.</li>
+      <li>Dropping a stone or slag chunk in a doorway will force it open, leaving you vulnerable to hostile wildlife and raiders.</li>
+
+      <!-- Added misc -->
+      <li TKey="CleanLabs">Clean labs with sterile tile give research speed bonuses.</li>
+      <li TKey="ChangeStoryteller">You can change storyteller and playstyle at any time through the options menu.</li>
+      <li TKey="MoreAlliesMoreTraders">The more factions you are allied with, the more random traders and military aid you will receive.</li>
+      <li TKey="CombatDrugsFromInventory">You can use drug policies to have your fighters carry combat drugs like go-juice. A quick dose at the start of combat can win the battle.</li>
+      <li TKey="SchedulesSetLong">Set schedules with long stretches of one activity to minimize travel time.</li>
+
+      <!-- Animals and ranching -->
+      <li TKey="StrawMatting">Straw matting ignores filth. Use it as the floor for your barn.</li>
+      <li TKey="AnimalFilth">Some animals produce a lot of filth. Keep your elephants and cattle outside.</li>
+      <li TKey="PredatorsAndFences">Predators are less likely to hunt animals which are enclosed by fences or barricades.</li>
+
+    </tips>
+  </TipSetDef>
+  
+</Defs>

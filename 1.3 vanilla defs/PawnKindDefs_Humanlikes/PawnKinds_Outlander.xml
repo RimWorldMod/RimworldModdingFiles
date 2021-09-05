@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <PawnKindDef Name="OutlanderBase" Abstract="True">
+    <race>Human</race>
+    <defaultFactionType>OutlanderCivil</defaultFactionType>
+    <chemicalAddictionChance>0.05</chemicalAddictionChance>
+    <backstoryCryptosleepCommonality>0.05</backstoryCryptosleepCommonality>
+    <invNutrition>2.55</invNutrition>
+    <apparelTags>
+      <li>IndustrialBasic</li>
+      <li>IndustrialAdvanced</li>
+    </apparelTags>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="OutlanderBase">
+    <defName>Villager</defName>
+    <label>villager</label>
+    <combatPower>45</combatPower>
+    <itemQuality>Poor</itemQuality>
+    <isFighter>false</isFighter>
+    <gearHealthRange>0.2~2.0</gearHealthRange>
+    <weaponTags>
+      <li>Gun</li>
+      <li>MedievalMeleeBasic</li>
+    </weaponTags>
+    <weaponMoney>65~250</weaponMoney>
+    <apparelMoney>200~400</apparelMoney>
+    <apparelAllowHeadgearChance>0.4</apparelAllowHeadgearChance>
+    <techHediffsChance>0.06</techHediffsChance>
+    <techHediffsMoney>50~600</techHediffsMoney>
+    <techHediffsTags>
+      <li>Poor</li>
+      <li>Simple</li>
+      <li>ImplantEmpireCommon</li>
+    </techHediffsTags>
+    <initialWillRange>0~1</initialWillRange>
+    <initialResistanceRange>10~17</initialResistanceRange>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="OutlanderBase">
+    <defName>Town_Guard</defName>
+    <label>town guard</label>
+    <combatPower>60</combatPower>
+    <isFighter>true</isFighter>
+    <gearHealthRange>0.6~2</gearHealthRange>
+    <apparelTags>
+      <li>IndustrialMilitaryBasic</li>
+      <li>BeltDefensePop</li>
+    </apparelTags>
+    <apparelMoney>400~600</apparelMoney>
+    <apparelAllowHeadgearChance>0.4</apparelAllowHeadgearChance>
+    <weaponTags>
+      <li>Gun</li>
+    </weaponTags>
+    <weaponMoney>250~400</weaponMoney>
+    <techHediffsChance>0.04</techHediffsChance>
+    <techHediffsMoney>200~700</techHediffsMoney>
+    <techHediffsTags>
+      <li>Poor</li>
+      <li>Simple</li>
+      <li>ImplantEmpireCommon</li>
+    </techHediffsTags>
+    <initialWillRange>1~3</initialWillRange>
+    <initialResistanceRange>15~24</initialResistanceRange>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="OutlanderBase">
+    <defName>Town_Trader</defName>
+    <label>town trader</label>
+    <trader>true</trader>
+    <combatPower>45</combatPower>
+    <isFighter>false</isFighter>
+    <gearHealthRange>1~1</gearHealthRange>
+    <itemQuality>Normal</itemQuality>
+    <weaponTags>
+      <li>Gun</li>
+    </weaponTags>
+    <weaponMoney>200~200</weaponMoney>
+    <apparelMoney>400~600</apparelMoney>
+    <apparelTags>
+      <li>IndustrialMilitaryBasic</li>
+      <li>IndustrialMilitaryAdvanced</li>
+      <li>BeltDefensePop</li>
+    </apparelTags>
+    <apparelRequired>
+      <li>Apparel_BowlerHat</li>
+    </apparelRequired>
+    <techHediffsChance>0.15</techHediffsChance>
+    <techHediffsMoney>600~1500</techHediffsMoney>
+    <techHediffsTags>
+      <li>Poor</li>
+      <li>Simple</li>
+      <li>Advanced</li>
+      <li>ImplantEmpireCommon</li>
+    </techHediffsTags>
+    <initialWillRange>2~4</initialWillRange>
+    <initialResistanceRange>12~20</initialResistanceRange>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="OutlanderBase">
+    <defName>Town_Councilman</defName>
+    <label>town councilman</label>
+    <labelPlural>town councilmen</labelPlural>
+    <combatPower>40</combatPower>
+    <factionLeader>true</factionLeader>
+    <minGenerationAge>30</minGenerationAge>
+    <isFighter>false</isFighter>
+    <gearHealthRange>1~1</gearHealthRange>
+    <itemQuality>Good</itemQuality>
+    <weaponMoney>200~200</weaponMoney>
+    <weaponTags>
+      <li>Gun</li>
+    </weaponTags>
+    <apparelMoney>700~1200</apparelMoney>
+    <apparelTags>
+      <li>IndustrialMilitaryBasic</li>
+      <li>BeltDefensePop</li>
+    </apparelTags>
+    <apparelRequired>
+      <li>Apparel_BowlerHat</li>
+    </apparelRequired>
+    <techHediffsChance>0.15</techHediffsChance>
+    <techHediffsMoney>600~1500</techHediffsMoney>
+    <techHediffsTags>
+      <li>Simple</li>
+      <li>Advanced</li>
+      <li>ImplantEmpireCommon</li>
+    </techHediffsTags>
+    <initialWillRange>3~5</initialWillRange>
+    <initialResistanceRange>7~11</initialResistanceRange>
+  </PawnKindDef>
+
+</Defs>

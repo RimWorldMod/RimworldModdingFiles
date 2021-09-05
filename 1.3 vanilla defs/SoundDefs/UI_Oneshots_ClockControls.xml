@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Defs>
+
+  <SoundDef>
+    <defName>Clock_Stop</defName>  
+    <maxSimultaneous>1</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <onCamera>True</onCamera>      
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>UI/Clock/ClockStops</clipPath>
+          </li>
+        </grains>      
+        <volumeRange>15~15</volumeRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Clock_Normal</defName>  
+    <maxSimultaneous>1</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <onCamera>True</onCamera>      
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>UI/Clock/ClockTickingNormal</clipPath>
+          </li>
+        </grains>      
+        <volumeRange>15~15</volumeRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Clock_Fast</defName>  
+    <maxSimultaneous>1</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <onCamera>True</onCamera>      
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>UI/Clock/ClockTickingFast</clipPath>
+          </li>
+        </grains>      
+        <volumeRange>15~15</volumeRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Clock_Superfast</defName>  
+    <maxSimultaneous>1</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <onCamera>True</onCamera>      
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>UI/Clock/ClockTickingSuperfast</clipPath>
+          </li>
+        </grains>      
+        <volumeRange>15~15</volumeRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+</Defs>

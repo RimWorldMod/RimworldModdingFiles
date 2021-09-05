@@ -1,0 +1,213 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ResearchProjectDef>
+    <defName>MicroelectronicsBasics</defName>
+    <label>microelectronics</label>
+    <description>Work with complex microelectronics. This unlocks the hi-tech research bench and comms console.</description>
+    <baseCost>3000</baseCost>
+    <techLevel>Industrial</techLevel>
+    <prerequisites>
+      <li>Electricity</li>
+    </prerequisites>
+    <researchViewX>10.00</researchViewX>
+    <researchViewY>2.90</researchViewY>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>FlatscreenTelevision</defName>
+    <label>flatscreen television</label>
+    <description>Produce high-resolution flatscreen televisions for greater enjoyment.</description>
+    <baseCost>2000</baseCost>
+    <techLevel>Industrial</techLevel>
+    <prerequisites>
+      <li>TubeTelevision</li>
+      <li>MicroelectronicsBasics</li>
+    </prerequisites>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <researchViewX>11.00</researchViewX>
+    <researchViewY>0.80</researchViewY>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>MoisturePump</defName>
+    <label>moisture pump</label>
+    <description>Construct moisture pumps, which very slowly normalize the moisture in the ground around them. They can turn wet ground dry and convert soft sand into normal sand.</description>
+    <baseCost>1200</baseCost>
+    <techLevel>Industrial</techLevel>
+    <prerequisites>
+      <li>MicroelectronicsBasics</li>
+    </prerequisites>
+    <hiddenPrerequisites>
+      <li>Machining</li>
+    </hiddenPrerequisites>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <researchViewX>12.00</researchViewX>
+    <researchViewY>0.80</researchViewY>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>HospitalBed</defName>
+    <label>hospital bed</label>
+    <description>Construct hospital beds which improve medical outcomes.</description>
+    <baseCost>1200</baseCost>
+    <techLevel>Industrial</techLevel>
+    <prerequisites>
+      <li>MicroelectronicsBasics</li>
+    </prerequisites>
+    <hiddenPrerequisites>
+      <li>SterileMaterials</li>
+      <li>ComplexFurniture</li>
+    </hiddenPrerequisites>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <researchViewX>12.00</researchViewX>
+    <researchViewY>1.50</researchViewY>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>DeepDrilling</defName>
+    <label>deep drilling</label>
+    <description>Build deep drills for extracting resources from underground. You'll need a ground-penetrating scanner to find the resources.</description>
+    <baseCost>1000</baseCost>
+    <techLevel>Industrial</techLevel>
+    <prerequisites>
+      <li>MicroelectronicsBasics</li>
+    </prerequisites>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <researchViewX>12.00</researchViewX>
+    <researchViewY>2.20</researchViewY>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>GroundPenetratingScanner</defName>
+    <label>ground-penetrating scanner</label>
+    <description>Build ground-penetrating scanners that can detect drillable resources under the surface. Requires an advanced component to construct.</description>
+    <baseCost>1000</baseCost>
+    <techLevel>Industrial</techLevel>
+    <prerequisites>
+      <li>DeepDrilling</li>
+    </prerequisites>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <researchViewX>13.00</researchViewX>
+    <researchViewY>2.20</researchViewY>
+  </ResearchProjectDef>
+  
+  <ResearchProjectDef>
+    <defName>TransportPod</defName>
+    <label>transport pod</label>
+    <description>Construct launchable transport pods that you can use to send people and supplies long distances across the planet's surface. Can be used for raiding, travel, sending gifts, and more.</description>
+    <baseCost>1000</baseCost>
+    <techLevel>Industrial</techLevel>
+    <prerequisites>
+      <li>MicroelectronicsBasics</li>
+    </prerequisites>
+    <hiddenPrerequisites>
+      <li>BiofuelRefining</li>
+      <li>Machining</li>
+    </hiddenPrerequisites>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <researchViewX>11.00</researchViewX>
+    <researchViewY>2.20</researchViewY>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>MedicineProduction</defName>
+    <label>medicine production</label>
+    <description>Produce standard industrial-tech medicine by combining herbal medicine, neutroamine, and cloth.</description>
+    <baseCost>1500</baseCost>
+    <techLevel>Industrial</techLevel>
+    <prerequisites>
+      <li>DrugProduction</li>
+      <li>MicroelectronicsBasics</li>
+    </prerequisites>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <researchViewX>11.00</researchViewX>
+    <researchViewY>0.00</researchViewY>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>LongRangeMineralScanner</defName>
+    <label>long-range mineral scanner</label>
+    <description>Construct long-range mineral scanners your researchers can use to detect precious minerals across the planet. Can be tuned to find a specific mineral. Requires advanced components to construct.</description>
+    <baseCost>2000</baseCost>
+    <techLevel>Industrial</techLevel>
+    <prerequisites>
+      <li>MicroelectronicsBasics</li>
+    </prerequisites>
+    <hiddenPrerequisites>
+      <li>Machining</li>
+    </hiddenPrerequisites>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <researchViewX>12.00</researchViewX>
+    <researchViewY>0.00</researchViewY>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>ShieldBelt</defName>
+    <label>shields</label>
+    <description>Build wearable shield gear. Shields use momentum-repulsion technology to prevent projectiles from traversing the field boundary.</description>
+    <baseCost>1000</baseCost>
+    <techLevel>Industrial</techLevel>
+    <prerequisites>
+      <li>MicroelectronicsBasics</li>
+    </prerequisites>
+    <hiddenPrerequisites>
+      <li>ComplexClothing</li>
+    </hiddenPrerequisites>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <researchViewX>11.00</researchViewX>
+    <researchViewY>1.50</researchViewY>
+  </ResearchProjectDef>
+
+  <!--===================== Machining and its children sub-tier ======================-->
+
+ <ResearchProjectDef>
+    <defName>PrecisionRifling</defName>
+    <label>precision rifling</label>
+    <description>Craft precisely-machined guns like assault rifles and sniper rifles.</description>
+    <baseCost>1400</baseCost>
+    <techLevel>Industrial</techLevel>
+    <prerequisites>
+      <li>GasOperation</li>
+      <li>MicroelectronicsBasics</li>
+    </prerequisites>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+   <researchViewX>11.00</researchViewX>
+   <researchViewY>3.90</researchViewY>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>HeavyTurrets</defName>
+    <label>autocannon turret</label>
+    <description>Produce the heavy autocannon turret.</description>
+    <baseCost>1600</baseCost>
+    <techLevel>Industrial</techLevel>
+    <prerequisites>
+      <li>GunTurrets</li>
+      <li>GasOperation</li>
+      <li>MicroelectronicsBasics</li>
+    </prerequisites>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <hideWhen>
+      <turretsDisabled>true</turretsDisabled>
+    </hideWhen>
+    <researchViewX>11.00</researchViewX>
+    <researchViewY>3.20</researchViewY>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>MultibarrelWeapons</defName>
+    <label>multibarrel weapons</label>
+    <description>Assemble miniguns.</description>
+    <baseCost>2600</baseCost>
+    <techLevel>Industrial</techLevel>
+    <prerequisites>
+      <li>GasOperation</li>
+      <li>MicroelectronicsBasics</li>
+    </prerequisites>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <researchViewX>11.00</researchViewX>
+    <researchViewY>4.60</researchViewY>
+  </ResearchProjectDef>
+
+</Defs>

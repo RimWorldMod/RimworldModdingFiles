@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<AbilityDef>
+    <defName>Name</defName>
+    <label>Label</label>
+    <description>Description</description>
+    <level>number</level>
+    <iconPath>Path/Icon</iconPath>
+    <writeCombatLog>true_or_false</writeCombatLog>
+    <hotKey>Hotkey</hotKey>
+    <statBases>
+      <Ability_EntropyGain>number</Ability_EntropyGain>
+      <Ability_PsyfocusCost>number</Ability_PsyfocusCost>
+      <Ability_Duration>number</Ability_Duration>
+    </statBases>
+    <verbProperties>
+      <warmupTime>number</warmupTime>
+      <range>number</range>
+      <targetParams>
+        <canTargetAnimals>true_or_false</canTargetAnimals>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class = "ClassName">
+        <compClass>ClassName</compClass>
+        <durationMultiplier>Name</durationMultiplier>
+        <psychic>true_or_false</psychic>
+        <goodwillImpact>number</goodwillImpact>
+      </li>
+      <li Class="ClassName">
+        <fleckDef>Name</fleckDef>
+      </li>
+    </comps>
+  </AbilityDef>
+
+</Defs>

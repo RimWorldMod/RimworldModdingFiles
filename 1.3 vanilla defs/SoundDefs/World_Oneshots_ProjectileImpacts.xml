@@ -1,0 +1,230 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Defs>
+
+  <SoundDef>
+    <defName>MetalHitImportant</defName>  
+    <context>MapOnly</context>   
+    <maxSimultaneous>1</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Misc/Hiss/MetalHit</clipPath>
+          </li>
+        </grains>      
+        <volumeRange>37~37</volumeRange>      
+        <pitchRange>0.8940217~1.190761</pitchRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>BulletImpact_Ground</defName>  
+    <context>MapOnly</context>   
+    <maxSimultaneous>1</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Impact/Bullet_Ground</clipFolderPath>
+          </li>
+        </grains>      
+        <volumeRange>6.956522~22.17392</volumeRange>      
+        <pitchRange>0.936413~1.423913</pitchRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>BulletImpact_Wood</defName>  
+    <context>MapOnly</context>   
+    <maxSimultaneous>1</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Impact/Bullet_Wood</clipFolderPath>
+          </li>
+        </grains>      
+        <volumeRange>6.956522~22.17392</volumeRange>      
+        <pitchRange>0.936413~1.423913</pitchRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>BulletImpact_Metal</defName>  
+    <context>MapOnly</context>   
+    <maxSimultaneous>1</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Impact/Bullet_Metal</clipFolderPath>
+          </li>
+        </grains>      
+        <volumeRange>6.956522~22.82609</volumeRange>      
+        <pitchRange>0.9152174~1.084783</pitchRange>      
+        <repeatMode>Any</repeatMode>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>BulletImpact_Flesh</defName>  
+    <context>MapOnly</context>   
+    <maxSimultaneous>1</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Impact/Bullet_Flesh</clipFolderPath>
+          </li>
+        </grains>      
+        <volumeRange>7~23</volumeRange>      
+        <pitchRange>0.9152174~1.169566</pitchRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>PunchThroughRoofMetal</defName>
+    <context>MapOnly</context> 
+    <maxSimultaneous>1</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Impact/Bullet_Metal</clipFolderPath>
+          </li>
+        </grains>
+        <volumeRange>25~50</volumeRange>
+        <pitchRange>0.6~0.8</pitchRange>
+        <repeatMode>Any</repeatMode>
+      </li>
+    </subSounds>
+  </SoundDef>
+  
+  <SoundDef>
+    <defName>Interceptor_BlockProjectile</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>1</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Misc/EnergyShield/Absorb</clipFolderPath>
+          </li>
+        </grains>
+        <volumeRange>40~40</volumeRange>
+        <distRange>10~40</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>EnergyShield_AbsorbDamage</defName>  
+    <context>MapOnly</context>   
+    <maxSimultaneous>4</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Misc/EnergyShield/Absorb</clipFolderPath>
+          </li>
+        </grains>      
+        <volumeRange>40~40</volumeRange>      
+        <pitchRange>0.95~1.05</pitchRange>      
+        <distRange>0~70</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>EnergyShield_Broken</defName>  
+    <context>MapOnly</context>   
+    <maxSimultaneous>1</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Misc/EnergyShield/Broken</clipFolderPath>
+          </li>
+        </grains>      
+        <volumeRange>40.58823~40.58823</volumeRange>      
+        <distRange>0~70</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>EnergyShield_Reset</defName>  
+    <context>MapOnly</context>   
+    <maxSimultaneous>1</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Misc/EnergyShield/Reset/Shield_Reset</clipPath>
+          </li>
+        </grains>      
+        <volumeRange>24.11765~24.11765</volumeRange>      
+        <distRange>0~70</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Deflect_Metal</defName>  
+    <context>MapOnly</context>  
+    <maxSimultaneous>2</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Impact/Deflect/Deflect_Metal</clipFolderPath>
+          </li>
+        </grains>      
+        <volumeRange>33~38</volumeRange>      
+        <pitchRange>0.96~1.07</pitchRange>      
+        <distRange>0~70</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Deflect_General</defName>  
+    <context>MapOnly</context>  
+    <maxSimultaneous>2</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Impact/Deflect/Deflect_General</clipFolderPath>
+          </li>
+        </grains>      
+        <volumeRange>65~75</volumeRange>      
+        <pitchRange>0.96~1.12</pitchRange>      
+        <distRange>0~70</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>ThumpCannon_Impact</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>1</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Impact/ThumpCannon</clipFolderPath>
+          </li>
+        </grains>
+        <volumeRange>60~70</volumeRange>
+        <pitchRange>0.9152174~1.084783</pitchRange>
+        <repeatMode>Any</repeatMode>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+</Defs>

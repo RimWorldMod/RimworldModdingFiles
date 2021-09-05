@@ -1,0 +1,276 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Defs>
+
+  <SoundDef>
+    <defName>CryptosleepCasket_Eject</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>1</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Misc/CryptosleepCasket/CryptosleepCasketEject</clipPath>
+          </li>
+        </grains>
+        <volumeRange>40~40</volumeRange>
+        <distRange>10~70</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+  
+  <SoundDef>
+    <defName>CryptosleepCasket_Accept</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>1</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Misc/CryptosleepCasket/CryptosleepCasketAccept</clipPath>
+          </li>
+        </grains>
+        <volumeRange>40~40</volumeRange>
+        <distRange>10~70</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Hive_Spawn</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>1</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Misc/Hive/Spawn</clipPath>
+          </li>
+        </grains>
+        <volumeRange>40~40</volumeRange>
+        <distRange>10~100</distRange>
+        <pitchRange>0.5~0.9</pitchRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>MechanoidsWakeUp</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>1</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Misc/MechanoidsWakeUp</clipFolderPath>
+          </li>
+        </grains>
+        <volumeRange>40~40</volumeRange>
+        <distRange>10~80</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>ShipReactor_Startup</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>1</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Exotic/Ship_Reactor/ShipReactor_Startup_01a</clipPath>
+          </li>
+        </grains>
+        <volumeRange>42</volumeRange>
+        <distRange>20~50</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>BuildingDestroyed_Wood_Big</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Impact/BuildingDestroyed/Wood/Big</clipFolderPath>
+          </li>
+        </grains>
+        <volumeRange>30</volumeRange>
+        <distRange>20~50</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>BuildingDestroyed_Wood_Medium</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Impact/BuildingDestroyed/Wood/Medium</clipFolderPath>
+          </li>
+        </grains>
+        <volumeRange>30</volumeRange>
+        <distRange>20~50</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>BuildingDestroyed_Wood_Small</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Impact/BuildingDestroyed/Wood/Small</clipFolderPath>
+          </li>
+        </grains>
+        <volumeRange>30</volumeRange>
+        <distRange>20~50</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>BuildingDestroyed_Metal_Big</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Impact/BuildingDestroyed/Metal/Big</clipFolderPath>
+          </li>
+        </grains>
+        <volumeRange>30</volumeRange>
+        <distRange>20~50</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>BuildingDestroyed_Metal_Medium</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Impact/BuildingDestroyed/Metal/Medium</clipFolderPath>
+          </li>
+        </grains>
+        <volumeRange>30</volumeRange>
+        <distRange>20~50</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>BuildingDestroyed_Metal_Small</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Impact/BuildingDestroyed/Metal/Small</clipFolderPath>
+          </li>
+        </grains>
+        <volumeRange>30</volumeRange>
+        <distRange>20~50</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>BuildingDestroyed_Stone_Big</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Impact/BuildingDestroyed/Stone/Big</clipFolderPath>
+          </li>
+        </grains>
+        <volumeRange>30</volumeRange>
+        <distRange>20~50</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>BuildingDestroyed_Stone_Medium</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Impact/BuildingDestroyed/Stone/Medium</clipFolderPath>
+          </li>
+        </grains>
+        <volumeRange>30</volumeRange>
+        <distRange>20~50</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>BuildingDestroyed_Stone_Small</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Impact/BuildingDestroyed/Stone/Small</clipFolderPath>
+          </li>
+        </grains>
+        <volumeRange>30</volumeRange>
+        <distRange>20~50</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>BuildingDestroyed_Soft_Medium</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Impact/BuildingDestroyed/Soft/Medium</clipFolderPath>
+          </li>
+        </grains>
+        <volumeRange>17</volumeRange>
+        <distRange>20~50</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>BuildingDestroyed_Soft_Small</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Impact/BuildingDestroyed/Soft/Small</clipFolderPath>
+          </li>
+        </grains>
+        <volumeRange>20</volumeRange>
+        <distRange>20~50</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+</Defs>

@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Defs>
+
+  <SoundDef>
+    <defName>MortarRound_Ambient</defName>  
+    <sustain>True</sustain>  
+    <context>MapOnly</context>  
+    <maxSimultaneous>1</maxSimultaneous>  
+    <priorityMode>PrioritizeNearest</priorityMode>  
+    <subSounds>
+      <li>
+        <muteWhenPaused>True</muteWhenPaused>      
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Weapon/Artillery/MortarRound_Ambient</clipFolderPath>
+          </li>
+        </grains>      
+        <volumeRange>13.17392~13.17392</volumeRange>      
+        <pitchRange>0.95~1.05</pitchRange>      
+        <sustainAttack>0.1</sustainAttack>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Mortar_LaunchA</defName>  
+    <context>MapOnly</context>  
+    <maxSimultaneous>1</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Weapon/Artillery/Mortar_Fire</clipFolderPath>
+          </li>
+        </grains>      
+        <pitchRange>1.4~1.6</pitchRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Artillery_HitThickRoof</defName>  
+    <context>MapOnly</context>  
+    <maxSimultaneous>1</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Weapon/Artillery/ArtilleryHitThickRoof</clipFolderPath>
+          </li>
+        </grains>      
+        <volumeRange>39.41176~38.23529</volumeRange>      
+        <pitchRange>0.38539~0.4330179</pitchRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>MortarRound_PreImpact</defName>  
+    <context>MapOnly</context>  
+    <maxSimultaneous>1</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Weapon/Artillery/Mortar_Incoming_Alt2</clipFolderPath>
+          </li>
+        </grains>      
+        <volumeRange>28.82353~37.05883</volumeRange>
+        <tempoAffectedByGameSpeed>true</tempoAffectedByGameSpeed>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Artillery_ShellLoaded</defName>  
+    <context>MapOnly</context>  
+    <maxSimultaneous>2</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Weapon/Artillery/Artillery_Load</clipFolderPath>
+          </li>
+        </grains>      
+        <volumeRange>15~15</volumeRange>      
+        <pitchRange>1~1.1</pitchRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>MortarIncendiary_Explode</defName>  
+    <context>MapOnly</context>  
+    <maxSimultaneous>1</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Weapon/Artillery/Mortar_Explode_Incendiary</clipFolderPath>
+          </li>
+        </grains>      
+        <volumeRange>67.05882~72.94118</volumeRange>      
+        <pitchRange>0.8516304~1.254348</pitchRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>MortarBomb_Explode</defName>  
+    <context>MapOnly</context>  
+    <maxSimultaneous>1</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Weapon/Artillery/Mortar_Explode_Dry</clipFolderPath>
+          </li>
+        </grains>      
+        <volumeRange>64.70588~67.05882</volumeRange>      
+        <pitchRange>0.8516304~1.254348</pitchRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+</Defs>

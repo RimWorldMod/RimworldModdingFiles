@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="MakeableDrugBase">
+    <defName>Flake</defName>
+    <label>flake</label>
+    <description>A flaky white preparation of psychite that can be smoked to induce a short but powerful euphoric state. While it is cheap to produce and extremely pleasurable to use, it is exceptionally addictive. Flake is known for destroying lives, communities, and entire societies.</description>
+    <descriptionHyperlinks>
+      <HediffDef>FlakeHigh</HediffDef>
+      <HediffDef>PsychiteTolerance</HediffDef>
+      <HediffDef>PsychiteAddiction</HediffDef>
+      <HediffDef>ChemicalDamageSevere</HediffDef>
+    </descriptionHyperlinks>
+    <graphicData>
+      <texPath>Things/Item/Drug/Yayo</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+      <color>(150,170,150)</color>
+      <drawSize>0.75</drawSize>
+    </graphicData>
+    <rotatable>false</rotatable>
+    <statBases>
+      <WorkToMake>250</WorkToMake>
+      <MarketValue>14</MarketValue>
+      <Mass>0.05</Mass>
+    </statBases>
+    <techLevel>Industrial</techLevel>
+    <minRewardCount>10</minRewardCount>
+    <ingestible>
+      <foodType>Processed</foodType>
+      <joyKind>Chemical</joyKind>
+      <joy>0.70</joy>
+      <baseIngestTicks>650</baseIngestTicks>
+      <nurseable>true</nurseable>
+      <drugCategory>Hard</drugCategory>
+      <ingestSound>Ingest_Smoke</ingestSound>
+      <ingestEffect>Smoke_Flake</ingestEffect>
+      <ingestEffectEat>EatVegetarian</ingestEffectEat>
+      <ingestHoldOffsetStanding>
+        <northDefault>
+          <offset>(0.23,0,0.065)</offset>
+        </northDefault>
+      </ingestHoldOffsetStanding>
+      <ingestHoldUsesTable>false</ingestHoldUsesTable>
+      <ingestCommandString>Smoke {0}</ingestCommandString>
+      <ingestReportString>Smoking {0}.</ingestReportString>
+      <useEatingSpeedStat>false</useEatingSpeedStat>
+      <outcomeDoers>
+        <li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>FlakeHigh</hediffDef>
+          <severity>0.75</severity>
+          <toleranceChemical>Psychite</toleranceChemical>
+        </li>
+        <li Class="IngestionOutcomeDoer_OffsetNeed">
+          <need>Rest</need>
+          <offset>0.2</offset>
+          <toleranceChemical>Psychite</toleranceChemical>
+        </li>
+        <li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>PsychiteTolerance</hediffDef>
+          <severity>0.04</severity>
+          <divideByBodySize>true</divideByBodySize>
+        </li>
+      </outcomeDoers>
+    </ingestible>
+    <recipeMaker>
+      <researchPrerequisite>PsychiteRefining</researchPrerequisite>
+      <recipeUsers>
+        <li>DrugLab</li>
+      </recipeUsers>
+      <soundWorking>Recipe_Drug</soundWorking>
+    </recipeMaker>
+    <costList>
+      <PsychoidLeaves>4</PsychoidLeaves>
+    </costList>
+    <comps>
+      <li Class="CompProperties_Drug">
+        <chemical>Psychite</chemical>
+        <addictiveness>0.05</addictiveness>
+        <existingAddictionSeverityOffset>0.30</existingAddictionSeverityOffset>
+        <needLevelOffset>0.9</needLevelOffset>
+        <listOrder>110</listOrder>
+        <overdoseSeverityOffset>0.18~0.35</overdoseSeverityOffset>
+        <largeOverdoseChance>0.015</largeOverdoseChance>
+      </li>
+    </comps>
+  </ThingDef>
+  
+  <HediffDef>
+    <defName>FlakeHigh</defName>
+    <label>high on flake</label>
+    <labelNoun>a flake high</labelNoun>
+    <description>Active flake in the bloodstream. Generates a euphoric, debilitating high.</description>
+    <hediffClass>Hediff_High</hediffClass>
+    <defaultLabelColor>(1,0,0.5)</defaultLabelColor>
+    <scenarioCanAdd>true</scenarioCanAdd>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-3.0</severityPerDay>
+        <showHoursToRecover>true</showHoursToRecover>
+      </li>
+    </comps>
+      <stages>
+        <li>
+          <painFactor>0.5</painFactor>
+          <restFallFactor>0.33</restFallFactor>
+        </li>
+      </stages>
+  </HediffDef>
+  
+  <ThoughtDef>
+    <defName>FlakeHigh</defName>
+    <workerClass>ThoughtWorker_Hediff</workerClass>
+    <hediff>FlakeHigh</hediff>
+    <validWhileDespawned>true</validWhileDespawned>
+    <stages>
+      <li>
+        <label>high on flake</label>
+        <description>So good, so good.</description>
+        <baseMoodEffect>35</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+</Defs>

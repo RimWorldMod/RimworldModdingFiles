@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  
+  <!--===================== Body Definitions ====================-->
+  
+  
+  <BodyDef>
+    <defName>BodyName</defName>
+    
+    <label>body_label</label>
+
+    <corePart>
+      
+      <def>Body</def>
+      
+      <height>Middle</height>
+      
+      <depth>Depth</depth>
+      
+      <parts>
+        
+        <li>
+          
+          <def>PartName</def>
+
+          <customLabel>LabelName</customLabel>
+          
+          <coverage>number</coverage>
+
+          <groups>
+            
+            <li>GroupName</li>
+            
+          </groups>
+
+          <parts>
+            
+            <li>
+              
+            </li>
+            
+          </parts>
+          
+        </li>
+        
+      </parts>
+      
+    </corePart>
+    
+  </BodyDef>
+
+
+  <!--===================== Body Part Groups ====================-->
+  
+  
+  <BodyPartGroupDef>
+
+    <defName>GroupName</defName>
+
+    <label>Group_label</label>
+
+    <listOrder>number</listOrder>
+
+  </BodyPartGroupDef>
+
+
+  <!--===================== Body Part definitions ====================-->
+  
+
+  <BodyPartDef>
+    
+    <defName>PartName</defName>
+    
+    <label>Part_label</label>
+    
+    <hitPoints>number</hitPoints>
+
+    <frostbiteVulnerability>number</frostbiteVulnerability>
+    
+    <permanentInjuryChanceFactor>number</permanentInjuryChanceFactor>
+    
+    <solid>true_or_false</solid>
+    
+    <alive>true_or_false</alive>
+    
+    <bleedRate>number</bleedRate>
+    
+    <skinCovered>true_or_false</skinCovered>
+
+    <canScarify>true_or_false</canScarify>
+
+    <socketed>true_or_false</socketed>
+
+    <beautyRelated>true_or_false</beautyRelated>
+    
+    <canSuggestAmputation>true_or_false</canSuggestAmputation>
+
+    <pawnGeneratorCanAmputate>true_or_false</pawnGeneratorCanAmputate>
+
+    <destroyableByDamage>true_or_false</destroyableByDamage>
+
+    <spawnThingOnRemoved>ThingName</spawnThingOnRemoved>
+
+    <conceptual>true_or_false</conceptual>
+
+    <tags>
+      
+      <li>Tag</li>
+      <li>Tag</li>
+
+    </tags>
+
+    <hitChanceFactors>
+      
+      <li>s
+        
+        <key>HitType</key>
+        
+        <value>number</value>
+        
+      </li>
+      
+    </hitChanceFactors>
+
+    </BodyPartDef>
+  
+</Defs>

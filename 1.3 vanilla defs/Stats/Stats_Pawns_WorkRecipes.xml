@@ -1,0 +1,302 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- Dumb recipes - not affected by skill because there's no skill component -->
+
+  <StatDef>
+    <defName>SmeltingSpeed</defName>
+    <label>smelting speed</label>
+    <description>The speed at which this person smelts things.\n\nSince smelting is dumb labor, smelting speed is not affected by any skill.</description>
+    <category>PawnWork</category>
+    <defaultBaseValue>1</defaultBaseValue>
+    <minValue>0.1</minValue>
+    <toStringStyle>PercentZero</toStringStyle>
+    <statFactors>
+      <li>WorkSpeedGlobal</li>
+    </statFactors>
+    <capacityFactors>
+      <li>
+        <capacity>Sight</capacity>
+        <weight>0.3</weight>
+        <max>1</max>
+      </li>
+      <li>
+        <capacity>Manipulation</capacity>
+        <weight>1</weight>
+      </li>
+    </capacityFactors>
+    <displayPriorityInCategory>4500</displayPriorityInCategory>
+  </StatDef>
+
+  <!-- Standard-speed recipes - speed not affected by skill because there's no skill involved OR because the skill affects product quality instead of production speed -->
+
+<StatDef>
+    <defName>GeneralLaborSpeed</defName>
+    <label>general labor speed</label>
+    <description>The speed at which this person carries out general labor like making stone blocks, making chemfuel at a refinery, burning items, tailoring clothes, creating art, smithing armor and weapons or smelting slag. This stat applies both to activities that involve no skill, as well as those where the skill affects the quality of the product instead of the speed of production.</description>
+    <category>PawnWork</category>
+    <defaultBaseValue>1</defaultBaseValue>
+    <minValue>0.1</minValue>
+    <toStringStyle>PercentZero</toStringStyle>
+    <statFactors>
+      <li>WorkSpeedGlobal</li>
+    </statFactors>
+    <capacityFactors>
+      <li>
+        <capacity>Manipulation</capacity>
+        <weight>1</weight>
+      </li>
+      <li>
+        <capacity>Sight</capacity>
+        <weight>0.5</weight>
+        <max>1</max>
+      </li>
+    </capacityFactors>
+    <displayPriorityInCategory>4999</displayPriorityInCategory>
+  </StatDef>
+
+  <!-- Production recipes - speed affected by skill because there is no output quality -->
+
+  <StatDef>
+    <defName>DrugSynthesisSpeed</defName>
+    <label>drug synthesis speed</label>
+    <description>How fast this character synthesizes complex chemical drugs.</description>
+    <category>PawnWork</category>
+    <defaultBaseValue>1</defaultBaseValue>
+    <minValue>0.1</minValue>
+    <toStringStyle>PercentZero</toStringStyle>
+    <supressDisabledError>true</supressDisabledError>
+    <statFactors>
+      <li>WorkSpeedGlobal</li>
+    </statFactors>
+    <skillNeedFactors>
+      <li Class="SkillNeed_BaseBonus">
+        <skill>Intellectual</skill>
+        <baseValue>0.3</baseValue>
+        <bonusPerLevel>0.0875</bonusPerLevel>
+      </li>
+    </skillNeedFactors>
+    <capacityFactors>
+      <li>
+        <capacity>Sight</capacity>
+        <weight>0.6</weight>
+        <max>1</max>
+      </li>
+      <li>
+        <capacity>Manipulation</capacity>
+        <weight>1</weight>
+      </li>
+    </capacityFactors>
+    <displayPriorityInCategory>4511</displayPriorityInCategory>
+  </StatDef>
+
+  <StatDef>
+    <defName>CookSpeed</defName>
+    <label>cooking speed</label>
+    <description>The speed at which this person cooks meals.</description>
+    <category>PawnWork</category>
+    <defaultBaseValue>0</defaultBaseValue>
+    <noSkillOffset>20</noSkillOffset>
+    <minValue>0.1</minValue>
+    <toStringStyle>PercentZero</toStringStyle>
+    <toStringStyleUnfinalized>FloatOne</toStringStyleUnfinalized>
+    <postProcessStatFactors>
+      <li>WorkSpeedGlobal</li>
+    </postProcessStatFactors>
+    <skillNeedOffsets>
+      <li Class="SkillNeed_BaseBonus">
+        <skill>Cooking</skill>
+        <baseValue>0</baseValue>
+        <bonusPerLevel>1</bonusPerLevel>
+      </li>
+    </skillNeedOffsets>
+    <capacityOffsets>
+      <li>
+        <capacity>Sight</capacity>
+        <scale>4</scale>
+        <max>1.5</max>
+      </li>
+      <li>
+        <capacity>Manipulation</capacity>
+        <scale>16</scale>
+        <max>1.5</max>
+      </li>
+    </capacityOffsets>
+    <postProcessCurve>
+      <points>
+        <li>(-20, 0.01)</li>
+        <li>(0, 0.4)</li>
+        <li>(20, 1.6)</li>
+      </points>
+    </postProcessCurve>
+    <displayPriorityInCategory>4541</displayPriorityInCategory>
+  </StatDef>
+
+  <StatDef>
+    <defName>FoodPoisonChance</defName>
+    <label>food poison chance</label>
+    <labelForFullStatList>food poison chance (chance to poison a meal)</labelForFullStatList>
+    <description>The probability that this character will inadvertently poison a meal they cook.\n\nAnyone who eats a food-poisoned meal will be temporarily debilitated with pain, weakness, and vomiting.</description>
+    <category>PawnWork</category>
+    <defaultBaseValue>1</defaultBaseValue>
+    <minValue>0</minValue>
+    <toStringStyle>PercentTwo</toStringStyle>
+    <skillNeedFactors>
+      <li Class="SkillNeed_Direct">
+        <skill>Cooking</skill>
+        <valuesPerLevel>
+          <li>0.050</li>
+          <li>0.040</li>
+          <li>0.030</li>
+          <li>0.020</li>
+          <li>0.015</li>
+          <li>0.010</li>
+          <li>0.005</li>
+          <li>0.0025</li>
+          <li>0.0015</li>
+          <li>0.001</li>
+          <li>0.001</li>
+          <li>0.001</li>
+          <li>0.001</li>
+          <li>0.001</li>
+          <li>0.001</li>
+          <li>0.001</li>
+          <li>0.001</li>
+          <li>0.001</li>
+          <li>0.001</li>
+          <li>0.001</li>
+        </valuesPerLevel>
+      </li>
+    </skillNeedFactors>
+    <displayPriorityInCategory>4542</displayPriorityInCategory>
+  </StatDef>
+
+  <StatDef>
+    <defName>DrugCookingSpeed</defName>
+    <label>drug cooking speed</label>
+    <description>The speed at which this person brews beer and tea, or makes simple drug products like smokeleaf joints.</description>
+    <category>PawnWork</category>
+    <defaultBaseValue>1</defaultBaseValue>
+    <minValue>0.1</minValue>
+    <toStringStyle>PercentZero</toStringStyle>
+    <statFactors>
+      <li>WorkSpeedGlobal</li>
+    </statFactors>
+    <skillNeedFactors>
+      <li Class="SkillNeed_BaseBonus">
+        <skill>Cooking</skill>
+        <baseValue>0.4</baseValue>
+        <bonusPerLevel>0.06</bonusPerLevel>
+      </li>
+    </skillNeedFactors>
+    <capacityFactors>
+      <li>
+        <capacity>Sight</capacity>
+        <weight>0.3</weight>
+        <max>1</max>
+      </li>
+      <li>
+        <capacity>Manipulation</capacity>
+        <weight>1</weight>
+      </li>
+    </capacityFactors>
+    <supressDisabledError>true</supressDisabledError>
+    <displayPriorityInCategory>4510</displayPriorityInCategory>
+  </StatDef>
+
+  <StatDef Abstract="True" Name="ButcherySpeedBase">
+    <category>PawnWork</category>
+    <defaultBaseValue>1</defaultBaseValue>
+    <minValue>0.1</minValue>
+    <toStringStyle>PercentZero</toStringStyle>
+    <statFactors>
+      <li>WorkSpeedGlobal</li>
+    </statFactors>
+    <capacityFactors>
+      <li>
+        <capacity>Sight</capacity>
+        <weight>0.4</weight>
+        <max>1</max>
+      </li>
+      <li>
+        <capacity>Manipulation</capacity>
+        <weight>1</weight>
+      </li>
+    </capacityFactors>
+    <displayPriorityInCategory>4500</displayPriorityInCategory>
+  </StatDef>
+
+  <StatDef ParentName="ButcherySpeedBase">
+    <defName>ButcheryFleshSpeed</defName>
+    <label>butchery speed</label>
+    <description>The speed at which this person butchers flesh creatures.</description>
+    <skillNeedFactors>
+      <li Class="SkillNeed_BaseBonus">
+        <skill>Cooking</skill>
+        <baseValue>0.4</baseValue>
+        <bonusPerLevel>0.06</bonusPerLevel>
+      </li>
+    </skillNeedFactors>
+  </StatDef>
+
+  <StatDef ParentName="ButcherySpeedBase">
+    <defName>ButcheryMechanoidSpeed</defName>
+    <label>mechanoid shredding speed</label>
+    <description>The speed at which this person can shred a mechanoid for resources.</description>
+    <skillNeedFactors>
+      <li Class="SkillNeed_BaseBonus">
+        <skill>Crafting</skill>
+        <baseValue>0.4</baseValue>
+        <bonusPerLevel>0.06</bonusPerLevel>
+      </li>
+    </skillNeedFactors>
+  </StatDef>
+
+  <StatDef Abstract="True" Name="ButcheryEfficiencyBase" >
+    <category>PawnWork</category>
+    <defaultBaseValue>1</defaultBaseValue>
+    <minValue>0</minValue>
+    <toStringStyle>PercentZero</toStringStyle>
+    <capacityFactors>
+      <li>
+        <capacity>Sight</capacity>
+        <weight>0.4</weight>
+        <max>1</max>
+      </li>
+      <li>
+        <capacity>Manipulation</capacity>
+        <weight>0.9</weight>
+      </li>
+    </capacityFactors>
+    <displayPriorityInCategory>4520</displayPriorityInCategory>
+  </StatDef>
+
+  <StatDef ParentName="ButcheryEfficiencyBase">
+    <defName>ButcheryFleshEfficiency</defName>
+    <label>butchery efficiency</label>
+    <description>The amount of meat produced when butchering flesh creatures.\n\nThe actual amount is also related to the creature's size.</description>
+    <maxValue>1</maxValue>
+    <skillNeedFactors>
+      <li Class="SkillNeed_BaseBonus">
+        <skill>Cooking</skill>
+        <baseValue>0.75</baseValue>
+        <bonusPerLevel>0.025</bonusPerLevel>
+      </li>
+    </skillNeedFactors>
+  </StatDef>
+
+  <StatDef ParentName="ButcheryEfficiencyBase">
+    <defName>ButcheryMechanoidEfficiency</defName>
+    <label>mechanoid shredding efficiency</label>
+    <description>The amount of materials yielded when this person shreds a dead mechanoid for resources.\n\nThe actual amount is also related to the mechanoid's size.</description>
+    <maxValue>1</maxValue>
+    <skillNeedFactors>
+      <li Class="SkillNeed_BaseBonus">
+        <skill>Crafting</skill>
+        <baseValue>0.75</baseValue>
+        <bonusPerLevel>0.025</bonusPerLevel>
+      </li>
+    </skillNeedFactors>
+  </StatDef>
+
+</Defs>

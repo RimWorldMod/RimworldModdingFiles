@@ -1,0 +1,329 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThoughtDef Name="LostMemory" Abstract="True">
+    <stackLimit>5</stackLimit>
+  </ThoughtDef>
+
+  <!--===================== general and non-related pawn deaths =====================-->
+  
+  <ThoughtDef>
+    <defName>ColonistLost</defName>
+    <durationDays>6</durationDays>
+    <stackLimit>5</stackLimit>
+    <showBubble>true</showBubble>
+    <nullifyingTraits>
+      <li>Psychopath</li>
+    </nullifyingTraits>
+    <stages>
+      <li>
+        <label>colonist lost</label>
+        <description>We just lost someone of our colony in a tragic way.</description>
+        <baseMoodEffect>-6</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+  
+  <!--===================== bonded animal released =====================-->
+
+  <ThoughtDef ParentName="LostMemory">
+    <defName>BondedAnimalReleased</defName>
+    <showBubble>true</showBubble>
+    <durationDays>15</durationDays>
+    <stackLimit>5</stackLimit>
+    <stackLimitForSameOtherPawn>1</stackLimitForSameOtherPawn>
+    <nullifyingTraits>
+      <li>Psychopath</li>
+    </nullifyingTraits>
+    <stages>
+      <li>
+        <label>bonded animal {0} released</label>
+        <description>Such a tender, unique animal. Why did it have to go?</description>
+        <baseMoodEffect>-5</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+  
+  <!--===================== bonded animal lost =====================-->
+
+  <ThoughtDef ParentName="LostMemory">
+    <defName>BondedAnimalLost</defName>
+    <showBubble>true</showBubble>
+    <durationDays>20</durationDays>
+    <stackLimit>5</stackLimit>
+    <stackLimitForSameOtherPawn>1</stackLimitForSameOtherPawn>
+    <nullifyingTraits>
+      <li>Psychopath</li>
+    </nullifyingTraits>
+    <stages>
+      <li>
+        <label>bonded animal {0} lost</label>
+        <description>Such a tender, unique animal. This universe is evil!</description>
+        <baseMoodEffect>-8</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <!--===================== friend/rival lost =====================-->
+
+  <ThoughtDef ParentName="LostMemory">
+    <defName>PawnWithGoodOpinionLost</defName>
+    <durationDays>20</durationDays>
+    <stackLimit>5</stackLimit>
+    <stackLimitForSameOtherPawn>1</stackLimitForSameOtherPawn>
+    <nullifyingTraits>
+      <li>Psychopath</li>
+    </nullifyingTraits>
+    <stages>
+      <li>
+        <label>my friend {0} lost</label>
+        <description>Such a wonderful person, lost. The universe gets darker every day.</description>
+        <baseMoodEffect>-10</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <ThoughtDef ParentName="LostMemory">
+    <defName>PawnWithBadOpinionLost</defName>
+    <durationDays>10</durationDays>
+    <stackLimit>5</stackLimit>
+    <stackLimitForSameOtherPawn>1</stackLimitForSameOtherPawn>
+    <stages>
+      <li>
+        <label>my rival {0} lost</label>
+        <description>Serves them right. At least there's some justice in this world.</description>
+        <baseMoodEffect>10</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <!--===================== Family member lost =====================-->
+
+  <ThoughtDef Name="LostMemoryFamily" ParentName="LostMemory" Abstract="True">
+    <durationDays>30.0</durationDays>
+    <stackLimit>10</stackLimit>
+    <showBubble>true</showBubble>
+    <stackLimitForSameOtherPawn>1</stackLimitForSameOtherPawn>
+  </ThoughtDef>
+
+  <ThoughtDef ParentName="LostMemoryFamily">
+    <defName>MySonLost</defName>
+    <stages>
+      <li>
+        <label>my son {0} lost</label>
+        <description>My son has gone lost. I hope he will get back to us someday.</description>
+        <baseMoodEffect>-20</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <ThoughtDef ParentName="LostMemoryFamily">
+    <defName>MyDaughterLost</defName>
+    <stages>
+      <li>
+        <label>my daughter {0} lost</label>
+        <description>My daughter has gone lost. I hope she will get back to us someday.</description>
+        <baseMoodEffect>-20</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <ThoughtDef ParentName="LostMemoryFamily">
+    <defName>MyHusbandLost</defName>
+    <stages>
+      <li>
+        <label>my husband {0} lost</label>
+        <description>My husband has gone lost. I hope he will get back to us someday.</description>
+        <baseMoodEffect>-20</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <ThoughtDef ParentName="LostMemoryFamily">
+    <defName>MyWifeLost</defName>
+    <stages>
+      <li>
+        <label>my wife {0} lost</label>
+        <description>My wife has gone lost. I hope she will get back to us someday.</description>
+        <baseMoodEffect>-20</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <ThoughtDef ParentName="LostMemoryFamily">
+    <defName>MyFianceLost</defName>
+    <stages>
+      <li>
+        <label>my fiance {0} lost</label>
+        <description>My fiance has gone lost. I hope he will get back to us someday.</description>
+        <baseMoodEffect>-18</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <ThoughtDef ParentName="LostMemoryFamily">
+    <defName>MyFianceeLost</defName>
+    <stages>
+      <li>
+        <label>my fiancée {0} lost</label>
+        <description>My fiancée has gone lost. I hope she will get back to us someday.</description>
+        <baseMoodEffect>-18</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <ThoughtDef ParentName="LostMemoryFamily">
+    <defName>MyLoverLost</defName>
+    <stages>
+      <li>
+        <label>my lover {0} lost</label>
+        <description>My lover has gone lost. I hope he will get back to us someday.</description>
+        <baseMoodEffect>-16</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <ThoughtDef ParentName="LostMemoryFamily">
+    <defName>MyBrotherLost</defName>
+    <stages>
+      <li>
+        <label>my brother {0} lost</label>
+        <description>My brother has gone lost. I hope he will get back to us someday.</description>
+        <baseMoodEffect>-14</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <ThoughtDef ParentName="LostMemoryFamily">
+    <defName>MySisterLost</defName>
+    <stages>
+      <li>
+        <label>my sister {0} lost</label>
+        <description>My sister has gone lost. I hope she will get back to us someday.</description>
+        <baseMoodEffect>-14</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <ThoughtDef ParentName="LostMemoryFamily">
+    <defName>MyGrandchildLost</defName>
+    <stages>
+      <li>
+        <label>my grandchild {0} lost</label>
+        <description>My grandchild has gone lost. I hope they will get back to us someday.</description>
+        <baseMoodEffect>-12</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <ThoughtDef ParentName="LostMemoryFamily">
+    <defName>MyFatherLost</defName>
+    <stages>
+      <li>
+        <label>my father {0} lost</label>
+        <description>My father has gone lost. I hope he will get back to us someday.</description>
+        <baseMoodEffect>-8</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <ThoughtDef ParentName="LostMemoryFamily">
+    <defName>MyMotherLost</defName>
+    <stages>
+      <li>
+        <label>my mother {0} lost</label>
+        <description>My mother has gone lost. I hope she will get back to us someday.</description>
+        <baseMoodEffect>-8</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <ThoughtDef ParentName="LostMemoryFamily">
+    <defName>MyNieceLost</defName>
+    <stages>
+      <li>
+        <label>my niece {0} lost</label>
+        <description>My niece has gone lost. I hope she will get back to us someday.</description>
+        <baseMoodEffect>-5</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <ThoughtDef ParentName="LostMemoryFamily">
+    <defName>MyNephewLost</defName>
+    <stages>
+      <li>
+        <label>my nephew {0} lost</label>
+        <description>My nephew has gone lost. I hope he will get back to us someday.</description>
+        <baseMoodEffect>-5</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <ThoughtDef ParentName="LostMemoryFamily">
+    <defName>MyHalfSiblingLost</defName>
+    <stages>
+      <li>
+        <label>my half-sibling {0} lost</label>
+        <description>My half-sibling has gone lost.</description>
+        <baseMoodEffect>-5</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <ThoughtDef ParentName="LostMemoryFamily">
+    <defName>MyAuntLost</defName>
+    <stages>
+      <li>
+        <label>my aunt {0} lost</label>
+        <description>My aunt has gone lost. I hope she will get back to us someday.</description>
+        <baseMoodEffect>-4</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <ThoughtDef ParentName="LostMemoryFamily">
+    <defName>MyUncleLost</defName>
+    <stages>
+      <li>
+        <label>my uncle {0} lost</label>
+        <description>My uncle has gone lost. I hope he will get back to us someday.</description>
+        <baseMoodEffect>-4</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <ThoughtDef ParentName="LostMemoryFamily">
+    <defName>MyGrandparentLost</defName>
+    <stages>
+      <li>
+        <label>my grandparent {0} lost</label>
+        <description>My grandparent has gone lost.</description>
+        <baseMoodEffect>-4</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <ThoughtDef ParentName="LostMemoryFamily">
+    <defName>MyCousinLost</defName>
+    <stages>
+      <li>
+        <label>my cousin {0} lost</label>
+        <description>My cousin has gone lost.</description>
+        <baseMoodEffect>-4</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <ThoughtDef ParentName="LostMemoryFamily">
+    <defName>MyKinLost</defName>
+    <stages>
+      <li>
+        <label>my kin {0} lost</label>
+        <description>My kin has gone lost.</description>
+        <baseMoodEffect>-4</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+  
+</Defs>

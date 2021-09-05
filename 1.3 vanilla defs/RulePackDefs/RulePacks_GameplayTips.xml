@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <RulePackDef>
+    <defName>GameplayTips</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>r_tip->[tip_text]</li>
+      </rulesStrings>
+      <rulesFiles>
+        <li>tip_text->Misc/Tips</li>
+      </rulesFiles>
+    </rulePack>
+  </RulePackDef>
+
+</Defs>

@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <HistoryAutoRecorderDef>
+    <defName>Wealth_Total</defName>
+    <label>wealth (total)</label>
+    <graphColor>(1, 1, 0, 1)</graphColor>
+    <recordTicksFrequency>30000</recordTicksFrequency>
+    <workerClass>HistoryAutoRecorderWorker_WealthTotal</workerClass>
+    <valueFormat>${0}</valueFormat>
+  </HistoryAutoRecorderDef>
+
+  <HistoryAutoRecorderDef>
+    <defName>Wealth_Items</defName>
+    <label>wealth (items)</label>
+    <graphColor>(0.91, 0.68, 0, 1)</graphColor>
+    <recordTicksFrequency>30000</recordTicksFrequency>
+    <workerClass>HistoryAutoRecorderWorker_WealthItems</workerClass>
+    <valueFormat>{0}</valueFormat>
+  </HistoryAutoRecorderDef>
+
+  <HistoryAutoRecorderDef>
+    <defName>Wealth_Buildings</defName>
+    <label>wealth (buildings)</label>
+    <graphColor>(0.5, 0.7, 0, 1)</graphColor>
+    <recordTicksFrequency>30000</recordTicksFrequency>
+    <workerClass>HistoryAutoRecorderWorker_WealthBuildings</workerClass>
+    <valueFormat>{0}</valueFormat>
+  </HistoryAutoRecorderDef>
+
+  <HistoryAutoRecorderDef>
+    <defName>Wealth_Pawns</defName>
+    <label>wealth (creatures)</label>
+    <graphColor>(0.3, 0.6, 0.48, 1)</graphColor>
+    <recordTicksFrequency>30000</recordTicksFrequency>
+    <workerClass>HistoryAutoRecorderWorker_WealthPawns</workerClass>
+    <valueFormat>{0}</valueFormat>
+  </HistoryAutoRecorderDef>
+
+  <HistoryAutoRecorderDef>
+    <defName>FreeColonists</defName>
+    <label>free colonists</label>
+    <graphColor>(0, 1, 0, 1)</graphColor>
+    <recordTicksFrequency>30000</recordTicksFrequency>
+    <workerClass>HistoryAutoRecorderWorker_FreeColonists</workerClass>
+    <valueFormat>{0}</valueFormat>
+  </HistoryAutoRecorderDef>
+
+  <HistoryAutoRecorderDef>
+    <defName>Prisoners</defName>
+    <label>prisoners</label>
+    <graphColor>(1, 0, 0, 1)</graphColor>
+    <recordTicksFrequency>30000</recordTicksFrequency>
+    <workerClass>HistoryAutoRecorderWorker_Prisoners</workerClass>
+    <valueFormat>{0}</valueFormat>
+  </HistoryAutoRecorderDef>
+
+  <HistoryAutoRecorderDef>
+    <defName>ColonistMood</defName>
+    <label>mood</label>
+    <graphColor>(0, 1, 0, 1)</graphColor>
+    <recordTicksFrequency>30000</recordTicksFrequency>
+    <workerClass>HistoryAutoRecorderWorker_ColonistMood</workerClass>
+    <valueFormat>{0}%</valueFormat>
+  </HistoryAutoRecorderDef>
+
+  <!-- Debug -->
+
+  <HistoryAutoRecorderDef>
+    <defName>Adaptation</defName>
+    <label>recovery</label>
+    <graphColor>(0, 1, 0.7, 1)</graphColor>
+    <recordTicksFrequency>60000</recordTicksFrequency>
+    <workerClass>HistoryAutoRecorderWorker_Adaptation</workerClass>
+    <valueFormat>{0} days</valueFormat>
+  </HistoryAutoRecorderDef>
+
+  <HistoryAutoRecorderDef>
+    <defName>ThreatPoints</defName>
+    <label>fun points /10</label>
+    <graphColor>(1, 0.5, 0.5, 1)</graphColor>
+    <recordTicksFrequency>30000</recordTicksFrequency>
+    <workerClass>HistoryAutoRecorderWorker_ThreatPoints</workerClass>
+    <valueFormat>{0} points</valueFormat>
+  </HistoryAutoRecorderDef>
+
+  <HistoryAutoRecorderDef>
+    <defName>PopAdaptation</defName>
+    <label>pop recovery</label>
+    <graphColor>(0, 0.5, 1, 1)</graphColor>
+    <recordTicksFrequency>60000</recordTicksFrequency>
+    <workerClass>HistoryAutoRecorderWorker_PopAdaptation</workerClass>
+    <valueFormat>{0} days</valueFormat>
+  </HistoryAutoRecorderDef>
+
+  <HistoryAutoRecorderDef>
+    <defName>PopIntent</defName>
+    <label>pop intent x10</label>
+    <graphColor>(0, 1, 0, 1)</graphColor>
+    <recordTicksFrequency>60000</recordTicksFrequency>
+    <workerClass>HistoryAutoRecorderWorker_PopIntent</workerClass>
+    <valueFormat>{0} days</valueFormat>
+  </HistoryAutoRecorderDef>
+
+</Defs>

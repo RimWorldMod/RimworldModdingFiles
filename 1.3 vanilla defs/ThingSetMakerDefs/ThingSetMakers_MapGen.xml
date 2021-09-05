@@ -1,0 +1,260 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingSetMakerDef>
+    <defName>MapGen_DefaultStockpile</defName>
+    <debugParams>
+      <countRange>8~8</countRange>
+      <totalMarketValueRange>1000~1000</totalMarketValueRange>
+    </debugParams>
+    <root Class="ThingSetMaker_Sum">
+      <options>
+        <li>
+          <thingSetMaker  Class="ThingSetMaker_RandomOption">
+            <options>
+              <li>
+                <weight>1</weight>
+                <thingSetMaker Class="ThingSetMaker_MarketValue">
+                  <fixedParams>
+                    <maxThingMarketValue>300</maxThingMarketValue>
+                    <filter>
+                      <categories>
+                        <li>Weapons</li>
+                      </categories>
+                      <disallowedThingDefs>
+                        <li>WoodLog</li>
+                        <li>ElephantTusk</li>
+                      </disallowedThingDefs>
+                      <thingSetMakerTagsToDisallow>
+                        <li>RewardStandardHighFreq</li>
+                      </thingSetMakerTagsToDisallow>
+                    </filter>
+                  </fixedParams>
+                </thingSetMaker>
+              </li>
+              <li>
+                <weight>1</weight>
+                <thingSetMaker Class="ThingSetMaker_MarketValue">
+                  <fixedParams>
+                    <maxThingMarketValue>300</maxThingMarketValue>
+                    <filter>
+                      <categories>
+                        <li>Apparel</li>
+                      </categories>
+                      <thingSetMakerTagsToDisallow>
+                        <li>RewardStandardHighFreq</li>
+                      </thingSetMakerTagsToDisallow>
+                    </filter>
+                  </fixedParams>
+                </thingSetMaker>
+              </li>
+              <li>
+                <weight>1</weight>
+                <thingSetMaker Class="ThingSetMaker_MarketValue">
+                  <fixedParams>
+                    <maxThingMarketValue>300</maxThingMarketValue>
+                    <filter>
+                      <categories>
+                        <li>ResourcesRaw</li>
+                      </categories>
+                      <thingSetMakerTagsToDisallow>
+                        <li>RewardStandardHighFreq</li>
+                      </thingSetMakerTagsToDisallow>
+                    </filter>
+                  </fixedParams>
+                </thingSetMaker>
+              </li>
+              <li>
+                <weight>1</weight>
+                <thingSetMaker Class="ThingSetMaker_RandomGeneralGoods" />
+              </li>
+            </options>
+          </thingSetMaker>
+        </li>
+        <li>
+          <thingSetMaker Class="ThingSetMaker_Conditional_MakingFaction">
+            <makingFaction MayRequire="Ludeon.RimWorld.Royalty">Empire</makingFaction>
+            <requireNonNull>true</requireNonNull>
+            <thingSetMaker Class="ThingSetMaker_Count">
+              <fixedParams>
+                <filter>
+                  <thingSetMakerTagsToAllow>
+                    <li>ImplantEmpireRoyal</li>
+                    <li>WeaponBladelink</li>
+                  </thingSetMakerTagsToAllow>
+                  <thingSetMakerTagsToDisallow>
+                    <li>RewardNonEmpireFactionsOnly</li>
+                  </thingSetMakerTagsToDisallow>
+                  <tradeTagsToAllow>
+                    <li>PsychicWeapon</li>
+                    <li>PsychicApparel</li>
+                  </tradeTagsToAllow>
+                </filter>
+                <countRange>2~3</countRange>
+              </fixedParams>
+            </thingSetMaker>
+          </thingSetMaker>
+        </li>
+      </options>
+    </root>
+  </ThingSetMakerDef>
+
+  <ThingSetMakerDef>
+    <defName>MapGen_AncientTempleContents</defName>
+    <root Class="ThingSetMaker_Sum">
+      <options>
+
+        <!-- Artifacts -->
+        <li>
+          <chance>0.7</chance>
+          <thingSetMaker Class="ThingSetMaker_Count">
+            <fixedParams>
+              <filter>
+                <categories>
+                  <li>Artifacts</li>
+                </categories>
+              </filter>
+              <countRange>1~2</countRange>
+            </fixedParams>
+          </thingSetMaker>
+        </li>
+
+        <!-- Misc cool items -->
+        <li>
+          <chance>0.5</chance>
+          <thingSetMaker Class="ThingSetMaker_Count">
+            <fixedParams>
+              <qualityGenerator>Reward</qualityGenerator>
+              <filter>
+                <thingDefs>
+                  <li>Apparel_PowerArmor</li>
+                  <li>Apparel_PowerArmorHelmet</li>
+                  <li>Gun_ChargeRifle</li>
+                  <li>Gun_ChargeLance</li>
+                  <li>Gun_AssaultRifle</li>
+                  <li>TechprofSubpersonaCore</li>
+                  <li>ArchotechEye</li>
+                  <li>ArchotechArm</li>
+                  <li>ArchotechLeg</li>
+                  <li>PowerClaw</li>
+                  <li>BionicEye</li>
+                  <li>BionicArm</li>
+                  <li>BionicLeg</li>
+                  <li>BionicSpine</li>
+                  <li>BionicHeart</li>
+                  <li>Joywire</li>
+                  <li>Painstopper</li>
+                  <li>Shell_AntigrainWarhead</li>
+                  <li>MechSerumHealer</li>
+                  <li>MechSerumResurrector</li>
+                  <li>FlatscreenTelevision</li>
+                  <li>MegascreenTelevision</li>
+                  <li>SculptureGrand</li>
+                </thingDefs>
+                <thingSetMakerTagsToAllow>
+                  <li>SingleUseWeapon</li>
+                  <li>SkillNeurotrainer</li>
+                </thingSetMakerTagsToAllow>
+              </filter>
+            </fixedParams>
+          </thingSetMaker>
+        </li>
+
+        <!-- Techprints -->
+        <!-- note this is intended to ignore player needs entirely, it gives entirely random techprints -->
+        <li>
+          <chance>0.5</chance> 
+          <thingSetMaker Class="ThingSetMaker_Count">
+            <fixedParams>
+              <filter>
+                <thingSetMakerTagsToAllow>
+                  <li>Techprint</li>
+                </thingSetMakerTagsToAllow>
+              </filter>
+            </fixedParams>
+          </thingSetMaker>
+        </li>
+
+        <!-- Luciferium -->
+        <li>
+          <chance>0.35</chance>
+          <thingSetMaker Class="ThingSetMaker_StackCount">
+            <fixedParams>
+              <filter>
+                <thingDefs>
+                  <li>Luciferium</li>
+                </thingDefs>
+              </filter>
+              <countRange>5~20</countRange>
+            </fixedParams>
+          </thingSetMaker>
+        </li>
+
+        <!-- Advanced components -->
+        <li>
+          <chance>0.35</chance>
+          <thingSetMaker Class="ThingSetMaker_StackCount">
+            <fixedParams>
+              <filter>
+                <thingDefs>
+                  <li>ComponentSpacer</li>
+                </thingDefs>
+              </filter>
+              <countRange>1~4</countRange>
+            </fixedParams>
+          </thingSetMaker>
+        </li>
+
+        <!-- Ultratech meds -->
+        <li>
+          <chance>0.35</chance>
+          <thingSetMaker Class="ThingSetMaker_StackCount">
+            <fixedParams>
+              <filter>
+                <thingDefs>
+                  <li>MedicineUltratech</li>
+                </thingDefs>
+              </filter>
+              <countRange>2~8</countRange>
+            </fixedParams>
+          </thingSetMaker>
+        </li>
+      </options>
+    </root>
+  </ThingSetMakerDef>
+
+  <ThingSetMakerDef>
+    <defName>MapGen_AncientPodContents</defName>
+    <root Class="ThingSetMaker_MapGen_AncientPodContents" />
+  </ThingSetMakerDef>
+
+  <ThingSetMakerDef>
+    <defName>MapGen_PrisonCellStockpile</defName>
+    <debugParams>
+      <countRange>8~8</countRange>
+    </debugParams>
+    <root Class="ThingSetMaker_Sum">
+      <options>
+        <li>
+          <thingSetMaker Class="ThingSetMaker_Nutrition">
+            <fixedParams>
+              <filter>
+                <categories>
+                  <li>Foods</li>
+                </categories>
+                <disallowedThingDefs>
+                  <li>InsectJelly</li>
+                </disallowedThingDefs>
+                <disallowWorsePreferability>RawBad</disallowWorsePreferability>
+                <disallowWithComp>CompHatcher</disallowWithComp>
+                <disallowInedibleByHuman>true</disallowInedibleByHuman>
+              </filter>
+              <totalNutritionRange>4~8</totalNutritionRange>
+            </fixedParams>
+          </thingSetMaker>
+        </li>
+      </options>
+    </root>
+  </ThingSetMakerDef>
+
+</Defs>

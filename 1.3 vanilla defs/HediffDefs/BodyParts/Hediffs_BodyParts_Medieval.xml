@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- Base content -->
+
+  <RecipeDef Name="SurgeryInstallWoodenPartBase" ParentName="SurgeryInstallBodyPartArtificialBase" Abstract="True">
+    <workAmount>1500</workAmount>
+    <skillRequirements>
+      <Medicine>3</Medicine>
+    </skillRequirements>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>WoodLog</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>WoodLog</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+  </RecipeDef>
+
+
+  <!-- Wooden peg leg -->
+
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>PegLeg</defName>
+    <label>peg leg</label>
+    <labelNoun>a peg leg</labelNoun>
+    <description>An installed peg leg.</description>
+    <priceImpact>false</priceImpact>
+    <addedPartProps>
+      <solid>true</solid>
+      <partEfficiency>0.60</partEfficiency>
+    </addedPartProps>
+    <spawnThingOnRemoved>WoodLog</spawnThingOnRemoved>
+  </HediffDef>
+
+  <RecipeDef ParentName="SurgeryInstallWoodenPartBase">
+    <defName>InstallPegLeg</defName>
+    <label>install peg leg</label>
+    <description>Install a peg leg.</description>
+    <descriptionHyperlinks><ThingDef>WoodLog</ThingDef></descriptionHyperlinks>
+    <jobString>Installing peg leg.</jobString>
+    <appliedOnFixedBodyParts>
+      <li>Leg</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>PegLeg</addsHediff>
+  </RecipeDef>
+
+  <!-- Wooden hand -->
+
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>WoodenHand</defName>
+    <label>wooden hand</label>
+    <labelNoun>a wooden hand</labelNoun>
+    <description>An installed wooden hand.</description>
+    <priceImpact>false</priceImpact>
+    <addedPartProps>
+      <solid>true</solid>
+      <partEfficiency>0.60</partEfficiency>
+    </addedPartProps>
+    <spawnThingOnRemoved>WoodLog</spawnThingOnRemoved>
+  </HediffDef>
+
+  <RecipeDef ParentName="SurgeryInstallWoodenPartBase">
+    <defName>InstallWoodenHand</defName>
+    <label>install wooden hand</label>
+    <description>Install a wooden hand.</description>
+    <descriptionHyperlinks><ThingDef>WoodLog</ThingDef></descriptionHyperlinks>
+    <jobString>Installing wooden hand.</jobString>
+    <appliedOnFixedBodyParts>
+      <li>Hand</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>WoodenHand</addsHediff>
+  </RecipeDef>
+
+  <!-- Wooden foot -->
+
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>WoodenFoot</defName>
+    <label>wooden foot</label>
+    <labelNoun>a wooden foot</labelNoun>
+    <description>An installed wooden foot.</description>
+    <priceImpact>false</priceImpact>
+    <addedPartProps>
+      <solid>true</solid>
+      <partEfficiency>0.80</partEfficiency>
+    </addedPartProps>
+    <spawnThingOnRemoved>WoodLog</spawnThingOnRemoved>
+  </HediffDef>
+
+  <RecipeDef ParentName="SurgeryInstallWoodenPartBase">
+    <defName>InstallWoodenFoot</defName>
+    <label>install wooden foot</label>
+    <description>Install a wooden foot.</description>
+    <descriptionHyperlinks><ThingDef>WoodLog</ThingDef></descriptionHyperlinks>
+    <jobString>Installing wooden foot.</jobString>
+    <workAmount>1000</workAmount>
+    <appliedOnFixedBodyParts>
+      <li>Foot</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>WoodenFoot</addsHediff>
+  </RecipeDef>
+
+  <!-- Denture -->
+  <!-- Only takes medicine, not a wooden part -->
+
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>Denture</defName>
+    <label>denture</label>
+    <labelNoun>a denture</labelNoun>
+    <description>An installed denture.</description>
+    <priceImpact>false</priceImpact>
+    <addedPartProps>
+      <solid>true</solid>
+      <partEfficiency>0.80</partEfficiency>
+    </addedPartProps>
+  </HediffDef>
+
+  <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+    <defName>InstallDenture</defName>
+    <label>install denture</label>
+    <description>Install a denture.</description>
+    <jobString>Installing denture.</jobString>
+    <workAmount>1500</workAmount>
+    <skillRequirements>
+      <Medicine>3</Medicine>
+    </skillRequirements>
+    <appliedOnFixedBodyParts>
+      <li>Jaw</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>Denture</addsHediff>
+  </RecipeDef>
+
+</Defs>

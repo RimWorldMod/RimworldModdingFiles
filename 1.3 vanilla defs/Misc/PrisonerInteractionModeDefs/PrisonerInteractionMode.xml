@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+  <PrisonerInteractionModeDef>
+    <defName>NoInteraction</defName>
+    <label>no interaction</label>
+    <listOrder>0</listOrder>
+    <description>Wardens will not interact with the prisoner.</description>
+  </PrisonerInteractionModeDef>
+
+  <PrisonerInteractionModeDef>
+    <defName>AttemptRecruit</defName>
+    <label>recruit</label>
+    <listOrder>10</listOrder>
+    <allowOnWildMan>False</allowOnWildMan>
+    <description>Wardens will attempt to recruit the prisoner. If the prisoner still has resistance, wardens will speak to them to reduce it.</description>
+  </PrisonerInteractionModeDef>
+
+  <PrisonerInteractionModeDef>
+    <defName>ReduceResistance</defName>
+    <label>reduce resistance</label>
+    <listOrder>20</listOrder>
+    <allowOnWildMan>False</allowOnWildMan>
+    <description>If the prisoner still has resistance, wardens will speak to them to reduce it. No recruit attempts will be made.</description>
+  </PrisonerInteractionModeDef>
+
+  <PrisonerInteractionModeDef>
+    <defName>Release</defName>
+    <label>release</label>
+    <listOrder>30</listOrder>
+    <description>A warden will release the prisoner.</description>
+  </PrisonerInteractionModeDef>
+
+  <PrisonerInteractionModeDef>
+    <defName>Execution</defName>
+    <label>execute</label>
+    <listOrder>40</listOrder>
+    <description>A warden will execute the prisoner on the spot by cutting. This can affect the mood of other prisoners and colonists.</description>
+  </PrisonerInteractionModeDef>
+
+</Defs>

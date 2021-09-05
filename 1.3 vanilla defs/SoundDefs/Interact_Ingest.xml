@@ -1,0 +1,221 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Defs>
+
+  <SoundDef>
+    <defName>RawVegetable_Eat</defName>  
+    <sustain>True</sustain>  
+    <context>MapOnly</context>
+    <maxSimultaneous>1</maxSimultaneous>  
+    <priorityMode>PrioritizeNearest</priorityMode>  
+    <subSounds>
+      <li>
+        <muteWhenPaused>True</muteWhenPaused>      
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Pawn/Human/Eating/Raw_Vegetable</clipFolderPath>
+          </li>
+        </grains>
+        <volumeRange>10~10</volumeRange>
+        <distRange>10~50</distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>RawMeat_Eat</defName>  
+    <sustain>True</sustain>  
+    <context>MapOnly</context>
+    <maxSimultaneous>1</maxSimultaneous>  
+    <priorityMode>PrioritizeNearest</priorityMode>  
+    <subSounds>
+      <li>
+        <muteWhenPaused>True</muteWhenPaused>      
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Pawn/Human/Eating/Raw_Meat</clipFolderPath>
+          </li>
+        </grains>
+        <volumeRange>10~10</volumeRange>
+        <pitchRange>0.8852941~1.022941</pitchRange>
+        <distRange>10~50</distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Meal_Eat</defName>  
+    <sustain>True</sustain>  
+    <context>MapOnly</context>
+    <maxSimultaneous>1</maxSimultaneous>  
+    <priorityMode>PrioritizeNearest</priorityMode>  
+    <subSounds>
+      <li>
+        <muteWhenPaused>True</muteWhenPaused>      
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Pawn/Human/Eating/Meal</clipFolderPath>
+          </li>
+        </grains>      
+        <volumeRange>10~10</volumeRange>      
+        <pitchRange>0.862353~0.9541182</pitchRange>      
+        <distRange>10~50</distRange>      
+        <filters>
+          <li Class="SoundFilterLowPass">
+            <cutoffFrequency>2180.26</cutoffFrequency>          
+            <lowpassResonaceQ>1</lowpassResonaceQ>
+          </li>
+        </filters>      
+        <sustainLoop>False</sustainLoop>      
+        <sustainIntervalRange>0.6978282~0.6978282</sustainIntervalRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Ingest_Beer</defName>  
+    <sustain>True</sustain>  
+    <context>MapOnly</context>
+    <maxSimultaneous>1</maxSimultaneous>  
+    <priorityMode>PrioritizeNearest</priorityMode>  
+    <sustainStartSound>Ingest_Beer_Start</sustainStartSound>  
+    <subSounds>
+      <li>
+        <muteWhenPaused>True</muteWhenPaused>      
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Pawn/Human/Drinking/Ingest_Beer/Loop</clipFolderPath>
+          </li>
+        </grains>      
+        <volumeRange>17~13</volumeRange>      
+        <pitchRange>0.8~1.2</pitchRange>      
+        <distRange>0~49.53489</distRange>      
+        <sustainLoop>False</sustainLoop>      
+        <sustainIntervalRange>0.1~0.5</sustainIntervalRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Ingest_Beer_Start</defName>  
+    <context>MapOnly</context>
+    <maxSimultaneous>1</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Pawn/Human/Drinking/Ingest_Beer/Start</clipFolderPath>
+          </li>
+        </grains>      
+        <volumeRange>16~16</volumeRange>      
+        <pitchRange>0.8~1.2</pitchRange>      
+        <distRange>0~51.86047</distRange>      
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Ingest_Drink</defName>
+    <sustain>True</sustain>
+    <context>MapOnly</context>
+    <maxSimultaneous>1</maxSimultaneous>
+    <priorityMode>PrioritizeNearest</priorityMode>
+    <subSounds>
+      <li>
+        <muteWhenPaused>True</muteWhenPaused>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Pawn/Human/Drinking/Ingest_Beer/Loop</clipFolderPath>
+          </li>
+        </grains>
+        <volumeRange>30~15</volumeRange>
+        <pitchRange>0.8~1.2</pitchRange>
+        <distRange>0~49.53489</distRange>
+        <sustainLoop>False</sustainLoop>
+        <sustainIntervalRange>0.1~0.5</sustainIntervalRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+  
+  <SoundDef>
+    <defName>Ingest_Smoke</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>1</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Interact/Drugs/Smoke/Smoke_start</clipPath>
+          </li>
+        </grains>
+        <volumeRange>20~20</volumeRange>
+        <pitchRange>0.8~1.2</pitchRange>
+        <distRange>0~51.86047</distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Ingest_Snort</defName>
+    <sustain>True</sustain>
+    <context>MapOnly</context>
+    <maxSimultaneous>1</maxSimultaneous>
+    <priorityMode>PrioritizeNearest</priorityMode>
+    <subSounds>
+      <li>
+        <muteWhenPaused>True</muteWhenPaused>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Interact/Drugs/Snort</clipFolderPath>
+          </li>
+        </grains>
+        <volumeRange>17~17</volumeRange>
+        <pitchRange>0.9~1.1</pitchRange>
+        <distRange>0~49.53489</distRange>
+        <sustainLoop>False</sustainLoop>
+        <sustainIntervalRange>0.1~0.5</sustainIntervalRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Ingest_Pill</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>1</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Interact/Drugs/Pills</clipFolderPath>
+          </li>
+        </grains>
+        <volumeRange>42~42</volumeRange>
+        <pitchRange>0.8~1.2</pitchRange>
+        <distRange>0~51.86047</distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Ingest_Inject</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>1</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Interact/Drugs/Inject</clipFolderPath>
+          </li>
+        </grains>
+        <volumeRange>42~42</volumeRange>
+        <pitchRange>0.8~1.2</pitchRange>
+        <distRange>0~51.86047</distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+</Defs>

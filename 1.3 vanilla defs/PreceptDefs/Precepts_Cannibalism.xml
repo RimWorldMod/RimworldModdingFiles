@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <IssueDef>
+    <defName>Cannibalism</defName>
+    <label>cannibalism</label>
+    <iconPath>UI/Issues/Cannibalism</iconPath>
+  </IssueDef>
+
+  <HistoryEventDef>
+    <defName>AteHumanMeatDirect</defName>
+    <label>ate human meat</label>
+  </HistoryEventDef>
+
+  <HistoryEventDef>
+    <defName>AteHumanMeatAsIngredient</defName>
+    <label>ate meal made from human meat</label>
+  </HistoryEventDef>
+
+  <HistoryEventDef>
+    <defName>ButcheredHuman</defName>
+    <label>butchered human</label>
+  </HistoryEventDef>
+
+  <PreceptDef>
+    <defName>Cannibalism_Classic</defName>
+    <issue>Cannibalism</issue>
+    <classic>true</classic>
+    <impact>Medium</impact>
+    <visible>false</visible>
+    <comps>
+      <li Class="PreceptComp_SelfTookMemoryThought">
+        <eventDef>AteHumanMeatDirect</eventDef>
+        <thought>AteHumanlikeMeatDirect</thought>
+      </li>
+      <li Class="PreceptComp_SelfTookMemoryThought">
+        <eventDef>AteHumanMeatAsIngredient</eventDef>
+        <thought>AteHumanlikeMeatAsIngredient</thought>
+      </li>
+      <li Class="PreceptComp_KnowsMemoryThought">
+        <eventDef>AteHumanMeatDirect</eventDef>
+        <thought>AteRawHumanlikeMeat</thought>
+      </li>
+      <li Class="PreceptComp_SelfTookMemoryThought">
+        <eventDef>ButcheredHuman</eventDef>
+        <thought>ButcheredHumanlikeCorpse</thought>
+      </li>
+      <li Class="PreceptComp_KnowsMemoryThought">
+        <eventDef>ButcheredHuman</eventDef>
+        <thought>KnowButcheredHumanlikeCorpse</thought>
+      </li>
+      <li Class="PreceptComp_KnowsMemoryThought">
+        <eventDef>ButcheredHuman</eventDef>
+        <thought>ButcheredHumanlikeCorpseOpinion</thought>
+      </li>
+      <li Class="PreceptComp_SituationalThought">
+        <thought>HumanLeatherApparelSad</thought>
+        <description>Humanleather apparel</description>
+        <tooltipShowMoodRange>true</tooltipShowMoodRange>
+      </li>
+    </comps>
+  </PreceptDef>
+
+</Defs>

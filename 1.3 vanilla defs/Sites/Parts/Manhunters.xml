@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <SitePartDef>
+    <defName>Manhunters</defName>
+    <label>manhunter pack</label>
+    <description>A pack of manhunting animals.</description>
+    <workerClass>SitePartWorker_Manhunters</workerClass>
+    <siteTexture>World/WorldObjects/Sites/GenericSite</siteTexture>
+    <expandingIconTexture>World/WorldObjects/Expanding/Sites/Manhunters</expandingIconTexture>
+    <arrivedLetter>There are scaria-infected manhunting animals in this area.</arrivedLetter>
+    <arrivedLetterDef>NegativeEvent</arrivedLetterDef>
+    <wantsThreatPoints>true</wantsThreatPoints>
+    <tags>
+      <li>MineralScannerPreciousLumpThreat</li>
+      <li>ItemStashQuestThreat</li>
+      <li>DownedRefugeeQuestThreat</li>
+      <li>QuestActiveThreatDefense</li>
+      <li>QuestActiveThreatDefenseNoHidden</li>
+      <li>Manhunters</li>
+    </tags>
+    <arrivedLetterHediffHyperlinks>
+      <li>Scaria</li>
+    </arrivedLetterHediffHyperlinks>
+  </SitePartDef>
+
+  <GenStepDef>
+    <defName>Manhunters</defName>
+    <linkWithSite>Manhunters</linkWithSite>
+    <order>1600</order>
+    <genStep Class="GenStep_ManhunterPack" />
+  </GenStepDef>
+
+</Defs>

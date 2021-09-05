@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <FactionDef ParentName="FactionBase" Abstract="True" Name="PlayerFactionBase">
+    <settlementTexturePath>World/WorldObjects/DefaultSettlement</settlementTexturePath>
+    <playerInitialSettlementNameMaker>NamerInitialSettlementColony</playerInitialSettlementNameMaker>
+    <colorSpectrum>
+      <li>(0, 0.737, 0.847)</li>
+    </colorSpectrum>
+  </FactionDef>
+  
+  <FactionDef ParentName="PlayerFactionBase">
+    <defName>PlayerColony</defName>
+    <label>New Arrivals</label>
+    <description>A colony of recently-arrived off-worlders.</description>
+    <isPlayer>true</isPlayer>
+    <basicMemberKind>Colonist</basicMemberKind>
+    <pawnSingular>colonist</pawnSingular>
+    <pawnsPlural>colonists</pawnsPlural>
+    <techLevel>Industrial</techLevel>
+    <factionNameMaker>NamerFactionOutlander</factionNameMaker>
+    <settlementNameMaker>NamerSettlementOutlander</settlementNameMaker>
+    <allowedCultures><li>Astropolitan</li></allowedCultures>
+    <backstoryFilters>
+      <li>
+        <categories>
+          <li>Offworld</li>
+        </categories>
+      </li>
+    </backstoryFilters>
+    <factionIconPath>World/WorldObjects/Expanding/Town</factionIconPath>
+    <geneticVariance>1</geneticVariance>
+    <startingResearchTags>
+      <li>ClassicStart</li>
+    </startingResearchTags>
+    <startingTechprintsResearchTags>
+      <li>ClassicStart</li>
+      <li>ClassicStartTechprints</li>
+    </startingTechprintsResearchTags>
+    <apparelStuffFilter>
+      <thingDefs>
+        <li>Synthread</li>
+      </thingDefs>
+    </apparelStuffFilter>
+  </FactionDef>
+  
+  <FactionDef ParentName="PlayerFactionBase">
+    <defName>PlayerTribe</defName>
+    <label>New Tribe</label>
+    <description>A small tribe.</description>
+    <isPlayer>true</isPlayer>
+    <categoryTag>Tribal</categoryTag>
+    <pawnSingular>tribesman</pawnSingular>
+    <pawnsPlural>tribespeople</pawnsPlural>
+    <basicMemberKind>Tribesperson</basicMemberKind>
+    <techLevel>Neolithic</techLevel>
+    <factionNameMaker>NamerFactionTribal</factionNameMaker>
+    <settlementNameMaker>NamerSettlementTribal</settlementNameMaker>
+    <allowedCultures>
+      <li>Corunan</li>
+    </allowedCultures>
+    <disallowedMemes>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Transhumanist</li>
+    </disallowedMemes>
+    <disallowedPrecepts>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Nudity_Male_CoveringAnythingButGroinDisapproved</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Nudity_Female_CoveringAnythingButGroinDisapproved</li>
+    </disallowedPrecepts>
+    <backstoryFilters>
+      <li>
+        <categories>
+          <li>Tribal</li>
+        </categories>
+      </li>
+    </backstoryFilters>
+    <factionIconPath>World/WorldObjects/Expanding/Village</factionIconPath>
+    <settlementTexturePath>World/WorldObjects/TribalSettlement</settlementTexturePath>
+    <geneticVariance>1</geneticVariance>
+    <forageabilityFactor>1.7</forageabilityFactor>
+    <startingResearchTags>
+      <li>TribalStart</li>
+    </startingResearchTags>
+    <startingTechprintsResearchTags>
+      <li>TribalStart</li>
+      <li>TribalStartTechprints</li>
+    </startingTechprintsResearchTags>
+    <apparelStuffFilter>
+      <thingDefs>
+        <li>Cloth</li>
+      </thingDefs>
+    </apparelStuffFilter>
+    <recipePrerequisiteTags>
+      <li>Tribal</li>
+    </recipePrerequisiteTags>
+  </FactionDef>
+
+</Defs>

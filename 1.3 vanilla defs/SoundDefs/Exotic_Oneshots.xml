@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Defs>
+
+  <SoundDef>
+    <defName>PsychicPulseGlobal</defName>  
+    <context>MapOnly</context>
+    <subSounds>
+      <li>
+        <onCamera>True</onCamera>      
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Exotic/Crashed_Ship_Part/Psychic_Pulse</clipFolderPath>
+          </li>
+        </grains>      
+        <volumeRange>9.705886~9.705877</volumeRange>      
+        <pitchRange>0.8529412~1.321177</pitchRange>      
+        <filters>
+          <li Class="SoundFilterEcho">
+            <delay>1112.654</delay>          
+            <decayRatio>0.5433328</decayRatio>          
+            <wetMix>0.1333435</wetMix>          
+            <dryMix>1</dryMix>
+          </li>
+        </filters>      
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>PsychicSootheGlobal</defName>
+    <context>MapOnly</context>
+    <subSounds>
+      <li>
+        <onCamera>True</onCamera>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Misc/Artifacts/Psychic_Soothe_Pulser</clipFolderPath>
+          </li>
+        </grains>
+        <volumeRange>42~42</volumeRange>
+        <pitchRange>0.8529412~1.321177</pitchRange>
+        <filters>
+          <li Class="SoundFilterEcho">
+            <delay>1112.654</delay>
+            <decayRatio>0.5433328</decayRatio>
+            <wetMix>0.1333435</wetMix>
+            <dryMix>1</dryMix>
+          </li>
+        </filters>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>PsychicInsanityLanceCast</defName>
+    <context>MapOnly</context>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Misc/Artifacts/Psychic_Insanity_Lance</clipFolderPath>
+          </li>
+        </grains>
+        <volumeRange>30~30</volumeRange>
+        <pitchRange>0.8529412~1.321177</pitchRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>PsychicShockLanceCast</defName>
+    <context>MapOnly</context>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Misc/Artifacts/Psychic_Shock_Lance</clipFolderPath>
+          </li>
+        </grains>
+        <volumeRange>30~30</volumeRange>
+        <pitchRange>0.8529412~1.321177</pitchRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>PsychicAnimalPulserCast</defName>
+    <context>MapOnly</context>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Misc/Artifacts/Psychic_Animal_Pulser</clipFolderPath>
+          </li>
+        </grains>
+        <volumeRange>40~40</volumeRange>
+        <pitchRange>0.8529412~1.321177</pitchRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>PsychicSoothePulserCast</defName>
+    <context>MapOnly</context>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Misc/Artifacts/Psychic_Soothe_Pulser</clipFolderPath>
+          </li>
+        </grains>
+        <volumeRange>40~40</volumeRange>
+        <pitchRange>0.8529412~1.321177</pitchRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+  
+  <SoundDef>
+    <defName>ShipTakeoff</defName>
+    <subSounds>
+      <li>
+        <onCamera>True</onCamera>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Misc/Ship_Takeoff_1</clipPath>
+          </li>
+        </grains>
+        <volumeRange>50~50</volumeRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>MechSerumUsed</defName>
+    <context>MapOnly</context>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Misc/Artifacts/MechSerumApplying_01c</clipPath>
+          </li>
+        </grains>
+        <volumeRange>35</volumeRange>
+        <sustainLoop>False</sustainLoop>
+        <distRange>15~40</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+  
+</Defs>

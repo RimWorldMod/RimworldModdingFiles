@@ -1,0 +1,249 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <StatDef>
+    <defName>NegotiationAbility</defName>
+    <label>negotiation ability</label>
+    <description>How effective this person is as a negotiator.\n\nThis affects the speed of prisoner recruitment, impact on faction relations when giving gifts, and the outcome of peace talks.</description>
+    <category>PawnSocial</category>
+    <defaultBaseValue>1</defaultBaseValue>
+    <minValue>0.4</minValue>
+    <toStringStyle>PercentTwo</toStringStyle>
+    <skillNeedFactors>
+      <li Class="SkillNeed_BaseBonus">
+        <skill>Social</skill>
+        <baseValue>0.4</baseValue>
+        <bonusPerLevel>0.075</bonusPerLevel>
+      </li>
+    </skillNeedFactors>
+    <capacityFactors>
+      <li>
+        <capacity>Talking</capacity>
+        <weight>0.9</weight>
+        <allowedDefect>0.05</allowedDefect>
+        <max>1</max>
+      </li>
+      <li>
+        <capacity>Hearing</capacity>
+        <weight>0.9</weight>
+        <allowedDefect>0.20</allowedDefect>
+        <max>1</max>
+      </li>
+    </capacityFactors>
+    <displayPriorityInCategory>2600</displayPriorityInCategory>
+  </StatDef>
+
+  <StatDef>
+    <defName>PawnBeauty</defName>
+    <label>beauty</label>
+    <showOnDefaultValue>false</showOnDefaultValue>
+    <description>How physically attractive this person is. This affects social interactions.</description>
+    <category>PawnSocial</category>
+    <defaultBaseValue>0</defaultBaseValue>
+    <toStringStyle>FloatOne</toStringStyle>
+    <displayPriorityInCategory>2000</displayPriorityInCategory>
+  </StatDef>
+  
+  <StatDef>
+    <defName>ArrestSuccessChance</defName>
+    <label>Arrest success chance</label>
+    <description>How effective this person is in arresting people. This affects chance that this person will be able to arrest someone without resistance.</description>
+    <category>PawnSocial</category>
+    <defaultBaseValue>1</defaultBaseValue>
+    <minValue>0.6</minValue>
+    <maxValue>1</maxValue>
+    <valueIfMissing>0.4</valueIfMissing>
+    <toStringStyle>PercentTwo</toStringStyle>
+    <skillNeedFactors>
+      <li Class="SkillNeed_BaseBonus">
+        <skill>Social</skill>
+        <baseValue>0.6</baseValue>
+        <bonusPerLevel>0.075</bonusPerLevel>
+      </li>
+    </skillNeedFactors>
+    <capacityFactors>
+      <li>
+        <capacity>Manipulation</capacity>
+        <weight>0.9</weight>
+        <allowedDefect>0.05</allowedDefect>
+        <max>1</max>
+      </li>
+    </capacityFactors>
+    <displayPriorityInCategory>2000</displayPriorityInCategory>
+  </StatDef>
+
+  <StatDef>
+    <defName>TradePriceImprovement</defName>
+    <label>trade price improvement</label>
+    <description>When this person acts as a trade negotiator, buy and sell prices are improved by this percentage.</description>
+    <category>PawnSocial</category>
+    <defaultBaseValue>1</defaultBaseValue>
+    <minValue>0</minValue>
+    <toStringStyle>PercentTwo</toStringStyle>
+    <displayPriorityInCategory>2599</displayPriorityInCategory>
+    <skillNeedFactors>
+      <li Class="SkillNeed_BaseBonus">
+        <skill>Social</skill>
+        <baseValue>0</baseValue>
+        <bonusPerLevel>0.015</bonusPerLevel>
+      </li>
+    </skillNeedFactors>
+    <capacityFactors>
+      <li>
+        <capacity>Talking</capacity>
+        <weight>0.9</weight>
+        <allowedDefect>0.05</allowedDefect>
+        <max>1</max>
+      </li>
+      <li>
+        <capacity>Hearing</capacity>
+        <weight>0.9</weight>
+        <allowedDefect>0.20</allowedDefect>
+        <max>1</max>
+      </li>
+    </capacityFactors>
+    <parts>
+      <li Class="StatPart_PlayerFactionLeader">
+        <offset>0.02</offset>
+      </li>
+    </parts>
+  </StatDef>
+  
+  <StatDef>
+    <defName>DrugSellPriceImprovement</defName>
+    <label>drug sell price improvement</label>
+    <description>When this person sells non-medical drugs, prices are improved by this percentage.</description>
+    <category>PawnSocial</category>
+    <defaultBaseValue>0</defaultBaseValue>
+    <hideAtValue>0</hideAtValue>
+    <toStringStyle>PercentTwo</toStringStyle>
+    <disableIfSkillDisabled>Social</disableIfSkillDisabled>
+    <displayPriorityInCategory>2560</displayPriorityInCategory>
+  </StatDef>
+
+    <StatDef>
+    <defName>SocialImpact</defName>
+    <label>social impact</label>
+    <description>A multiplier on how much other people are affected by this person's social interactions.</description>
+    <category>PawnSocial</category>
+    <defaultBaseValue>1</defaultBaseValue>
+    <minValue>0.2</minValue>
+    <toStringStyle>PercentTwo</toStringStyle>
+    <displayPriorityInCategory>2000</displayPriorityInCategory>
+    <skillNeedFactors>
+      <li Class="SkillNeed_BaseBonus">
+        <skill>Social</skill>
+        <baseValue>0.82</baseValue>
+        <bonusPerLevel>0.0275</bonusPerLevel>
+      </li>
+    </skillNeedFactors>
+    <neverDisabled>true</neverDisabled>
+    <capacityFactors>
+      <li>
+        <capacity>Talking</capacity>
+        <weight>0.9</weight>
+        <allowedDefect>0.05</allowedDefect>
+        <max>1</max>
+      </li>
+      <li>
+        <capacity>Hearing</capacity>
+        <weight>0.3</weight>
+        <allowedDefect>0.05</allowedDefect>
+        <max>1</max>
+      </li>
+    </capacityFactors>
+  </StatDef>
+
+  <!--============ Animal ============-->
+
+  <StatDef>
+    <defName>TameAnimalChance</defName>
+    <label>tame animal chance</label>
+    <description>The base chance this person will successfully tame an animal on any given attempt.\n\nThe actual chance is also affected by the animal's wildness.\nFailed tame attempt can induce animal attacks, especially for more vicious animals.</description>
+    <category>PawnSocial</category>
+    <defaultBaseValue>1</defaultBaseValue>
+    <minValue>0.01</minValue>
+    <toStringStyle>PercentTwo</toStringStyle>
+    <displayPriorityInCategory>1901</displayPriorityInCategory>
+    <skillNeedFactors>
+      <li Class="SkillNeed_BaseBonus">
+        <skill>Animals</skill>
+        <baseValue>0.04</baseValue>
+        <bonusPerLevel>0.03</bonusPerLevel>
+      </li>
+    </skillNeedFactors>
+    <capacityFactors>
+      <li>
+        <capacity>Talking</capacity>
+        <weight>0.9</weight>
+        <allowedDefect>0.20</allowedDefect>
+        <max>1</max>
+      </li>
+      <li>
+        <capacity>Hearing</capacity>
+        <weight>0.3</weight>
+        <allowedDefect>0.05</allowedDefect>
+        <max>1</max>
+      </li>
+      <li>
+        <capacity>Manipulation</capacity>
+        <weight>0.5</weight>
+        <allowedDefect>0.20</allowedDefect>
+        <max>1</max>
+      </li>
+    </capacityFactors>
+    <scenarioRandomizable>true</scenarioRandomizable>
+  </StatDef>
+
+  <StatDef>
+    <defName>TrainAnimalChance</defName>
+    <label>train animal chance</label>
+    <description>The base chance this person will make progress training an animal on a given attempt.\n\nThe actual chance for a given attempt will also depend on the animal's wildness, whether it is bonded with the trainer, and so on.</description>
+    <category>PawnSocial</category>
+    <defaultBaseValue>1.0</defaultBaseValue>
+    <minValue>0.01</minValue>
+    <toStringStyle>PercentTwo</toStringStyle>
+    <displayPriorityInCategory>1900</displayPriorityInCategory>
+    <skillNeedFactors>
+      <li Class="SkillNeed_BaseBonus">
+        <skill>Animals</skill>
+        <baseValue>0.10</baseValue>
+        <bonusPerLevel>0.05</bonusPerLevel>
+      </li>
+    </skillNeedFactors>
+    <capacityFactors>
+      <li>
+        <capacity>Talking</capacity>
+        <weight>0.7</weight>
+        <allowedDefect>0.20</allowedDefect>
+        <max>1</max>
+      </li>
+      <li>
+        <capacity>Hearing</capacity>
+        <weight>0.3</weight>
+        <allowedDefect>0.05</allowedDefect>
+        <max>1</max>
+      </li>
+      <li>
+        <capacity>Manipulation</capacity>
+        <weight>0.5</weight>
+        <allowedDefect>0.20</allowedDefect>
+        <max>1</max>
+      </li>
+    </capacityFactors>
+    <scenarioRandomizable>true</scenarioRandomizable>
+  </StatDef>
+
+  <StatDef>
+    <defName>BondAnimalChanceFactor</defName>
+    <label>bond chance factor</label>
+    <description>A multiplier on the chance to bond with an animal when interacting with it.</description>
+    <category>PawnSocial</category>
+    <defaultBaseValue>1</defaultBaseValue>
+    <minValue>0</minValue>
+    <hideAtValue>1</hideAtValue>
+    <toStringStyle>PercentTwo</toStringStyle>
+    <displayPriorityInCategory>1890</displayPriorityInCategory>
+  </StatDef>
+
+</Defs>
